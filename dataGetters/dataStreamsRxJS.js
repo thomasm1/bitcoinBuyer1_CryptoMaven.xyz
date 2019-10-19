@@ -16,7 +16,7 @@ observable.subscribe(val => print1('1. ' + val))
 const promesa = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("2. ...PROMISE resolved\n\n");
-    }, 0);
+    }, 1000);
 });
 const observaPromesa = Rx.Observable.fromPromise(promesa);
 observaPromesa.subscribe(result => print1(result));
@@ -193,6 +193,99 @@ const clickss = observMulticast
     const subB = subject.subscribe( c => print2(`22.SUBJECT-B: ${c.timeStamp}`))
     subject.connect();
 
+// 23. async
+///
+    const array1 = [{
+        "Date": "2019-07-04",
+        "Symbol": "BTCUSD",
+        "Open": 11976.42,
+        "High": 12064.26,
+        "Low": 11820,
+        "Close": 11909.55,
+        "Volume BTC": 1237.57,
+        "Volume USD": 14790355.69
+    },
+    {
+        "Date": "2019-07-04",
+        "Symbol": "ETHUSD",
+        "Open": 301.79,
+        "High": 304,
+        "Low": 300.39,
+        "Close": 301.5,
+        "Volume ETH": 3825.69,
+        "Volume USD": 1154988.12
+    }
+    ];
+    const array2 = 
+    {
+        "Date": "2019-07-05",
+        "Symbol": "LITECOIN",
+        "Open": 101.79,
+        "High": 104,
+        "Low": 100.39,
+        "Close": 101.5,
+        "Volume LTC": 825.69,
+        "Volume USD": 7777777.77
+    }
+    function afterTheDelay() {
+    setTimeout(() => {
+        let outputPromise = "";
+        array1.forEach((array1, index) => {
+            outputPromise += `<li>Date: ${array1.Date} Symbol:  ${array1.Symbol} Close: ${array1.Close}</li>`;
+        });
+        document.getElementById("array1").innerHTML = "<strong>Local Ether + Bitcoin:</strong><br />" + outputPromise;
+    }, 2000);
+    }
+
+    function addPromise(price) {
+        return new Promise((resolve, reject) => { 
+            setTimeout(() => {
+                array1.push(price);
+                console.log("hey num2")
+                // const error = true;
+                const error = false;
+                if (!error) {
+                    resolve();
+                } else {
+                    reject(console.log("%c Promise Errorrr occured", "color:orange; border:solid 1px orange"));
+                }
+            }, 2000);
+        });
+    } 
+    const promesa_New = new Promise((resolve, reject) => {
+        setInterval(() => {  
+            resolve(array1.push(
+                {                   
+                "Date": "2019-07-05",
+                "Symbol": "NEWCOIN",
+                "Open": 101.79,
+                "High": 104,
+                "Low": 100.39,
+                "Close": 101.5,
+                "Volume LTC": 825.69,
+                "Volume USD": 7777777.77
+            }
+            ));  
+            array1.push(array2) 
+           console.log("inside Promes_NEW")
+        }, 3000);
+    });
+    const observaPromesa_New = Rx.Observable.fromPromise(promesa_New);
+    observaPromesa.subscribe(result => print3(result));
+    /// 
+    async function initAsync() {
+    await addPromise({
+        "Date": "2020-01-02",
+        "Symbol": "coinASYNCAdded",
+        "Open": 13000.00,
+        "High": 14000,
+        "Low": 12000.00,
+        "Close": 1350.00
+    });
+    afterTheDelay();
+    }
+    initAsync(); 
+/// 
 
 
 
@@ -203,8 +296,13 @@ function print1(val) {
     el.innerText = val;
     document.getElementById("analytics").appendChild(el)
 }
+function print3(val) {
+    let el2 = document.createElement('p');
+    el2.innerText = val
+    document.getElementById("analyticsNum2").appendChild(el2)
+}
 
-// right column
+// middle column
 function print2(val) {
     let el = document.createElement('p')
     el.innerText = val;
