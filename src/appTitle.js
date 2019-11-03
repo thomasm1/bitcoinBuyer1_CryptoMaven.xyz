@@ -1,5 +1,5 @@
 let title = `Bitcoin Buyer Console: Phase I, Raw Materials`;
-let tocTitle = ` Guiding Inspiration for Bitcoin Buyer:`
+let tocTitle = `Guiding Inspiration for Bitcoin Buyer:`
 let toc = ` 
 “Typically, momentum trading is effective in markets that 1) do not have valuation models, 2) have large amounts of volatility, and 3) have frequent mispricings. Momentum investing is not typically used in US stocks, bonds, or options – as they have clear valuation models (e.g. discounted cash flow analysis for stocks and black Scholes for options). However, for commodities and assets like crypto – momentum trading can be an effective strategy that allows protection from losses in downtrends and capture subside on the uptrends. Based on historical data, this may be an extremely effective strategy – until a valuation model has been figured out.” <sup>1</sup><br />
 <br /> 
@@ -21,7 +21,7 @@ function TitleWidget(spec) {
 
     instance.render = function() {
         var div = d3.select(".appTitle").append("div");
-        div.append("h3").text(headline)
+        div.append("h2").text(headline)
             .attr(
                 "style",
                 "text-align:" +
@@ -37,8 +37,10 @@ function TitleWidget(spec) {
                 "color:" +
                 spec.color +
                 "width:" +
-                spec.width +
+                spec.minWidth +
                 "%;" +
+                "height:" +
+                spec.height +
                 "max-height:" +
                 spec.maxHeight +
                 "overflow-y:" +
@@ -69,7 +71,7 @@ function TitleWidget(spec) {
 
 var widget = new TitleWidget({
         color: "darkblue;",
-        backgroundColor: "rgba(135, 207, 235, 0.575);",
+        backgroundColor: "rgba(135, 207, 235, 0.875);",
         width: "100"
     })
     .headline(title);
@@ -77,16 +79,17 @@ var widget = new TitleWidget({
 var subWidget = new TitleWidget({
         color: "blue;",
         backgroundColor: "rgba(135, 207, 235, 0.575);",
-        width: "100",
+        minWidth: "100",
         margin: "0",
-        maxHeight: "200px;",
+        height: "220px;",
+        maxHeight: "220px;",
         overflowY: "scroll;",
         textAlign: "justify;",
         titleTextAlign: "center;",
-        padding: "0px 10px;"
+        padding: "0px 0px;"
     })
     .headline(tocTitle)
     .desc(toc);
 
 widget.render();
-subWidget.render();
+// subWidget.render();

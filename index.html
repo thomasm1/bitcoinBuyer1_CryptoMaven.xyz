@@ -4,7 +4,8 @@
 <head>
 
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
 
     <title>ArrayMaker</title>
@@ -15,17 +16,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.3/Rx.js"></script>
 
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <!-- <script src="node_modules/jsdom/lib/api.js"></script> -->
 </head>
 
-<body>
+<body id="body">
+    <div id="ckmeans"></div><span></span>
     <div class="appTitle"></div>
     <script src="src/appTitle.js">
     </script>
     <div class="container">
 
-        <div class="row">
+        <div class="row subwidget">
             <!-- <div class="dataGetters col col-xs-4">
 				<div id="scraperBtc"></div>
 				<div id="scraperEther"></div>
@@ -49,7 +51,7 @@
         </div>
 
         <!-- <svg></svg> -->
-        <div id="app"></div>
+        <!-- <div id="app"></div> -->
 
         <script src="dataGetters/dataScraper.js"></script>
         <script src="dataGetters/dataAsyncPromise.js"></script>
@@ -68,7 +70,7 @@
 			<span> 4.) AWS Lambda Function <em>returning ...</em> JSON data. </span>
 		</code>
             <div align="center">
-                <button class="btn btn-primary" onclick="myFunction()">Make HTTP Call</button>
+                <button class="btn btn-primary" onclick="myFunction()">GET DATA</button>
             </div>
             <div class="row">
                 <div class="dataXMLH col col-xs-6">
@@ -86,7 +88,7 @@
         </div>
         <p class="portlet-title">RxJS Vanilla Data Stream Manipulation</p>
         <div class=" row rxjs analytics">
-            <div class="col col-xs-6 "> 
+            <div class="col col-xs-6 ">
                 <div id="analyticsNum2"></div>
                 <hr>
                 <div id="array1"></div>
@@ -94,18 +96,229 @@
                 <div id="analytics"></div>
             </div>
 
-            <div class="pull-right col col-xs-5 col-right"> 
+            <div class="pull-right col col-xs-5 col-right">
                 <div id="analytics2">
                 </div>
             </div>
 
             <div id="mouse"></div>
-          
+
         </div>
+        <!-- <script src="http://d3js.org/d3.v4.min.js"></script> -->
+        <script src="http://d3js.org/queue.v1.min.js"></script>
+        <script src="http://d3js.org/topojson.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v1.min.js"></script>
+        <script src="d3-tip.js"></script>
+        <script src='https://unpkg.com/simple-statistics@2.0.0/dist/simple-statistics.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js'></script>
+        <script lang='babel' type='text/babel'>
+		// configuration
+		const colorVariable = 'population';
+		const geoIDVariable = 'id';
+		const format = d3.format(',');
+		
+		// Set tooltips
+		const tip = d3.tip()
+		  .attr('class', 'd3-tip')
+		  .offset([-10, 0])
+		  .html(d => `<strong>Country: </strong><span class='details'>${d.properties.name}<br></span><strong>Population: </strong><span class='details'>${format(d[colorVariable])}</span>`);
+		
+		tip.direction(function(d) {
+		  if (d.properties.name === 'Antarctica') return 'n';
+		  // Americas
+		  if (d.properties.name === 'Greenland') return 's';
+		  if (d.properties.name === 'Canada') return 'e';
+		  if (d.properties.name === 'USA') return 'e';
+		  if (d.properties.name === 'Mexico') return 'e';
+		  // Europe
+		  if (d.properties.name === 'Iceland') return 's';
+		  if (d.properties.name === 'Norway') return 's';
+		  if (d.properties.name === 'Sweden') return 's';
+		  if (d.properties.name === 'Finland') return 's';
+		  if (d.properties.name === 'Russia') return 'w';
+		  // Asia
+		  if (d.properties.name === 'China') return 'w';
+		  if (d.properties.name === 'Japan') return 's';
+		  // Oceania
+		  if (d.properties.name === 'Indonesia') return 'w';
+		  if (d.properties.name === 'Papua New Guinea') return 'w';
+		  if (d.properties.name === 'Australia') return 'w';
+		  if (d.properties.name === 'New Zealand') return 'w';
+		  // otherwise if not specified
+		  return 'n';
+		})
+		
+		tip.offset(function(d) { // [top, left]
+		  if (d.properties.name === 'Antarctica') return [0, 0];
+		  // Americas
+		  if (d.properties.name === 'Greenland') return [10, -10];
+		  if (d.properties.name === 'Canada') return [24, -28];
+		  if (d.properties.name === 'USA') return [-5, 8];
+		  if (d.properties.name === 'Mexico') return [12, 10];
+		  if (d.properties.name === 'Chile') return [0, -15];
+		  // Europe
+		  if (d.properties.name === 'Iceland') return [15, 0];
+		  if (d.properties.name === 'Norway') return [10, -28];
+		  if (d.properties.name === 'Sweden') return [10, -8];
+		  if (d.properties.name === 'Finland') return [10, 0];
+		  if (d.properties.name === 'France') return [-9, 66];
+		  if (d.properties.name === 'Italy') return [-8, -6];
+		  if (d.properties.name === 'Russia') return [5, 385];
+		  // Africa
+		  if (d.properties.name === 'Madagascar') return [-10, 10];
+		  // Asia
+		  if (d.properties.name === 'China') return [-16, -8];
+		  if (d.properties.name === 'Mongolia') return [-5, 0];
+		  if (d.properties.name === 'Pakistan') return [-10, 13];
+		  if (d.properties.name === 'India') return [-11, -18];
+		  if (d.properties.name === 'Nepal') return [-8, 1];
+		  if (d.properties.name === 'Myanmar') return [-12, 0];
+		  if (d.properties.name === 'Laos') return [-12, -8];
+		  if (d.properties.name === 'Vietnam') return [-12, -4];
+		  if (d.properties.name === 'Japan') return [5, 5];
+		  // Oceania
+		  if (d.properties.name === 'Indonesia') return [0, -5];
+		  if (d.properties.name === 'Papua New Guinea') return [-5, -10];
+		  if (d.properties.name === 'Australia') return [-15, 0];
+		  if (d.properties.name === 'New Zealand') return [-15, 0];
+		  // otherwise if not specified
+		  return [-10, 0];
+		})
+		
+		d3.select('#ckmeans')
+			.style('overflow', 'hidden');
+		
+		const parentWidth = d3.select('#ckmeans').node().getBoundingClientRect().width;
+		const margin = {top: 0, right: 0, bottom: 0, left: 0};
+		const width = 960 - margin.left - margin.right;
+		const height = 500 - margin.top - margin.bottom;
+		
+		const color = d3.scaleQuantile()
+		  .range([
+			'rgb(247,251,255)',
+			'rgb(222,235,247)', 
+			'rgb(198,219,239)', 
+			'rgb(158,202,225)',
+			'rgb(107,174,214)',
+			'rgb(66,146,198)',
+			'rgb(33,113,181)',
+			'rgb(8,81,156)',
+			'rgb(8,48,107)',
+			'rgb(3,19,43)'
+		  ]);
+		
+		
+		const svg = d3.select('#ckmeans')
+		  .append('svg')
+		  .attr('width', width)
+		  .attr('height', height)
+		  .append('g')
+		  .attr('class', 'map');
+		
+		const projection = d3.geoRobinson()
+		  .scale(148)
+		  .rotate([352, 0, 0])
+		  .translate( [width / 2.4, height / 1.7]);
+		
+		const path = d3.geoPath().projection(projection);
+		
+		svg.call(tip);
+		
+		queue()
+		  .defer(d3.json, 'world_countries.json')
+		  .defer(d3.tsv, 'world_population.tsv')
+		  .await(ready);
+		
+		function ready(error, geography, data) {
+		  data.forEach(d => {
+			d[colorVariable] = Number(d[colorVariable].replace(',', ''));
+		  })
+		
+		  const colorVariableValueByID = {};
+		
+		  data.forEach(d => { colorVariableValueByID[d[geoIDVariable]] = d[colorVariable]; });
+		  geography.features.forEach(d => { d[colorVariable] = colorVariableValueByID[d.id] });
+		
+		  // calculate ckmeans clusters
+		  // then use the max value of each cluster
+		  // as a break
+		  const numberOfClasses = color.range().length - 1;
+		  const ckmeansClusters = ss.ckmeans(data.map(d => d[colorVariable]), numberOfClasses);
+		  const ckmeansBreaks = ckmeansClusters.map(d => d3.min(d));
+		  console.log('numberOfClasses', numberOfClasses);
+		  console.log('ckmeansClusters', ckmeansClusters);
+		  console.log('ckmeansBreaks', ckmeansBreaks);
+		
+		  // set the domain of the color scale based on our data
+		  color
+			.domain(ckmeansBreaks);
+		  //
+		  // .domain(jenksNaturalBreaks)
+		  //
+		  // .domain(d3.extent(data, d => d[colorVariable]));
+		  //
+		  // .domain([
+		  //   10000,
+		  //   100000,
+		  //   500000,
+		  //   1000000,
+		  //   5000000,
+		  //   10000000,
+		  //   50000000,
+		  //   100000000,
+		  //   500000000,
+		  //   1500000000
+		  // ]);
+		
+		  svg.append('g')
+			.attr('class', 'countries')
+			.selectAll('path')
+			.data(geography.features)
+			.enter().append('path')
+			  .attr('d', path)
+			  .style('fill', d => {
+				if (typeof colorVariableValueByID[d.id] !== 'undefined') {
+				  return color(colorVariableValueByID[d.id])
+				} 
+				return 'white'
+			  })
+			  .style('fill-opacity',0.8)
+			  .style('stroke', d => {
+				  if (d[colorVariable] !== 0) {
+				  return 'white';
+				} 
+				return 'lightgray';
+			  })
+			  .style('stroke-width', 1)
+			  .style('stroke-opacity', 0.5)
+			  // tooltips
+			  .on('mouseover',function(d){
+				tip.show(d);
+				d3.select(this)
+				  .style('fill-opacity', 1)
+				  .style('stroke-opacity', 1)
+				  .style('stroke-width', 2)
+			  })
+			  .on('mouseout', function(d){
+				tip.hide(d);
+				d3.select(this)
+				  .style('fill-opacity', 0.8)
+				  .style('stroke-opacity', 0.5)
+				  .style('stroke-width', 1)
+			  });
+		
+		  svg.append('path')
+			.datum(topojson.mesh(geography.features, (a, b) => a.id !== b.id))
+			.attr('class', 'names')
+			.attr('d', path);
+		}
+		</script>
+        <div id="ckmeans"></div>
         <footer class="footer">
             <h5> Copyright &copy; 2019 All Rights Reserved. </h5>
             <h5><a href="mailto:thomasm1.maestas@gmail.com" title="Contact Information: thomasmaestas.net/">
-                    Contact Thomas Maestas</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a href="https://thomasmaestas.net">thomasmaestas.net</a>
+                    Contact Thomas Maestas</a> &nbsp;&nbsp; | &nbsp;&nbsp; <a
+                    href="https://thomasmaestas.net">thomasmaestas.net</a>
             </h5>
         </footer>
     </div>
