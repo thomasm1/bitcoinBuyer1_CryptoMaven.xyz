@@ -1,7 +1,6 @@
 console.log("%c BITCOIN CALCS BEGIN: ", "color:white; background-color:orange")
 
-document.getElementById("app").innerHTML = `
-
+document.getElementById("app").innerHTML = ` 
 <div class="appTitle">
 </div>   
 `;
@@ -129,111 +128,138 @@ const ethBtc = [
     "Volume ETH": 184436.14,
     "Volume USD": 53230192.12
   }
-]; 
-console.log("%c Object mapping: ", "color:orange; border:solid 1px orange") 
-  //0-A.)
-  console.time("timer_Obj-A.");
-  for (const key in btc2019[0]) {
-    console.log("btc2019[0][key]: ", btc2019[0][key]);
-  }
-  console.timeEnd("timer_Obj-A.");
-  //0-B.)
-  console.time("timer_Obj-B.");
-  for (const b of Object.values(btc2019[0])) {
-    console.log("Object.values: ", b);
-  }
-  console.timeEnd("timer_Obj-B.");
-  //0-C.)
-  console.time("timer_Obj-C.");
-  const bObject = new Map(
-    Object.entries({
-      Date: "2019-07-02",
-      Symbol: "BTCUSD",
-      Open: 10577.63,
-      High: 10925,
-      Low: 9651,
-      Close: 10829.18,
-      "Volume BTC": 41476.42,
-      "Volume USD": 424791613.92
-    })
-  );
-  for (const b of bObject.values()) {
-    console.log("Object.entries", b);
-  }
-  console.timeEnd("timer_Obj-C.");
-  //1.)
-  console.time("timer_i");
-  for (let i = 0; i < btc2019.length; i++) {
-    console.log(btc2019[i].Symbol, btc2019[i].Date, btc2019[i].High);
-  }
-  console.timeEnd("timer_i");
-  //2.
-  console.time("timer_forOf");
-  for (const btc of btc2019) {
-    console.log(btc.Symbol, btc.Date, btc.High);
-  }
-  console.timeEnd("timer_forOf");
-  //3. forEach
-  console.time("timer_forEach");
-  btc2019.forEach(function(btc) {
-    console.log(btc.Symbol, btc.Date, btc.High);
-  });
-  console.timeEnd("timer_forEach");
-
-
-  console.log("%c Array mapping: ", "color:orange; border:solid 1px orange") 
-//
-let canSell = [];
-for (let i = 0; i < btc2019.length; i++) {
-  if (btc2019[i] >= btc2019[i - 1]) {
-    canSell.push(btc2019[i]);
-  }
+];
+console.log("%c Object mapping: ", "color:orange; border:solid 1px orange")
+//0-A.)
+console.time("timer_Obj-A.");
+for (const key in btc2019[0]) {
+  console.log("btc2019[0][key]: ", btc2019[0][key]);
 }
-console.log(canSell);
-// filter
-const canBuy = btc2019.filter(function(btc) {
+console.timeEnd("timer_Obj-A.");
+//0-B.)
+console.time("timer_Obj-B.");
+for (const b of Object.values(btc2019[0])) {
+  console.log("Object.values: ", b);
+}
+console.timeEnd("timer_Obj-B.");
+//0-C.)
+console.time("timer_Obj-C.");
+const bObject = new Map(
+  Object.entries({
+    Date: "2019-07-02",
+    Symbol: "BTCUSD",
+    Open: 10577.63,
+    High: 10925,
+    Low: 9651,
+    Close: 10829.18,
+    "Volume BTC": 41476.42,
+    "Volume USD": 424791613.92
+  })
+);
+for (const b of bObject.values()) {
+  console.log("Object.entries", b);
+}
+console.timeEnd("timer_Obj-C.");
+//1.)
+console.time("timer_i");
+for (let i = 0; i < btc2019.length; i++) {
+  console.log(btc2019[i].Symbol, btc2019[i].Date, btc2019[i].High);
+}
+console.timeEnd("timer_i");
+//2.
+console.time("timer_forOf");
+for (const btc of btc2019) {
+  console.log(btc.Symbol, btc.Date, btc.High);
+}
+console.timeEnd("timer_forOf");
+//3. forEach
+console.time("timer_forEach");
+btc2019.forEach(function (btc) {
+  console.log(btc.Symbol, btc.Date, btc.High);
+});
+console.timeEnd("timer_forEach");
+  
+//////// FILTER 
+console.log("%c Filtering out negative days: ", "color:orange; border:solid 1px orange")
+// filter out negative days, calc
+const avgPosOnly = btc2019
+  .filter(btc => btc.Close - btc.Open >= 0)
+  .map(btc => (btc.Close - btc.Open) / btc2019.length); ///calc each avg
+console.log(avgPosOnly);
+//
+const canBuy = btc2019.filter(function (btc) {
   if (btc.Close <= 11000) {
     return true;
   }
 });
 console.log(canBuy);
-// map new arrays -> create array of btc volumes
-const coinSymbols = ethBtc.map(function(coin) {
-  return coin.Symbol;
-});
-console.log(coinSymbols);
+print('FILTER' + canBuy);
 //
-// const coinIntervals = ethBtc.map(function(coin) {
-//   return `${coin.Symbol} [O:${coin.Open}-C:${coin.Close}]`;
-// });
+const belowtenk = btc2019.filter((item) => { 
+  return item.Close < 11000.0;
+})
+console.log(belowtenk);
+print('FILTER' + `<br /><code>${JSON.stringify(belowtenk)}</code>`);
+
+///////// MAP  
+console.log("%c Array mapping: ", "color:orange; border:solid 1px orange")
+//
+    let canSell = [];
+    for (let i = 0; i < btc2019.length; i++) {
+      if (btc2019[i] >= btc2019[i - 1]) {
+        canSell.push(btc2019[i]);
+      }
+    }
+    console.log(canSell);
+// map new arrays -> create array of btc volumes
 const coinIntervals = ethBtc.map(
   coin => `${coin.Symbol} [O:${coin.Open}-C:${coin.Close}]`
 );
-console.log(coinIntervals);
+console.log(coinIntervals);  print('MAP' + coinIntervals)
 //
 const coinSquareRoot = ethBtc.map(coin => Math.sqrt(coin.Close));
 const coinSquare = ethBtc.map(coin => coin.Close * 2);
-console.log(coinSquareRoot, coinSquare);
-// sort
-// const sortedBtc = btc2019.sort(function(a, b) {
-//   if (a.Close > b.Close) {
-//     return 1;
-//   } else {
-//     return -1;
-//   }
-// });
+console.log(coinSquareRoot, coinSquare); print('MAP' + coinSquareRoot+' '+ coinSquare)
+//
+const coinSymbols = ethBtc.map(function (coin) {
+  return coin.Symbol;
+});
+console.log(coinSymbols);  print('MAP' + coinSymbols)
+//
+print('MAP' + coinSymbols)
+const btcName = btc2019.map((item) => {
+  return `<br />${item.Symbol} : ${item.Close}`;
+})
+console.log(btcName); print('MAP' + btcName)
 
-console.log("%c Sorting: ", "color:orange; border:solid 1px orange") 
-const sortedBtc = btc2019.sort((a, b) => (a.Open > b.Open ? 1 : -1));
-const sortedB = btc2019.sort((a, b) => a.Open - b.Open);
-console.log(sortedBtc, sortedB);
-//reduce
+/////////// FIND - returns first it finds ..  
+const btcFind = btc2019.find((item) => {
+  return item.Date === '2019-07-04'
+})
+console.log(btcFind); print('FIND: ' + btcFind)
+
+/////////// INCLUDES - returns first it finds .. but how to print the stringify??
+const btcIncludes = btc2019.includes(btc2019[0])
+console.log(btcIncludes); print('INCLUDES: ' + btcIncludes)
+
+/////////// SOME/EVERY - returns Boolean
+const btcSomeTrue = btc2019.some((item) => {
+  return item.Close < 11000
+})
+console.log(btcSomeTrue); print('SOME: ' + btcSomeTrue)
+
+/////////// forEACH  - DOES NOT RETURN ANYTHING
+const btcForEach = btc2019.forEach((item) => {
+  print('forEACH: ' + `${item.Symbol} : ${item.Close}`);
+  console.log(`${item.Symbol} : ${item.Close}`);
+})
+
+/////////// REDUCE((accumulation, item) =>{}, startIndex)
 // let closeAvg = 0, closeSum = 0;
 // for (let i = 0; i < btc2019.length; i++) {
 //   closeSum += btc2019[i].Close;
 //   closeAvg = closeSum/btc2019.length;
-// }
-// reduce total
+// } 
 const closeSum = btc2019.reduce((total, btc) => total + btc.Close, 0);
 const closeAvg = closeSum / btc2019.length;
 console.log("sum: " + closeSum, "avg: " + closeAvg);
@@ -245,14 +271,27 @@ const closeIntTot = btc2019.reduce(
 const closeIAvg = closeIntTot / btc2019.length;
 console.log("sum: " + closeIntTot, "avg: " + closeIAvg);
 
-console.log("%c Filtering out negative days: ", "color:orange; border:solid 1px orange") 
-// filter out negative days, calc
-const avgPosOnly = btc2019
-  .filter(btc => btc.Close - btc.Open >= 0)
-  .map(btc => (btc.Close - btc.Open) / btc2019.length); ///calc each avg
-console.log(avgPosOnly);
-//
-console.log("%c Calc Avg, Sum each pos avg, reduce to total: ", "color:orange; border:solid 1px orange") 
+const btcTotalReduce = btc2019.reduce((currentTotal, item) => {
+  return Math.floor((item.Close + currentTotal) / btc2019.length);
+}, 0)
+console.log(btcTotalReduce);
+print('REDUCE: ' + btcTotalReduce)
+
+//////////// SORT  
+// const sortedBtc = btc2019.sort(function(a, b) {
+//   if (a.Close > b.Close) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// }); 
+console.log("%c Sorting: ", "color:orange; border:solid 1px orange")
+const sortedBtc = btc2019.sort((a, b) => (a.Open > b.Open ? 1 : -1));
+const sortedB = btc2019.sort((a, b) => a.Open - b.Open);
+console.log(sortedBtc, sortedB);
+
+///////////// FILTER/MAP/SORT/REDUCE CALCULATION
+console.log("%c Calc Avg, Sum each pos avg, reduce to total: ", "color:orange; border:solid 1px orange")
 const avgPosLong = btc2019
   .filter(btc => btc.Close - btc.Open >= 0)
   .map(btc => (btc.Close - btc.Open) / btc2019.length) ///calc each avg
@@ -260,3 +299,16 @@ const avgPosLong = btc2019
   .reduce((a, b) => a + b, 0); // sum each pos avg, reduce to total
 const avgPos = avgPosLong / btc2019.length;
 console.log(avgPosLong, avgPos);
+ 
+
+
+function print(val) {
+  let el = document.createElement('p');
+  el.innerHTML = val;
+  // document.getElementById('output').appendChild(el)
+}
+
+
+
+
+

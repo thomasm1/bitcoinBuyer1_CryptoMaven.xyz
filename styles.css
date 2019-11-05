@@ -8,6 +8,7 @@
 #body {
     background-color: rgba(135, 207, 235, 0.575);
     /* white-space: nowrap; */
+    padding: 0 10px;
 }
 
 path {
@@ -44,16 +45,18 @@ code span {
     padding-left: 20px;
 }
 
-.container {
+.contain {
     font-family: "Roboto";
-    background: rgba(135, 207, 235, 0.575);;
+    background: rgba(135, 207, 235, 0.575);
+    /* width: 90%;
+    margin-left:auto;
+    margin-right:auto; */
     /* position: fixed;
       left: 0;
       right: 0;
       top: 0;
       bottom: 0;
-      margin: 0;  */
-    margin: 5px;
+      margin: 0;  */ 
 }
 
 
@@ -148,19 +151,23 @@ code span {
     background-color: aliceblue;
     border: solid 1px orange;
     max-height: 400px;
-    max-width: 45%;
+    max-width: 46%;
     /* min-width: 300px; */
     overflow: scroll;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .dataGetters {
     background-color: aliceblue;
     border: solid 1px orange;
     /* width: 500px; */
-    max-width: 45%;
+    max-width: 46%;
     height: 250px;
     float: left;
     overflow: scroll;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 .dataXMLH {
@@ -180,8 +187,8 @@ code span {
     /* background-color: rgba(135, 207, 235, 0.875); */
 }
 
-.subwidget {
-    margin-top : 300px;
+.btc {
+    margin-top : 340px; 
 }
 
 .names {
@@ -247,4 +254,15 @@ code span {
     top: 50%;
     left: 100%;
 }
-/* end d3 globe
+/* end d3 globe */
+
+
+/* Calculations Output */
+#output {
+    max-width:200px;
+    max-height:400px;
+    overflow:scroll;
+    position:absolute;
+    top:100px;
+    left:80%;
+}
