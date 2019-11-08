@@ -1,3 +1,4 @@
+
 let title = `Bitcoin Buyer Console: Phase I, Raw Materials`;
 let tocTitle = `Guiding Inspiration for Bitcoin Buyer:`
 let toc = ` 
@@ -19,7 +20,7 @@ function TitleWidget(spec) {
     var instance = {};
     var headline, desc;
 
-    instance.render = function() {
+    instance.render = function () {
         var div = d3.select(".appTitle").append("div");
         div.append("h2").text(headline)
             .attr(
@@ -34,6 +35,8 @@ function TitleWidget(spec) {
                 "style",
                 "background-color: " +
                 spec.backgroundColor +
+                "opacity: " +
+                spec.opacity +
                 "color:" +
                 spec.color +
                 "width:" +
@@ -55,13 +58,13 @@ function TitleWidget(spec) {
         return instance;
     };
 
-    instance.headline = function(h) {
+    instance.headline = function (h) {
         if (!arguments.length) return headline;
         headline = h;
         return instance;
     };
 
-    instance.desc = function(d) {
+    instance.desc = function (d) {
         if (!arguments.length) return desc;
         desc = d;
         return instance;
@@ -70,26 +73,43 @@ function TitleWidget(spec) {
 } // end TitleWidget
 
 var widget = new TitleWidget({
-        color: "darkblue;",
-        backgroundColor: "rgba(135, 207, 235, 0.875);",
-        width: "100"
-    })
+    color: "darkblue;",
+    backgroundColor: "rgba(135, 207, 235, 0.875);",
+    width: "100"
+})
     .headline(title);
 
 var subWidget = new TitleWidget({
-        color: "blue;",
-        backgroundColor: "rgba(135, 207, 235, 0.575);",
-        minWidth: "100",
-        margin: "0",
-        height: "220px;",
-        maxHeight: "220px;",
-        overflowY: "scroll;",
-        textAlign: "justify;",
-        titleTextAlign: "center;",
-        padding: "0px 0px;"
-    })
+    color: "blue;",
+    backgroundColor: "rgba(135, 207, 235 );",
+    opacity: "1",
+    minWidth: "100",
+    margin: "0",
+    height: "220px;",
+    maxHeight: "220px;",
+    overflowY: "scroll;",
+    textAlign: "justify;",
+    titleTextAlign: "center;",
+    padding: "0px 0px;"
+})
     .headline(tocTitle)
     .desc(toc);
 
 widget.render();
-// subWidget.render();
+//subWidget.render()/; 
+
+var codeDiv = '';
+var code = `
+    <p><strong>Clicking Get Data serverless process: </strong></p> 
+    <span> 1.)  AWS API Gateway Endpoint <em>using</em>...</span><br />
+    <span> 2.) AWS Route 53 A Record Set Alias <em>using</em>...</span><br />
+    <span> 3.) AWS S3 files. GET Method button <em>triggers ...</em></span><br />
+    <span> 4.) AWS Lambda Function <em>returning ...</em> JSON data. </span>
+			`
+ 
+let hide = function () {
+    document.getElementById("code").innerHTML = codeDiv;
+}
+let show = function () {
+    document.getElementById("code").innerHTML = code;
+}  

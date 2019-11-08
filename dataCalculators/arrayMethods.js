@@ -285,7 +285,7 @@ print('REDUCE: ' + btcTotalReduce)
 //     return -1;
 //   }
 // }); 
-console.log("%c Sorting: ", "color:orange; border:solid 1px orange")
+console.log("%c Sorting (JavaScript library): ", "color:orange; border:solid 1px orange")
 const sortedBtc = btc2019.sort((a, b) => (a.Open > b.Open ? 1 : -1));
 const sortedB = btc2019.sort((a, b) => a.Open - b.Open);
 console.log(sortedBtc, sortedB);

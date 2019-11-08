@@ -1,7 +1,8 @@
+(vertiBars = function(id = "appQueue") {
 // d3 STACKS
 //console.log("%c D3 STACKS BEGIN: ", "color:white; background-color:green");
 
-document.getElementById("appQueue").innerHTML = ` 
+document.getElementById(id).innerHTML = ` 
  
 <div class="appQueue">
 </div>  
@@ -47,12 +48,28 @@ document.getElementById("appQueue").innerHTML = `
 //     return this.storage[this.count - 1];
 //   };
 // };
-let a = 10,
-  o = 25; //,  e = 15, i = 20, u = 30
-let r = 70,
-  t = 75;
 
-let data = [r, o, t, a, t, o, r];
+// TODO replace demo with observables subscription <====
+let ETH = 20.53,
+  BTC = 25.44; //,  e = 15, i = 20, u = 30
+let XRP = 70.65,
+  LTC = 75.76,
+  b = 45.92,
+c= 46.07,
+d=56.68,
+e=22.82,
+f=41.71,
+g=223.53,
+h=324.66,
+i=23.34,
+j=27.26,
+k=22.44,
+l=44.55,
+m=233.11,
+n=211.56,
+o=111.33,
+p=234.22;
+let data = [ETH, BTC, XRP, LTC,ETH, BTC,XRP,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p];
 
 function render(data) {
   var bars = d3
@@ -69,7 +86,7 @@ function render(data) {
       return d * 3 + "px";
     })
     .text(function(d) {
-      return d;
+      return '$ '+ d;
     });
 
   bars
@@ -82,7 +99,7 @@ setInterval(function() {
   //   // for (let i = 0; i < data.length; i++) {
   //   data.push(Math.round(Math.random() * 100));
   //   // }
-  data.unshift(Math.round(Math.random() * 100));
+  data.unshift((50+ Math.random() * 100).toFixed(2));
   data.pop();
   render(data);
 }, 1500);
@@ -102,3 +119,5 @@ render(data);
 // };
 
 // implementStack(myStack);
+
+})();
