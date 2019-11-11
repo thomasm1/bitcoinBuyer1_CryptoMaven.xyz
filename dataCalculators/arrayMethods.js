@@ -1,9 +1,8 @@
-console.log("%c BITCOIN CALCS BEGIN: ", "color:white; background-color:orange")
-
-document.getElementById("app").innerHTML = ` 
-<div class="appTitle">
-</div>   
-`;
+console.log("%c BITCOIN CALCS BEGIN: ", "color:white; background-color:black") 
+// document.getElementById("app").innerHTML = ` 
+// <div class="appTitle">
+// </div>   
+// `;
 const btc2019 = [
   {
     Date: "2019-07-04",
@@ -46,7 +45,7 @@ const btc2019 = [
     "Volume USD": 396857365.17
   }
 ];
-
+ 
 const ethBtc = [
   {
     Date: "2019-07-04",
@@ -179,7 +178,18 @@ btc2019.forEach(function (btc) {
 });
 console.timeEnd("timer_forEach");
   
+ 
+
 //////// FILTER 
+console.log("%c Filter, then addin conditional object/array (shortens new array): ", "color:orange; border:solid 1px orange");
+const btc2019AddObj = btc2019.filter(btc => btc.Symbol === 'BTCUSD').map(btc => Object.assign({}, btc, { newSymbol: 'BTC' }));
+console.log('btc2019 with new obj in array', btc2019AddObj);   /// SHORTENS ARRAY
+console.log('btc2019 untouched ', btc2019);
+
+const btc2019AddArr = btc2019.filter(btc => btc.Symbol === 'BTCUSD').map(btc => Object.assign({}, btc, { newSymbol: ['BTC','3d array'] }));
+console.log('btc2019 with new obj in array', btc2019AddArr);    /// SHORTENS NEW ARRAY
+console.log('btc2019 untouched ', btc2019);
+
 console.log("%c Filtering out negative days: ", "color:orange; border:solid 1px orange")
 // filter out negative days, calc
 const avgPosOnly = btc2019
@@ -238,14 +248,21 @@ const btcFind = btc2019.find((item) => {
 })
 console.log(btcFind); print('FIND: ' + btcFind)
 
-/////////// INCLUDES - returns first it finds .. but how to print the stringify??
-const btcIncludes = btc2019.includes(btc2019[0])
+/////////// INDEXOF - returns index or -1  ==> use some()
+const btcIndexOf = btc2019.includes(btc2019[0]) 
+console.log(btcIndexOf); print('INDEXOF: ' + btcIndexOf)
+
+/////////// INCLUDES - returns Boolean  ==> use some()
+const btcIncludes = btc2019.includes(btc2019[0]) 
 console.log(btcIncludes); print('INCLUDES: ' + btcIncludes)
 
-/////////// SOME/EVERY - returns Boolean
+/////////// SOME/EVERY - returns Boolean 
+var boolSome = btc2019.some(  
+    btc => { return btc.Symbol === 'EHUSD' }); 
+console.log(boolSome);  print('SOME: ' + boolSome)
+
 const btcSomeTrue = btc2019.some((item) => {
-  return item.Close < 11000
-})
+  return item.Close < 11000   })
 console.log(btcSomeTrue); print('SOME: ' + btcSomeTrue)
 
 /////////// forEACH  - DOES NOT RETURN ANYTHING
@@ -260,6 +277,19 @@ const btcForEach = btc2019.forEach((item) => {
 //   closeSum += btc2019[i].Close;
 //   closeAvg = closeSum/btc2019.length;
 // } 
+
+// Add reduce accumulation object/array  **does not shorten array
+console.log("%c reduce acc, then add object/array (does NOT shorten new array):: ", "color:orange; border:solid 1px orange");
+const newReducedObject = btc2019
+    .reduce((acc, btc) => {
+      return btc.Symbol === 'BTCUSD'
+        ? acc.concat(Object.assign({}, btc, { newSymbol: 'BTC' }))
+        : acc.concat(Object.assign({}, btc, { newSymbol: 'Not BTC' }));
+    }, [])            // does not shorten array
+console.log('conditional btc2019',newReducedObject);
+console.log('not touched btc2019',btc2019); 
+
+// close  sum => close AVG
 const closeSum = btc2019.reduce((total, btc) => total + btc.Close, 0);
 const closeAvg = closeSum / btc2019.length;
 console.log("sum: " + closeSum, "avg: " + closeAvg);

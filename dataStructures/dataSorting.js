@@ -1,6 +1,13 @@
 // SORTING
 console.log("%c SORTING: ", "color:black; background-color:yellow;border:solid 1px black");
 
+// Best asymptotic run-time complexity:
+//        O(n):  Heap, Insertion  
+// average case best:
+//        O(nlogn):   Merge Sort, Quick Sort, Heap Sort. 
+// The worst case best:
+//        O(nlogn):   Merge Sort and Heap Sort.
+ 
 
 // SELECTION -- O(n^2)
 // pretty lousy performance, but ... can be good at checking if everything is already sorted. 
