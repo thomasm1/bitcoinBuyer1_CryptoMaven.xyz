@@ -211,8 +211,44 @@ const belowtenk = btc2019.filter((item) => {
 console.log(belowtenk);
 print('FILTER' + `<br /><code>${JSON.stringify(belowtenk)}</code>`);
 
+
 ///////// MAP  
 console.log("%c Array mapping: ", "color:orange; border:solid 1px orange")
+// create object
+const newBTC = new Map(
+   Object.entries({ bitcoin: 'BTC',  ethereum: 'ETH', litecoin: 'LTC'})
+);
+for (const b of newBTC.values()) {
+   console.log(b);
+}
+for (const b of newBTC.keys()) {
+   console.log(b);
+} 
+
+// count ETH types in array
+const ethBtc_mixed = ethBtc;
+const eth_in_array = ethBtc_mixed.reduce((acc, cur) => {
+     return acc + (cur.Symbol === 'ETHUSD' ? 1 : 0)
+}, 0);
+console.log(eth_in_array);
+
+// take out, clean array (outlier anomalous data)
+const ethBtc_mixed = ethBtc
+const mislabled = ethBtc_mixed.filter(e => e.Symbol === 'ETHUSD')
+const ethBtc_correct = mislabled.map(e => e.Symbol = 'ETH')
+console.log(mislabled) // cleaned full array
+console.log(ethBtc_correct) // cleaned objects
+
+// c vanilla sorting
+const unsorted = ethBtc;
+console.log("unsorted", unsorted) 
+const sortedClose = unsorted.sort((a,b) => a.Close < b.Close); // ?
+console.log("unsorted", unsorted) 
+console.log("sortedClose", sortedClose) 
+// sorted.splice(SortedClose.length/2) //  cut  array to length of median
+// console.log(sorted)
+ 
+
 //
     let canSell = [];
     for (let i = 0; i < btc2019.length; i++) {
@@ -221,6 +257,7 @@ console.log("%c Array mapping: ", "color:orange; border:solid 1px orange")
       }
     }
     console.log(canSell);
+
 // map new arrays -> create array of btc volumes
 const coinIntervals = ethBtc.map(
   coin => `${coin.Symbol} [O:${coin.Open}-C:${coin.Close}]`
@@ -241,6 +278,7 @@ const btcName = btc2019.map((item) => {
   return `<br />${item.Symbol} : ${item.Close}`;
 })
 console.log(btcName); print('MAP' + btcName)
+
 
 /////////// FIND - returns first it finds ..  
 const btcFind = btc2019.find((item) => {
@@ -319,6 +357,7 @@ console.log("%c Sorting (JavaScript library): ", "color:orange; border:solid 1px
 const sortedBtc = btc2019.sort((a, b) => (a.Open > b.Open ? 1 : -1));
 const sortedB = btc2019.sort((a, b) => a.Open - b.Open);
 console.log(sortedBtc, sortedB);
+
 
 ///////////// FILTER/MAP/SORT/REDUCE CALCULATION
 console.log("%c Calc Avg, Sum each pos avg, reduce to total: ", "color:orange; border:solid 1px orange")
