@@ -233,8 +233,8 @@ const eth_in_array = ethBtc_mixed.reduce((acc, cur) => {
 console.log(eth_in_array);
 
 // take out, clean array (outlier anomalous data)
-const ethBtc_mixed = ethBtc
-const mislabled = ethBtc_mixed.filter(e => e.Symbol === 'ETHUSD')
+const ethBtc_mixed1 = ethBtc
+const mislabled = ethBtc_mixed1.filter(e => e.Symbol === 'ETHUSD')
 const ethBtc_correct = mislabled.map(e => e.Symbol = 'ETH')
 console.log(mislabled) // cleaned full array
 console.log(ethBtc_correct) // cleaned objects
