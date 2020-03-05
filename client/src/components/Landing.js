@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Route, BrowserRouter } from 'react-router-dom';
+import { Link  } from 'react-router-dom';
 const Landing = () => {
   return (
     <div style={{ height: '75vh' }} className="container valign-wrapper">
@@ -10,7 +10,7 @@ const Landing = () => {
           </h4>
           <br />
           <div className="col s6">
-            <BrowserRouter
+            <Link
               to="/login"
               style={{
                 width: '140px',
@@ -20,7 +20,7 @@ const Landing = () => {
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
               Login
-            </BrowserRouter>
+            </Link>
           </div>
         </div>
       </div>
