@@ -6,7 +6,7 @@ const Landing = () => {
       <div className="row">
         <div className="col s12 center-align">
           <h4>
-            <b>FindersCalculators</b>
+            <b><em>FindersCalculators</em></b>
           </h4>
           <br />
           <div className="col s6">

@@ -1,4 +1,5 @@
 export const HOST = 'http://localhost:9091'
+// export const HOST = 'http://localhost:8080'
 // User Token
 export const USER_TOKEN = 'USER_TOKEN';
 export const SET_USER_TOKEN = 'SET_USER_TOKEN';

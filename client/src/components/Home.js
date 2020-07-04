@@ -5,8 +5,8 @@ const Home = props => {
     <div style={{ height: '75vh' }} className="container valign-wrapper">
       <div className="row">
         <div className="col s12 center-align">
-          <h4>
-            <b>FindersCalculators - HOME</b>
+         <h4>
+            <b><em>HOME - FindersCalculators</em></b>
           </h4>
           <br />
           <div className="col s6">
