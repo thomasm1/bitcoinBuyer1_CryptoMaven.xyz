@@ -1,9 +1,11 @@
 {
-  "name": "parcel-sandbox",
+  "name": "bitcoin-calculator",
   "version": "1.0.0",
-  "description": "Simple Parcel Sandbox",
-  "main": "index.html",
+  "author": "Thomas Maestas",
+  "description": "Data algorithms/struct. exploratory app",
+  "main": "index.js",
   "scripts": {
+    "block": "tsc -w",
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
