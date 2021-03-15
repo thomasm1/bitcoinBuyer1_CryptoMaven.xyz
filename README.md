@@ -5,7 +5,9 @@
 ## Crypto Data Streaming
 
 ### UI
-
+##### Dependencies
+-
+-
 ### Data 
 ##### Dependencies
 * D3js
