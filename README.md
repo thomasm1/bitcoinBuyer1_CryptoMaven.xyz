@@ -6,8 +6,9 @@
 
 ### UI
 ##### Dependencies
--
--
+-Node.js
+-Express
+
 ### Data 
 ##### Dependencies
 * D3js
