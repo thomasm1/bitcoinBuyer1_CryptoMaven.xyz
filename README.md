@@ -74,3 +74,5 @@ a',
 }
 
 ```
+#### REFERENCES
+##### http://vis.stanford.edu/files/2011-D3-InfoVis.pdf
