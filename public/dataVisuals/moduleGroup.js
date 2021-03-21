@@ -33,33 +33,21 @@ const Module = function (id) {
     const groupsEnter = groups.enter().append('g');
     groupsEnter.merge(groups) // enter+updateb
       .attr('transform', (d,i) =>
-          `translate(${xPosition},${height/3})`
-          )
+          `translate(${i * 100 + 110},${height/3})`
+          );
     groups.exit()
-      .transition().duration(1000)
-      .attr('fill', 'black')
-      .transition().duration(1000)
-      .attr('r', 0)
-      .remove();
-
-    const circles = selection.selectAll('circle')
-      .data(modules);//, d => d.id);  
-      
-    circles
-      .enter().append('circle')
-      .attr('cx', xPosition)
-      .attr('cy', height / 3)
-    .merge(circles) // enter+update
-      // circles  // circles object IS the update function!!!!!
-      .attr('r', (d) => radiusScale(d.type)) 
-      .attr('fill', (d) => colorScale(d.type)); 
-    circles.exit()
-      .transition().duration(1000)
-      .attr('fill', 'black')
-      .transition().duration(1000)
-      .attr('r', 0)
-      .remove()
+    .remove();
  
+    groupsEnter.append('circle') 
+    .merge(groups.select('circle')) //  circles obj IS the update function
+      .attr('r', (d) => radiusScale(d.type)) 
+      .attr('fill', (d) => colorScale(d.type));  
+ 
+    groupsEnter.append('text') 
+    .merge(groups.select('text')) 
+    .text(d => d.type)
+    .attr('y', height / 3 + 80)
+      
     const text = selection.selectAll('text')
       .data(modules);
     text.style('text-anchor','middle')
@@ -69,7 +57,6 @@ const Module = function (id) {
     text
       .enter().append('text')
       .attr('x', xPosition)
-      .attr('y', height / 3 + 80)
     .merge(text)  
       .text(d => d.type);  
     text.exit().remove()
