@@ -27,9 +27,24 @@ const Module = function (id) {
   const capsule = (selection,  props ) => {
     const { modules, height } = props;
 
-    const circles = selection.selectAll('circle')
-     .data(modules); //, d => d.id);
+    const groups = selection.selectAll('g')
+    .data(modules);//, d => d.id); 
 
+    const groupsEnter = groups.enter().append('g');
+    groupsEnter.merge(groups) // enter+updateb
+      .attr('transform', (d,i) =>
+          `translate(${xPosition},${height/3})`
+          )
+    groups.exit()
+      .transition().duration(1000)
+      .attr('fill', 'black')
+      .transition().duration(1000)
+      .attr('r', 0)
+      .remove();
+
+    const circles = selection.selectAll('circle')
+      .data(modules);//, d => d.id);  
+      
     circles
       .enter().append('circle')
       .attr('cx', xPosition)
@@ -37,28 +52,27 @@ const Module = function (id) {
     .merge(circles) // enter+update
       // circles  // circles object IS the update function!!!!!
       .attr('r', (d) => radiusScale(d.type)) 
-      .attr('fill', (d) => colorScale(d.type));
-
+      .attr('fill', (d) => colorScale(d.type)); 
     circles.exit()
       .transition().duration(1000)
       .attr('fill', 'black')
       .transition().duration(1000)
       .attr('r', 0)
       .remove()
-
+ 
     const text = selection.selectAll('text')
       .data(modules);
+    text.style('text-anchor','middle')
+      .style('color','darkblue')
+      .style('font-size','3rem');
+    
     text
       .enter().append('text')
       .attr('x', xPosition)
       .attr('y', height / 3 + 80)
     .merge(text)  
       .text(d => d.type);  
-    text.exit().remove();
-
-    text.style('text-anchor','middle')
-    .style('color','darkblue')
-    .style('font-size','3rem');
+    text.exit().remove()
   };
 
   const render = () => {
