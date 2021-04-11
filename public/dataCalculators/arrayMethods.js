@@ -173,6 +173,7 @@ for (const btc of btc2019) {
 console.timeEnd("timer_forOf");
 //3. forEach
 console.time("timer_forEach");
+
 btc2019.forEach(function (btc) {
   console.log(btc.Symbol, btc.Date, btc.High);
 });
@@ -224,7 +225,7 @@ for (const b of newBTC.values()) {
 for (const b of newBTC.keys()) {
    console.log(b);
 } 
-
+ 
 // count ETH types in array
 const ethBtc_mixed = ethBtc;
 const eth_in_array = ethBtc_mixed.reduce((acc, cur) => {

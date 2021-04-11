@@ -6,6 +6,8 @@ const app= express();
 const port = '5000';
 
 // app.get('/', (req, res) => {
+    // // res.send('<h2>Node-Express-NGINX Reverse Proxy</h2>);
+
     // res.sendFile(path.join(__dirname + '/public/index.html'));
     // res.sendFile(path.join(__dirname + '/index.html'), {root: __dirname});
 // });

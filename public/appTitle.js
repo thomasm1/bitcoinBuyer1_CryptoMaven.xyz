@@ -1,5 +1,6 @@
 
-let title = `Bitcoin Buyer Console: Phase I, Raw Materials`;
+let title = `Bitcoin Buyer Console`;
+
 let tocTitle = `Guiding Inspiration for Bitcoin Buyer:`
 let toc = ` 
 “Typically, momentum trading is effective in markets that 1) do not have valuation models, 2) have large amounts of volatility, and 3) have frequent mispricings. Momentum investing is not typically used in US stocks, bonds, or options – as they have clear valuation models (e.g. discounted cash flow analysis for stocks and black Scholes for options). However, for commodities and assets like crypto – momentum trading can be an effective strategy that allows protection from losses in downtrends and capture subside on the uptrends. Based on historical data, this may be an extremely effective strategy – until a valuation model has been figured out.” <sup>1</sup><br />
@@ -19,10 +20,10 @@ source -https://www.cryptodatadownload.com/data/northamerican/`;
 function TitleWidget(spec) {
     var instance = {};
     var headline, desc;
-
+     
     instance.render = function () {
         var div = d3.select(".appTitle").append("div");
-        div.append("h2").text(headline)
+        div.append("h1").text(headline)
             .attr(
                 "style",
                 "text-align:" +
@@ -77,7 +78,7 @@ var widget = new TitleWidget({
     backgroundColor: "rgba(135, 207, 235, 0.875);",
     width: "100"
 })
-    .headline(title);
+    .headline(title.toUpperCase());
 
 var subWidget = new TitleWidget({
     color: "blue;",

@@ -6,16 +6,21 @@
 
 ### UI
 ##### Dependencies
--Node.js
+-Node.js 
 -Express
 
 ### Data 
 ##### Dependencies
 * D3js
 
-### Load Balancer
-##### Dependencies
-* NGINX
+### Load Balancer 
+* localhost port 5000
+* NGINX -Digital Ocean:  [134.122.15.249] https://hexstat.xyz
+          -local: /home/ubuntu/nfs
+
+* NGINX -AWS - [35.175.138.209] https://hexstat.xyz
+          -local: /home/thomas/apps/bitcoinBuyer1-findersCalculators
+
 
 ## Custom Blockchain App
 ##### Dependencies

@@ -1,6 +1,8 @@
-// import { render } from './indexModule';
-
 const Module = function (id) {
+  const coinArr = ['BTC','XRP', 'HEX','ETH','ADA','AAVE','YFI','XLM'];
+  const colorArr = ['yellow', 'cyan', 'magenta', 'teal','silver','green','blue','orange'];
+  const sizeArr = [30, 30, 30, 30, 30, 30,30,30];
+  
   document.getElementById(id).innerHTML = `  
     <svg id='thisSVG'>
     </svg>  
@@ -9,20 +11,20 @@ const Module = function (id) {
   const svg = d3.select('#thisSVG');
   svg.style('background', 'red');
 
-  const width = +svg.attr('width', '600px');
+  const width = +svg.attr('width', '100%');
   const height = +svg.attr('height');
 
   const colorScale = d3
     .scaleOrdinal()
-    .domain(['BTC', 'ETH', 'HEX'])
-    .range(['yellow', 'cyan', 'magenta']);
+    .domain(coinArr)
+    .range(colorArr);
 
   const radiusScale = d3
     .scaleOrdinal()
-    .domain(['BTC', 'ETH', 'HEX'])
-    .range([50, 45, 30]);
+    .domain(coinArr)
+    .range(sizeArr);
 
-  const xPosition = (d, i) => i * 100 + 110;
+  const xPosition = (d, i) => i * 70 + 70;
 
   const capsule = (selection,  props ) => {
     const { modules, height } = props;
@@ -33,7 +35,7 @@ const Module = function (id) {
     circles
       .enter().append('circle')
       .attr('cx', xPosition)
-      .attr('cy', height / 3)
+      .attr('cy', (height / 3)+30)
     .merge(circles) // enter+update
       // circles  // circles object IS the update function!!!!!
       .attr('r', (d) => radiusScale(d.type)) 
@@ -51,14 +53,15 @@ const Module = function (id) {
     text
       .enter().append('text')
       .attr('x', xPosition)
-      .attr('y', height / 3 + 80)
+      .attr('y', height / 3 +34 )
     .merge(text)  
       .text(d => d.type);  
     text.exit().remove();
 
     text.style('text-anchor','middle')
+    .style('font-family','sans-serif')
     .style('color','darkblue')
-    .style('font-size','3rem');
+    .style('font-size','1rem');
   };
 
   const render = () => {
@@ -75,10 +78,10 @@ const Module = function (id) {
     id: Math.random()
    }); 
 
-  let modules = d3.range(5).map(() => makeModules('BTC'));
+  let modules = d3.range(10).map(() => makeModules('BTC'));
 
   render();
-
+ 
   setTimeout(() => {
     console.log('hey modules', modules);
     modules.pop();
@@ -86,19 +89,42 @@ const Module = function (id) {
   }, 1000);
 
   setTimeout(() => {
-    modules[1].type = 'HEX';
+    modules[1].type = 'XRP';
     render();
-  }, 2000);
+  }, 1500);
 
   setTimeout(() => {
     modules[2].type = 'ETH';
     render();
+  },2000 );
+
+  setTimeout(() => {
+    modules = modules.filter((d,i) => i != 0);
+    render();
+  }, 2500);
+
+  setTimeout(() => {
+    modules[3].type = 'HEX';
+    render();
   }, 3000);
 
   setTimeout(() => {
-    modules = modules.filter((d,i) => i != 2);
+    modules[4].type = 'ADA';
+    render();
+  }, 3500);
+
+  setTimeout(() => {
+    modules[5].type = 'AAVE';
     render();
   }, 4000);
+  setTimeout(() => {
+    modules[6].type = 'YFI';
+    render();
+  }, 4500);
+  setTimeout(() => {
+    modules[7].type = 'XLM';
+    render();
+  }, 5000);
 };
 
 let modInstance = new Module('module');
