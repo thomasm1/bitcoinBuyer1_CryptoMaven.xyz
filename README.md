@@ -15,11 +15,14 @@
 
 ### Load Balancer 
 * localhost port 5000
-* NGINX -Digital Ocean:  [134.122.15.249] https://hexstat.xyz
+* NGINX -Digital Ocean:  [134.122.15.249] 
+          -https://hexstat.xyz
           -local: /home/ubuntu/nfs
 
-* NGINX -AWS - [35.175.138.209] https://hexstat.xyz
-          -local: /home/thomas/apps/bitcoinBuyer1-findersCalculators
+* NGINX -AWS - [35.175.138.209]  
+          * local: /home/thomas/apps/
+          * bitcoinBuyer1-findersCalculators
+          * https://cryptomaven.xyz https://cryptomaven.us
 
 
 ## Custom Blockchain App
@@ -36,8 +39,7 @@ OUTPUT::
 ```sh
 $ npm run start
 
-> server-blockchain@1.0.0 start C:\w\www\git\armchair\bitcoinBuyer1-findersCalcu
-lators\server-blockchain
+> server-blockchain@1.0.0 start C:\w\www\git\armchair\bitcoinBuyer1-findersCalculators\server-blockchain
 > tsc && node .
 
 ⛏️⛏️⛏️ mining yo ⛏️⛏️⛏️

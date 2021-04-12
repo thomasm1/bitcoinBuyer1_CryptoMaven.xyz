@@ -52,9 +52,9 @@ pm2 startup ubuntu
 ```
 sudo ufw enable
 sudo ufw status
-sudo ufw allow ssh (Port 22)
-sudo ufw allow http (Port 80)
-sudo ufw allow https (Port 443)
+sudo ufw allow ssh #(Port 22)
+sudo ufw allow http #Port 80)
+sudo ufw allow https #(Port 443)
 ```
 
 ## 8. Install NGINX and configure
@@ -104,11 +104,13 @@ Choose "Custom nameservers" and add these 3
  
 10. Add SSL with LetsEncrypt
 ```
-sudo add-apt-repository ppa:certbot/certbot
+sudo add-apt-repository ppa:certbot/certbot  #deprecated use==>
+  curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
+
 sudo apt-get update
 sudo apt-get install python-certbot-nginx
-sudo certbot --nginx -d hexstat.xyz -d www.hexstat.xyz
-
+# sudo certbot --nginx -d hexstat.xyz -d www.hexstat.xyz
+sudo certbot --nginx -d mavencrypto.xyz -d www.mavencrypto.xyz
 # Only valid for 90 days, test the renewal process with
 certbot renew --dry-run
 ```
