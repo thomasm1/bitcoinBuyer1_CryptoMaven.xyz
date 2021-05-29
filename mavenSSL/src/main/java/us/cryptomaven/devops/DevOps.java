@@ -60,7 +60,7 @@ public class DevOps implements ApplicationListener<ContextRefreshedEvent> {
         p.setCat3("setCat3");
         p.setTitle("setTitle");
         p.setPost("setPost");
-        p.setUsername("setUsername");
+        p.setUsername("Musing Blockchain");
         p = postRepository.save(p);
 
         Post p1 = new Post();
@@ -69,11 +69,24 @@ public class DevOps implements ApplicationListener<ContextRefreshedEvent> {
         p1.setDate("setDate1");
         p1.setAuthor("setAuthor1");
         p1.setMonthOrder("setMonthOrder1");
-        p1.setCat3("setCat31");
+        p1.setCat3("Web-Dev-Affairs");
         p1.setTitle("setTitle1");
         p1.setPost("setPost1");
-        p1.setUsername("setUsername1");
+        p1.setUsername("k");
         p1 = postRepository.save(p1);
+
+        Post p2 = new Post();
+        p2.setId(1042L);
+        p2.setDid("setDid");
+        p2.setDate("setDate");
+        p2.setAuthor("setAuthor");
+        p2.setMonthOrder("setMonthOrder");
+        p2.setCat3("Web-Dev-Affairs");
+        p2.setTitle("setTitle");
+        p2.setPost("Web-Dev-Affairs");
+        p2.setUsername("kd");
+        p2 = postRepository.save(p2);
+
 
         User tm = new User();
         tm.setFirstName("Thomas");

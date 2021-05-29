@@ -11,6 +11,7 @@ import us.cryptomaven.services.PostService;
 
 import java.net.URI;
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -28,9 +29,11 @@ public class PostController {
 	public List<Post> getPosts(){
 //		return postRepository.findByUsername(username);
 		return postService.findAll();
-
 	}
-
+@RequestMapping(path="/{category}",method=RequestMethod.GET)
+	public List<Post> getPostsByCategory(@PathVariable String category ){
+		return postRepository.findByCat3(category);
+}
 	@RequestMapping(path="/{username}/posts", method=RequestMethod.GET)
 	public List<Post> getPostsByName(@PathVariable String username){
 //		return postRepository.findByUsername(username);
@@ -53,6 +56,9 @@ public class PostController {
 		 return ResponseEntity.created(uri).build();
  
 	}
+
+
+
 			@RequestMapping(value="/{username}/posts/{id}",method=RequestMethod.GET)
 			public Post getPost(@PathVariable String username, @PathVariable long id){
 //				return postRepository.findById(id).get();

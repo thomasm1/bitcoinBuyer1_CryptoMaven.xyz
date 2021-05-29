@@ -30,16 +30,16 @@ public class PostServiceImpl implements PostService {
 	return pr.findOne(id);
 		}
 
+
 	
-	
-//	@Override
-//	public Post getPostByUsername(String username) {
-//	try {
-//		return pr.findByUsername(username).get(); 
-//	} catch (Exception e) {
-//	return null;
-//	}
-//	}
+	@Override
+	public List<Post> findByCat3(String category) {
+	try {
+		return pr.findByCat3(category);
+	} catch (Exception e) {
+	return null;
+	}
+	}
 
 //	@Override
 //	public Object getPostByUsernameAndPassword(String email, String password) {

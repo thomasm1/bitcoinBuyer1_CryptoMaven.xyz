@@ -13,6 +13,6 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 	List<Post> findByUsername(String username);
 	Post save(Post post);
 
-	Optional<Post> findByCat3(String cat3);
+	List<Post> findByCat3(String cat3);
 	Optional<Post> findByDid(String did);
 }
