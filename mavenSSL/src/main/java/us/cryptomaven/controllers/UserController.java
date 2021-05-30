@@ -1,14 +1,17 @@
 package us.cryptomaven.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import us.cryptomaven.domain.Product;
 import us.cryptomaven.domain.User;
 import us.cryptomaven.repositories.UserRepository;
 import us.cryptomaven.services.UserService;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/")
+@RequestMapping("/api/users")
 public class UserController {
     @Autowired
     UserService us;
@@ -16,14 +19,22 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
-    @RequestMapping(value = "/users", method = RequestMethod.GET )
+    @RequestMapping(value = "", method = RequestMethod.GET )
     public Iterable<User> getUsers() {
         return us.getUsers();
     }
 
-    @RequestMapping(value = "/users", method = RequestMethod.POST, consumes = "application/json")
-    public User createUser(@RequestBody User user) {
-        return us.addUser(user);
+
+    @RequestMapping(value="/add", method = RequestMethod.POST, consumes = "application/json")
+    public ResponseEntity<Product> addProduct(@RequestBody User user) {
+        try {
+            us.getUserById(user.getId()).equals(null);
+        }catch(Exception e) {
+            us.addUser(user);
+
+            return new ResponseEntity<Product>( HttpStatus.CREATED);
+        }
+        return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
     }
 
 }

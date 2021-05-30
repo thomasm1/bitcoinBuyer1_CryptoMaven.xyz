@@ -25,8 +25,9 @@ public class Product {
     private String coinDescription;
 
 //    @ManyToOne
-//    private User user;
-
+//    private User user_;
+//    @ManyToMany
+//    private List<ProductUser> productUser = new ArrayList<>();
     @Column(name="price")
     private BigDecimal price;
 
@@ -53,7 +54,7 @@ public class Product {
 
     public Product() {};
 
-    public Product( String coinName, String coinDescription, String symbol, String category, Double retailPrice, Double discountedPrice, Double volume, BigDecimal price, String imageUrl) {
+    public Product(String coinName, String coinDescription, String symbol, String category, Double retailPrice, Double discountedPrice, Double volume, BigDecimal price, String imageUrl ) {
 //        this.version = version;
 //        this.dateCreated = dateCreated;
 //        this.lastUpdated = lastUpdated;
@@ -65,7 +66,7 @@ public class Product {
 
         this.discountedPrice = discountedPrice;
         this.volume = volume;
-//        this.user = user;
+//        this.user_ = user_;
 //        this.price = price;
 //        this.productCategories = productCategories;
 

@@ -24,4 +24,5 @@ public interface UserService {
     public List<User> getUsersByEmailAndPassword(String email, String password);
 
     public boolean deleteUserById(Long id);
+
 }

@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import us.cryptomaven.domain.Post;
 import us.cryptomaven.domain.Product;
 import us.cryptomaven.repositories.PostRepository;
 import us.cryptomaven.repositories.ProductRepository;
@@ -52,25 +53,29 @@ public class ProductController {
         return productService.getProducts();
 
     }
+    ///////88
+//    @RequestMapping(method=RequestMethod.POST, value="/add") //  //value ="/{username}/posts/{id}" )
+//    public ResponseEntity<Product> updateProduct(
+//            @PathVariable String username,
+//            @PathVariable long id, @RequestBody Product p){
+//
+//         Product product = productRepo.save(p);
+//        return new ResponseEntity<Product>(p, HttpStatus.OK);
+//
+//    }
+    ////////////88
     // 1. Add a new Product   	WORKING BOTH STATUSES
-    @RequestMapping(value="/add", method = RequestMethod.GET)
+    @RequestMapping(value="/add", method = RequestMethod.POST)
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
-
         try {
-
             productService.getProductById(product.getId()).equals(null);
-
         }catch(Exception e) {
-
 //            productRepo.put(product.getId(), product);
             productService.addProduct(product);
 
             return new ResponseEntity<Product>( HttpStatus.CREATED);
-
         }
-
         return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
-
     }
 
     // 2. Update a product by id 	WORKING BOTH STATUSES

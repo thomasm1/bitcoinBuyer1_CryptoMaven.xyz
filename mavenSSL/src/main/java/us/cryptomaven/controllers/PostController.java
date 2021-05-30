@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import us.cryptomaven.domain.Post;
+import us.cryptomaven.domain.Product;
 import us.cryptomaven.repositories.PostRepository;
 import us.cryptomaven.services.PostService;
 
@@ -37,6 +38,18 @@ public class PostController {
 	@RequestMapping(path="/user/{username}", method=RequestMethod.GET)
 	public List<Post> findByUsername(@PathVariable String username){
 		return postService.findByUsernames(username);
+	}
+
+	// 1. Add a new Product   	WORKING BOTH STATUSES
+	@RequestMapping(value="/add", method = RequestMethod.POST)
+	public ResponseEntity<Post> addPost(@RequestBody Post post) {
+		try {
+			postService.getPostById(post.getId()).equals(null);
+		}catch(Exception e) {
+			postService.createPost(post);
+			return new ResponseEntity<Post>( HttpStatus.CREATED);
+		}
+		return new ResponseEntity<Post>(HttpStatus.BAD_REQUEST);
 	}
 
 	@RequestMapping(value="/{username}/posts",method=RequestMethod.POST)

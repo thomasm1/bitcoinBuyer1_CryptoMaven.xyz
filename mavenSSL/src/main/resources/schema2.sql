@@ -1,0 +1,29 @@
+--CREATE SEQUENCE IF NOT EXISTS user_seq;
+--
+--CREATE TABLE IF NOT EXISTS user (
+--
+--user_id BIGINT NOT NULL DEFAULT nextval('user_seq') PRIMARY KEY,
+--email VARCHAR(100) NOT NULL,
+--first_name VARCHAR(100) NOT NULL,
+--last_name VARCHAR(100) NOT NULL
+--
+--);
+--
+--CREATE SEQUENCE IF NOT EXISTS product_seq;
+--
+--CREATE TABLE IF NOT EXISTS product (
+--
+--product_id BIGINT NOT NULL DEFAULT nextval('product_seq') PRIMARY KEY,
+--name VARCHAR(100) NOT NULL,
+--stage VARCHAR(100) NOT NULL,
+--description VARCHAR(500) NOT NULL
+--
+--);
+--
+--
+--CREATE TABLE IF NOT EXISTS product_user (
+--
+--product_id BIGINT REFERENCES product,
+--user_id BIGINT REFERENCES user
+--
+--);

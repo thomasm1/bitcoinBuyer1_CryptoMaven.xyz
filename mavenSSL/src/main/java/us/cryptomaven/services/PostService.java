@@ -15,4 +15,5 @@ public interface PostService {
 	public List<Post> findAll();
 	public Post updatesPost(Post change);
 	public boolean deletePost(Post post);
+
 }
