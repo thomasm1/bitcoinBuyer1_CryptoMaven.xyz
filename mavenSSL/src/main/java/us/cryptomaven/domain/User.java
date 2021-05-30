@@ -32,24 +32,26 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private Long id;
 
-    private Date dateCreated;
-    private Date lastUpdated;
+//    private Date dateCreated;
+//    private Date lastUpdated;
 
-    @Column(length = 200)
+    @Column(name="first_name")
     private String firstName;
 
-    @Column(length = 200)
+    @Column(name="last_name")
     private String lastName;
 
-    @Column(length = 200)
+    @Column(name="image")
     private String image;
 
-    @Column(length = 200)
+    @Column(name="email")
     private String email;
 
+    @Column(name="password")
     private String password;
 
     public User() {}
@@ -94,13 +96,13 @@ public class User {
         this.image = image;
     }
 
-    public Date getDateCreated() {
-        return dateCreated;
-    }
-
-    public Date getLastUpdated() {
-        return lastUpdated;
-    }
+//    public Date getDateCreated() {
+//        return dateCreated;
+//    }
+//
+//    public Date getLastUpdated() {
+//        return lastUpdated;
+//    }
 
     public void setPassword(String password) {
         this.password = password;
@@ -118,12 +120,12 @@ public class User {
         this.email = email;
     }
 
-    @PreUpdate
-    @PrePersist
-    public void updateTimeStamps() {
-        lastUpdated = new Date();
-        if (dateCreated==null) {
-            dateCreated = new Date();
-        }
-    }
+//    @PreUpdate
+//    @PrePersist
+//    public void updateTimeStamps() {
+//        lastUpdated = new Date();
+//        if (dateCreated==null) {
+//            dateCreated = new Date();
+//        }
+//    }
 }

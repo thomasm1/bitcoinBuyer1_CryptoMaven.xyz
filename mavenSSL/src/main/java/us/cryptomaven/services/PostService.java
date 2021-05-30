@@ -9,7 +9,8 @@ public interface PostService {
 	public Post getPostById(Long id); 
 	public Post getPostByDid(String did);
 	public List<Post> findByCat3(String category);
-	
+	public List<Post> findByUsernames(String username);
+
 	public List<Post> getAllPosts();
 	public List<Post> findAll();
 	public Post updatesPost(Post change);

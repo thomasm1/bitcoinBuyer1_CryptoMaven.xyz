@@ -1,15 +1,14 @@
 package us.cryptomaven.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.List;
 
 @Entity
+@Table
 public class Post {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
     private Long id;
 
@@ -45,10 +44,10 @@ public class Post {
 
     }
 
-    public Post(Long id, String did, String date, String author, String monthOrder, String cat3, String title, String post,
+    public Post(String did, String date, String author, String monthOrder, String cat3, String title, String post,
                 String blogcite, String username) {
-        super();
-        this.id = id;
+//        super();
+//        this.id = id;
         this.did = did;
         this.date = date;
         this.author = author;

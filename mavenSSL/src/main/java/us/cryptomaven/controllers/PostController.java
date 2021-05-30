@@ -34,10 +34,9 @@ public class PostController {
 	public List<Post> getPostsByCategory(@PathVariable String category ){
 		return postRepository.findByCat3(category);
 }
-	@RequestMapping(path="/{username}/posts", method=RequestMethod.GET)
-	public List<Post> getPostsByName(@PathVariable String username){
-//		return postRepository.findByUsername(username);
-		return postService.findAll(); 
+	@RequestMapping(path="/user/{username}", method=RequestMethod.GET)
+	public List<Post> findByUsername(@PathVariable String username){
+		return postService.findByUsernames(username);
 	}
 
 	@RequestMapping(value="/{username}/posts",method=RequestMethod.POST)

@@ -14,5 +14,6 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 	Post save(Post post);
 
 	List<Post> findByCat3(String cat3);
+
 	Optional<Post> findByDid(String did);
 }

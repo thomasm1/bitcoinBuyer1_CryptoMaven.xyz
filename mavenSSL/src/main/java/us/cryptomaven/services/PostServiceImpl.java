@@ -31,11 +31,19 @@ public class PostServiceImpl implements PostService {
 		}
 
 
-	
 	@Override
 	public List<Post> findByCat3(String category) {
+		try {
+			return pr.findByCat3(category);
+		} catch (Exception e) {
+			return null;
+		}
+	}
+	
+	@Override
+	public List<Post> findByUsernames(String username) {
 	try {
-		return pr.findByCat3(category);
+		return pr.findByUsername(username);
 	} catch (Exception e) {
 	return null;
 	}

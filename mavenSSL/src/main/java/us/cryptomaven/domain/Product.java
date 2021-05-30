@@ -10,27 +10,30 @@ import java.util.List;
 @Table
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Version
-    private Integer version;
-
-    private Date dateCreated;
-    private Date lastUpdated;
+//    @Version
+//    private Integer version;
+//
+//    private Date dateCreated;
+//    private Date lastUpdated;
+    @Column( name="coin_name")
     private String coinName;
 
-    @Column(length = 2000)
+    @Column( name="coin_description")
     private String coinDescription;
 
-    @ManyToOne
-    private User user;
+//    @ManyToOne
+//    private User user;
 
+    @Column(name="price")
     private BigDecimal price;
 
-    @ManyToMany
-    private List<ProductCategory> productCategories = new ArrayList<>();
+//    @ManyToMany
+//    private List<ProductCategory> productCategories = new ArrayList<>();
 
+    @Column(name="image_url")
     private String imageUrl;
 
     @Column(name="symbol")
@@ -50,12 +53,11 @@ public class Product {
 
     public Product() {};
 
-    public Product(Integer version, Date dateCreated, Date lastUpdated, String coinName, String coinDescription, String symbol, String category, Double retailPrice, Double discountedPrice, Double volume, User user, BigDecimal price, List<ProductCategory> productCategories, String imageUrl) {
-        this.version = version;
-        this.dateCreated = dateCreated;
-        this.lastUpdated = lastUpdated;
+    public Product( String coinName, String coinDescription, String symbol, String category, Double retailPrice, Double discountedPrice, Double volume, BigDecimal price, String imageUrl) {
+//        this.version = version;
+//        this.dateCreated = dateCreated;
+//        this.lastUpdated = lastUpdated;
         this.coinName = coinName;
-
         this.coinDescription = coinDescription;
         this.symbol = symbol;
         this.category = category;
@@ -63,9 +65,9 @@ public class Product {
 
         this.discountedPrice = discountedPrice;
         this.volume = volume;
-        this.user = user;
-        this.price = price;
-        this.productCategories = productCategories;
+//        this.user = user;
+//        this.price = price;
+//        this.productCategories = productCategories;
 
         this.imageUrl = imageUrl;
     }
@@ -73,13 +75,13 @@ public class Product {
 
 
 
-    public void setDateCreated(Date dateCreated) {
-        this.dateCreated = dateCreated;
-    }
-
-    public void setLastUpdated(Date lastUpdated) {
-        this.lastUpdated = lastUpdated;
-    }
+//    public void setDateCreated(Date dateCreated) {
+//        this.dateCreated = dateCreated;
+//    }
+//
+//    public void setLastUpdated(Date lastUpdated) {
+//        this.lastUpdated = lastUpdated;
+//    }
 
     public String getSymbol() {
         return symbol;
@@ -147,13 +149,13 @@ public class Product {
         this.coinDescription = coinDescription;
     }
 
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
 
     public BigDecimal getPrice() {
         return price;
@@ -163,13 +165,13 @@ public class Product {
         this.price = price;
     }
 
-    public List<ProductCategory> getProductCategories() {
-        return productCategories;
-    }
-
-    public void setProductCategories(List<ProductCategory> productCategories) {
-        this.productCategories = productCategories;
-    }
+//    public List<ProductCategory> getProductCategories() {
+//        return productCategories;
+//    }
+//
+//    public void setProductCategories(List<ProductCategory> productCategories) {
+//        this.productCategories = productCategories;
+//    }
 
     public String getImageUrl() {
         return imageUrl;
@@ -179,28 +181,28 @@ public class Product {
         this.imageUrl = imageUrl;
     }
 
-    public Date getDateCreated() {
-        return dateCreated;
-    }
+//    public Date getDateCreated() {
+//        return dateCreated;
+//    }
+//
+//    public Date getLastUpdated() {
+//        return lastUpdated;
+//    }
+//
+//    public Integer getVersion() {
+//        return version;
+//    }
+//
+//    public void setVersion(Integer version) {
+//        this.version = version;
+//    }
 
-    public Date getLastUpdated() {
-        return lastUpdated;
-    }
-
-    public Integer getVersion() {
-        return version;
-    }
-
-    public void setVersion(Integer version) {
-        this.version = version;
-    }
-
-    @PreUpdate
-    @PrePersist
-    public void updateTimeStamps() {
-        lastUpdated = new Date();
-        if (dateCreated==null) {
-            dateCreated = new Date();
-        }
-    }
+//    @PreUpdate
+//    @PrePersist
+//    public void updateTimeStamps() {
+//        lastUpdated = new Date();
+//        if (dateCreated==null) {
+//            dateCreated = new Date();
+//        }
+//    }
 }
