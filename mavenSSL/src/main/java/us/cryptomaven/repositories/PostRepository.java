@@ -16,4 +16,7 @@ public interface PostRepository extends CrudRepository<Post, Long> {
 	List<Post> findByCat3(String cat3);
 
 	Optional<Post> findByDid(String did);
+
+	boolean deleteById(Long id);
+	boolean deletePostById(Long id);
 }

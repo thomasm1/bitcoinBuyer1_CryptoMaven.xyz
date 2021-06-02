@@ -60,7 +60,7 @@ public class Post {
     }
 
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 

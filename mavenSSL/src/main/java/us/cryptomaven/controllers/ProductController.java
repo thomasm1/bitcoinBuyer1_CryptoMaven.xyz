@@ -37,11 +37,6 @@ public class ProductController {
 //    }
 
 
-    @RequestMapping("/list")
-    public List<Object> listProducts() {
-        return null;
-    }
-
     @RequestMapping("/test")
     public String products() {
         return "products test";
@@ -53,17 +48,7 @@ public class ProductController {
         return productService.getProducts();
 
     }
-    ///////88
-//    @RequestMapping(method=RequestMethod.POST, value="/add") //  //value ="/{username}/posts/{id}" )
-//    public ResponseEntity<Product> updateProduct(
-//            @PathVariable String username,
-//            @PathVariable long id, @RequestBody Product p){
-//
-//         Product product = productRepo.save(p);
-//        return new ResponseEntity<Product>(p, HttpStatus.OK);
-//
-//    }
-    ////////////88
+
     // 1. Add a new Product   	WORKING BOTH STATUSES
     @RequestMapping(value="/add", method = RequestMethod.POST)
     public ResponseEntity<Product> addProduct(@RequestBody Product product) {
@@ -79,15 +64,12 @@ public class ProductController {
     }
 
     // 2. Update a product by id 	WORKING BOTH STATUSES
-    @RequestMapping(value="/{id}", consumes="application/json", method=RequestMethod.GET)
+    @RequestMapping(value="/{id}", consumes="application/json", method=RequestMethod.PUT)
     public ResponseEntity<Product> updateProductById(@PathVariable("id") Long id, @RequestBody Product product) {
         try {
             productService.getProductById(id).equals(null);
-
         }catch(Exception e) {
-
             return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
-
         }
         if (productService.getProductById(id).getId().equals(product.getId())) {
             productService.updateProductById(product);
@@ -95,8 +77,6 @@ public class ProductController {
         }else {
             return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
         }
-
-
     }
 
 
@@ -136,8 +116,11 @@ public class ProductController {
 
 
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-    public ResponseEntity<Object> delete(@PathVariable("id") Long id) {
-//        productRepo.remove(id);
-        return new ResponseEntity<Object>("Product deleted successfully", HttpStatus.OK);
+    public boolean delete(@PathVariable("id") Long id) {
+        try {
+            return productService.deleteProductById(id);
+        } catch (IllegalArgumentException e) {
+            return false;
+        }
     }
 }

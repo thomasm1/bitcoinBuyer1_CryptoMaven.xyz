@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import us.cryptomaven.domain.Post;
 import us.cryptomaven.domain.Product;
+import us.cryptomaven.domain.User;
 import us.cryptomaven.repositories.PostRepository;
 import us.cryptomaven.services.PostService;
 
@@ -52,23 +53,33 @@ public class PostController {
 		return new ResponseEntity<Post>(HttpStatus.BAD_REQUEST);
 	}
 
-	@RequestMapping(value="/{username}/posts",method=RequestMethod.POST)
-	public ResponseEntity<Void> createPost(
-			@PathVariable String username, 
-		    @RequestBody Post post
-			){
-		 
-		post.setUsername(username);
-		Post postCreated = postRepository.save(post);
-//		 Post postCreated = postService.save(post); 
- 
-		 URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
-				 .path("/{id}").buildAndExpand(postCreated.getId()).toUri();
-		 
-		 return ResponseEntity.created(uri).build();
- 
+//	@RequestMapping(value="/{username}/posts",method=RequestMethod.POST)
+//	public ResponseEntity<Void> createPost(
+//			@PathVariable String username, 
+//		    @RequestBody Post post
+//			){ 
+//		post.setUsername(username);
+//		Post postCreated = postRepository.save(post);
+////		 Post postCreated = postService.save(post);  
+//		 URI uri = ServletUriComponentsBuilder.fromCurrentRequest()
+//				 .path("/{id}").buildAndExpand(postCreated.getId()).toUri(); 
+//		 return ResponseEntity.created(uri).build(); 
+//	}
+// 2. Update a user by id 	WORKING BOTH STATUSES
+@RequestMapping(value="/{id}", consumes="application/json", method=RequestMethod.PUT)
+public ResponseEntity<Post> updatePostById(@PathVariable("id") Long id, @RequestBody Post post) {
+	try {
+		postService.getPostById(id).equals(null);
+	}catch(Exception e) {
+		return new ResponseEntity<Post>(HttpStatus.BAD_REQUEST);
 	}
-
+	if (postService.getPostById(id).getId().equals(post.getId())) {
+		postService.updatePostById(post);
+		return new ResponseEntity<Post>( HttpStatus.OK);
+	}else {
+		return new ResponseEntity<Post>(HttpStatus.BAD_REQUEST);
+	}
+}
 
 
 			@RequestMapping(value="/{username}/posts/{id}",method=RequestMethod.GET)
@@ -80,15 +91,19 @@ public class PostController {
 			}
 
 
-			@RequestMapping(value="/api/{username}/posts/{id}",method=RequestMethod.DELETE)
-			public ResponseEntity<Void> deletePost(
-					@PathVariable String username, @PathVariable long id){
+			@RequestMapping(value="/{id}",method=RequestMethod.DELETE)
+			public boolean deletePost( @PathVariable Long id){
 				
 //				postRepository.deleteById(id);
-				postRepository.delete(id);
+//				postRepository.delete(id);
+//				return ResponseEntity.noContent().build();
+				try {
+					return postService.deleteById(id);
+				} catch (IllegalArgumentException e) {
+					return false;
+				}
 
-				return ResponseEntity.noContent().build();
-		//		Post post = postService.deleteById(id);
+// 		Post post = postService.deleteById(id);
 		//		if(post!=null) {
 		//			return ResponseEntity.noContent().build();
 		//		}
@@ -99,7 +114,7 @@ public class PostController {
 			public ResponseEntity<Post> updatePost(
 					@PathVariable String username, 
 					@PathVariable long id, @RequestBody Post post){
-				
+
 				Post postUpdated = postRepository.save(post);
 				 return new ResponseEntity<Post>(post, HttpStatus.OK);
 				

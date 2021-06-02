@@ -36,7 +36,21 @@ public class UserController {
         }
         return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
     }
-
+    // 2. Update a user by id 	WORKING BOTH STATUSES
+    @RequestMapping(value="/{id}", consumes="application/json", method=RequestMethod.PUT)
+    public ResponseEntity<Product> updateProductById(@PathVariable("id") Long id, @RequestBody User user) {
+        try {
+            us.getUserById(id).equals(null);
+        }catch(Exception e) {
+            return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
+        }
+        if (us.getUserById(id).getId().equals(user.getId())) {
+            us.updateUserById(user);
+            return new ResponseEntity<Product>( HttpStatus.OK);
+        }else {
+            return new ResponseEntity<Product>(HttpStatus.BAD_REQUEST);
+        }
+    }
 }
 
 

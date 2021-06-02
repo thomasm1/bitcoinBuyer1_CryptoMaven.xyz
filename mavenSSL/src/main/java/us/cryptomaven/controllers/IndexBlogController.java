@@ -15,28 +15,32 @@ public class IndexBlogController {
 
     private PostService postService;
 
+    @Autowired
+    public void setPostService(PostService postService) {
+        this.postService = postService;
+    }
 
+
+    @RequestMapping({"", "indexBlog"})
+    public String getIndexBlog(Model model){
+        model.addAttribute("posts", postService.getAllPosts());
+
+        return "indexBlog";
+    }
+//    @RequestMapping({"/new", "indexBlog"})
+//    public String setIndexBlog(Model model){
+//        Post apost = new Post();
+//        model.addAttribute("post", apost);
+////        model.addAttribute("posts", postService.getAllPosts());
+//
+//        return "indexBlog";
+//    }
     @RequestMapping("/login")
     public String showLoginForm(Model model){
 
         model.addAttribute("blogCommand", new BlogCommand());
 
         return "blogform";
-    }
-
-
-    @Autowired
-    public void setPostService(PostService postService) {
-        this.postService = postService;
-    }
-
-    @RequestMapping({"/new", "indexBlog"})
-    public String getIndexBlog(Model model){
-        Post apost = new Post();
-        model.addAttribute("post", apost);
-//        model.addAttribute("posts", postService.getAllPosts());
-
-        return "indexBlog";
     }
 
 }

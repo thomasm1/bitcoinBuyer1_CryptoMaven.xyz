@@ -72,13 +72,28 @@ public class PostServiceImpl implements PostService {
 
 	@Override
 	public boolean deletePost(Post post) {
+		return false;
+	}
+
+	@Override
+	public boolean deleteById(Long id) {
 		try {
-			pr.delete(post);
+			pr.deleteById(id);
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 			return false;
 		}
 		return true; 
 	}
- 
+
+	@Override
+	public Post updatePostById(Post post) {
+		try {
+			pr.save(post);
+		} catch (IllegalArgumentException e) {
+			return null;
+		}
+		return post;
+	}
+
 }

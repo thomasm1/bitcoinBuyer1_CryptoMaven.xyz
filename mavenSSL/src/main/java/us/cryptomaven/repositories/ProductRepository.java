@@ -17,14 +17,12 @@ public interface ProductRepository extends CrudRepository<Product, Long> {  // J
 
     public List<Product> findAllByCategoryAndVolume(String category, Double volume);
 
-    boolean deleteProductById(Product product);
-
+    boolean deleteProductById(Long id);
 
     Object findAll(Sort sort);
 
     Product save(Product product);
 
-    boolean deleteUserById(Product one);
 
 
 }

@@ -49,6 +49,7 @@ public class ProductServiceImpl implements ProductService {
         return productRepository.save(product);
     }
 
+
     public Product getProductById(Long id) {
         return productRepository.findOne(id); //.get();
     }
@@ -72,6 +73,6 @@ public class ProductServiceImpl implements ProductService {
     }
 
     public boolean deleteProductById(Long id) {
-        return productRepository.deleteProductById(productRepository.findOne(id));// .get());
+        return productRepository.deleteProductById(id);// .get());
     }
 }
