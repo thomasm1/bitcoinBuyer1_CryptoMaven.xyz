@@ -82,11 +82,16 @@ public ResponseEntity<Post> updatePostById(@PathVariable("id") Long id, @Request
 }
 
 
-			@RequestMapping(value="/{username}/posts/{id}",method=RequestMethod.GET)
-			public Post getPost(@PathVariable String username, @PathVariable long id){
+			@RequestMapping(value="/{id}",method=RequestMethod.GET)
+			public Post getPost(@PathVariable long id){
 //				return postRepository.findById(id).get();
-				return postRepository.findOne(id);
-
+			try {
+//				return postRepository.findOne(id);//
+				return postService.getPostById(id);
+			} catch (IllegalArgumentException e) {
+				System.out.println(e);
+				return null;
+			}
 				//		return postService.findById(id); 
 			}
 

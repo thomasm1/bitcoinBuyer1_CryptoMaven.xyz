@@ -195,6 +195,45 @@
 
                                         </div>
                                         <div class="mod-behave ">
+
+                                            <!--                                            /////////////////////////////////-->
+                                            <div class='row coin-list list'>
+                                                <div th:each="post,it : ${posts}">
+                                                    <div th:if="${(it.count gt 0 and it.count lt 40)}">
+                                                        <div th:replace="fragments/postdiv :: postdiv">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <tr th:each="aPost : ${postsList}">
+                                                    <td th:text="${aPost.title}"/>
+                                                    <td th:text="${aPost.blogcite}"/>
+                                                </tr>
+                                            </div>
+<!--                                            ///////-->
+                                            <div class="row">
+                                                <a href="blog.html" th:href="@{/post/1}">
+                                                    <p></p>
+                                                    <div class="col-lg-12">
+                                                        <div class="coin-box-image-container">
+                                                            <img role="presentation"
+                                                                 src="../static/images/TMMmoonscape_450.jpg"
+                                                                 th:src="@{images/TMMmoonscape_450.jpg}"
+                                                                 class="coin-box-image"/>
+                                                        </div>
+                                                        <div class="coin-listing-title">
+                                                            Introduction to Spring
+                                                        </div>
+                                                        <div class="coin-listing-subtitle">
+                                                            Introductory Coin for the Spring Framework
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+<!--                                            /////////////////////////////////-->
+
                                             <div id="top"></div>
 
                                             <div id="jan19"></div>
@@ -230,7 +269,7 @@
                                 </style>
 
 <div>
-    
+
 </div>
 <!--                                <div id="lambda-posts" class="lambda-posts">-->
 <!--                                    Title {{titleLambda}} endtitle-->
