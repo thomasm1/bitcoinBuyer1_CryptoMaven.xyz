@@ -113,6 +113,9 @@ sudo apt-get install python-certbot-nginx
 sudo certbot --nginx -d mavencrypto.xyz -d www.mavencrypto.xyz
 # Only valid for 90 days, test the renewal process with
 certbot renew --dry-run
+
+sudo apt-get install python-certbot-apache
+sudo certbot --apache -d mavencrypto.xyz -d www.mavencrypto.xyz
 ```
  
 
