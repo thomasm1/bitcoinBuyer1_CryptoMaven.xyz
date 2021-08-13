@@ -9,7 +9,7 @@ const Module = function (id) {
     `;
 
   const svg = d3.select('#thisSVG');
-  svg.style('background', 'red');
+  svg.style('background', 'steelblue');
 
   const width = +svg.attr('width', '100%');
   const height = +svg.attr('height');
@@ -35,7 +35,7 @@ const Module = function (id) {
     circles
       .enter().append('circle')
       .attr('cx', xPosition)
-      .attr('cy', (height / 3)+30)
+      .attr('cy', (height / 3)+40)
     .merge(circles) // enter+update
       // circles  // circles object IS the update function!!!!!
       .attr('r', (d) => radiusScale(d.type)) 
