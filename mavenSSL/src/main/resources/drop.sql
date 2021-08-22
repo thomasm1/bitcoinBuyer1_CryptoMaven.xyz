@@ -1,3 +1,0 @@
---DROP TABLE product_user IF EXISTS;
---DROP TABLE product IF EXISTS;
---DROP TABLE user IF EXISTS;
