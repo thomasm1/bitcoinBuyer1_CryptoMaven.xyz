@@ -12,7 +12,7 @@ const port = '5000';
     // res.sendFile(path.join(__dirname + '/index.html'), {root: __dirname});
 // });
 
-app.use(express.static('public'));
+app.use(express.static('index'));
  
 
 app.listen(port, () => {

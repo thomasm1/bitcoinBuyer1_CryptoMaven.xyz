@@ -14,8 +14,9 @@
 
     <title>ArrayMaker</title>
     <meta charset="UTF-8" />
+    <!--style overwrites bootstrap-->
     <link rel="stylesheet" href="styles.css" />
-
+ 
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
@@ -178,4 +179,10 @@
 
   <script src="dataCalculators/consecDays.js"></script>
   <script src="dataCalculators/searchDays.js"></script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script> 
 </html>
