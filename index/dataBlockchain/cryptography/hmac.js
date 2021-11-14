@@ -11,5 +11,4 @@ console.log(hmac);
 const key2 = 'other-password';
 const hmac2 = createHmac('sha256', key2).update(message).digest('hex');
 console.log(hmac);
-
-con
+ 
