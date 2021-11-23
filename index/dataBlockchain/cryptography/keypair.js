@@ -14,9 +14,9 @@ const { privateKey, publicKey } = generateKeyPairSync('rsa', {
   },
 });
 
-// console.log(publicKey);
-// console.log(privateKey);
+console.log(publicKey);
+console.log(privateKey);
 
-module.exports = {
-    privateKey, publicKey
+module.exports = { 
+  privateKey, publicKey
 }
