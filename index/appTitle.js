@@ -15,7 +15,23 @@ let toc = `
  
 data from: 07-04-2019<br />
 source -https://www.cryptodatadownload.com/data/northamerican/`;
+                              
+//////////////////////////////////////////////////////////
+// const pBrowser = document.querySelector('p')
+const element = d3.select('#module')
+  .append('p')
+  // .attr('class', 'foo')
+  // .attr('class', 'bar')
+  .classed('foo', true)
+  .classed('bar', false)
+  .text('Data Driven Documents - d3 - connect')
+  .style('color', 'blue')
+  .style('text-align','right')
+  .style('margin-right', '10px');
 
+// console.log(pBrowser)
+console.log(element)
+/////////////////////////////////////////////////////////
 
 function TitleWidget(spec) {
     var instance = {};
