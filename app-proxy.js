@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 5000;
  
 
 // Handlebars
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({ defaultLayout: 'mavenlanding' }));
 app.set('view engine', 'handlebars');
 
 // Body Parser
@@ -30,7 +30,7 @@ app.use(express.urlencoded({ extended: false }));
 
 // app.use(express.static('index'));
 app.use(express.static(path.join(__dirname, 'index')));
-app.get('/', (req, res) => res.render('index', { layout: 'landing' }));
+app.get('/', (req, res) => res.render('index', { layout: 'maven' }));
 
 app.use('/gigs', require('./routes/gigs'));  
 
