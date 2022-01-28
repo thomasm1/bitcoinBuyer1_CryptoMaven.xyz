@@ -3,8 +3,24 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser'); 
 const path = require('path');
 
+const Sequelize = require('sequelize'); 
+
 // Database
-const db = require('./config/database');
+const db = require('./config/database');  // move later
+// const db = new Sequelize('dbcryptomaven', 'thomas1', 'password1', { 
+//     host: 'localhost',
+//     dialect: 'mysql', // 'mysql'|'sqlite'|'postgres'|'mssql',
+//     operatorsAliases: false,
+//     pool: {
+//       max:5,
+//       min:0,
+//       acquire:30000,
+//       idle:10000
+//     },
+//     //SQLite only (theseus & atlas computers)
+//     // storage: '~/db/sqlite/db.sqlite'
+// });
+
 // Test DB
 db.authenticate()
   .then(() => console.log('Database connected...'))
@@ -32,7 +48,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'index')));
 app.get('/', (req, res) => res.render('index', { layout: 'maven' }));
 
-app.use('/gigs', require('./routes/gigs'));  
+
+//ROUTES
+app.use('/crypto', require('./routes/crypto'));  
 
 
 app.listen(PORT, console.log(`App Listening on port  ${PORT}`)); 
