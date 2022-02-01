@@ -3,23 +3,8 @@ const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser'); 
 const path = require('path');
 
-const Sequelize = require('sequelize'); 
-
 // Database
-const db = require('./config/database');  // move later
-// const db = new Sequelize('dbcryptomaven', 'thomas1', 'password1', { 
-//     host: 'localhost',
-//     dialect: 'mysql', // 'mysql'|'sqlite'|'postgres'|'mssql',
-//     operatorsAliases: false,
-//     pool: {
-//       max:5,
-//       min:0,
-//       acquire:30000,
-//       idle:10000
-//     },
-//     //SQLite only (theseus & atlas computers)
-//     // storage: '~/db/sqlite/db.sqlite'
-// });
+const db = require('./index/config/database');
 
 // Test DB
 db.authenticate()

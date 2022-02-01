@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "author": "Thomas Maestas",
   "description": "Data algorithms/struct. exploratory app",
-  "main": "app.js",
+  "main": "app-proxy.js",
   "scripts": {
     "block": "tsc -w",
     "dev": "nodemon app-proxy.js",

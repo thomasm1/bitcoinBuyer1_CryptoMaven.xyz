@@ -13,6 +13,11 @@
 ##### Dependencies
 * D3js
 
+### DataBase: 
+* commuterlink.cmcadlepsyx9.us-east-1.rds.amazonaws.com
+* AWS PostgreSQL 
+* Auto-detected PostgreSQL 10 installation with the data directory at C:\Program Files\PostgreSQL\10\data
+
 ### Load Balancer 
 * localhost port 5000
 * NGINX -Digital Ocean:  [134.122.15.249] 
