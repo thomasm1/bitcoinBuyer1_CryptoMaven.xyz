@@ -4,6 +4,7 @@ const db = require('../config/database');
 const Crypto = require('../models/Crypto');
 const Sequelize = require('sequelize');
 const Op = Sequelize.Op;
+const InputStream = require('../models/InputStream');
 
 router.get('/', (req, res) => 
 Crypto.findAll()
@@ -11,5 +12,12 @@ Crypto.findAll()
     cr
 }))
 .catch(err => res.render('error', {error: err})));
- 
+
+router.get('/current', (req, res) => 
+InputStream.findAll()
+.then(_input => res.render('_input', {
+    _input
+}))
+.catch(err=> res.render('error', {error: err})));
+
 module.exports = router;
