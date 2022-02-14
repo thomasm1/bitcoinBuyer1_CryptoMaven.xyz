@@ -1,11 +1,12 @@
 {
-  "name": "bitcoin-calculator",
+  "name": "crypto-maven",
   "version": "1.0.0",
   "author": "Thomas Maestas",
   "description": "Data algorithms/struct. exploratory app",
-  "main": "index.js",
+  "main": "app-proxy.js",
   "scripts": {
     "block": "tsc -w",
+    "dev": "nodemon app-proxy.js",
     "start": "parcel index.html --open",
     "build": "parcel build index.html"
   },
@@ -15,12 +16,27 @@
     "d3-collection": "^1.0.7",
     "d3-geo": "^1.12.1",
     "d3-selection": "^1.4.1",
+<<<<<<< HEAD
     "express": "^4.17.2",
+=======
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.0.0",
+>>>>>>> f365b9ef467c6c51728df9b890285850c230c57b
     "jsdom": "^15.1.1",
-    "path": "^0.12.7"
+    "mysql2": "^2.3.3",
+    "path": "^0.12.7",
+    "pg": "^7.7.1",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^6.14.1"
   },
   "devDependencies": {
     "@babel/core": "7.2.0",
+<<<<<<< HEAD
     "parcel-bundler": "^1.12.5"
+=======
+    "nodemon": "^2.0.15",
+    "parcel-bundler": "^1.6.1"
+>>>>>>> f365b9ef467c6c51728df9b890285850c230c57b
   }
 }

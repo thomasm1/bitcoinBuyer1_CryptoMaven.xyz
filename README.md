@@ -9,11 +9,29 @@
 -Node.js 
 -Express
 
-### Data 
+### CryptoMaven's Data Structures: 
+```sh
+{
+    "Date": "2019-07-04",
+    "Symbol": "BTCUSD",
+    "Open": 11976.42,
+    "High": 12064.26,
+    "Low": 11820,
+    "Close": 11909.55,
+    "Volume BTC": 1237.57,
+    "Volume USD": 14790355.69
+  }
+``` 
 ##### Dependencies
 * D3js
 
-### Load Balancer 
+### Database: 
+* commuterlink.cmcadlepsyx9.us-east-1.rds.amazonaws.com
+* AWS PostgreSQL 
+* Auto-detected PostgreSQL 10 installation with the data directory at C:\Program Files\PostgreSQL\10\data
+
+###  server-nginx
+#### Load Balancer 
 * localhost port 5000
 * NGINX -Digital Ocean:  [134.122.15.249] 
           -https://hexstat.xyz
@@ -25,7 +43,8 @@
           * https://cryptomaven.xyz https://cryptomaven.us
 
 
-## Custom Blockchain App
+### solidity 
+#### Custom Blockchain App
 ##### Dependencies
 * crypto (built-in Node module)
 * npm run block :: Start blockchain

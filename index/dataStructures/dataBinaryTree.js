@@ -212,9 +212,7 @@ class BST {
         };
     };
 }
-
-
-
+ 
 const bst = new BST();
 
 bst.add(9);
@@ -236,6 +234,7 @@ console.log(bst.findMaxHeight());
 console.log(bst.isBalanced());
 console.log('inOrder: ' + bst.inOrder());
 console.log('preOrder: ' + bst.preOrder());
-console.log('postOrder: ' + bst.postOrder());
-
+console.log('postOrder: ' + bst.postOrder()); 
 console.log('levelOrder: ' + bst.levelOrder());
+
+export { BST, Node };
