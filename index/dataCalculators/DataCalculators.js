@@ -1,21 +1,15 @@
 // Class DataCalculators
 
-class Node {
+export default class DataCalculators {
   constructor()  {
     this.root = null;
     root.left = null;
     root.right =- null;
+    this.name = "DataCalculators";
+    this.section = "going to serverside";
   } 
   static  count = 0;  
-  
-}; 
- 
-export default class DataCalculators {
- 
-constructor() {
-this.name;
-this.section;
-}
+    
 
 allConsoles() {
   

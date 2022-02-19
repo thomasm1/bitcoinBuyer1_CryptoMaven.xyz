@@ -4,6 +4,22 @@
 
 ## Crypto Data Streaming
 
+### App Functionality
+ #### Data Operation Methods ::
+ 
+```sh
+ DataBinaryTreeClass
+ bST.printDataBinaryTree();
+ bST.add(data);
+    findMin() {
+    findMax() {
+    find(data) {
+    isPresent(data) {
+    remove(data) {
+    isBalanced() {
+    findMinHeight(node = this.root) {
+```
+
 ### UI
 ##### Dependencies
 -Node.js 
