@@ -35,7 +35,7 @@ app.get('/', (req, res) => res.render('index', { layout: 'maven' }));
 
 
 //ROUTES
-app.use('/crypto', require('./routes/crypto'));  
+// app.use('/crypto', require('./routes/crypto'));  
 
 
 app.listen(PORT, console.log(`App Listening on port  ${PORT}`)); 

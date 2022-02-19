@@ -1,4 +1,4 @@
-
+// Class DataCalculators
 
 class Node {
   constructor()  {
@@ -8,37 +8,17 @@ class Node {
   } 
   static  count = 0;  
   
-};
-
-
+}; 
  
-console.log("%c Object mapping: ", "color:orange; border:solid 1px orange")
-//0-A.)
-console.time("timer_Obj-A.");
-for (const key in btc2019[0]) {
-  console.log("btc2019[0][key]: ", btc2019[0][key]);
+export default class DataCalculators {
+ 
+constructor() {
+this.name;
+this.section;
 }
-console.timeEnd("timer_Obj-A.");
-//0-B.)
-console.time("timer_Obj-B.");
-for (const b of Object.values(btc2019[0])) {
-  console.log("Object.values: ", b);
-}
-console.timeEnd("timer_Obj-B.");
-//0-C.)
-console.time("timer_Obj-C.");
-const bObject = new Map(
-  Object.entries({
-    Date: "2019-07-02",
-    Symbol: "BTCUSD",
-    Open: 10577.63,
-    High: 10925,
-    Low: 9651,
-    Close: 10829.18,
-    "Volume BTC": 41476.42,
-    "Volume USD": 424791613.92
-  })
-);
+
+allConsoles() {
+  
 for (const b of bObject.values()) {
   console.log("Object.entries", b);
 }
@@ -241,8 +221,7 @@ print('REDUCE: ' + btcTotalReduce)
 console.log("%c Sorting (JavaScript library): ", "color:orange; border:solid 1px orange")
 const sortedBtc = btc2019.sort((a, b) => (a.Open > b.Open ? 1 : -1));
 const sortedB = btc2019.sort((a, b) => a.Open - b.Open);
-console.log(sortedBtc, sortedB);
-
+console.log(sortedBtc, sortedB); 
 
 ///////////// FILTER/MAP/SORT/REDUCE CALCULATION
 console.log("%c Calc Avg, Sum each pos avg, reduce to total: ", "color:orange; border:solid 1px orange")
@@ -252,17 +231,58 @@ const avgPosLong = btc2019
   .sort((a, b) => a - b)
   .reduce((a, b) => a + b, 0); // sum each pos avg, reduce to total
 const avgPos = avgPosLong / btc2019.length;
-console.log(avgPosLong, avgPos);
- 
+console.log(avgPosLong, avgPos); 
+
+}
+
+allConsoles();
+
+mapping = ["%c Object mapping: ", "color:orange; border:solid 1px orange"] 
+printArray() { 
+  for (let a of this.mapping) { 
+    console.log(`${ a }`)
+  } 
+}
+
+printArray(mapping)
+//0-A.)
+// console.time("timer_Obj-A.");
+// for (const key in btc2019[0]) {
+//   console.log("btc2019[0][key]: ", btc2019[0][key]);
+// }
+// console.timeEnd("timer_Obj-A.");
+// //0-B.)
+// console.time("timer_Obj-B.");
+// for (const b of Object.values(btc2019[0])) {
+//   console.log("Object.values: ", b);
+// }
+// console.timeEnd("timer_Obj-B.");
+// //0-C.)
+// console.time("timer_Obj-C.");
 
 
-function print(val) {
+bObject = new Map(
+  Object.entries({
+    Date: "2019-07-02",
+    Symbol: "BTCUSD",
+    Open: 10577.63,
+    High: 10925,
+    Low: 9651,
+    Close: 10829.18,
+    "Volume BTC": 41476.42,
+    "Volume USD": 424791613.92
+  })
+);
+
+  print(val) {
   let el = document.createElement('p');
   el.innerHTML = val;
   // document.getElementById('output').appendChild(el)
+} 
+ 
+printThis( string ) { 
+  console.log(`${string}`)
 }
+ 
 
-
-
-
-
+}
