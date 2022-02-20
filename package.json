@@ -4,7 +4,7 @@
   "author": "Thomas Maestas",
   "description": "Data algorithms/struct. exploratory app",
   "main": "app-proxy.js",
-  "type":"module",
+  "type": "module",
   "scripts": {
     "block": "tsc -w",
     "dev": "nodemon app-proxy.js",

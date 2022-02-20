@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> f66045cb1732d98c6cfcd9978e1241565fc0593c
 export class Node {
   constructor(data, left = null, right = null) {
     this.data = data;
@@ -69,6 +73,7 @@ export default class BST {
         return null;
       }
     }
+<<<<<<< HEAD
     return current;
   }
   isPresent(data) {
@@ -87,6 +92,25 @@ export default class BST {
       } else {
         return true;
       }
+=======
+    isPresent(data) {
+        let current = this.root, found = false;
+        if (current === null) return false;
+
+        while (current && !found) {
+            // if (data === current.data) {
+            //     return true;
+            // }
+            if (data < current.data) {
+                current = current.left;
+            } else if (data > current.data) {
+                current = current.right;
+            } else {
+                return true;
+            }
+        }
+        return false;
+>>>>>>> f66045cb1732d98c6cfcd9978e1241565fc0593c
     }
     return false;
   }
