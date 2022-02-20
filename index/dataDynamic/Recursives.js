@@ -4,7 +4,7 @@ export default class Recursives {
     targetSumInt = 10;
     numbers = [];
     memo = {}
-    howSumMemo = (targetSum, numbers, _memo = {} ) => {
+    howSumMemo (targetSum, numbers, _memo = {} )   {
         if(targetSum===0) return [];
         if(targetSum < 0) return null;
     
@@ -20,7 +20,7 @@ export default class Recursives {
         return null;
     }
     
-    howSum = (targetSum, numbers) => {
+    howSum (targetSum, numbers)   {
         if(targetSum===0) return [];
         if(targetSum < 0) return null;
     
@@ -45,3 +45,23 @@ export default class Recursives {
         }
     } 
 }
+
+ 
+let count = 0;
+
+function getSubsequence(word) { 
+if (word == '') { return ''; }
+const first = word.charAt(0);
+const rest = getSubsequence(word.substring(1));
+let result = '';
+
+rest.split(',').forEach( subseq => {
+     count++;
+   result += ','+ first + subseq; 
+   result += ','+ subseq 
+});
+
+return result.substring(1);
+} 
+let resultt = getSubsequence('hello');
+console.log (count, resultt);

@@ -1,5 +1,4 @@
 // SORTING
-console.log("%c SORTING: ", "color:black; background-color:yellow;border:solid 1px black");
 
 // Best asymptotic run-time complexity:
 //        O(n):  Heap, Insertion  
@@ -38,10 +37,12 @@ export function  bubbleSort(arr) {
     }
     return arr;
 }
+console.log("%c SORTING: ", "color:black; background-color:yellow;border:solid 1px black");
  
+
 let arrayUnsorted  = [0, 2, 34, 22, 2, 1, 9, 76, 4, 10, 19, 17]
 console.log('Unsorted: '+ arrayUnsorted)
-newBubbleSort = bubbleSort(arrayUnsorted) 
+let newBubbleSort = new bubbleSort(arrayUnsorted) 
 console.log('Bubble Sort: '+ newBubbleSort);
 
 
@@ -65,5 +66,5 @@ export function  bubbleSortOptimize(arr){
 } 
 let arrayUnsorted2  = [0, 2, 34, 22, 2, 1, 9, 76, 4, 10, 19, 17]
 console.log('Unsorted: '+ arrayUnsorted2)
-newBubbleSort = bubbleSortOptimize(arrayUnsorted2) 
-console.log('Bubble Sort (Optimized): '+ newBubbleSort);
+let newBubbleSortOptimized = new bubbleSortOptimize(arrayUnsorted2) 
+console.log('Bubble Sort (Optimized): '+ newBubbleSortOptimized);

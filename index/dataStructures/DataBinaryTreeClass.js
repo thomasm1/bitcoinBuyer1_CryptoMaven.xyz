@@ -10,20 +10,16 @@ export class Node {
         this.left = left;
         this.right = right;
     }
-    constructor() {
-        this.root = null;
-       }
- 
+    
     }
 
 export default class BST {
 
-    constructor(){
-        
-        console.log("%c B-TREE SEARCH:", "color:white; background-color:black"); 
+    constructor(){ 
+        console.log("%c MODULE B-TREE SEARCH:", "color:yellow; background-color:black");  
+            this.root = null; 
     }
       // B-TREE SEARCH
-
     add(data) {
         const node = this.root;
         if (node === null) {
@@ -224,10 +220,13 @@ export default class BST {
         };
     };
 
-    printDataBinaryTree() {
+    printDataBinaryTree(array) {
+        this.array = array;
         
-        const bst = new BST();
+    }
+    printCodedDataBinaryTree() {
 
+        this.bst = new BST();
         bst.add(9);
         bst.add(4);
         bst.add(17);
@@ -236,8 +235,9 @@ export default class BST {
         bst.add(22);
         bst.add(5);
         bst.add(7);
-        bst.add(20);
-
+        bst.add(20); 
+        
+        
         console.log(bst.findMinHeight());
         console.log(bst.findMaxHeight());
         console.log(bst.isBalanced());

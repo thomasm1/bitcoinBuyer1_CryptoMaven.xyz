@@ -1,6 +1,7 @@
 // Class DataCalculators
 
-export default class DataCalculators {
+export class DataCalculators {
+
   constructor()  {
     this.root = null;
     root.left = null;
@@ -9,8 +10,30 @@ export default class DataCalculators {
     this.section = "going to serverside";
   } 
   static  count = 0;  
-    
+  
+bObject = new Map(
+  Object.entries({
+    Date: "2019-07-02",
+    Symbol: "BTCUSD",
+    Open: 10577.63,
+    High: 10925,
+    Low: 9651,
+    Close: 10829.18,
+    "Volume BTC": 41476.42,
+    "Volume USD": 424791613.92
+  })
+); 
 
+print(val) {
+  let el = document.createElement('p');
+  el.innerHTML = val;
+  // document.getElementById('output').appendChild(el)
+} 
+ 
+printThis( string ) { 
+  console.log(`${string}`)
+}
+ 
 allConsoles() {
   
 for (const b of bObject.values()) {
@@ -35,9 +58,7 @@ console.time("timer_forEach");
 btc2019.forEach(function (btc) {
   console.log(btc.Symbol, btc.Date, btc.High);
 });
-console.timeEnd("timer_forEach");
-  
- 
+console.timeEnd("timer_forEach"); 
 
 //////// FILTER 
 console.log("%c Filter, then addin conditional object/array (shortens new array): ", "color:orange; border:solid 1px orange");
@@ -183,8 +204,8 @@ const newReducedObject = btc2019
         ? acc.concat(Object.assign({}, btc, { newSymbol: 'BTC' }))
         : acc.concat(Object.assign({}, btc, { newSymbol: 'Not BTC' }));
     }, [])            // does not shorten array
-console.log('conditional btc2019',newReducedObject);
-console.log('not touched btc2019',btc2019); 
+console.log('conditional btc2019', newReducedObject);
+console.log('not touched btc2019', btc2019); 
 
 // close  sum => close AVG
 const closeSum = btc2019.reduce((total, btc) => total + btc.Close, 0);
@@ -212,6 +233,7 @@ print('REDUCE: ' + btcTotalReduce)
 //     return -1;
 //   }
 // }); 
+
 console.log("%c Sorting (JavaScript library): ", "color:orange; border:solid 1px orange")
 const sortedBtc = btc2019.sort((a, b) => (a.Open > b.Open ? 1 : -1));
 const sortedB = btc2019.sort((a, b) => a.Open - b.Open);
@@ -219,26 +241,20 @@ console.log(sortedBtc, sortedB);
 
 ///////////// FILTER/MAP/SORT/REDUCE CALCULATION
 console.log("%c Calc Avg, Sum each pos avg, reduce to total: ", "color:orange; border:solid 1px orange")
-const avgPosLong = btc2019
-  .filter(btc => btc.Close - btc.Open >= 0)
-  .map(btc => (btc.Close - btc.Open) / btc2019.length) ///calc each avg
+const avgPosLong = btc2019.filter(btc => btc.Close - btc.Open >= 0).map(btc => (btc.Close - btc.Open) / btc2019.length) ///calc each avg
   .sort((a, b) => a - b)
   .reduce((a, b) => a + b, 0); // sum each pos avg, reduce to total
 const avgPos = avgPosLong / btc2019.length;
-console.log(avgPosLong, avgPos); 
-
-}
-
-allConsoles();
+console.log(avgPosLong, avgPos);  
+} 
 
 mapping = ["%c Object mapping: ", "color:orange; border:solid 1px orange"] 
 printArray() { 
   for (let a of this.mapping) { 
     console.log(`${ a }`)
   } 
-}
-
-printArray(mapping)
+} 
+// printArray(mapping)
 //0-A.)
 // console.time("timer_Obj-A.");
 // for (const key in btc2019[0]) {
@@ -254,29 +270,5 @@ printArray(mapping)
 // //0-C.)
 // console.time("timer_Obj-C.");
 
-
-bObject = new Map(
-  Object.entries({
-    Date: "2019-07-02",
-    Symbol: "BTCUSD",
-    Open: 10577.63,
-    High: 10925,
-    Low: 9651,
-    Close: 10829.18,
-    "Volume BTC": 41476.42,
-    "Volume USD": 424791613.92
-  })
-);
-
-  print(val) {
-  let el = document.createElement('p');
-  el.innerHTML = val;
-  // document.getElementById('output').appendChild(el)
-} 
- 
-printThis( string ) { 
-  console.log(`${string}`)
-}
- 
-
+// this.allConsoles()
 }

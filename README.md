@@ -5,8 +5,11 @@
 ## Crypto Data Streaming
 
 ### App Functionality
- #### Data Operation Methods ::
- 
+ #### Data Operation Methods :12:
+#### Performance
+  * Tool: https://rithmschool.github.io/function-timer-demo/
+
+
 ```sh
  DataBinaryTreeClass
  bST.printDataBinaryTree();
