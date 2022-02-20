@@ -1,8 +1,3 @@
-// methodslike 
-// bST.printDataBinaryTree();
-// bST.add(data);
-
-
 
 export class Node {
     constructor(data, left = null, right = null) {
@@ -77,15 +72,19 @@ export default class BST {
         return current;
     }
     isPresent(data) {
-        let current = this.root;
-        while (current) {
-            if (data === current.data) {
-                return true;
-            }
+        let current = this.root, found = false;
+        if (current === null) return false;
+
+        while (current && !found) {
+            // if (data === current.data) {
+            //     return true;
+            // }
             if (data < current.data) {
                 current = current.left;
-            } else {
+            } else if (data > current.data) {
                 current = current.right;
+            } else {
+                return true;
             }
         }
         return false;

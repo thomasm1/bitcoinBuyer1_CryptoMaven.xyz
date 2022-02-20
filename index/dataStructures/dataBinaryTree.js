@@ -1,11 +1,10 @@
 // B-TREE SEARCH
-console.log("%c ORIGINAL B-TREE::  B-TREE SEARCH:", "color:white; background-color:black");
+console.log("%c B-TREE SEARCH:", "color:white; background-color:black");
 class Node {
     constructor(data, left = null, right = null) {
         this.data = data;
         this.left = left;
         this.right = right;
-        
     }
 }
 
@@ -238,4 +237,4 @@ console.log('preOrder: ' + bst.preOrder());
 console.log('postOrder: ' + bst.postOrder()); 
 console.log('levelOrder: ' + bst.levelOrder());
 
- 
+export { BST, Node };
