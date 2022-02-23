@@ -1,6 +1,7 @@
 // d3 STACKS
-//console.log("%c D3 data convert csv->json: ", "border:outset 3px silver;color:black; background-color:silver");
+console.log("%c D3 data convert csv->json: ", "border:outset 3px silver;color:black; background-color:silver");
 
+console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 const baseUrl = 'data/';
 const dcClass = ".dataConvert";
 

@@ -44,22 +44,37 @@
         <label for ="choice">choice</label>
         <input type="radio" id="choice" name="choice">
       </form> -->
+      <button class="button" id="dataGetters" onclick="timer()">timer</button><br />
+      <button class="button" id="dataGetters" onclick="timeend()">timeend</button><br />
       <button class="button" id="dataServerless" onclick="dataServerless()">dataServerless</button><br />
-      <button class="button" id="dataGetters" onclick="dataGetters()">dataGetters</button><br />
+      <button class="button" id="dataGetters" onclick="reader()">dataGetters</button><br />
       <button class="button" id="dataScrapers" onclick="dataScrapers()">dataScrapers</button><br />
       <button class="button" id="dataQueues" onclick="dataQueues()">dataQueues</button><br />
       <button class="button" id="dataDynamic" onclick="dataDyn()">dataDynamic </button><br />
       <button class="button" id="dataVisuals" onclick="dataVisuals()">dataVisuals</button><br />
     </div>
 <script >  
-   // convert to React later - 2/27 
+   // convert to React later - 2/27 j
+const timeStart = () => {
+  console.time("timer "); 
+}
+const timeend = () => {  
+console.timeEnd("TimeEnd");
+}
+
+// const reader = () => {
+//  console.log("reader"); 
+//  document.getElementById('dataGetters').addEventListener('click',     () => {
+//   const modulePath = 23>3 ? './dataDynamic/reader.js':'./dataDynamic/writer.js';
+//  const read =    import(modulePath);
+//  console.log("reader done"); 
+// });
+// }
 const dataDyn = () => {
-  document.getElementById('dataDynamic').addEventListener('click',   () => {                        
+  document.getElementById('dataDynamic').addEventListener('click', async  () => {                        
   const modulePath = 13>2 ? './dataDynamic/fractionalKnap.js' : './dataDynamic/dynamic.js';
-  const math = import(modulePath);
-  // console.log(math);
-  // math.default(wt,val,capacity);
-//  alert(math.getMaxValue(wt, val, capacity))
+  const dataDynamic = await import(modulePath); 
+ 
 });
 }
  </script> 
@@ -191,7 +206,7 @@ const dataDyn = () => {
 <script  lang="babel" type="text/babel"   src='dataVisuals/index.js'></script> -->
 <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
   <script src="dataGetters/dataStreamsRxJS.js"></script>
-  <script src="shared/csvJson.js"></script>
+  <script src="util/csvJson.js"></script>
   <script src="dataCalculators/arrayMethods.js"></script>
   <script src="dataStructures/dataStacks.js"></script>
   <script src="dataStructures/dataLinkedList.js"></script>
