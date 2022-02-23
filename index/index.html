@@ -37,15 +37,31 @@
     <div id="module"></div>   
 
     <div >
-      <button class="button" id="groot">add Event Listener</button>
+      <div id="viewport">
+
+      </div>
+      <!-- <form>
+        <label for ="choice">choice</label>
+        <input type="radio" id="choice" name="choice">
+      </form> -->
+      <button class="button" id="dataServerless" onclick="dataServerless()">dataServerless</button><br />
+      <button class="button" id="dataGetters" onclick="dataGetters()">dataGetters</button><br />
+      <button class="button" id="dataScrapers" onclick="dataScrapers()">dataScrapers</button><br />
+      <button class="button" id="dataQueues" onclick="dataQueues()">dataQueues</button><br />
+      <button class="button" id="dataDynamic" onclick="dataDyn()">dataDynamic </button><br />
+      <button class="button" id="dataVisuals" onclick="dataVisuals()">dataVisuals</button><br />
     </div>
 <script >  
-document.getElementById('groot').addEventListener('click', async () => {
- const modulePath = 1>2?'./datadynamic/not' : './dataDynamic/dynamic.js';
- const math = await import(modulePath);
- console.log(math)
- alert(math.default(2, 14))
+   // convert to React later - 2/27 
+const dataDyn = () => {
+  document.getElementById('dataDynamic').addEventListener('click',   () => {                        
+  const modulePath = 13>2 ? './dataDynamic/fractionalKnap.js' : './dataDynamic/dynamic.js';
+  const math = import(modulePath);
+  // console.log(math);
+  // math.default(wt,val,capacity);
+//  alert(math.getMaxValue(wt, val, capacity))
 });
+}
  </script> 
     <script  src='dataVisuals/module.js'></script>
 
