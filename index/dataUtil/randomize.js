@@ -1,8 +1,6 @@
+"strict";
 
-<p id="myRandText">The random numbers are: </p>
-<button type="button" onClick='genRandomNumbers()'>Generate 10 random numbers</button>
-<script>
-genRandomNumbers = function getRandomNumbers() {
+export default function getRandomNumbers() {
   var array = new Uint32Array(10);
   window.crypto.getRandomValues(array);
  
@@ -12,4 +10,3 @@ genRandomNumbers = function getRandomNumbers() {
     randText.innerHTML += array[i] + " ";
   }
 }
-</script>
