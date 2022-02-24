@@ -9,7 +9,7 @@ var hash = (string, max) => {
   return hash % max;
 };
 
-let HashTable = function() {
+let HashMethods = function() {
   let storage = [];
   const storageLimit = 4;
 

@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> f66045cb1732d98c6cfcd9978e1241565fc0593c
 export class Node {
   constructor(data, left = null, right = null) {
     this.data = data;

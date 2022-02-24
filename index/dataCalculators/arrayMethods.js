@@ -23,7 +23,7 @@ const btc2019 = [
     Close: 11976.42,
     "Volume BTC": 36836.85,
     "Volume USD": 419076229.34
-  },
+  },c
   {
     Date: "2019-07-02",
     Symbol: "BTCUSD",

@@ -1,7 +1,7 @@
  
      let count = 0;
 
-     function getSubsequence(word) { 
+ export default function getSubsequence(word) { 
     if (word == '') { return ''; }
     const first = word.charAt(0);
     const rest = getSubsequence(word.substring(1));
@@ -15,6 +15,8 @@
 
     return result.substring(1);
 }
-s
+ 
 let resultt = getSubsequence('hello');
 console.log (count, resultt);
+
+
