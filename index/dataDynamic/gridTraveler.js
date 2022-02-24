@@ -7,4 +7,4 @@ const gridTraveler = (m, n, memo = {} ) => {
  
     memo[key] = gridTraveler(m - 1, memo) + gridTraverler(m, n - 1, memo);
     return memo[key];
-};
+}; 

@@ -5,13 +5,12 @@ export default class DataHeap {
         
     // HEAPS Min 1=>1+  
   console.log("%c MinHEAP Bi-Tree: ", "color:white; background-color:brown");
+  console.log("  REMEMBER!!!! ", "Left child: 1*2  ;   Right chile: 1*2 + 1  ; find Parent: i/2");
   
   // Left child: 1*2
   // Right chile: 1*2 + 1
   // Parent: i/2
-    }
-    header();
-
+    } 
 
   MinHeap() {
     let heap = [null];
