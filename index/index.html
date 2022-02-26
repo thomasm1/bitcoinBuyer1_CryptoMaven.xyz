@@ -73,7 +73,7 @@ console.timeEnd("TimeEnd");
 // }
 const dataDyn = () => {
   document.getElementById('dataDynamic').addEventListener('click', async  () => {                        
-  const modulePath = 13>2 ? './dataDynamic/fractionalKnap.js' : './dataDynamic/dynamic.js';
+  const modulePath = 13>2 ? './dataDynamic/fractionalKnap.js' : './dataUtil/dynamic.js';
   const dataDynamic = await import(modulePath); 
  
 });
