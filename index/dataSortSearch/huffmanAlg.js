@@ -1,4 +1,13 @@
-
+/*
+creating a binary tree of nodes. These can be stored in a regular array, the size of which depends on the number of symbols, 
+{\displaystyle n}n. A node can be either a leaf node or an internal node. Initially, all nodes are 
+leaf nodes, which contain the symbol itself, the weight (frequency of appearance) of the symbol and optionally, a link to a 
+parent node which makes it easy to read the code (in reverse) starting from a leaf node. Internal nodes contain a weight,
+ links to two child nodes and an optional link to a parent node. As a common convention, bit '0' represents
+  following the left child and bit '1' represents following the right child. A finished tree has up to n leaf nodes and  n-1}n-1 internal nodes. 
+ A Huffman tree that omits unused symbols produces the most optimal code lengths.
+ */
+ 
 // 1 2 3 4 5 5 6
 // F E D C A B G
 

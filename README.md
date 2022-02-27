@@ -2,13 +2,21 @@
 ### Author: Thomas Maestas
 ### App Purpose: Data algorithms/structures Exploratory Application
 
-## Crypto Data Streaming
+## Crypto Data Streaming App
+### Part I. Algorithms and Tools
+### Part II. Implementations
+### Part III. UI Interactivity
 
 ### App Functionality
  #### Data Operation Methods :12:
-#### Performance
+#### Performance Tools
   * Tool: https://rithmschool.github.io/function-timer-demo/
-
+#### 
+```sh
+notes: 
+1. Global Var Warning! JavaScript use of var used in limited cases, usually removed for let/const otherwise: 
+The only useful application of var is that a global can be redefined in global scope multiple times without causing an error.
+```
 
 ```sh
  DataBinaryTreeClass
