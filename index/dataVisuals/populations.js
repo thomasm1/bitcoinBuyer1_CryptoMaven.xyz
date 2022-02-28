@@ -111,8 +111,8 @@
 			svg.call(tip);
 
 			queue()
-				.defer(d3.json, 'world_countries.json')
-				.defer(d3.tsv, 'world_population.tsv')
+				.defer(d3.json, '../data/world_countries.json')
+				.defer(d3.tsv, '../data/world_population.tsv')
 				.await(ready);
 
 			function ready(error, geography, data) {
