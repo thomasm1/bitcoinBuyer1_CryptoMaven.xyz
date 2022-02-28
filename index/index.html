@@ -24,6 +24,7 @@
 
   <body id="body">
     <!--D3JS Animation-->
+
     <div id="module"></div>
     <div class="ctrl">
       <button class="button left" id="thisSVG">add Event Listener</button>
@@ -60,6 +61,28 @@
         dataVisuals</button
       ><br />
     </div>
+    
+
+      <div id="d3data">
+        TO BE OVERWRITTEN HERE 
+     </div>
+     
+   <script>
+     d3.json("./data/json/btc-array.json", function (data) {
+       var canvas = d3.select("#d3data").append("svg")
+       .attr("width", 800)
+       .attr("height", 300)
+ 
+     canvas.selectAll("rect")
+     .data(data)
+     .enter()
+       .append("rect")
+       .attr("width", function (d) {return d.Close/100; })
+       .attr("height", 20)
+       .attr("y", function (d, i) { return i *30})
+       .attr("fill", "green");
+     })
+   </script>
     <div class="form-check form-switch">
       <input
         class="form-check-input"
@@ -95,7 +118,6 @@
       <label class="form-check-label" for="flexSwitchCheckDisabled">
         Disabled switch checkbox input</label
       >
-
 
     <!-- container________-->
     <div style="background-color: skyblue" class="container">
@@ -275,10 +297,10 @@
     // Properties Mapping  //ckmeans
   </script>
 
-  <!-- <script lang="babel" type="text/babel"    src='dataVisuals/indexModule.js'></script>
+  <script lang="babel" type="text/babel"    src='dataVisuals/indexModule.js'></script>
 <script  lang="babel" type="text/babel"   src='dataVisuals/index.js'></script> -->
 
-  <!-- <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
+ <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
   <script src="dataGetters/dataStreamsRxJS.js"></script>
   <script src="dataUtil/csvJson.js"></script>
 
@@ -303,11 +325,12 @@
   <script src="dataPerformance/arrays/orderedSearch.js"></script>
 
   <script src="dataCalculators/consecDays.js"></script>
-  <script src="dataCalculators/searchDays.js"></script> -->
+  <script src="dataCalculators/searchDays.js"></script>
 
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./serviceWorker.js");
     }
   </script>
+
 </html>
