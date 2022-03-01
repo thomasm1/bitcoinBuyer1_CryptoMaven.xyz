@@ -2,28 +2,86 @@ import 'dotenv/config';  // only CRYPTO_API_KEY here
 import axios from "axios";
 import express from "express";
 import   Cheerio   from "cheerio";
-
  
-
-///////////////// VARS
-
 const app = express();
 const PORT = process.env.PORT || 5000;
+
+
+///////////////// VARS
+// Crypto News
 const articles = [];
-console.log(process.env)
+
+const newsOutlets = [ 
+  {
+    name: 'cointelegraph',
+    address: 'https://cointelegraph.com/',
+    baseUrl: 'https://cointelegraph.com'
+  },
+  {
+    name: 'coindesk',
+    address: 'https://www.coindesk.com/tech/',
+    baseUrl:'https://www.coindesk.com'
+  },
+] 
+console.log("articles"+ articles)
 
 
-/////////////////   Static index path /
-app.use(express.static("index"));
-app.listen(PORT, () =>
-  setTimeout( () => {
-    console.log(` ... serving on Port ${PORT}`);  
-  }, 2500)
-);
+newsOutlets.forEach(news => {
+  axios.get(news.address).then((response) => {
+    const html = response.data;
+    const $ = Cheerio.load(html)
+  
+    $('a:contains("Ethereum")', html).each(function () {
+      const title = $(this).text()
+      const url = $(this).attr('href')
 
+      articles.push({
+        title, 
+        url: news.baseUrl+url, 
+        source: news.name
+      })
+    })
+ 
 
-/////////////// Dynamic Paths
+  })
+})
 
+// Crypto Market Api
+const siteApi =[
+  {
+    name: 'nomics',
+    address: 'https://nomics.com'
+  },
+]
+
+/////////////// Dynamic Paths  
+
+// DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
+app.get("/cryptonews", (req, res) => {
+  res.json(articles)
+ 
+});
+
+                            //* News OUTPUT Needs: 1. Filter out Ethereum Class; 2. De-Duplicator 
+/*
+// 20220228001654
+// http://localhost:5000/cryptonews 
+[
+  {
+    "title": "Ethereum$2,620.10-3.32%",
+    "url": "/price/ethereum/"
+  },
+  {
+    "title": "Ethereum Classic$27.33-2.34%",
+    "url": "/price/ethereum-classic/"
+  },
+  {
+    "title": "Ethereum Gets an Upgraded Scaling Testnet – And It's Actually Years Ahead of Schedule",
+    "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
+  }, 
+*/ 
+
+////////////////////////////////////////////////////////////////////////////////
 // Data to return crypto resources
 app.get("/api", (req, res) => {
   res.json("welcome to CryptoMaven");
@@ -38,6 +96,7 @@ let options = {
     'x-rapidapi-key':  process.env.CRYPTO_API_KEY
   }
 };
+
                 // moving to   MOVE    to DataScrapers   ******
 axios.request(options).then(function (response) {
 	console.log(response.data);
@@ -47,51 +106,16 @@ axios.request(options).then(function (response) {
 
 
 
-// DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
-app.get("/cryptonews", (req, res) => {
-  axios.get("https://www.coindesk.com/tech/").then((response) => {
-    const html = response.data;
-    // console.log(html);
-        const $ = Cheerio.load(html)
 
-        $('a:contains("Ethereum")', html).each(function() {
-            const title = $(this).text()
-            const url = $(this).attr('href')
-            articles.push({
-                title,url
-            })
-            
-        })
-        res.json(articles)
-    }).catch((err) => console.log(err));
-});
+///  ///// END Routes
 
-//* News OUTPUT Needs a dDE Duplicator
 
-/*
-// 20220228001654
-// http://localhost:5000/cryptonews
 
-[
-  {
-    "title": "Ethereum$2,620.10-3.32%",
-    "url": "/price/ethereum/"
-  },
-  {
-    "title": "Ethereum Classic$27.33-2.34%",
-    "url": "/price/ethereum-classic/"
-  },
-  {
-    "title": "Ethereum Gets an Upgraded Scaling Testnet – And It's Actually Years Ahead of Schedule",
-    "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
-  },
-  {
-    "title": "Ethereum Gets an Upgraded Scaling Testnet – And It's Actually Years Ahead of Schedule",
-    "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
-  },
-  {
-    "title": "Ethereum Gets an Upgraded Scaling Testnet – And It's Actually Years Ahead of Schedule",
-    "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
-  }
-]
-*/ 
+
+/////////////////   Static index path /
+app.use(express.static("index"));
+app.listen(PORT, () =>
+  setTimeout( () => {
+    console.log(` ... serving on Port ${PORT}`);  
+  }, 2500)
+);
