@@ -6,7 +6,7 @@
   "main": "app-proxy.js",
   "type": "module",
   "scripts": {
-    "block": "tsc -w", 
+    "block": "tsc -w",
     "start": "nodemon app-proxy.js"
   },
   "dependencies": {
@@ -25,7 +25,6 @@
     "sequelize": "^6.14.1"
   },
   "devDependencies": {
-    "@babel/core": "7.2.0",
-    "parcel-bundler": "^1.12.5"
+    "@babel/core": "7.2.0"
   }
 }
