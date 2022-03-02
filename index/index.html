@@ -13,33 +13,36 @@
     <script src="src/d3.v4.min.js"></script>
   </head>
 
-  <body id="body"> 
-    <div id="module"></div><!--d3-token modules -->
+  <body id="body">
+    <div id="module"></div>
+    <!--d3-token modules -->
 
-    <div class="ctrl"> 
-      <div id="viewport"></div>  
+    <div class="ctrl">
+      <div id="viewport"></div>
     </div>
 
-    <div id="d3data" > </div>
+    <div id="d3data"></div>
 
     <!-- container________-->
-    <div style="background-color: skyblue;padding:10px;" class="container"> 
-      <script type="module" src="./appControl.js"> </script> 
+    <div style="background-color: skyblue; padding: 10px" class="container">
+      <script type="module" src="./appControl.js"></script>
       <script type="module" src="dataVisuals/module.js"></script>
- 
+
       <div id="ckmeans" abbrev="dataVisuals/populations.js"></div>
- 
+
       <div class="appTitle" abbrev=" public/appTitle.js"></div>
- 
 
       <div class="container">
         <!--MAP: dataVisuals/dataQueues_D3.js -->
         <div id="dataQueues"></div>
 
         <div class="contain">
-          
-      <button class="button left" id="appVisualsBtn" >Load App Visuals</button
-        >  <button class="button left" id="launchMoreBtn">Load Viz Options</button>
+          <button class="button left" id="appVisualsBtn">
+            Load App Visuals
+          </button>
+          <button class="button left" id="launchMoreBtn">
+            Load Viz Options
+          </button>
           <div id="output" class="output"></div>
           <div class="row btc">
             <div class="dataConvert col col-xs-4" id="dataConvert0"></div>
@@ -48,10 +51,6 @@
           </div>
           <h3 align="center">API Data Fetchers.</h3>
           <div class="row">
-            <!-- <div class="dataGetters col col-xs-4">
-				<div id="scraperBtc"></div>
-				<div id="scraperEther"></div>
-			</div> -->
             <div class="dataGetters col col-xs-6">
               <div id="fetchAsyncBtc"></div>
               <div id="fetchAsyncEther"></div>
@@ -75,11 +74,25 @@
             </h3>
           </div>
           <div>
-            <code id="code"> </code>
             <div align="center">
               <button class="btn btn-primary" onclick="myFunction()">
                 GET DATA
               </button>
+              <code>
+                <p><strong>Clicking Get Data serverless process: </strong></p>
+                <span> 1.) AWS API Gateway Endpoint <em>using</em>...</span
+                ><br />
+                <span>
+                  2.) AWS Route 53 A Record Set Alias <em>using</em>...</span
+                ><br />
+                <span>
+                  3.) AWS S3 files. GET Method button
+                  <em>triggers ...</em></span
+                ><br />
+                <span>
+                  4.) AWS Lambda Function <em>returning ...</em> JSON data.
+                </span>
+              </code>
             </div>
             <div class="row">
               <div class="dataXMLH col col-xs-6">
@@ -150,12 +163,7 @@
     // Properties Mapping  //ckmeans
   </script>
 
-  <script
-    lang="babel"
-    type="text/babel"
-    src="dataVisuals/module.js"
-  ></script> 
- 
+  <script lang="babel" type="text/babel" src="dataVisuals/module.js"></script>
 
   <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
   <script src="dataGetters/dataStreamsRxJS.js"></script>

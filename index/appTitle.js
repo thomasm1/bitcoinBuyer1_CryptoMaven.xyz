@@ -4,6 +4,7 @@ let title = `Bitcoin Buyer Console`;
 
 let tocTitle = `Guiding Inspiration for Bitcoin Buyer:`
 let toc = ` 
+
 “Typically, momentum trading is effective in markets that 1) do not have valuation models, 2) have large amounts of volatility, and 3) have frequent mispricings. Momentum investing is not typically used in US stocks, bonds, or options – as they have clear valuation models (e.g. discounted cash flow analysis for stocks and black Scholes for options). However, for commodities and assets like crypto – momentum trading can be an effective strategy that allows protection from losses in downtrends and capture subside on the uptrends. Based on historical data, this may be an extremely effective strategy – until a valuation model has been figured out.” <sup>1</sup><br />
 <br /> 
 [using a strategy to]
@@ -15,7 +16,9 @@ let toc = `
 2: https://towardsdatascience.com/creating-bitcoin-trading-bots-that-dont-lose-money-2e7165fb0b29<br /><br />
  
 data from: 07-04-2019<br />
-source -https://www.cryptodatadownload.com/data/northamerican/`;
+source -https://www.cryptodatadownload.com/data/northamerican/
+
+`;
                               
 //////////////////////////////////////////////////////////
 // const pBrowser = document.querySelector('p')
@@ -114,22 +117,6 @@ var subWidget = new TitleWidget({
     .desc(toc);
 
 widget.render();
-//subWidget.render()/; 
-
-var codeDiv = '';
-var code = `
-    <p><strong>Clicking Get Data serverless process: </strong></p> 
-    <span> 1.)  AWS API Gateway Endpoint <em>using</em>...</span><br />
-    <span> 2.) AWS Route 53 A Record Set Alias <em>using</em>...</span><br />
-    <span> 3.) AWS S3 files. GET Method button <em>triggers ...</em></span><br />
-    <span> 4.) AWS Lambda Function <em>returning ...</em> JSON data. </span>
-			`
+subWidget.render(); 
  
-let hide = function () {
-    document.getElementById("code").innerHTML = codeDiv;
-}
-let show = function () {
-    document.getElementById("code").innerHTML = code;
-}  
-
 }
