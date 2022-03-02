@@ -5,9 +5,9 @@ console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
 const baseUrl = 'data/';
 const dcClass = ".dataConvert";
 
-const eth = 'Coinbase_ETHUSD_2019.csv';
-const btc = 'Coinbase_BTCUSD_2019.csv';
-const ltc = 'Coinbase_LTCUSD_2019.csv';
+const eth = '../data/csv/Coinbase_ETHUSD_2019.csv';
+const btc = '../data/csv/Coinbase_BTCUSD_2019.csv';
+const ltc = '../data/csv/Coinbase_LTCUSD_2019.csv';
 const coinArr = [btc, eth, ltc];
 
 for (let i = 0; i < coinArr.length; i++) {

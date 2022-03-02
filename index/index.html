@@ -3,190 +3,43 @@
   <head>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-      rel="stylesheet" 
+      rel="stylesheet"
     />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
-    ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>CryptoMaven</title>
     <meta charset="UTF-8" />
-    <!-- <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
-    />  -->
     <link rel="stylesheet" href="src/css/styles.css" />
     <script src="src/rxjs.5.4.3.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.3/Rx.js"></script> -->
     <script src="src/d3.v4.min.js"></script>
-    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
   </head>
 
-  <body id="body">
-    <!--D3JS Animation-->
+  <body id="body"> 
+    <div id="module"></div><!--d3-token modules -->
 
-    <div id="module"></div>
-    <div class="ctrl">
-      <button class="button left" id="thisSVG">add Event Listener</button>
-      <div id="viewport"></div>
-      <button class="button left" id="dataGetters" onclick="timer()">
-        timer</button
-      ><br />
-      <button class="button left" id="dataGetters" onclick="timeend()">
-        timeend</button
-      ><br />
-      <button
-        class="button left"
-        id="dataServerless"
-        onclick="dataServerless()"
-      >
-        dataServerless</button
-      ><br />
-      <button class="button left" id="dataGetters" onclick="reader()">
-        dataGetters</button
-      ><br />
-      <button class="button left" id="dataScrapers" onclick="dataScrapers()">
-        dataScrapers</button
-      ><br />
-      <button class="button left" id="dataQueues" onclick="dataQueues()">
-        dataQueues</button
-      ><br />
-      <button class="button left" id="dataDynamic" onclick="chooser(3)">
-        chooser</button
-      ><br />
-      <button class="button left" id="dataDynamic" onclick="dataDyn()">
-        dataDynamic</button
-      ><br />
-      <!-- <button class="button left" id="dataVisuals" onclick="dataVisuals()">
-        dataVisuals</button -->
-      ><br />
+    <div class="ctrl"> 
+      <div id="viewport"></div>  
     </div>
-    
 
-      <div id="d3data">
-        TO BE OVERWRITTEN HERE 
-     </div>
-     
-   <script>
-     d3.json("./data/json/btc-array.json", function (data) {
-       var canvas = d3.select("#d3data").append("svg")
-       .attr("width", 800)
-       .attr("height", 300)
- 
-     canvas.selectAll("rect")
-     .data(data)
-     .enter()
-       .append("rect")
-       .attr("width", function (d) {return d.Close/100; })
-       .attr("height", 20)
-       .attr("y", function (d, i) { return i *30})
-       .attr("fill", "green");
-     })
-   </script>
-    <div class="form-check form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckDefault"
-      />
-      <label class="form-check-label" for="flexSwitchCheckDefault">
-        &nbsp; arrayMethods Default
-      </label>
-      <!--  <script src="dataCalculators/arrayMethods.js"></script>  -->
-    </div>
-    <div class="form-check form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckChecked"
-        checked
-      />
-      <label class="form-check-label" for="flexSwitchCheckChecked">
-        Checked switch checkbox input</label
-      >
-    </div>
-    <div class="form-check form-switch">
-      <input
-        class="form-check-input"
-        type="checkbox"
-        role="switch"
-        id="flexSwitchCheckDisabled"
-        disabled
-      />
-      <label class="form-check-label" for="flexSwitchCheckDisabled">
-        Disabled switch checkbox input</label
-      >
+    <div id="d3data" > </div>
 
     <!-- container________-->
-    <div style="background-color: skyblue" class="container">
-      <script>
-        // convert to React later - 2/27 j
-        const timeStart = () => {
-          console.time("timer ");
-        };
-        const timeend = () => {
-          console.timeEnd("TimeEnd");
-        };
-
-        const reader = () => {
-          console.log("reader");
-          document.getElementById("dataGetters").addEventListener(
-            "click",
-            () => {
-              const modulePath =
-                23 > 3 ? "./dataDynamic/reader.js" : "./dataDynamic/writer.js";
-              const read = import(modulePath);
-              console.log("reader done");
-            },
-            true
-          );
-        };
-        const dataDyn = () => {
-          document.getElementById("dataDynamic").addEventListener(
-            "click",
-            async () => {
-              const modulePath =
-                13 > 2
-                  ? "./dataDynamic/fractionalKnap.js"
-                  : "./dataUtil/dynamic.js";
-              const dataDynamic = await import(modulePath);
-            },
-            true
-          );
-        };
-
-        const chooser = (num) => {
-          switch (num) {
-            case 1:
-              alert("1"); 
-              break;
-            case 2:
-              alert("2");
-              break;
-            case 3:
-              alert("3");
-              break;
-            default:
-              alert("default");
-          }
-        };
-      </script>
-      <script src="dataVisuals/module.js"></script>
-
-      <!--MAP: dataVisuals/populations.js -->
-      <div id="ckmeans"></div>
-
-      <!--Title:  public/appTitle.js -->
-      <div class="appTitle"></div>
-      <script src="appTitle.js"></script>
+    <div style="background-color: skyblue;padding:10px;" class="container"> 
+      <script type="module" src="./appControl.js"> </script> 
+      <script type="module" src="dataVisuals/module.js"></script>
+ 
+      <div id="ckmeans" abbrev="dataVisuals/populations.js"></div>
+ 
+      <div class="appTitle" abbrev=" public/appTitle.js"></div>
+ 
 
       <div class="container">
         <!--MAP: dataVisuals/dataQueues_D3.js -->
         <div id="dataQueues"></div>
 
         <div class="contain">
+          
+      <button class="button left" id="appVisualsBtn" >Load App Visuals</button
+        >  <button class="button left" id="launchMoreBtn">Load Viz Options</button>
           <div id="output" class="output"></div>
           <div class="row btc">
             <div class="dataConvert col col-xs-4" id="dataConvert0"></div>
@@ -297,29 +150,37 @@
     // Properties Mapping  //ckmeans
   </script>
 
-  <script lang="babel" type="text/babel"    src='dataVisuals/indexModule.js'></script>
-<script  lang="babel" type="text/babel"   src='dataVisuals/index.js'></script> -->
+  <script
+    lang="babel"
+    type="text/babel"
+    src="dataVisuals/module.js"
+  ></script> 
+ 
 
- <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
+  <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
   <script src="dataGetters/dataStreamsRxJS.js"></script>
   <script src="dataUtil/csvJson.js"></script>
 
   <script src="dataStructures/dataStacks.js"></script>
   <script src="dataStructures/dataLinkedList.js"></script>
   <script src="dataStructures/dataSets.js"></script>
-  <script src="dataStructures/dataQueues.js"></script> 
+  <script src="dataStructures/dataQueues.js"></script>
 
   <script src="dataStructures/dataBinaryTree.js"></script>
-  <script type="module" defer src="dataSortSearch/BinarySearchGroot.js"></script>
-  
-  <script src="dataStructures/dataHashTable.js"></script>
+  <script
+    type="module"
+    defer
+    src="dataSortSearch/BinarySearchGroot.js"
+  ></script>
+
+  <script src="dataStructures/dataHashTablesProto.js"></script>
   <script src="dataStructures/dataTrieStruct.js"></script>
   <script src="dataStructures/dataHeap.js"></script>
   <script src="dataStructures/dataGraphs.js"></script>
-  <script type="module" src="dataSortSearch/dBubble.js"></script>
-  <script src="dataSortSearch/dSelection.js"></script>
+  <script type="module" src="dataSortSearch/_sortBubble.js"></script>
+  <script src="dataSortSearch/_sortSelection.js"></script>
   <script src="dataVisuals/dataQueues_D3.js"></script>
- 
+
   <script src="dataPerformance/bigO.js"></script>
 
   <script src="dataPerformance/arrays/orderedSearch.js"></script>
@@ -332,5 +193,4 @@
       navigator.serviceWorker.register("./serviceWorker.js");
     }
   </script>
-
 </html>

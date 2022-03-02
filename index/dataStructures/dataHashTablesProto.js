@@ -73,7 +73,7 @@
         }
 
         transactHash.prototype.add = function(key, value) { // Constant Time
-            let key = key.replace(/-/g, '') // replace hyphens from key input
+            key.replace(/-/g, '') // replace hyphens from key input
             let hash = this.hash(key) // create hash value out of key
         
             if (this.table[hash]) { // if position is already filled

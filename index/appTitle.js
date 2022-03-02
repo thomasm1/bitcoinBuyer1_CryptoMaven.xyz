@@ -1,4 +1,5 @@
-
+export function appTitle() {
+    
 let title = `Bitcoin Buyer Console`;
 
 let tocTitle = `Guiding Inspiration for Bitcoin Buyer:`
@@ -130,3 +131,5 @@ let hide = function () {
 let show = function () {
     document.getElementById("code").innerHTML = code;
 }  
+
+}
