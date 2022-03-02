@@ -45,21 +45,10 @@ newsOutlets.forEach(news => {
 
   })
 })
-
-// Crypto Market Api
-const siteApi =[
-  {
-    name: 'nomics',
-    address: 'https://nomics.com'
-  },
-]
-
-/////////////// Dynamic Paths  
-
+ 
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => {
-  res.json(articles)
- 
+  res.json(articles) 
 });
 
                             //* News OUTPUT Needs: 1. Filter out Ethereum Class; 2. De-Duplicator 
@@ -80,8 +69,33 @@ app.get("/cryptonews", (req, res) => {
     "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
   }, 
 */ 
+app.get("/cryptonews/:newsId", (req, res) => {
+  const newsId = req.params.newsId
+  const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
+  const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
 
+  axios.get(newsAddress)
+    .then(response => {
+      const html = response.data
+      const $ = cheerio.load(html)
+      const targetArticles = []
+
+      $('a:contains("Ethereum")', html).each(function () {
+        const title = $(this).text()
+        const url = $(this).attr('href')
+  
+        targetArticles.push({
+          title, 
+          url: news.baseUrl+url, 
+          source: newsId
+        })
+      })
+      res.json(targetArticles)
+    }).catch(err => console.log(err))
+
+})
 ////////////////////////////////////////////////////////////////////////////////
+ 
 // Data to return crypto resources
 app.get("/api", (req, res) => {
   res.json("welcome to CryptoMaven");

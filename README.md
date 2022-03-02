@@ -49,9 +49,20 @@ The only useful application of var is that a global can be redefined in global s
     "Volume USD": 14790355.69
   }
 ``` 
-##### Dependencies
+### Dependencies
 * D3js
 
+#### CDNs
+* https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.3/Rx.js
+* https://d3js.org/d3.v4.min.js
+* 
+  <!--D3JS Dependencies-->
+* http://d3js.org/queue.v1.min.js 
+ *  http://d3js.org/topojson.v1.min.js 
+  * https://d3js.org/d3-geo-projection.v1.min.js 
+ * https://unpkg.com/simple-statistics@2.0.0/dist/simple-statistics.min.js
+ * https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js
+ 
 ### Database: 
 * commuterlink.cmcadlepsyx9.us-east-1.rds.amazonaws.com
 * AWS PostgreSQL 
@@ -67,8 +78,7 @@ The only useful application of var is that a global can be redefined in global s
 * NGINX -AWS - [35.175.138.209]  
           * local: /home/thomas/apps/
           * bitcoinBuyer1-findersCalculators
-          * https://cryptomaven.xyz https://cryptomaven.us
-
+          * https://cryptomaven.xyz https://cryptomaven.us 
 
 ### solidity 
 #### Custom Blockchain App
