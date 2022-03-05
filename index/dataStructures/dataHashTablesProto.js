@@ -1,6 +1,6 @@
 
         // O(N)
-        function hash(key, arrayLen) {
+       export function hash(key, arrayLen) {
             let total = 0;  
             for (let char of key){  
               let value = char.charCodeAt(0) - 96;
@@ -12,7 +12,7 @@
         
         
          // O(1)
-         function hashPrime(key, arrayLen) {
+         export  function hashPrime(key, arrayLen) {
             let total = 0;
             let PRIME = 31;
             for(let i = 0; i < Math.min(key.length, 100); i++){  
@@ -27,7 +27,7 @@
                 // Memory Inefficient – requires a secondary data structure to store collisions Long Chains will produce Linear search times
 
 // TODO:  Convert to prototypal inheritance
-        class HashSeparateChaining {
+export  class HashSeparateChaining {
             constructor(size = 53) {
                 this.keyMap = new Array(size);
             }
@@ -56,7 +56,7 @@
         */
         
         
-        function transactHash(size) {
+        export  function transactHash(size) {
             this.count = 0 // Tracks actual item count in table
             this.size = size // current storage size of table
             this.maxLoadFactor = 0.667 // when table crosses 2/3rds capacity, size will either need to be increased or decreased

@@ -2,10 +2,12 @@ import 'dotenv/config';  // only CRYPTO_API_KEY here
 import axios from "axios";
 import express from "express";
 import   Cheerio   from "cheerio";
+
+// this moving to AppControl soon
+import {HashSeparateChaining} from './dataStructures/dataHashTablesProto.js';
  
 const app = express();
 const PORT = process.env.PORT || 5000;
-
 
 ///////////////// VARS
 // Crypto News
@@ -48,6 +50,7 @@ newsOutlets.forEach(news => {
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => {
+  DeDupeArticles(articles)
   res.json(articles) 
 });
 
@@ -69,6 +72,15 @@ app.get("/cryptonews", (req, res) => {
     "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
   }, 
 */ 
+ // TEMPORARY PLACEMENT OF PLEIADES II
+/// De-duplicator based on class-based, Large Prime-HashMap, with O(1) Speed, pump. 
+class DeDupeArticlesHash {
+  constructor(size) {
+    this.keyMap  = new Array(size);
+  } 
+
+};
+
 app.get("/cryptonews/:newsId", (req, res) => {
   const newsId = req.params.newsId
   const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
