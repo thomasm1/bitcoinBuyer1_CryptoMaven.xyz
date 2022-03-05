@@ -4,8 +4,8 @@ import express from "express";
 import   Cheerio   from "cheerio";
 
 // this moving to AppControl soon
-import {HashSeparateChaining} from './dataStructures/dataHashTablesProto.js';
- 
+import {HashSeparateChaining} from './index/dataStructures/dataHashTablesProto.js';
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
@@ -13,7 +13,10 @@ const PORT = process.env.PORT || 5000;
 // Crypto News
 const articles = [];
 
-const newsOutlets = [ 
+// Fin API
+const apiData = [];
+
+const newsOutlets = [  // Go to these websites and scrape for keyword 
   {
     name: 'cointelegraph',
     address: 'https://cointelegraph.com/',
@@ -50,7 +53,12 @@ newsOutlets.forEach(news => {
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => {
-  DeDupeArticles(articles)
+   // TEMPORARY PLACEMENT OF PLEIADES II
+/// De-duplicator based on class-based, Large Prime-HashMap, with O(1) Speed, pump. 
+const newClassDupe = new HashSeparateChaining( articles.length *20); 
+const e = newClassDupe._hash(articles.length);
+console.log(e.toString())
+ console.log("length"+ articles)
   res.json(articles) 
 });
 
@@ -72,14 +80,7 @@ app.get("/cryptonews", (req, res) => {
     "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
   }, 
 */ 
- // TEMPORARY PLACEMENT OF PLEIADES II
-/// De-duplicator based on class-based, Large Prime-HashMap, with O(1) Speed, pump. 
-class DeDupeArticlesHash {
-  constructor(size) {
-    this.keyMap  = new Array(size);
-  } 
 
-};
 
 app.get("/cryptonews/:newsId", (req, res) => {
   const newsId = req.params.newsId
@@ -110,7 +111,8 @@ app.get("/cryptonews/:newsId", (req, res) => {
  
 // Data to return crypto resources
 app.get("/api", (req, res) => {
-  res.json("welcome to CryptoMaven");
+
+  res.json(res.data)
 });
 
 let options = {
@@ -122,16 +124,32 @@ let options = {
     'x-rapidapi-key':  process.env.CRYPTO_API_KEY
   }
 };
-
                 // moving to   MOVE    to DataScrapers   ******
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
+function scraper() {
+  axios.request(options).then(function (response) {
+  
+
+    console.log(response.data);
+ 
+  return response.data
+    
+  }).catch(function (error) {
+    console.error(error);
+  });
+}
+scraper()
+
+let re = [1,2,3]
+const newOne = [];
+function pleiades(arr) {
+  let object = scraper();
+
+  arr.forEach(data => {
+console.log(data)
+  // ouput to module PLEIADES
+ 
 });
-
-
-
+}
 
 ///  ///// END Routes
 

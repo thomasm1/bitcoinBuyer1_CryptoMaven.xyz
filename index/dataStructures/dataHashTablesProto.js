@@ -1,6 +1,6 @@
 
         // O(N)
-       export function hash(key, arrayLen) {
+         function hash(key, arrayLen) {
             let total = 0;  
             for (let char of key){  
               let value = char.charCodeAt(0) - 96;
@@ -12,7 +12,7 @@
         
         
          // O(1)
-         export  function hashPrime(key, arrayLen) {
+            function hashPrime(key, arrayLen) {
             let total = 0;
             let PRIME = 31;
             for(let i = 0; i < Math.min(key.length, 100); i++){  
@@ -27,7 +27,7 @@
                 // Memory Inefficient – requires a secondary data structure to store collisions Long Chains will produce Linear search times
 
 // TODO:  Convert to prototypal inheritance
-export  class HashSeparateChaining {
+  export class HashSeparateChaining {
             constructor(size = 53) {
                 this.keyMap = new Array(size);
             }
