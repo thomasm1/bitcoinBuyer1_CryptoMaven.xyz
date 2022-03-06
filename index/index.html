@@ -11,12 +11,54 @@
     <link rel="stylesheet" href="src/css/styles.css" />
     <script src="src/rxjs.5.4.3.js"></script>
     <script src="src/d3.v4.min.js"></script>
+
+    <script src="./app-react-src.js"></script>
   </head>
 
   <body id="body">
-    <svg width="960" height=""><circle
-      cx="400" cy="250" r="250" fill="yellow" stroke="blue" stroke-width="yellow"></circle></svg>
-     
+    <svg width="960" height="">
+      <circle
+        cx="100"
+        cy="100"
+        r="50"
+        fill="silver"
+        stroke="silver"
+        stroke-width="1"
+      >
+      
+ 
+      </circle>
+      <circle
+      cx="70"
+      cy="80"
+      r="5"
+      fill="black"
+      stroke="silver"
+      stroke-width="1"
+    ></circle> 
+    
+        <circle
+          cx="130"
+          cy="80"
+          r="5"
+          fill="black"
+          stroke="silver"
+          stroke-width="1"
+        ></circle>
+    </svg>
+
+    <br />
+    <svg width="960" height="">
+      <circle
+        cx="400"
+        cy="350"
+        r="350"
+        fill="yellow"
+        stroke="orange"
+        stroke-width="1"
+      ></circle>
+    </svg>
+
     <div id="module"></div>
     <!--d3-token modules -->
 
@@ -36,16 +78,13 @@
       <div class="appTitle" abbrev=" public/appTitle.js"></div>
 
       <div class="container">
-         <!--MAP: dataVisuals/dataQueues_D3.js -->
+        <!--MAP: dataVisuals/dataQueues_D3.js -->
         <div id="dataQueues"></div>
 
         <div class="contain">
-          <h4>Operation Method: <span id="graph-choice"></span>
-          </h4>
-          <h4>Graphing Choice: <span id="user-choice"></span>
-          </h4>
-          <h4>Output: <span id="result"></span>
-          </h4>
+          <h4>Operation Method: <span id="graph-choice"></span></h4>
+          <h4>Graphing Choice: <span id="user-choice"></span></h4>
+          <h4>Output: <span id="result"></span></h4>
           <div class="dataConvert col col-xs-4" id="dataConvert0"></div>
           <div class="dataConvert col col-xs-4" id="dataConvert1"></div>
           <div class="dataConvert col col-xs-4" id="dataConvert2"></div>
@@ -82,7 +121,7 @@
           <script src="dataGetters/serverless.js"></script>
 
           <div align="center">
-            <h3 >
+            <h3>
               <span class="hover">Serverless API Serving Bitcoin Prices</span>
             </h3>
           </div>
@@ -166,10 +205,13 @@
   <script src="src/d3-tip.js"></script>
   <script src="src/simple-statistics.2.0.min.js"></script>
   <script src="src/babel.6.10.3.min.js"></script>
-  <script lang="babel" type="text/babel" src="dataVisuals/populations.js">  </script>
+  <script
+    lang="babel"
+    type="text/babel"
+    src="dataVisuals/populations.js"
+  ></script>
 
- 
-  <script lang="babel" type="text/babel" src="dataVisuals/module.js"></script> 
+  <script lang="babel" type="text/babel" src="dataVisuals/module.js"></script>
   <script type="module" src="dataStructures/DataBinaryTreeClass.js"></script>
   <script src="dataGetters/dataStreamsRxJS.js"></script>
   <script src="dataUtil/csvJson.js"></script>
@@ -178,14 +220,9 @@
   <script src="dataStructures/dataLinkedList.js"></script>
   <script src="dataStructures/dataSets.js"></script>
   <script src="dataStructures/dataQueues.js"></script>
-  <script 
-    src="dataDynamic/StepWiseOptions.js"
-  ></script>
+  <script src="dataDynamic/StepWiseOptions.js"></script>
   <script src="dataStructures/dataBinaryTree.js"></script>
-  <script
-    type="module" 
-    src="dataSortSearch/BinarySearchGroot.js"
-  ></script> 
+  <script type="module" src="dataSortSearch/BinarySearchGroot.js"></script>
   <script src="dataStructures/dataHashTablesProto.js"></script>
   <script src="dataStructures/dataTrieStruct.js"></script>
   <script src="dataStructures/dataHeap.js"></script>
@@ -205,5 +242,9 @@
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("./serviceWorker.js");
     }
+
+    setTimeout(function () {
+      console.log(React);
+    }, 7000);
   </script>
 </html>

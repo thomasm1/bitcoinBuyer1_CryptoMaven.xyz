@@ -53,8 +53,17 @@ newsOutlets.forEach(news => {
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => {
- 
-   // TEMPORARY PLACEMENT OF PLEIADES II
+  function hash(key, arrayLen) {
+    let total = 0;
+    let WEIRD_PRIME = 31;
+    for (let i = 0; i < Math.min(key.length, 100); i++) {
+      let char = key[i];
+      let value = char.charCodeAt(0) - 96
+      total = (total * WEIRD_PRIME + value) % arrayLen;
+    }
+    return total;
+  }
+   // TEMPORARY PLACEMENT OF PLEIADES  
 /// De-duplicator based on class-based, Large Prime-HashMap, with O(1) Speed, pump. 
 const newClassDupe = new HashSeparateChaining( articles.length *20); 
 const e = newClassDupe._hash(articles.length);

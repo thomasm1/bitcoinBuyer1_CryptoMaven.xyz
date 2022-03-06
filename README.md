@@ -6,7 +6,8 @@
 
 This app applies data scraper to collect unstructured data. And this app structures into meaningful data, based on the parameters as profiled by self-assessment, and propensity for success
 
-<h3 width="1200" style="margin-left:20px;max-width:300px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</p> 
+<h3 width="1200" style="margin-left:50px;max-width:300px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</h3> 
+<img src="./index/src/img/cryptoMaven.JPG" height="550>
 ```
 ## Crypto Data Streaming App
 ### Part I. Algorithms and Tools
@@ -59,12 +60,14 @@ The only useful application of var is that a global can be redefined in global s
   }
 ``` 
 ### Dependencies
+* Vanilla JavaScript is Aim
 * D3js
+* React
 
 #### CDNs
 * https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.3/Rx.js
 * https://d3js.org/d3.v4.min.js
-* 
+* https://unpkg.com/react@17.0.2/umd/react.development.js
   <!--D3JS Dependencies-->
 * http://d3js.org/queue.v1.min.js 
  *  http://d3js.org/topojson.v1.min.js 

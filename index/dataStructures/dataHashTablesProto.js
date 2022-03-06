@@ -29,6 +29,7 @@
 // TODO:  Convert to prototypal inheritance
  
   export class HashSeparateChaining {
+ 
             constructor(size = 53) {
                 this.keyMap = new Array(size);
             }

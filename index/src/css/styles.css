@@ -7,7 +7,9 @@
 
 #body {
     background-color: rgba(135, 207, 235, 0.575);
-    /* white-space: nowrap; */ 
+    margin: 0;
+    overflow:hidden; /* FOR D3 purposes */
+    white-space: nowrap; 
 }
 
 path {
