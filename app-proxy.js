@@ -50,7 +50,9 @@ newsOutlets.forEach(news => {
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => {
-  DeDupeArticles(articles)
+  DeDupeArticlesHash(articles.length);
+  // Helper class goes here
+  // some kind of exponential back-off 
   res.json(articles) 
 });
 
@@ -78,7 +80,14 @@ class DeDupeArticlesHash {
   constructor(size) {
     this.keyMap  = new Array(size);
   } 
+_hash(key) {
+  let total = 0;
+  let _PRIME = 31;
+  for (let i = 0; i <Math.min(key.length,100); i++) {  // to safegaurd against a huge array
+let char = key[i];
 
+  }
+}
 };
 
 app.get("/cryptonews/:newsId", (req, res) => {

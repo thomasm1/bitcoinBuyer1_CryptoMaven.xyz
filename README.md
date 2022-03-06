@@ -1,7 +1,13 @@
 ## Data Analytics Application
 ### Author: Thomas Maestas
-### App Purpose: Data algorithms/structures Exploratory Application
+### App: CryptoMaven
+### App Purpose: Data algorithms/structures Exploratory Application ;
+### App Name: Pleaides, inspired by the Gree God with 7 Sisters Cluster. 
 
+This app applies data scraper to collect unstructured data. And this app structures into meaningful data, based on the parameters as profiled by self-assessment, and propensity for success
+
+<h3 width="1200" style="margin-left:20px;max-width:300px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</p> 
+```
 ## Crypto Data Streaming App
 ### Part I. Algorithms and Tools
 ### Part II. Implementations
@@ -12,6 +18,9 @@
 #### Performance Tools
   * Tool: https://rithmschool.github.io/function-timer-demo/
 #### 
+<script type="module" defer>
+  alert("hey")
+  </script>
 ```sh
 notes: 
 1. Global Var Warning! JavaScript use of var used in limited cases, usually removed for let/const otherwise: 

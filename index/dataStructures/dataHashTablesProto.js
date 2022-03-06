@@ -27,6 +27,7 @@
                 // Memory Inefficient – requires a secondary data structure to store collisions Long Chains will produce Linear search times
 
 // TODO:  Convert to prototypal inheritance
+
 export  class HashSeparateChaining {
             constructor(size = 53) {
                 this.keyMap = new Array(size);
