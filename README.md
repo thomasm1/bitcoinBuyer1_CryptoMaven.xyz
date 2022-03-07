@@ -1,6 +1,7 @@
 ## Data Analytics Application
 ### Author: Thomas Maestas
 ### App: CryptoMaven
+### Application Overview
 ### App Purpose: Data algorithms/structures Exploratory Application ;
 ### App Name: Pleaides, inspired by the Gree God with 7 Sisters Cluster. 
 
@@ -15,6 +16,7 @@ This app applies data scraper to collect unstructured data. And this app structu
 ### Part III. UI Interactivity
 
 ### App Functionality
+
  #### Data Operation Methods :12:
 #### Performance Tools
   * Tool: https://rithmschool.github.io/function-timer-demo/
@@ -40,12 +42,20 @@ The only useful application of var is that a global can be redefined in global s
     isBalanced() {
     findMinHeight(node = this.root) {
 ```
-
+ 
 ### UI
 ##### Dependencies
 -Node.js 
 -Express
 
+### Technologies 
+| Fx | Tools | URLS |
+|-----------------|:-----------------:|---------:|
+| Database | Oracle SE 11 | [Oracle]  | 
+| Cloud Data | Amazon RDS |  [AWS-RDS] | 
+| Cloud Assets | Amazon S3 |  [AWS-S3]  | 
+ 
+     
 ### CryptoMaven's Data Structures: 
 ```sh
 {
@@ -81,6 +91,32 @@ The only useful application of var is that a global can be redefined in global s
 * Auto-detected PostgreSQL 10 installation with the data directory at C:\Program Files\PostgreSQL\10\data
 
 ###  server-nginx
+
+##pm2 
+https://www.npmjs.com/package/pm2
+https://pm2.keymetrics.io/
+npm i pm2 -g 
+pm2 start app.js [[instead of node app.js]]
+
+auto-restart after reboot:
+pm2 startup ubuntu 
+or...
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup ubuntu -u ubuntu --hp /home/ubuntu
+pm2 status
+
+##ufw
+ufw enable
+ufw allow ssh
+ufw allow http
+ufw allow https
+
+##nginx
+sudo apt install nginx
+sudo nano /etc/nginx/sites-available/default  
+sudo nginx -t
+sudo service nginx restart
+
+
 #### Load Balancer 
 * localhost port 5000
 * NGINX -Digital Ocean:  [134.122.15.249] 
@@ -92,6 +128,14 @@ The only useful application of var is that a global can be redefined in global s
           * bitcoinBuyer1-findersCalculators
           * https://cryptomaven.xyz https://cryptomaven.us 
 
+
+** DB Cloud Software **
+
+ [Oracle](https://www.oracle.com/database/technologies/112010-win64soft.html)
+ [AWS-RDS](https://aws.amazon.com/rds/)
+ [AWS-S3](https://aws.amazon.com/s3/) 
+   
+
 ### solidity 
 #### Custom Blockchain App
 ##### Dependencies
@@ -99,6 +143,8 @@ The only useful application of var is that a global can be redefined in global s
 * npm run block :: Start blockchain
 
 ### INSTRUCTIONS
+## Solidity Application
+
 Development: npm run block
 
 Start Chain: npm run start 

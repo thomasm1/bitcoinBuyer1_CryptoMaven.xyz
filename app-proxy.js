@@ -3,8 +3,10 @@ import axios from "axios";
 import express from "express";
 import   Cheerio   from "cheerio";
 
-// this moving to AppControl soon
-import {HashSeparateChaining} from './index/dataStructures/dataHashTablesProto.js';
+// Default Class helpers
+//// this moving to AppControl soon
+import HashTableHelpers from './index/dataUtil/HashTableHelpers.js'; 
+import HashSeparateChaining from './index/dataStructures/dataHashTablesClass.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
