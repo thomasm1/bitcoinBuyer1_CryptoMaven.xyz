@@ -4,7 +4,8 @@ console.log("%c MinHEAP Bi-Tree: ", "color:white; background-color:brown");
 // Left child: 1*2
 // Right chile: 1*2 + 1
 // Parent: i/2
-let MinHeap = function() {
+
+export function MinHeap() {
   let heap = [null];
   this.insert = function(num) {
     heap.push(num);
@@ -91,7 +92,7 @@ console.log(newMinHeap.print());
 // HEAPS maxHeap 1+ => 1
 console.log("%c MaxHEAP Bi-Tree: ", "color:white; background-color:brown");
 
-let MaxHeap = function() {
+export function MaxHeap() {
 
 	let heap = [null];
 

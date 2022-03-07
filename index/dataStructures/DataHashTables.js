@@ -1,3 +1,9 @@
+// 2 hash functions
+// 2 classes:
+//  class HashSeparateChaining 
+// class HashTableLinearProbing  
+ 
+
 // O(N)
 function hash(key, arrayLen) {
   let total = 0;
