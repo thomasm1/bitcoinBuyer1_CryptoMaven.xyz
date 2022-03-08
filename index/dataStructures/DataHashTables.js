@@ -75,7 +75,8 @@ export class HashTableLinearProbing {
 
   add(key, value) {
     // Constant Time
-    let key = key.replace(/-/g, ""); // replace hyphens from key input
+    
+    key = key.replace(/-/g, ""); // replace hyphens from key input
     let hash = this.hash(key); // create hash value out of key
 
     if (this.table[hash]) {

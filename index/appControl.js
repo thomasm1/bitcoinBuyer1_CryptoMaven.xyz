@@ -1,9 +1,18 @@
 import { appTitle } from "./appTitle.js";
-
-
-
-//1:  Auto-load initial D3 visuals
+//1:  Auto-load initial D3 visuals and index.html elements
 appTitle();
+
+// import tools
+import  BST  from './dataStructures/DataBinaryTree.js'; 
+// imports check
+const bst= new BST();
+for (let i=0;i<10;i++){
+bst.add(i);
+}
+console.log("bst true = "+bst.isPresent(3));
+console.log("bst false = "+bst.isPresent(33));
+
+
 
 //2:  Dynamically loaded on button-click
 document.getElementById("appVisualsBtn").addEventListener(

@@ -1,5 +1,3 @@
-import  BST  from '../dataStructures/DataBinaryTreeClass.js';
- 
 export default class BinarySearchGroot {
   
      // Refactored Binary Version

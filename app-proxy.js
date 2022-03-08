@@ -4,9 +4,8 @@ import express from "express";
 import   Cheerio   from "cheerio";
 
 // Default Class helpers
-//// this moving to AppControl soon
-import HashTableHelpers from './index/dataUtil/HashTableHelpers.js'; 
-import HashSeparateChaining from './index/dataStructures/dataHashTablesProto.js';
+//// this moving to AppControl soon 
+import {HashSeparateChaining} from './index/dataStructures/DataHashTables.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
