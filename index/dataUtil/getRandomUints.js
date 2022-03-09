@@ -1,8 +1,9 @@
-"strict";
+// import crypto from 'jscrypt' or something
+ 
 
-export default function getRandomNumbers() {
-  var array = new Uint32Array(10);
-  window.crypto.getRandomValues(array);
+export default function getRandomUints() {
+  const array = new Uint32Array(10);
+  Window.crypto.getRandomValues(array);
  
   var randText = document.getElementById("myRandText");
   randText.innerHTML = "The random numbers are: "

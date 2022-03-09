@@ -1,4 +1,4 @@
-export default class DataHeap {
+export default class DataBinaryHeap {
 
   constructor() {
     this.values = [];

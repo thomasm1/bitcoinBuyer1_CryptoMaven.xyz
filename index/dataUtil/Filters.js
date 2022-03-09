@@ -1,10 +1,10 @@
 
-// class IterFilters   methods: 
-//   fibonacci(num); fizBuzz(num);  
+// class rFilters   methods: 
+
 // export class NumFilters {
-//     constructor(){ 
+//   //   fibonacci(num); fibonacciMemo(num) fizBuzz(num);  
 // class ArrayFilters methods:
-//
+//  hashMapper(array, target)
 
 // class ObjectFilters methods:
 //
@@ -49,17 +49,53 @@ export class NumFilters {
         }
     }
 }
+ 
 const numFilters = new NumFilters();
 const testInt = 40      //
 console.log(numFilters.fibonacci(testInt ));
 console.log(numFilters.fibonacciMemo(testInt )); 
 // console.log(numFilters.iterFibonacci(testInt ));
-console.log(numFilters.fizzBuzz(testInt ));
+numFilters.fizzBuzz(testInt);
 
 
-
+////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// 
 // class ArrayFilters methods:
 //
+export class ArrayFilters {
+    constructor(){
+        console.log("ArrayFilters init"); 
+    }
+  inPlaceReverse(arr) {
+        for (let i =0;i<arr.length/2;i++) {
+            let temp = arr[i];
+            arr[i] = arr[arr.length-1-i]; //swap first & last
+            arr[arr.length - 1 - i] = temp;
+        }
+        return arr;
+    } 
+    
+ hashArrayMapper(intArray, targetSum){
+    let pairs =[];
+    let hashArrayTable = [];
+
+    for(let i = 0; i<intArray.length; i++){
+        let current = intArray[i];
+        let targetPart = targetSum - current;   // Calculations to get to target here
+        
+        if (hashArrayTable.indexOf(targetPart) !== -1){  // if not empty
+            pairs.push([current, targetPart]);
+        }
+        hashArrayTable.push(current);
+    }
+    return pairs;
+}
+}
+
+let arrayFilters = new ArrayFilters(); 
+const orderedArray = [1,2,3,4,5]
+console.log(arrayFilters.inPlaceReverse(orderedArray)) 
+
+console.log(arrayFilters.hashArrayMapper([1,5,3,2,2],7));
 
 // class ObjectFilters methods:
 //
