@@ -1,11 +1,15 @@
 import 'dotenv/config';  // only CRYPTO_API_KEY here
 import axios from "axios";
+
 import express from "express";
 import   Cheerio   from "cheerio";
 
-// Default Class helpers
-//// this moving to AppControl soon 
+// Default Prototypes
+import {apiWalker} from './index/dataServices/dataServices.js';
+
+// Default Class helpers 
 import {HashSeparateChaining} from './index/dataStructures/DataHashTables.js';
+import { local } from 'd3-selection';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,8 +18,6 @@ const PORT = process.env.PORT || 5000;
 // Crypto News
 const articles = [];
 
-// Fin API
-const apiData = [];
 
 const newsOutlets = [  // Go to these websites and scrape for keyword 
   {
@@ -29,10 +31,9 @@ const newsOutlets = [  // Go to these websites and scrape for keyword
     baseUrl:'https://www.coindesk.com'
   },
 ] 
-console.log("articles"+ articles)
 
-
-newsOutlets.forEach(news => {
+//  
+  newsOutlets.forEach(news => {
   axios.get(news.address).then((response) => {
     const html = response.data;
     const $ = Cheerio.load(html)
@@ -97,7 +98,7 @@ app.get("/cryptonews/:newsId", (req, res) => {
   const newsId = req.params.newsId
   const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
   const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
-
+ 
   axios.get(newsAddress)
     .then(response => {
       const html = response.data
@@ -119,58 +120,91 @@ app.get("/cryptonews/:newsId", (req, res) => {
 
 })
 ////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////
  
+
+ ////////////////////////////////////////////////////////////////////////////////
+ ////////////////////////////////////////////////////////////////////////////////
+// VARS 
+
+// countries: [  // Go to these websites and scrape for keyword 
+// {
+// "ci": "95",
+// "cc": "AL",
+// "cname": "Albania",
+// "country_name_translated": "Albania",
+// "country_international_phone_code": "+355",
+// "flag_image_32x32": "https://i-invdn-com.investing.com/flags_32x32/circle/Albania.png",
+// "flag_image_32x32_flat": "https://i-invdn-com.investing.com/flags_32x32_ios/Albania.png"
+// },
+// {
+// "ci": "88",
+// "cc": "DZ",
+// "cname": "Algeria",
+// "country_name_translated": "Algeria",
+// "country_international_phone_code": "+213",
+// "flag_image_32x32": "https://i-invdn-com.investing.com/flags_32x32/circle/Algeria.png",
+// "flag_image_32x32_flat": "https://i-invdn-com.investing.com/flags_32x32_ios/Algeria.png"
+// }
+// ] 
+
+
 // Data to return crypto resources
-app.get("/api", (req, res) => {
+app.get("/api", (req, res) => { 
 
-  res.json(res.data)
-});
+  let options = {
 
-let options = {
-  method: 'GET',
-  url: 'https://investing-cryptocurrency-markets.p.rapidapi.com/get-meta-data',
-  params: {locale_info: 'en_US', lang_ID: '1', time_utc_offset: '28800'},
-  headers: {
-    'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
-    'x-rapidapi-key':  process.env.CRYPTO_API_KEY
-  }
-};
-                // moving to   MOVE    to DataScrapers   ******
-function scraper() {
-  axios.request(options).then(function (response) {
-  
+    method: 'GET',
+    url: 'https://investing-cryptocurrency-markets.p.rapidapi.com/get-meta-data',
+    params: {locale_info: 'en_US', lang_ID: '1', time_utc_offset: '28800'},
+    headers: {
+      'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
+      'x-rapidapi-key':  process.env.CRYPTO_API_KEY
+    }
+  };
+                  // moving to   MOVE    to DataScrapers   ****** 
+    axios.request(options).then(response => {
+      const a = new apiWalker();
+    const d = response.data
+    let newObjMappers 
+    let countries_market 
+    let all_langs 
+      for (let i = 0;i<d.length;i++){
+   
+        newObjMappers.push({
+         i: d.countries[i]
+        })    // mapper for caching later
+        countries_market.push({
+          i: d.countries_market[i]  // for quick-lookup by index
+        })
+        all_langs.push({
+          i:d.all_langs[i]
+        })
 
-    console.log(response.data);
- 
-  return response.data
-    
-  }).catch(function (error) {
-    console.error(error);
+      
+      }
+      
+
+  console.log(newObjMappers)
+  console.log(countries_market)
+  console.log(all_langs)
+                                              // for next Method GET     console.log( a.local(d.countries, input ))
+    const input =  "Afghanistan"
+    console.log("grab some objects from names");
+    console.log( a.local(d.countries, input ));
+
+     
+    res.json(d) 
+    }).catch(function (error) {
+      console.error(error);
+    });
+
   });
-}
-scraper()
-
-let re = [1,2,3]
-const newOne = [];
-function pleiades(arr) {
-  let object = scraper();
-
-  arr.forEach(data => {
-console.log(data)
-  // ouput to module PLEIADES
- 
-});
-}
-
-///  ///// END Routes
-
-
-
-
+   
 /////////////////   Static index path /
 app.use(express.static("index"));
-app.listen(PORT, () =>
+app.listen(PORT, () => {
   setTimeout( () => {
     console.log(` ... serving on Port ${PORT}`);  
   }, 2500)
-);
+});

@@ -48,12 +48,32 @@ export class NumFilters {
             console.log(i);
         }
     }
+
+    findPrimes(num){
+        let primes = [];
+        for (let i=0;i<=num;i++){
+            primes[i] = true;
+        }
+        primes[0] = false;
+        primes[1] = false;
+        for (let i = 2;i<=Math.sqrt(num);i++){
+            for (let j = 2;i*j<=num;j++){
+                primes[i*j] = false;                
+            }
+        }
+        let resultArr = []; 
+        for (let i=0;i<primes.length;i++){
+            if (primes[i]===true){  resultArr.push(i)         }
+        }
+        return resultArr;
+    }
 }
  
 const numFilters = new NumFilters();
 const testInt = 40      //
-console.log(numFilters.fibonacci(testInt ));
-console.log(numFilters.fibonacciMemo(testInt )); 
+console.log("findPrimes: "+ numFilters.findPrimes(testInt));
+// console.log(numFilters.fibonacci(testInt ));
+console.log("fibonacciMemo: "+numFilters.fibonacciMemo(testInt )); 
 // console.log(numFilters.iterFibonacci(testInt ));
 numFilters.fizzBuzz(testInt);
 
