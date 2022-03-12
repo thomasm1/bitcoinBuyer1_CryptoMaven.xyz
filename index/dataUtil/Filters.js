@@ -109,13 +109,39 @@ export class ArrayFilters {
     }
     return pairs;
 }
-}
+
+    maxProfit(arr) {
+        let maxProfit = 0;
+        let buyPrice = 0;
+        let sellPrice = 0;
+        let changeBuyPrice = true;
+
+    for (let i = 0;i<arr.length;i++){
+        if (changeBuyPrice) {      buyPrice = arr[i];   }
+        sellPrice = arr[i+1];
+        
+        if(sellPrice < buyPrice) { 
+            changeBuyPrice=true;
+        } else {
+            let tempProfit = sellPrice - buyPrice;
+            if (tempProfit > maxProfit) { maxProfit = tempProfit; }
+            changeBuyPrice = false;
+            }
+        }
+        return maxProfit;
+      }
+    } 
 
 let arrayFilters = new ArrayFilters(); 
-const orderedArray = [1,2,3,4,5]
-console.log(arrayFilters.inPlaceReverse(orderedArray)) 
+   let orderedArray = [1,2,3,4,5]
+ let unorderedArray = [10, 18, 4, 5, 9, 6, 16, 12]
+console.log(arrayFilters.inPlaceReverse(orderedArray))  
 
 console.log(arrayFilters.hashArrayMapper([1,5,3,2,2],7));
+
+console.log(arrayFilters.maxProfit(unorderedArray));
+
+
 
 // class ObjectFilters methods:
 //
