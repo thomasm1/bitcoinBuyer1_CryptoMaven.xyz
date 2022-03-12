@@ -18,7 +18,7 @@ if (reverse === word) {
 }
 ///
 
-var Stack = function() {
+export default function DataStack () {
   this.count = 0;
   this.storage = {};
   //
@@ -43,7 +43,7 @@ var Stack = function() {
   };
 };
 
-var myStack = new Stack();
+var myStack = new DataStack();
 const implementStack = function(stack) {
   myStack.push(1);
   myStack.push(2);

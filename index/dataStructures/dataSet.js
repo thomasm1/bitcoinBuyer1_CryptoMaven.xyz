@@ -1,7 +1,7 @@
 // SETS
 console.log("%c SETS BEGN: ", "color:white; background-color:grey");
 // ES6 Set methods:  .has, .values, .add,   .size,
-function mySet() {
+export default function DataSet() {
   // collection holding set
   var collection = [];
   // check for presence, return true or false
@@ -34,7 +34,7 @@ function mySet() {
   };
   //  returns the union of two sets
   this.union = function(otherSet) {
-    var unionSet = new Set();
+    var unionSet = new Set();    /// <===== USE JAVASCRIPT"S SET ??? 
     var firstSet = this.values();
     var secondSet = otherSet.values();
     firstSet.forEach(function(e) {
@@ -47,7 +47,7 @@ function mySet() {
   };
   // returns intersection of 2 sets AS A NEW SET
   this.intersection = function(otherSet) {
-    var intersectionSet = new mySet();
+    var intersectionSet = new DataSet();   /// 
     var firstSet = this.values();
     firstSet.forEach(function(e) {
       if (otherSet.has(e)) {
@@ -58,7 +58,7 @@ function mySet() {
   };
   // returns DIFFERENCE of 2 sets as a new set
   this.difference = function(otherSet) {
-    var differenceSet = new Set();
+    var differenceSet = new Set();      /// <===== USE JAVASCRIPT"S SET GOOD IDEA ??? 
     var firstSet = this.values();
     firstSet.forEach(function(e) {
       if (!otherSet.has(e)) {
@@ -75,8 +75,8 @@ function mySet() {
     });
   };
 }
-var setA = new mySet();
-var setB = new mySet();
+var setA = new DataSet();
+var setB = new DataSet();
 
 setA.add("a");
 setB.add("b");

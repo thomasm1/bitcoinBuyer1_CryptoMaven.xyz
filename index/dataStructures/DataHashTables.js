@@ -4,8 +4,30 @@
 // class HashTableLinearProbing  
  
 
+// separate chaining =>
+// Can store more keys than size of array....
+// Separate Chaining	Very Easy to implement
+// Memory Inefficient – requires a secondary data structure to store collisions Long Chains will produce Linear search times
+export class HashSeparateChaining {
+  constructor(size) {
+    this.size = size || 53; 
+    this.keyMap = new Array(this.size);
+  }
+
+// O(1)
+hashPrime(key) { 
+    let total = 0;
+    let PRIME = 31;
+    for (let i = 0; i < Math.min(key.length, 100); i++) {  
+      let char = key[i]; 
+      let value = char.charCodeAt(0) - 96;
+      total = (total + value + PRIME) % this.keyMap.length;
+    }
+    return total;
+  }
+  
 // O(N)
-function hash(key, arrayLen) {
+hashSlow(key, arrayLen) {
   let total = 0;
   for (let char of key) {
     let value = char.charCodeAt(0) - 96;
@@ -13,35 +35,7 @@ function hash(key, arrayLen) {
   }
   return total;
 }
-
-// O(1)
-function hashPrime(key, arrayLen) {
-  let total = 0;
-  let PRIME = 31;
-  for (let i = 0; i < Math.min(key.length, 100); i++) {
-    let value = char.charCodeAt(0) - 96;
-    total = (total + PRIME + value) % arrayLen;
-  }
-  return total;
-}
-// separate chaining =>
-// Can store more keys than size of array....
-// Separate Chaining	Very Easy to implement
-// Memory Inefficient – requires a secondary data structure to store collisions Long Chains will produce Linear search times
-export class HashSeparateChaining {
-  constructor(size = 53) {
-    this.keyMap = new Array(size);
-  }
-  _hash(key) {
-    let total = 0;
-    let PRIME = 31;
-    for (let i = 0; i < Math.min(key.length, 100); i++) {
-      let char = key[i];
-      let value = char.charCodeAt(0) - 96;
-      total = (total + value + PRIME) % this.keyMap.length;
-    }
-    return total;
-  }
+ 
 }
 
 // Open Addressing //  linear probing
@@ -55,7 +49,7 @@ export class HashSeparateChaining {
         Disadvantages: Creates Clusters with Linear and Quadratic Probing
         
         */
-// TODO: CONVERT TO PSEUDO-CLASS
+ 
 export class HashTableLinearProbing {
   constructor(mSize = 53) {
     this.count = 0; // Tracks actual item count in table

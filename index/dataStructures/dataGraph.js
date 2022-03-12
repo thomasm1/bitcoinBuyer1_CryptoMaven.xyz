@@ -4,7 +4,7 @@ console.log(
     "%c GRAPHS, Breadth-First Search: ",
     "color:white; background-color:darkblue"
   );
-  function breadthSearch(graph, root) {
+  export function breadthSearch(graph, root) {
     var nodesLength = {};
     for (var i = 0; i < graph.length; i++) {
       nodesLength[i] = Infinity;
@@ -33,14 +33,16 @@ console.log(
     }
     return nodesLength;
   }
-  var newBreadthGraph = [
+
+
+  export const testBreadthGraph = [
     [0, 1, 1, 1, 0],
     [0, 0, 1, 0, 0],
     [1, 1, 0, 0, 0],
     [0, 0, 0, 1, 0],
     [0, 1, 0, 0, 0]
   ];
-  console.log(breadthSearch(newBreadthGraph, 1));
+  console.log(breadthSearch(testBreadthGraph, 1));
   // Undirected & Directed Braphs
   console.log(
     "%c GRAPHS, Adjacency Lists: ",
@@ -51,7 +53,7 @@ console.log(
     "color:darkblue; background-color:aliceblue"
   );
   // Adjacency List
-  var undirectedGraph = {
+export const testUndirectedGraph = {
     NodeA: ["NodeB"],
     NodeB: ["NodeA", "NodeC"],
     NodeC: ["NodeB"],
@@ -59,19 +61,19 @@ console.log(
   };
   console.log(
     "NodeA",
-    undirectedGraph.NodeA,
+    testUndirectedGraph.NodeA,
     "NodeB: ",
-    undirectedGraph.NodeB,
+    testUndirectedGraph.NodeB,
     "NodeC",
-    undirectedGraph.NodeC,
+    testUndirectedGraph.NodeC,
     "NodeD",
-    undirectedGraph.NodeD
+    testUndirectedGraph.NodeD
   );
   console.log(
     "%c Undirected Graph Arr:",
     "color:darkblue; background-color:aliceblue"
   );
-  var undirectedGraphArray = {
+  export const testUndirectedGraphArray = {
     NodeA: [1],
     NodeB: [0, 2],
     NodeC: [1],
@@ -79,31 +81,31 @@ console.log(
   };
   console.log(
     "NodeA",
-    undirectedGraphArray.NodeA,
+    testUndirectedGraphArray.NodeA,
     "NodeB: ",
-    undirectedGraphArray.NodeB,
+    testUndirectedGraphArray.NodeB,
     "NodeC",
-    undirectedGraphArray.NodeC,
+    testUndirectedGraphArray.NodeC,
     "NodeD",
-    undirectedGraphArray.NodeD
+    testUndirectedGraphArray.NodeD
   );
   
   console.log(
     "%c Adjacency Matrix: ",
     "color:darkblue; background-color:aliceblue"
   );
-  var adjacencyMatrix = [[0, 1, 0], [1, 0, 1], [0, 1, 0]];
-  console.log(adjacencyMatrix);
+export const testAdjacencyMatrix = [[0, 1, 0], [1, 0, 1], [0, 1, 0]];
+  console.log(testAdjacencyMatrix);
   
   console.log(
     "%c Incidence Matrix: ",
     "color:darkblue; background-color:aliceblue"
   );
-  var incidenceMatrixDir = [
+export const testIncidenceMatrixDir = [
     [1, 0, -1, 1],
     [-1, 1, 0, 0],
     [0, -1, 1, 0],
     [0, 0, 0, -1]
   ];
-  console.log(incidenceMatrixDir);
+  console.log(testIncidenceMatrixDir);
   

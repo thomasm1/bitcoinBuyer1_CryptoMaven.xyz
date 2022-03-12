@@ -1,7 +1,7 @@
 // QUEUES
 console.log("%c QUEUES BEGN: ", "color:white; background-color:blue");
 
-function Queue() {
+export default function DataQueue() {
   let collection = [];
   this.print = function() {
     console.log(collection);
@@ -23,7 +23,7 @@ function Queue() {
   };
 }
 
-var q = new Queue();
+var q = new DataQueue();
 q.enqueue("a");
 q.enqueue("b");
 q.enqueue("c");

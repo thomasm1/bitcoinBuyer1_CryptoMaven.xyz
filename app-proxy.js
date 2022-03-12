@@ -55,6 +55,7 @@ const newsOutlets = [  // Go to these websites and scrape for keyword
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => { 
+
   });
 
   
@@ -91,12 +92,12 @@ app.get("/cryptonews/:newsId", (req, res) => {
  ////////////////////////////////////////////////////////////////////////////////
 /// GLOBAL   VARS
 //////////////////////////////////////////////////////////////////////
-const newObjMappers = {}
-const countriesMarket = {}
+let newObjMappers = {}
+let countriesMarket = {}
 const allLangs = {}
 
 // Data to return crypto resources
-app.get("/api/coins/meta", (req, res) => { 
+app.get("/api", (req, res) => { 
 
   let options = {
 
@@ -118,17 +119,14 @@ app.get("/api/coins/meta", (req, res) => {
         newObjMappers.push({
          i: d.countries[i]
         })    // mapper for caching later
-        countries_market.push({
-          i: d.countries_market[i]  // for quick-lookup by index
+        countriesMarket.push({
+          i: d.countriesMarket[i]  // for quick-lookup by index
         })
-        all_langs.push({
-          i:d.all_langs[i]
+        allLangs.push({
+          i:d.allLangs[i]
         }) 
       } 
 
-  console.log(newObjMappers)
-  console.log(countries_market)
-  console.log(all_langs)
                                               // for next Method GET     console.log( a.local(d.countries, input ))
     const input =  "Afghanistan"
     console.log("grab some objects from names");
@@ -139,6 +137,11 @@ app.get("/api/coins/meta", (req, res) => {
       console.error(error);
     });
 
+
+    
+  console.log(newObjMappers)
+  console.log(countriesMarket)
+  console.log(allLangs)
   });
 
   
@@ -178,7 +181,7 @@ ipo_countries: [
     4,   5, 138, 178
 ], 
 default_ipo_countries: [ 5, 4, 6 ],
-countries_market: '5,4,22,17,35,25,29,32,6,27,122,15,119,7,125,138,54,34,174,70,113,107,55,24,89,72,71,51,93,106,33,10,97,96,103,109,247,21,60,53,38,100,56,238,90,112,26,9,12,63,61,47,37,39,14,48,102,42,43,44,45,36,11,162,46,41,178,145,59,66,23,92,94,68,87,193,170,52,143,163,78,57,111,188,105,172,20,80,110,85,202,123,84,75',
+countriesMarket: '5,4,22,17,35,25,29,32,6,27,122,15,119,7,125,138,54,34,174,70,113,107,55,24,89,72,71,51,93,106,33,10,97,96,103,109,247,21,60,53,38,100,56,238,90,112,26,9,12,63,61,47,37,39,14,48,102,42,43,44,45,36,11,162,46,41,178,145,59,66,23,92,94,68,87,193,170,52,143,163,78,57,111,188,105,172,20,80,110,85,202,123,84,75',
 market_default_country: {
   flag_image_32x32: 'https://i-invdn-com.investing.com/flags_32x32/circle/United_States.png',
   flag_image_32x32_flat: 'https://i-invdn-com.investing.com/flags_32x32_ios/United_States.png',
@@ -187,7 +190,7 @@ market_default_country: {
 },
 edition_currency_id: 12,
 edition_currency_short_name: 'USD',
-all_langs: [
+allLangs: [
   {
     iso_639_lang_code: 'en',
     lang_dir: 'ltr',

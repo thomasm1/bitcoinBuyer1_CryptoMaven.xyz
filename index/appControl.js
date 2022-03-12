@@ -2,8 +2,24 @@ import { appTitle } from "./appTitle.js";
 //1:  Auto-load initial D3 visuals and index.html elements
 appTitle();
 
-// import tools
-import  BST  from './dataStructures/DataBinaryTree.js'; 
+// import tools [used]
+import  BST  from './dataStructures/DataBinaryTree.js';   
+
+// tools [not [yet] in use]
+import NBST from './dataStructures/dataBinaryTreePrototype.js';
+import BinarySearchGroot  from './dataSortSearch/BinarySearchGroot.js';
+import  StepWiseOptions  from './dataDynamic/StepWiseOptions.js';
+import DataBinaryHeap from './dataStructures/DataBinaryHeap.js';
+
+import DataStack from './dataStructures/dataStack.js';
+import DataLinkedList from './dataStructures/DataLinkedList.js';
+
+import DataSet from './dataStructures/dataSet.js';
+import DataQueue from './dataStructures/dataQueue.js';
+
+import DataTrie from './dataStructures/dataTrie.js';
+import { breadthSearch,testUndirectedGraph, testBreadthGraph, testUndirectedGraphArray} from './dataStructures/dataGraph.js';
+
 // imports check
 const bst= new BST();
 for (let i=0;i<10;i++){
@@ -11,8 +27,42 @@ bst.add(i);
 }
 console.log("bst true = "+bst.isPresent(3));
 console.log("bst false = "+bst.isPresent(33));
+///
 
+const nbst= new NBST();
+///
+const bsBinarySearchGroot= new BinarySearchGroot();
+///
+const stepWise = new StepWiseOptions();
 
+const dataHeap = new DataBinaryHeap();
+///
+const dataStack = new DataStack();
+///
+const dataLinkedList = new DataLinkedList();
+///
+const dataSet = new DataSet();
+///
+const dataQueue = new DataQueue();
+
+const dataTrie = new DataTrie();
+newTrie.add("Tom");
+newTrie.add("Thomas");
+newTrie.add("Tomtom");
+newTrie.add("Tom");
+newTrie.add("ThomasMilton");
+newTrie.add("ball");
+newTrie.add("bat");
+newTrie.add("sense");
+newTrie.add("donut");
+newTrie.add("doubleDown");
+console.log(newTrie.isWord("Tom"));
+console.log(newTrie.isWord("Thxyz"));
+console.log(newTrie.isWord("TomXX"));
+console.log(newTrie.isWord("ball"));
+console.log(newTrie.print());
+
+dataTrie.
 
 //2:  Dynamically loaded on button-click
 document.getElementById("appVisualsBtn").addEventListener(

@@ -1,25 +1,29 @@
-// B-TREE SEARCH
+ 
+// NON-BINARY SEARCH TREE  prototype
 console.log("%c B-TREE SEARCH:", "color:white; background-color:black");
 class Node {
-    constructor(data, left = null, right = null) {
-        this.data = data;
-        this.left = left;
-        this.right = right;
-        this.center = center;
+    constructor(data, left, right, center) {  
+        this.data = data || null;
+        this.left = left || null;
+        this.right = right || null;
+
+        this.center = center || null;      // For Non-Binary Trees, etc.
+        this.remainders = new Array();
     }
 }
 
-class BST {
-    constructor() {
-        this.root = null;
-    }
-    add(data) {
+export default  function NBST() {  /// NEED WORK ON THIS  
+        this.root = null; 
+    
+}
+
+NBST.prototype.add = function(data) {
         const node = this.root;
         if (node === null) {
             this.root = new Node(data);
             return;
         } else {
-            
+
             const searchTree = function(node) {
                 if (data < node.data) {
                     if (node.left === null) {
@@ -42,21 +46,22 @@ class BST {
             return searchTree(node);
         }
     }
-    findMin() {
+
+    NBST.prototype.findMin = function() {
         let current = this.root;
         while (current.left !== null) {
             current = current.left;
         }
         return current.data;
     }
-    findMax() {
+    NBST.prototype.findMax = function() {
         let current = this.root;
         while (current.right !== null) {
             current = current.right;
         }
         return current.data;
     }
-    find(data) {
+    NBST.prototype.find = function(data) {
         let current = this.root;
         while (current.data !== data) {
             if (data < current.data) {
@@ -70,7 +75,7 @@ class BST {
         }
         return current;
     }
-    isPresent(data) {
+    NBST.prototype.isPresent = function(data) {
         let current = this.root;
         while (current) {
             if (data === current.data) {
@@ -84,7 +89,7 @@ class BST {
         }
         return false;
     }
-    remove(data) {
+    NBST.prototype.remove  = function (data) {
         const removeNode = function(node, data) {
             if (node == null) {
                 return null;
@@ -120,10 +125,10 @@ class BST {
         }
         this.root = removeNode(this.root, data);
     }
-    isBalanced() {
+    NBST.prototype.isBalanced = function() {
         return (this.findMinHeight() >= this.findMaxHeight() - 1)
     }
-    findMinHeight(node = this.root) {
+    NBST.prototype.findMinHeight = function (node = this.root) {
         if (node == null) {
             return -1;
         };
@@ -135,7 +140,7 @@ class BST {
             return right + 1;
         };
     }
-    findMaxHeight(node = this.root) {
+    NBST.prototype.findMaxHeight  = function (node = this.root) {
         if (node == null) {
             return -1;
         };
@@ -147,7 +152,7 @@ class BST {
             return right + 1;
         };
     }
-    inOrder() {
+    NBST.prototype.inOrder = function () {
         if (this.root == null) {
             return null;
         } else {
@@ -162,7 +167,7 @@ class BST {
             return result;
         };
     }
-    preOrder() {
+    NBST.prototype.preOrder = function() {
         if (this.root == null) {
             return null;
         } else {
@@ -177,7 +182,7 @@ class BST {
             return result;
         };
     }
-    postOrder() {
+    NBST.prototype.postOrder = function () {
         if (this.root == null) {
             return null;
         } else {
@@ -193,7 +198,7 @@ class BST {
         }
     }
 
-    levelOrder() {
+    NBST.prototype.levelOrder = function() {
         let result = [];
         let Q = [];
         if (this.root != null) {
@@ -213,30 +218,29 @@ class BST {
             return null;
         };
     };
-}
  
-const bst = new BST();
+const nbst = new NBST();
 
-bst.add(9);
-bst.add(4);
-bst.add(17);
-bst.add(3);
-bst.add(6);
-bst.add(22);
-bst.add(5);
-bst.add(7);
-bst.add(20);
+nbst.add(9);
+nbst.add(4);
+nbst.add(17);
+nbst.add(3);
+nbst.add(6);
+nbst.add(22);
+nbst.add(5);
+nbst.add(7);
+nbst.add(20);
 
-console.log(bst.findMinHeight());
-console.log(bst.findMaxHeight());
-console.log(bst.isBalanced());
-bst.add(10);
-console.log(bst.findMinHeight());
-console.log(bst.findMaxHeight());
-console.log(bst.isBalanced());
-console.log('inOrder: ' + bst.inOrder());
-console.log('preOrder: ' + bst.preOrder());
-console.log('postOrder: ' + bst.postOrder()); 
-console.log('levelOrder: ' + bst.levelOrder());
+console.log(nbst.findMinHeight());
+console.log(nbst.findMaxHeight());
+console.log(nbst.isBalanced());
+nbst.add(10);
+console.log(nbst.findMinHeight());
+console.log(nbst.findMaxHeight());
+console.log(nbst.isBalanced());
+console.log('inOrder: ' + nbst.inOrder());
+console.log('preOrder: ' + nbst.preOrder());
+console.log('postOrder: ' + nbst.postOrder()); 
+console.log('levelOrder: ' + nbst.levelOrder());
 
  

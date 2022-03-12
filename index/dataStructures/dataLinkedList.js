@@ -1,7 +1,7 @@
 // LinkedList
 console.log("%c LINKED LIST: ", "color:white; background-color:brown");
 
-function LinkedList() {
+export default function DataLinkedList() {
   var length = 0;
   var head = null;
 
@@ -111,7 +111,7 @@ function LinkedList() {
   };
 }
 
-var catKing = new LinkedList();
+var catKing = new DataLinkedList();
 catKing.add("Kitten");
 catKing.add("Katten");
 catKing.add("Tuna");
