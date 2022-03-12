@@ -25,9 +25,7 @@ export class Grids {
             stack.push(neighbor);
          }
      }
- }
-
-
+ } 
 
  breadthFirst = (graph, src, print=false) =>{   // pass in 3rd param as boolean true to print
      const queue = [src];

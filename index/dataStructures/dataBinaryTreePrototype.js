@@ -5,6 +5,7 @@ class Node {
         this.data = data;
         this.left = left;
         this.right = right;
+        this.center = center;
     }
 }
 
@@ -18,6 +19,7 @@ class BST {
             this.root = new Node(data);
             return;
         } else {
+            
             const searchTree = function(node) {
                 if (data < node.data) {
                     if (node.left === null) {
