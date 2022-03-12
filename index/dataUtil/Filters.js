@@ -60,11 +60,13 @@ numFilters.fizzBuzz(testInt);
 
 ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// 
 // class ArrayFilters methods:
-//
+
 export class ArrayFilters {
+    
     constructor(){
         console.log("ArrayFilters init"); 
     }
+
   inPlaceReverse(arr) {
         for (let i =0;i<arr.length/2;i++) {
             let temp = arr[i];

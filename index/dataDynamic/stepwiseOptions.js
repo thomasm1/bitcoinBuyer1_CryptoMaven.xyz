@@ -19,7 +19,7 @@ export class StepWiseOptions {
 
     let ans = 0;
     for (let j = 1; j <= k; j++) {
-        ans += waysRecursive(n - j, k);
+        ans += ans + waysRecursive(n - j, k);
     }
     return ans;
   }

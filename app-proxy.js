@@ -1,7 +1,7 @@
 import 'dotenv/config';  // only CRYPTO_API_KEY here
 import axios from "axios";
 import express from "express";
-import   Cheerio   from "cheerio";
+import   {CheerioApi}   from "cheerio";
 
 // Default Class helpers
 //// this moving to AppControl soon 
@@ -53,27 +53,8 @@ newsOutlets.forEach(news => {
 })
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
-app.get("/cryptonews", (req, res) => {
-  function hash(key, arrayLen) {
-    let total = 0;
-    let WEIRD_PRIME = 31;
-    for (let i = 0; i < Math.min(key.length, 100); i++) {
-      let char = key[i];
-      let value = char.charCodeAt(0) - 96
-      total = (total * WEIRD_PRIME + value) % arrayLen;
-    }
-    return total;
-  }
-   // TEMPORARY PLACEMENT OF PLEIADES  
-/// De-duplicator based on class-based, Large Prime-HashMap, with O(1) Speed, pump. 
-const newClassDupe = new HashSeparateChaining( articles.length *20); 
-const e = newClassDupe._hash(articles.length);
-console.log(e.toString())
- console.log("length"+ articles)
-
- res.json(articles) 
-});
-
+app.get("/cryptonews", (req, res) => { 
+  // }
                             //* News OUTPUT Needs: 1. Filter out Ethereum Class; 2. De-Duplicator 
 /*
 // 20220228001654
@@ -92,6 +73,31 @@ console.log(e.toString())
     "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
   }, 
 */ 
+// {
+//   "access-control-allow-credentials": "true",
+//   "access-control-allow-headers": "ver",
+//   "access-control-allow-methods": "GET, POST",
+//   "access-control-allow-origin": "*",
+//   "connection": "keep-alive",
+//   "content-length": "72225",
+//   "content-type": "application/json",
+//   "date": "Fri, 18 Feb 2022 07:02:40 GMT",
+//   "server": "RapidAPI-1.2.8",
+//   "x-rapidapi-region": "AWS - ap-southeast-1",
+//   "x-rapidapi-version": "1.2.8"
+// }
+
+// "countries":222 items
+// [100 items
+// 0:{7 items
+// "ci":"104"
+// "cc":"AF"
+// "cname":"Afghanistan"
+// "country_name_translated":"Afghanistan"
+// "country_international_phone_code":"+93"
+// "flag_image_32x32":"https://i-invdn-com.investing.com/flags_32x32/circle/Afghanistan.png"
+// "flag_image_32x32_flat":"https://i-invdn-com.investing.com/flags_32x32_ios/Afghanistan.png"
+// }
 
 app.get("/cryptonews/:newsId", (req, res) => {
   const newsId = req.params.newsId
@@ -101,7 +107,7 @@ app.get("/cryptonews/:newsId", (req, res) => {
   axios.get(newsAddress)
     .then(response => {
       const html = response.data
-      const $ = cheerio.load(html)
+      const $ = CheerioApi.load(html)
       const targetArticles = []
 
       $('a:contains("Ethereum")', html).each(function () {
@@ -153,11 +159,11 @@ scraper()
 let re = [1,2,3]
 const newOne = [];
 function pleiades(arr) {
-  let object = scraper();
+let object = scraper();
 
   arr.forEach(data => {
 console.log(data)
-  // ouput to module PLEIADES
+                   
  
 });
 }
