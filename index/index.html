@@ -71,9 +71,9 @@
     <!-- container________-->
     <div style="background-color: skyblue; padding: 10px" class="container">
       <script type="module" src="./appControl.js"></script>
-      <script type="module" src="dataVisuals/module.js"></script>
+      <script type="module" src="./dataVisuals/module.js"></script>
 
-      <div id="ckmeans" abbrev="dataVisuals/populations.js"></div>
+      <div id="ckmeans" abbrev="./dadataVisuals/populations.js"></div>
 
       <div class="appTitle" abbrev=" public/appTitle.js"></div>
 
@@ -81,7 +81,14 @@
         <!--MAP: dataVisuals/dataQueues_D3.js -->
         <div id="dataQueues"></div>
 
-        <div class="contain">
+        <div class="contain"> 
+          <h2>API NAV:
+            <span id="api-nav-choice-display"></span></h2> 
+      
+          <button class="button" id="meta">meta</button>
+          <button class="button" id="coins">coins</button>
+          <button class="button" id="converter">converter</button>
+      
           <h4>Operation Method: <span id="graph-choice"></span></h4>
           <h4>Graphing Choice: <span id="user-choice"></span></h4>
           <h4>Output: <span id="result"></span></h4>
@@ -220,13 +227,9 @@
 
   <script src="dataUtil/csvJson.js"></script> 
 
-  
-  <script type="module" src="dataSortSearch/_sortBubble.js"></script>
-  <script src="dataSortSearch/_sortSelection.js"></script>
-  <script src="dataVisuals/dataQueues_D3.js"></script>
-
-  <script src="dataPerformance/bigO.js"></script>
-
+   
+  <script src="dataVisuals/dataQueues_D3.js"></script> 
+  <script src="dataPerformance/bigO.js"></script> 
   <script src="dataPerformance/arrays/orderedSearch.js"></script>
 
   <script src="dataCalculators/consecDays.js"></script>

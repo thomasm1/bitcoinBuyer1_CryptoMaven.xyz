@@ -95,3 +95,69 @@ document.getElementById("launchMoreBtn").addEventListener("click", async () => {
   }
   const launchMore = await import(modulePath);
 });
+
+
+
+// CONTROLS TEMP
+
+ 
+const possibleChoices = document.getElementsByClassName('.button')
+console.log("possibleChoices", possibleChoices)
+const apiNavChoiceDisplay = document.getElementById('api-nav-choice-display')
+
+ 
+let apiNavChoice 
+possibleChoices.forEach(possibleChoice =>possibleChoice.addEventListener('click', (e) =>{
+  apiNavChoice = e.target.id
+  apiNavChoiceDisplay.innerHTML = apiNavChoice
+  console.log(apiNavChoice)
+  // getResult(apiNavChoice);
+}))
+
+function getResult(apiNavChoice) { 
+  let path = '';
+  //                  // TEMP CASE SWITCH
+  switch(apiNavChoice) {
+  case 0:
+  console.log("0: "+"get-meta-data"+path);
+  path = 'get-meta-data'
+  break;
+  case 1:
+  console.log("1 search"+path);
+  path = 'coins/search';
+  break;
+  case 2:
+  console.log("2"+"coins/list"+path);
+  path = 'coins/list';
+  break;
+  case 3:
+  console.log("3"+"coins/list-pairs"+path);
+  path = 'coins/list-pairs';
+  break;
+  case 4:
+  console.log("4"+"get-overview"+path);
+  path = 'coins/get-overview'; 
+  break;
+  case 5:
+  console.log("4"+"get-technical"+path);
+  path = 'coins/get-technical';
+  break;
+  case 6:
+  console.log("4"+"get-markets"+path);
+  path = 'coins/get-markets';
+  break;
+  case 7:
+  console.log("4"+"get-historical-data"+path);
+  path = 'coins/get-historical-data';
+  break;
+  case 8:
+  console.log("4"+"get-analysis"+path);
+  path = 'coins/get-analysis';
+  break;
+  case 9:
+  console.log("4"+"get-news"+path);
+  path = 'coins/get-news';
+  break; 
+  }
+  
+}

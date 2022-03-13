@@ -14,7 +14,7 @@ import {HashSeparateChaining} from './index/dataStructures/DataHashTables.js';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-///////////////// VARS
+///////////////// Web Scraping VARS
 // Crypto News
 const articles = [];
 
@@ -35,12 +35,13 @@ const newsOutlets = [  // Go to these websites and scrape for keyword
 //  
   newsOutlets.forEach(news => {
   axios.get(news.address).then((response) => {
+
     const html = response.data;
     const $ = CheerioApi.load(html)
   
     $('a:contains("Ethereum")', html).each(function () {
       const title = $(this).text()
-      const url = $(this).attr('href')
+      const url = $(this).find('a').attr('href')
 
       articles.push({
         title, 
@@ -55,11 +56,13 @@ const newsOutlets = [  // Go to these websites and scrape for keyword
  
 // DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
 app.get("/cryptonews", (req, res) => { 
+  console.log("/cryptonews")
   res.json(articles)
   });
 
   
 app.get("/cryptonews/:newsId", (req, res) => {
+  console.log("/cryptonews/:newsId");
   const newsId = req.params.newsId
   const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
   const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
@@ -83,89 +86,130 @@ app.get("/cryptonews/:newsId", (req, res) => {
       res.json(targetArticles)
     }).catch(err => console.log(err))
 
-})
-////////////////////////////////////////////////////////////////////////////////
- ////////////////////////////////////////////////////////////////////////////////
- 
-
+}) 
  ////////////////////////////////////////////////////////////////////////////////
  ////////////////////////////////////////////////////////////////////////////////
 /// GLOBAL   VARS
-//////////////////////////////////////////////////////////////////////
+
 const newObjMappers = []
 const countriesMarket = []
 const allLangs = []
+ 
+//////////////////////////////////////////////////////////////////////
+let nations = [];
+let coins = [];
 
-const meta = 'get-meta-data';
-const list = 'list';
-const pairs = 'list-pairs'
-const headers = headers 
-switch(x) {
-case 0:
-console.log("0: "+"get-meta-data");
-
-case 1:
-console.log("1");
-
-case 2:
-console.log("2"+"coins/list");
-
-case 2:
-console.log("3"+"coins/list-pairs");
-
-case 3:
-console.log("4"+"get-overview"
-headers =  {
-  'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
-  'x-rapidapi-key': '57bfc2747fmshb53b12354ec93fdp18a6dcjsn6f2efa89fa36'
+function getParams(paramOptions){
+  // if coins 
+if (paramOptions=='nations' ) return  {
+  locale_info: 'en_US', 
+  lang_ID: '1', 
+  time_utc_offset: '28800'
+};
+if (paramOptions =='calendar')  return {
+  tabname: 'ongoing',
+  lang_ID: '1',
+  time_utc_offset: '28800',
+  sort: 'related_days'
 }
+if (paramOptions=='coinsList')  return {
+  edition_currency_id: '12',
+  time_utc_offset: '28800',
+  lang_ID: '1',
+  sort: 'PERC1D_DN',
+  page: '1'
+}
+if (paramOptions=='currenciesList' ) return {
+  lang_ID: '1', 
+  time_utc_offset: '28800'
+}
+
 }
 
 // Data to return crypto resources
-app.get("/api", (req, res) => {    // META DATA
-
-  let options = {
-
+app.get("/api/nations", (req, res) => {    // META DATA
+  let thisPath = "get-meta-data"                       // REMOVE!
+  let thisParam = 'nations';
+  console.log("/api/nations"); 
+  let options = { 
     method: 'GET',
-    url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${path}`,
-    params: {locale_info: 'en_US', lang_ID: '1', time_utc_offset: '28800'},
+    url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${thisPath}`,
+    params: getParams(thisParam),
     headers: {
       'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
       'x-rapidapi-key':  process.env.CRYPTO_API_KEY
     }
-  };
- 
+  }; 
     axios.request(options).then(response => {
       const apiWalker = new ApiWalker();
-    const d = response.data
-console.log(d);
-      for (let i = 0;i<d.length;i++){
-   
-        newObjMappers.push({
+      nations = response.data
+console.log(nations);
+      for (let i = 0;i<nations.length;i++){ 
+        apiWalker.newObjMappers.push({
           name:"tempMapper",
-         i: d.countries[i]
-        })    // mapper for caching later
-        countriesMarket.push({
-          i: d.countriesMarket[i]  // for quick-lookup by index
-        })
-        allLangs.push({
-          i:d.allLangs[i]
-        }) 
-      } 
- 
-                                              // for next Method GET     console.log( a.local(d.countries, input ))
-    const input =  "Afghanistan"
-    console.log("grab some objects from names");
-    console.log(apiWalker.nonLocal(d.countries, input ));
-     
-    res.json(d) 
+         nation: nations.countries[i]
+        })   
+      }       const input =  "Albania"     /// REMOVE 
+    console.log("check Albania some objects from names");
+    console.log(apiWalker.getAll(nations.countries, input )); 
+    res.json(nations) 
     }).catch(function (error) {
       console.error(error);
-    });
-
-
+    }); 
   });
 
+
+  app.get("/api/coins", (req, res) => {    // META DATA
+    const thisPath = "coins/list"                       // REMOVE!
+    const thisParam = 'coinsList';
+    let options = { 
+      method: 'GET',
+      url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${thisPath}`,
+      params: getParams(thisParam),
+      headers: {
+        'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
+        'x-rapidapi-key':  process.env.CRYPTO_API_KEY
+      }
+    }; 
+      axios.request(options).then(response => {
+        const apiWalker = new ApiWalker();
+        coins = response.data
+  // console.log(coins[0].screen_data.crypto_data);
+  console.log(coins);
+        for (let i = 0;i<coins.length;i++){ 
+          apiWalker.newObjMappers.push({
+            name:"tempMapper",
+            coin: coins[0].screen_data.crypto_data[i]
+          })   
+        }      
+     
+      // res.json(coins[0].screen_data[2].crypto_data) 
+      res.json(coins) 
+      }).catch(function (error) {
+        console.error(error);
+      }); 
+    });
+
+// Calendar
+app.get("/api/calendar", (req, res) => {    // META DATA
+  const thisPath = "get-ico-calendar"                       // REMOVE!
+  const thisParam = 'calendar'; 
+  let options = { 
+    method: 'GET',
+    url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${thisPath}`,
+    params: getParams(thisParam),
+    headers: {
+      'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
+      'x-rapidapi-key':  process.env.CRYPTO_API_KEY
+    }
+  }; 
+    axios.request(options).then(response => { 
+      let cal = response.data[0].screen_data.icoData.data
+    res.json(cal) 
+    }).catch(function (error) {
+      console.error(error);
+    }); 
+  });
   
    
 /////////////////   Static index path /

@@ -1,6 +1,8 @@
 
 // class rFilters   methods: 
 
+import { geoClipAntimeridian } from "d3-geo";
+
 // export class NumFilters {
 //   //   fibonacci(num); fibonacciMemo(num) fizBuzz(num);  
 // class ArrayFilters methods:
@@ -112,6 +114,35 @@ export class ArrayFilters {
     return pairs;
 }
 
+    meanMedianMode(arr){
+        return {
+            mean: this.getMean(arr),
+            median:this.getMedian(arr),
+            mode: this.getMode(arr)
+        }
+    }
+    getMean(arr) {
+        let sum = 0;
+        arr.forEach(num => {
+            sum += num;
+        });
+        let mean = sum/arr.length;
+        return mean;
+    }
+    getMedian(arr) {
+        arr.sort(function(a,b){ return a-b}); // Sort ascending
+        let median;
+        if (arr.length %2 !==0) { median =  Math.floor(arr.length/2)} // odds: round down middle elem
+        else { 
+            let firstMid = arr[(arr.length/2)-1]
+            let secondMid = arr[(arr.length/2)]
+            median = (firstMid+secondMid)/2;
+        }
+        return median
+    }
+    getMode(arr) {
+
+    }
     maxProfit(arr) {
         let maxProfit = 0;
         let buyPrice = 0;
