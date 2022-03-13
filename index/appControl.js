@@ -46,24 +46,22 @@ const dataSet = new DataSet();
 const dataQueue = new DataQueue();
 
 const dataTrie = new DataTrie();
-newTrie.add("Tom");
-newTrie.add("Thomas");
-newTrie.add("Tomtom");
-newTrie.add("Tom");
-newTrie.add("ThomasMilton");
-newTrie.add("ball");
-newTrie.add("bat");
-newTrie.add("sense");
-newTrie.add("donut");
-newTrie.add("doubleDown");
-console.log(newTrie.isWord("Tom"));
-console.log(newTrie.isWord("Thxyz"));
-console.log(newTrie.isWord("TomXX"));
-console.log(newTrie.isWord("ball"));
-console.log(newTrie.print());
-
-dataTrie.
-
+dataTrie.add("Tom");
+dataTrie.add("Thomas");
+dataTrie.add("Tomtom");
+dataTrie.add("Tom");
+dataTrie.add("ThomasMilton");
+dataTrie.add("ball");
+dataTrie.add("bat");
+dataTrie.add("sense");
+dataTrie.add("donut");
+dataTrie.add("doubleDown");
+console.log(dataTrie.isWord("Tom"));
+console.log(dataTrie.isWord("Thxyz"));
+console.log(dataTrie.isWord("TomXX"));
+console.log(dataTrie.isWord("ball"));
+console.log(dataTrie.print());
+ 
 //2:  Dynamically loaded on button-click
 document.getElementById("appVisualsBtn").addEventListener(
   "click",

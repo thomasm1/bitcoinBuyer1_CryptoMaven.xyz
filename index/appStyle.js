@@ -1,27 +1,59 @@
+import Quotations from '../txt/quotations.js';
 
+export function appStyle(option = null) {
 
-export function appTitle() {
-    
-let title = `Bitcoin Buyer Console`;
+function makeDarkMode(spec) {
+    let instance = {};
+    instance.render = function() {
+        let body = d3.select("body");
+        body.attr(
+            "style",+
+            "color:"+
+            spec.body.color+
+            "font:"+
+            spec.body.font+
+            "background-color:"+
+            spec.body.backgroundColor
+        ) 
+        let a = d3.selctAll("a");
+        a.attr(
+            "style",+
+            "color:"+
+            spec.a.color
+        )
+    }
+}       
+if (option) { 
+    spec = {}
+    spec.body.color = "#222;"
+    spec.body.backgroundColor = "#fff;"
+    spec.body.font = "100% system-ui;"
+    spec.a.color = "0033cc;"
+    makeDarkMode(spec)
+}    
 
-let tocTitle = `Guiding Inspiration for Bitcoin Buyer:`
-let toc = ` 
-
-“Typically, momentum trading is effective in markets that 1) do not have valuation models, 2) have large amounts of volatility, and 3) have frequent mispricings. Momentum investing is not typically used in US stocks, bonds, or options – as they have clear valuation models (e.g. discounted cash flow analysis for stocks and black Scholes for options). However, for commodities and assets like crypto – momentum trading can be an effective strategy that allows protection from losses in downtrends and capture subside on the uptrends. Based on historical data, this may be an extremely effective strategy – until a valuation model has been figured out.” <sup>1</sup><br />
-<br /> 
-[using a strategy to]
-"... create deep reinforcement learning agents that learn to make money trading Bitcoin. <br />
-... to experiment with state-of-the-art deep reinforcement learning technologies to see if we can create profitable Bitcoin trading bots. It seems to be the status quo to quickly shut down any attempts to create reinforcement learning algorithms, as it is “the wrong way to go about building a trading algorithm”. However, recent advances in the field have shown that RL agents are often capable of learning much more than supervised learning agents within the same problem domain." <sup>2</sup><br />
-<br />
-
-1. https://www.coindesk.com/set-protocol-launches-momentum-trading-strategy<br /><br />
-2: https://towardsdatascience.com/creating-bitcoin-trading-bots-that-dont-lose-money-2e7165fb0b29<br /><br />
- 
-data from: 07-04-2019<br />
-source -https://www.cryptodatadownload.com/data/northamerican/
-
-`;
-                              
+/* Dark Mode */ 
+// body {
+//     color: #222;
+//     background: #fff;
+//     font: 100% system-ui;
+//   }
+  
+//   a {
+//     color: #0033cc;
+//   }
+  
+//   @media (prefers-color-scheme: dark) {
+//     body {
+//       color: #eee;
+//       background: #121212;
+//     }
+  
+//     body a {
+//       color: #809fff;
+//     }
+//   }
+       
 //////////////////////////////////////////////////////////
 // const pBrowser = document.querySelector('p')
 const element = d3.select('#module')
@@ -44,7 +76,7 @@ function TitleWidget(spec) {
     var headline, desc;
      
     instance.render = function () {
-        var div = d3.select(".appTitle").append("div");
+        var div = d3.select(".appStyle").append("div");
         div.append("h1").text(headline)
             .attr(
                 "style",

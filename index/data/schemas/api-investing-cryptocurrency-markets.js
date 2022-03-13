@@ -48,9 +48,10 @@ all_langs: [
 
 
                             //* News OUTPUT Needs: 1. Filter out Ethereum Class; 2. De-Duplicator 
-/*
+// RESP 
 // 20220228001654
 // http://localhost:5000/cryptonews 
+
 [
   {
     "title": "Ethereum$2,620.10-3.32%",
@@ -64,28 +65,4 @@ all_langs: [
     "title": "Ethereum Gets an Upgraded Scaling Testnet – And It's Actually Years Ahead of Schedule",
     "url": "/tech/2022/02/24/ethereum-gets-an-upgraded-scaling-testnet-and-its-actually-years-ahead-of-schedule/"
   }, 
-*/ 
-// {
-//   "access-control-allow-credentials": "true",
-//   "access-control-allow-headers": "ver",
-//   "access-control-allow-methods": "GET, POST",
-//   "access-control-allow-origin": "*",
-//   "connection": "keep-alive",
-//   "content-length": "72225",
-//   "content-type": "application/json",
-//   "date": "Fri, 18 Feb 2022 07:02:40 GMT",
-//   "server": "RapidAPI-1.2.8",
-//   "x-rapidapi-region": "AWS - ap-southeast-1",
-//   "x-rapidapi-version": "1.2.8"
-// }
-
-// "countries":222 items
-// [100 items
-// 0:{7 items
-// "ci":"104"
-// "cc":"AF"
-// "cname":"Afghanistan"
-// "country_name_translated":"Afghanistan"
-// "country_international_phone_code":"+93"
-// "flag_image_32x32":"https://i-invdn-com.investing.com/flags_32x32/circle/Afghanistan.png"
-// "flag_image_32x32_flat":"https://i-invdn-com.investing.com/flags_32x32_ios/Afghanistan.png"
+]
