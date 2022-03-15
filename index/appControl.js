@@ -1,6 +1,7 @@
-import { appTitle } from "./appTitle.js";
+import { AppStyle } from "./appStyle.js";
 //1:  Auto-load initial D3 visuals and index.html elements
-appTitle();
+// options arg taking AppStyle's default option object 
+appStyle();
 
 // import tools [used]
 import  BST  from './dataStructures/DataBinaryTree.js';   

@@ -1,6 +1,6 @@
 
 // 3 Prototypes: 
-// hashMethods(storageLimit = 10)
+// HashMethods(storageLimit = 10)
 // hashSeparateChainingProto(size = 53);
 // transactHash(size) 
 
@@ -8,12 +8,12 @@
 console.log("%c HASH TABLE: ", "color:white; background-color:orange");
 
 
-export function hashMethods(storageLimit = 10) { 
+export function HashMethods(storageLimit = 10) { 
     this.keyMapArray = [];
   this.storageLimit = storageLimit; // i.e. maxLength if not specified as arg
 }; // END Hash fx
 
-hashMethods.prototype.hash = function (string, maxLength) {
+HashMethods.prototype.hash = function (string, maxLength) {
   let hashResult = 0;
   for (var i = 0; i < string.length; i++) {
     hashResult += string.charCodeAt(i)-96;
@@ -21,11 +21,11 @@ hashMethods.prototype.hash = function (string, maxLength) {
   return hashResult % maxLength;
 };
 
-  hashMethods.prototype.print = function() {
+  HashMethods.prototype.print = function() {
     console.log(this.keyMapArray);
   };
 
-  hashMethods.prototype.add = function(key, value) {
+  HashMethods.prototype.add = function(key, value) {
     let index = this.hash(key, this.storageLimit);
     if (this.keyMapArray[index] === undefined) {
       this.keyMapArray[index] = [[key, value]];
@@ -43,7 +43,7 @@ hashMethods.prototype.hash = function (string, maxLength) {
     }
   }; // end add fx
 
-  hashMethods.prototype.remove = function(key) {
+  HashMethods.prototype.remove = function(key) {
     var index = this.hash(key, this.storageLimit);
     if (this.keyMapArray[index].length === 1 && this.keyMapArray[index][0][0] === key) {
       delete this.keyMapArray[index];
@@ -56,7 +56,7 @@ hashMethods.prototype.hash = function (string, maxLength) {
     }
   }; // end remove fx
 
-  hashMethods.prototype.lookup = function(key) {
+  HashMethods.prototype.lookup = function(key) {
     var index = this.hash(key, this.storageLimit);
     if (this.keyMapArray[index] === undefined) {
       return undefined;
@@ -69,9 +69,9 @@ hashMethods.prototype.hash = function (string, maxLength) {
     }
   }; //end lookup fx
 
-  hashMethods.prototype.printCheck = function(){ 
+  HashMethods.prototype.printCheck = function(){ 
   console.log(this.hash("thomas", 10));
-  let ht = new hashMethods();
+  let ht = new HashMethods();
   ht.add("alpha", "one");
   ht.add("beta", "two");
   ht.add("gamma", "three");
@@ -81,7 +81,7 @@ hashMethods.prototype.hash = function (string, maxLength) {
   ht.print();
 
   }
-let check = new hashMethods();
+let check = new HashMethods();
 check.printCheck();
 
 export function hashSeparateChainingProto(size = 53) {

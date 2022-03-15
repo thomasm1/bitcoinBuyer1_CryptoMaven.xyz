@@ -1,7 +1,14 @@
 // import crypto from 'jscrypt' or something
  
 
-export default function getRandomUints() {
+export function Random () {
+this.limit = limit || 3
+}
+
+Random.prototype.generateRandom = function(limit) {
+  return Math.floor(Math.Random() * limit)
+}
+Random.prototype.getRandomUints = function(){
   const array = new Uint32Array(10);
   Window.crypto.getRandomValues(array);
  

@@ -59,7 +59,7 @@
       ></circle>
     </svg>
 
-    <div id="module"></div>
+    <div id="header"></div>
     <!--d3-token modules -->
 
     <div class="ctrl">
@@ -67,15 +67,17 @@
     </div>
 
     <div id="d3data"></div>
+<div id="dashboardGrid"></div>
 
     <!-- container________-->
     <div style="background-color: skyblue; padding: 10px" class="container">
-      <script type="module" src="./appControl.js"></script>
+      <script type="module" src="./appControl.js"></script> 
+      
       <script type="module" src="./dataVisuals/module.js"></script>
 
       <div id="ckmeans" abbrev="./dadataVisuals/populations.js"></div>
 
-      <div class="appTitle" abbrev=" public/appTitle.js"></div>
+      <div class="appStyle" abbrev="AppStyle.js">header overwritten</div>
 
       <div class="container">
         <!--MAP: dataVisuals/dataQueues_D3.js -->
