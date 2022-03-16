@@ -141,7 +141,21 @@ export class ArrayFilters {
         return median
     }
     getMode(arr) {
-
+        let modeObject = {};
+        arr.forEach(num => {
+            if(!modeObject[num]) {   modeObject[num] = 0; }
+            modeObject[num]++;
+        });
+        let maxFrequency = 0;
+        let modes = []
+        for (let num in modeObject) {
+            if(modeObject[num] > maxFrequency) {
+                modes = [num];
+                maxFrequnecy = modeObject[num];
+            } else if (modeObject[num] === maxFrequency) {modes.push(num)}// if 2 modes
+        }
+        if (modes.length === Object.keys(modObject).length) { modes = []; }
+        return modes
     }
     maxProfit(arr) {
         let maxProfit = 0;
@@ -167,12 +181,17 @@ export class ArrayFilters {
 
 let arrayFilters = new ArrayFilters(); 
    let orderedArray = [1,2,3,4,5]
+   let nearlyOrderedArray = [1,2,3,4,5,4,6,1]
  let unorderedArray = [10, 18, 4, 5, 9, 6, 16, 12]
 console.log(arrayFilters.inPlaceReverse(orderedArray))  
 
 console.log(arrayFilters.hashArrayMapper([1,5,3,2,2],7));
 
+console.log(arrayFilters.meanMedianMode(nearlyOrderedArray)) //mean 3.25, median 3.5, mode['1','4']
+ let other = [9,10,23,10,23,9]
+ console.log(arrayFilters.meanMedianMode(other)) // mean 14/median-10/mode:[]
 console.log(arrayFilters.maxProfit(unorderedArray));
+
 
 
 

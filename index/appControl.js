@@ -1,8 +1,10 @@
-import { AppStyle } from "./appStyle.js";
-//1:  Auto-load initial D3 visuals and index.html elements
-// options arg taking AppStyle's default option object 
-appStyle();
 
+// Default Prototypes
+import {ApiWalker} from './dataServices/dataServices.js';
+
+// // Default Class helpers 
+// import {HashSeparateChaining} from './index/dataStructures/DataHashTables.js';
+ 
 // import tools [used]
 import  BST  from './dataStructures/DataBinaryTree.js';   
 
@@ -20,6 +22,23 @@ import DataQueue from './dataStructures/dataQueue.js';
 
 import DataTrie from './dataStructures/dataTrie.js';
 import { breadthSearch,testUndirectedGraph, testBreadthGraph, testUndirectedGraphArray} from './dataStructures/dataGraph.js';
+
+
+
+import { AppStyle } from "./appStyle.js";
+//1:  Auto-load initial D3 visuals and index.html elements
+// options arg taking AppStyle's default option object
+
+// const appStyle= new AppStyle()
+// appStyle.headline(title.toUpperCase());
+//  appStyle.headline( tocTitle)
+//     .desc(toc);
+
+//   appStyle.widget.render();
+// appStyle.subWidget.render(); 
+// appStyle.titleWidget()
+// appStyle.elemHeader();
+
 
 // imports check
 const bst= new BST();
@@ -61,7 +80,7 @@ console.log(dataTrie.isWord("Tom"));
 console.log(dataTrie.isWord("Thxyz"));
 console.log(dataTrie.isWord("TomXX"));
 console.log(dataTrie.isWord("ball"));
-console.log(dataTrie.print());
+console.log(dataTrie.printIterative());
  
 //2:  Dynamically loaded on button-click
 document.getElementById("appVisualsBtn").addEventListener(
@@ -102,13 +121,14 @@ document.getElementById("launchMoreBtn").addEventListener("click", async () => {
 // CONTROLS TEMP
 
  
-const possibleChoices = document.getElementsByClassName('.button')
+let possibleChoices = new Array()
+possibleChoices = document.getElementsByClassName('button')
 console.log("possibleChoices", possibleChoices)
 const apiNavChoiceDisplay = document.getElementById('api-nav-choice-display')
 
  
 let apiNavChoice 
-possibleChoices.forEach(possibleChoice =>possibleChoice.addEventListener('click', (e) =>{
+possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) =>{
   apiNavChoice = e.target.id
   apiNavChoiceDisplay.innerHTML = apiNavChoice
   console.log(apiNavChoice)

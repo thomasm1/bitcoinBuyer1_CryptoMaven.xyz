@@ -4,12 +4,6 @@ import axios from "axios";
 import express from "express";
 import   CheerioApi   from "cheerio";
 
-// Default Prototypes
-import {ApiWalker} from './index/dataServices/dataServices.js';
-
-// Default Class helpers 
-import {HashSeparateChaining} from './index/dataStructures/DataHashTables.js';
- 
 
 const app = express();
 const PORT = process.env.PORT || 5000;

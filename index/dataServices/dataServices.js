@@ -1,4 +1,4 @@
-import { localResponse } from "../../functionalTest/src/test/java/resources/databrief.js";
+import { localResponse } from "../data/js/dataLocalResponse.js";
 
 const nationsShown = {
   "countries": [

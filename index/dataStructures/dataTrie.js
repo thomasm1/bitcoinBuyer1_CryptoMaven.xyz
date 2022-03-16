@@ -123,20 +123,3 @@ export default function DataTrie() {
     return words.length > 0 ? words : null;
   };
 };
-
-let newTrie = new DataTrie();
-newTrie.add("Tom");
-newTrie.add("Thomas");
-newTrie.add("Tomtom");
-newTrie.add("Tom");
-newTrie.add("ThomasMilton");
-newTrie.add("ball");
-newTrie.add("bat");
-newTrie.add("sense");
-newTrie.add("donut");
-newTrie.add("doubleDown");
-console.log(newTrie.isWord("Tom"));
-console.log(newTrie.isWord("Thxyz"));
-console.log(newTrie.isWord("TomXX"));
-console.log(newTrie.isWord("ball"));
-console.log(newTrie.print());

@@ -1,23 +1,26 @@
-import Quotations from '../txt/quotations.js'
-import Random from './dataUtil/Random.js'
+
+import {Random} from './dataUtil/Random.js'
 
 
-export function AppStyle(options) {
-    this.options = options || {}
+export function AppStyle( ) {
     this.keyMapArray = [];
 }      
  
                                                  ///////////////////////// 
 ////////////////// default properties 
 //////////////////                               /////////////////////////
-
-AppStyle.prototype.options.widget  = {
+AppStyle.prototype.title = "Bitcoin Buyer Console: Phase I, Raw Materials";
+AppStyle.prototype.tocTitle = "Guiding Inspiration for Bitcoin Buyer:";
+AppStyle.prototype.toc = "Typically, momentum trading is effective in markets that 1) do not have valuation models, 2) have large amounts of volatility, and 3) have frequent mispricings. Momentum investing is not typically used in US stocks, bonds, or options \u2013 as they have clear valuation models (e.g. discounted cash flow analysis for stocks and black Scholes for options). However, for commodities and assets like crypto \u2013 momentum trading can be an effective strategy that allows protection from losses in downtrends and capture subside on the uptrends. Based on historical data, this may be an extremely effective strategy \u2013 until a valuation model has been figured out.\u201D <sup>1</sup><br />\n<br /> \n[using a strategy to]\n\"... create deep reinforcement learning agents that learn to make money trading Bitcoin. <br />\n... to experiment with state-of-the-art deep reinforcement learning technologies to see if we can create profitable Bitcoin trading bots. It seems to be the status quo to quickly shut down any attempts to create reinforcement learning algorithms, as it is \u201Cthe wrong way to go about building a trading algorithm\u201D. However, recent advances in the field have shown that RL agents are often capable of learning much more than supervised learning agents within the same problem domain.\" <sup>2</sup><br />\n<br />\n\n1. https://www.coindesk.com/set-protocol-launches-momentum-trading-strategy<br /><br />\n2: https://towardsdatascience.com/creating-bitcoin-trading-bots-that-dont-lose-money-2e7165fb0b29<br /><br />\n \ndata from: 07-04-2019<br />\nsource -https://www.cryptodatadownload.com/data/northamerican/";
+ 
+AppStyle.prototype.options = {}
+AppStyle.prototype.options.widgetOptions  = {
     color: "darkblue;",
     backgroundColor: "rgba(135, 207, 235, 0.875);",
     width: "100"
 }
 
-AppStyle.prototype.options.subWidget ={
+AppStyle.prototype.options.subWidgetOptions ={
     color: "blue;",
     backgroundColor: "rgba(135, 207, 235 );",
     opacity: "1",
@@ -31,7 +34,7 @@ AppStyle.prototype.options.subWidget ={
     padding: "0px 0px;"
 }
  
-AppStyle.prototype.options.dashboardOptions= {
+AppStyle.prototype.options.dashboardOptions = {
    elemSize: "h3",
    dashGrid: "#dashGrid",
    ctrlsArray: ["Hashing", "visualDAG", "Sankey"]
@@ -53,10 +56,11 @@ AppStyle.prototype.elemHeader = (elemId) => {
   .style('text-align','right')
   .style('margin-right', '10px');
 }
+AppStyle.prototype.instance = {};
+AppStyle.prototype.headline, AppStyle.prototype.desc;
 AppStyle.prototype.titleWidget = (spec) => {
-    let spec = options.subWidget
-    let instance = {};
-    let headline, desc;
+    this.spec = spec || options.subWidgetOptions
+
      
     instance.render = function () {
         var div = d3.select(".appStyle").append("div");
@@ -140,11 +144,14 @@ AppStyle.prototype.dashboard = (options) =>{
     }
 }
   
-const appStyle= new AppStyle(options)
-appStyle.headline(title.toUpperCase());
- appStyle.headline(tocTitle)
-    .desc(toc);
 
-    appStyle.widget.render();
-appStyle.subWidget.render(); 
  
+const appStyle= new AppStyle()
+// appStyle.headline(appStyle.title.toUpperCase());
+//  appStyle.headline( appStyle.tocTitle)
+//     .desc(appStyle.toc);
+
+//   appStyle.widget.render();
+// appStyle.subWidget.render(); 
+// appStyle.titleWidget()
+// appStyle.elemHeader();

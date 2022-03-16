@@ -9,14 +9,19 @@
     <title>CryptoMaven</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="src/css/styles.css" />
+
+
+    <script src="./app-react-src.js"></script>
     <script src="src/rxjs.5.4.3.js"></script>
     <script src="src/d3.v4.min.js"></script>
 
-    <script src="./app-react-src.js"></script>
   </head>
 
   <body id="body">
-    <svg width="960" height="">
+    <div id="module"></div>
+
+    <svg width="960">
+
       <circle
         cx="100"
         cy="100"
@@ -24,10 +29,8 @@
         fill="silver"
         stroke="silver"
         stroke-width="1"
-      >
-      
- 
-      </circle>
+      ></circle>
+
       <circle
       cx="70"
       cy="80"
@@ -45,10 +48,11 @@
           stroke="silver"
           stroke-width="1"
         ></circle>
+
     </svg>
 
     <br />
-    <svg width="960" height="">
+    <svg width="960">
       <circle
         cx="400"
         cy="350"
@@ -61,7 +65,6 @@
 
     <div id="header"></div>
     <!--d3-token modules -->
-
     <div class="ctrl">
       <div id="viewport"></div>
     </div>

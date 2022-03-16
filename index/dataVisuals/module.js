@@ -3,8 +3,7 @@ const Module = function (id) {
   const colorArr = ['yellow', 'cyan', 'magenta', 'teal','silver','green','blue','orange'];
   const sizeArr = [30, 30, 30, 30, 30, 30,30,30];
   
-  document.getElementById(id).innerHTML = `  
-    <svg id='thisSVG'>
+  document.getElementById(id).innerHTML = `<svg id='thisSVG'>
     </svg>  
     `;
 
