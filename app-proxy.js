@@ -1,5 +1,6 @@
 import 'dotenv/config';  // only CRYPTO_API_KEY here
 import axios from "axios";
+import {ApiWalker} from './dataServices/dataServices.js';
 
 import express from "express";
 import   CheerioApi   from "cheerio";

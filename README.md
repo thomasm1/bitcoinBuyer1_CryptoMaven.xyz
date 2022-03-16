@@ -197,3 +197,35 @@ a',
 ```
 #### REFERENCES
 ##### http://vis.stanford.edu/files/2011-D3-InfoVis.pdf
+
+### REACT Natively Implemented with React-Dom, JQuery, D3 and webpack for bundler
+### Sandbox project for native JavaScript expressions  
+
+UNPKG
+unpkg is a fast, global content delivery network for everything on npm. Use it to quickly and easily load any file from any package using a URL like:
+
+unpkg.com/:package@:version/:file
+Examples
+Using a fixed version:
+
+unpkg.com/react@16.7.0/umd/react.production.min.js
+unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js
+You may also use a semver range or a tag instead of a fixed version number, or omit the version/tag entirely to use the latest tag.
+
+unpkg.com/react@^16/umd/react.production.min.js
+unpkg.com/react/umd/react.production.min.js
+If you omit the file path (i.e. use a “bare” URL), unpkg will serve the file specified by the unpkg field in package.json, or fall back to main.
+
+unpkg.com/jquery
+unpkg.com/three
+Append a / at the end of a URL to view a listing of all the files in a package.
+
+unpkg.com/react/
+unpkg.com/react-router/
+Query Parameters
+?meta
+Return metadata about any file in a package as JSON (e.g./any/file?meta)
+?module
+Expands all “bare” import specifiers in JavaScript modules to unpkg URLs. This feature is very experimental
+Cache Behavior
+The CDN caches files based on their permanent URL, which includes the npm package version. This works because npm does not allow package authors to overwrite a package that has already been published with a different one at the same version number.
