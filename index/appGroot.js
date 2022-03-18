@@ -1,21 +1,22 @@
 (function(global, $, d3) {
     
     //  Returns new Global Object, with 'new' an object
-    var Groot = function(firstName, lastName, language) {
+    var Groot = function(firstName, lastName, premier, language) {
         return new Groot.init(firstName, lastName, premier, language);   
     }
     
-    // hidden within the scope of the IIFE and never directly accessible
+    // hidden within the scope of the Groot Global Function appGroot.js IIFE and never directly accessible
     const supportedLangs = ['en', 'es', 'fr'];
+const premierTiers = ['basic', 'member', 'bronze','silver','gold','platinum','premier'];
     
-    // informal greetings
+    // logged-in addressing
     const dashboard = {
         en: 'Hello',
         es: 'Hola',
-        fr: 'Salut'
+        fr: 'Salut',
     };
     
-    // formal greetings
+    // at login addressing
     const greetLoginFormal = {
         en: 'Greetings',
         es: 'Saludos',
@@ -29,7 +30,9 @@
         fr: 'Connecté'
 
     };
-    
+     
+
+
     // prototype holds methods (to save memory space)
     Groot.prototype = {
         
@@ -49,8 +52,9 @@
         membership: function() {
             // check that if Premier Token Watch Subsription
             // references the externally inaccessible 'premier' within the closure
-             if (supportedLangs.indexOf(this.premier)  === -1) {
-                throw "Invalid language";   
+             if ((premierTiers.indexOf(this.premier)  === -1) || (this.premier ==='basic')) {
+                premier:true
+                throw "not a member";   
              }
         },
 

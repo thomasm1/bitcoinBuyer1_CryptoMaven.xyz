@@ -48,6 +48,10 @@ The only useful application of var is that a global can be redefined in global s
 -Node.js 
 -Express
 
+##### Development 
+```sh
+rollup index.js --file bundle.js --format umd --name "mavenBundle"
+```
 ### Technologies 
 | Fx | Tools | URLS |
 |-----------------|:-----------------:|---------:|
@@ -229,3 +233,138 @@ Return metadata about any file in a package as JSON (e.g./any/file?meta)
 Expands all “bare” import specifiers in JavaScript modules to unpkg URLs. This feature is very experimental
 Cache Behavior
 The CDN caches files based on their permanent URL, which includes the npm package version. This works because npm does not allow package authors to overwrite a package that has already been published with a different one at the same version number.
+
+
+#### React
+console.log(React)
+{Children: {…}, createRef: ƒ, Component: ƒ, PureComponent: ƒ, createContext: ƒ, …}
+    Children: {map: ƒ, forEach: ƒ, count: ƒ, toArray: ƒ, only: ƒ}
+    Component: ƒ r(a, b, d)
+    length: 3
+    name: "r"
+    prototype:
+    forceUpdate: ƒ (a)
+    isReactComponent: {}
+    setState: ƒ (a, b)
+    constructor: ƒ r(a, b, d)
+    [[Prototype]]: Object
+    arguments: (...)
+    caller: (...)
+    [[FunctionLocation]]: app-react.js:55
+    [[Prototype]]: ƒ ()
+    [[Scopes]]: Scopes[2]
+    Fragment: Symbol(react.fragment)
+    PureComponent: ƒ M(a, b, d)
+    StrictMode: Symbol(react.strict_mode)
+    Suspense: Symbol(react.suspense)
+    cloneElement: ƒ (a, b, d)
+    createContext: ƒ (a, b)
+    createElement: ƒ da(a, b, d)
+    createFactory: ƒ (a)
+    createRef: ƒ ()
+    forwardRef: ƒ (a)
+    isValidElement: ƒ R(a)
+    lazy: ƒ (a)
+    memo: ƒ (a, b)
+    unstable_ConcurrentMode: Symbol(react.concurrent_mode)
+    unstable_Profiler: Symbol(react.profiler)
+    version: "16.7.0"
+    __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED: {ReactCurrentOwner: {…}, Scheduler: {…}, SchedulerTracing: {…}, assign: ƒ}
+    [[Prototype]]: Object
+    constructor: ƒ Object()
+    assign: ƒ assign()
+    create: ƒ create()
+    defineProperties: ƒ defineProperties()
+    defineProperty: ƒ defineProperty()
+    entries: ƒ entries()
+    freeze: ƒ freeze()
+    fromEntries: ƒ fromEntries()
+    getOwnPropertyDescriptor: ƒ getOwnPropertyDescriptor()
+    getOwnPropertyDescriptors: ƒ getOwnPropertyDescriptors()
+    getOwnPropertyNames: ƒ getOwnPropertyNames()
+    getOwnPropertySymbols: ƒ getOwnPropertySymbols()
+    getPrototypeOf: ƒ getPrototypeOf()
+    hasOwn: ƒ hasOwn()
+    is: ƒ is()
+    isExtensible: ƒ isExtensible()
+    isFrozen: ƒ isFrozen()
+    isSealed: ƒ isSealed()
+    keys: ƒ keys()
+    length: 1
+    name: "Object"
+    preventExtensions: ƒ preventExtensions()
+    prototype: {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+    seal: ƒ seal()
+    setPrototypeOf: ƒ setPrototypeOf()
+    values: ƒ values()
+    arguments: (...)
+    caller: (...)
+    [[Prototype]]: ƒ ()
+    [[Scopes]]: Scopes[0]
+    hasOwnProperty: ƒ hasOwnProperty()
+    isPrototypeOf: ƒ isPrototypeOf()
+    propertyIsEnumerable: ƒ propertyIsEnumerable()
+    toLocaleString: ƒ toLocaleString()
+    toString: ƒ toString()
+    valueOf: ƒ valueOf()
+    __defineGetter__: ƒ __defineGetter__()
+    __defineSetter__: ƒ __defineSetter__()
+    __lookupGetter__: ƒ __lookupGetter__()
+    __lookupSetter__: ƒ __lookupSetter__()
+    __proto__: (...)
+    get __proto__: ƒ __proto__()
+    set __proto__: ƒ __proto__()
+
+
+    //  D3- v4
+  {event: null, format: ƒ, formatPrefix: ƒ, timeFormat: ƒ, timeParse: ƒ, …}
+active: ƒ (t, n)
+arc: ƒ ()
+area: ƒ sc()
+areaRadial: ƒ gc()
+ascending: ƒ n(t, n)
+axisBottom: ƒ (t)
+axisLeft: ƒ (t)
+axisRight: ƒ (t)
+axisTop: ƒ (t)
+bisect: ƒ (n, e, r, i)
+bisectLeft: ƒ (n, e, r, i)
+bisectRight: ƒ (n, e, r, i)
+bisector: ƒ e(t)
+brush: ƒ ()
+brushSelection: ƒ (t)
+brushX: ƒ ()
+brushY: ƒ ()
+chord: ƒ ()
+clientPoint: ƒ ht(t, n)
+cluster: ƒ ()
+color: ƒ Et(t)
+create: ƒ (t)
+creator: ƒ A(t)
+cross: ƒ (t, n, e)
+csv: ƒ (e, r, i)
+csvFormat: ƒ (n, e)
+csvFormatRows: ƒ (t)
+csvParse: ƒ (t, e)
+csvParseRows: ƒ n(t, n)
+cubehelix: ƒ $t(t, n, e, r)
+curveBasis: ƒ (t)
+curveBasisClosed: ƒ (t)
+curveBasisOpen: ƒ (t)
+curveBundle: ƒ e(t)
+curveCardinal: ƒ e(t)
+curveCardinalClosed: ƒ e(t)
+curveCardinalOpen: ƒ e(t)
+curveCatmullRom: ƒ e(t)
+curveCatmullRomClosed: ƒ e(t)
+curveCatmullRomOpen: ƒ e(t)
+curveLinear: ƒ oc(t)
+curveLinearClosed: ƒ (t)
+curveMonotoneX: ƒ (t)
+curveMonotoneY: ƒ (t)
+curveNatural: ƒ (t)
+curveStep: ƒ (t)
+curveStepAfter: ƒ (t)
+curveStepBefore: ƒ (t)
+customEvent: ƒ it(n, e, r, i)
+descending: ƒ (

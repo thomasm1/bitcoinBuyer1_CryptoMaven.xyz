@@ -1,7 +1,4 @@
 
-import {Random} from './dataUtil/Random.js'
-
-
 export function AppStyle( ) {
     this.keyMapArray = [];
 }      
@@ -137,9 +134,10 @@ AppStyle.prototype.dashboard = (options) =>{
     dashboardGrid.append(userDisplay1,userDisplay2,outputDisplay); 
 
     for(let i = 0;i<ctrlsArray.length;i++){
+        console.log(ctrlsArray[i])
         const button = doc.createElement('button')
         button.id = ctrlsArray[i]
-        button.addEventListener('click', handleClick)
+        button.addEventListener('click', this.handleClick)
         dashboardGrid.appendChild(button)
     }
 } 
