@@ -7,7 +7,7 @@
 //      F   8    G  
  
 
-import  {SortingTools}   from "./SortingTools.js";
+import  {GraphingTools}   from "../dataUtil/graph/GraphingTools.js";
 // adjacencyMatrix = [
 //     [0, 3, 5, 6, 0, 8, 0],
 //     [3, 0, 0, 4, 2, 0, 5],
@@ -19,12 +19,12 @@ import  {SortingTools}   from "./SortingTools.js";
 // ] ; 
 
 
-let tool = new SortingTools();
-const adjacencyMatrix = tool.adjacencyMatrix;
+const gTool = new GraphingTools();
+const adjacencyMatrix = gTool.adjacencyMatrix;
 
 dijkstra(adjacencyMatrix)
 
-function dijkstra(Matrix){
+export  function dijkstra(Matrix)  {
     var v = Matrix.length;
     var visited = new Array(v);
     var distance = new Array(v).fill(Number.MAX_SAFE_INTEGER);
