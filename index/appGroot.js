@@ -1,7 +1,15 @@
-(function(global, $, d3) {
+/*!   * AppGroot, visualization toolset invoked by global $g3 
+    * Includes d3, rxjs, jquery 
+    * https://d3js.org
+    * https://jquery.org 
+    * Date: 2022-03-19
+    * Author: Thomas Maestas
+    */ 
+
+;(function(global, $, d3) {
     
     //  Returns new Global Object, with 'new' an object
-    var Groot = function(firstName, lastName, premier, language) {
+    var Groot = function({firstName, lastName, premier, language}) {
         return new Groot.init(firstName, lastName, premier, language);   
     }
     

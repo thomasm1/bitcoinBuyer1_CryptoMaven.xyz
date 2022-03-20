@@ -5,10 +5,13 @@
 ### App Purpose: Data algorithms/structures Exploratory Application ;
 ### App Name: Pleaides, inspired by the Gree God with 7 Sisters Cluster. 
 
+```sh
 This app applies data scraper to collect unstructured data. And this app structures into meaningful data, based on the parameters as profiled by self-assessment, and propensity for success
+```
 
-<h3 width="1200" style="margin-left:50px;max-width:300px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</h3> 
-<img src="./index/src/img/cryptoMaven.JPG" height="550>
+<a href="https://cryptomaven.xyz" target="_blank">
+<img src="./index/src/img/cryptoMaven.JPG" height="550">
+</a>
 ```
 ## Crypto Data Streaming App
 ### Part I. Algorithms and Tools
@@ -17,33 +20,11 @@ This app applies data scraper to collect unstructured data. And this app structu
 
 ### App Functionality
 
- #### Data Operation Methods :12:
 #### Performance Tools
   * Tool: https://rithmschool.github.io/function-timer-demo/
-#### 
-<script type="module" defer>
-  alert("hey")
-  </script>
-```sh
-notes: 
-1. Global Var Warning! JavaScript use of var used in limited cases, usually removed for let/const otherwise: 
-The only useful application of var is that a global can be redefined in global scope multiple times without causing an error.
-```
-
-```sh
- DataBinaryTreeClass
- bST.printDataBinaryTree();
- bST.add(data);
-    findMin() {
-    findMax() {
-    find(data) {
-    isPresent(data) {
-    remove(data) {
-    isBalanced() {
-    findMinHeight(node = this.root) {
-```
- 
+  
 ### UI
+
 ##### Dependencies
 -Node.js 
 -Express
@@ -55,11 +36,15 @@ rollup index.js --file bundle.js --format umd --name "mavenBundle"
 ### Technologies 
 | Fx | Tools | URLS |
 |-----------------|:-----------------:|---------:|
-| Database | Oracle SE 11 | [Oracle]  | 
+| Database | Oracle SE 11 | [MySQL]  | 
+| Object Relational Mapper | Sequelize | [Sequelize] |
 | Cloud Data | Amazon RDS |  [AWS-RDS] | 
 | Cloud Assets | Amazon S3 |  [AWS-S3]  | 
  
      
+     
+#### Data Operation Methods 
+  
 ### CryptoMaven's Data Structures: 
 ```sh
 {
@@ -135,7 +120,8 @@ sudo service nginx restart
 
 ** DB Cloud Software **
 
- [Oracle](https://www.oracle.com/database/technologies/112010-win64soft.html)
+ [MySQL](https://www.mysql.com/)
+ [Sequelize](https://sequelize.org/)
  [AWS-RDS](https://aws.amazon.com/rds/)
  [AWS-S3](https://aws.amazon.com/s3/) 
    
@@ -203,39 +189,16 @@ a',
 ##### http://vis.stanford.edu/files/2011-D3-InfoVis.pdf
 
 ### REACT Natively Implemented with React-Dom, JQuery, D3 and webpack for bundler
-### Sandbox project for native JavaScript expressions  
 
-UNPKG
-unpkg is a fast, global content delivery network for everything on npm. Use it to quickly and easily load any file from any package using a URL like:
+### Methods 
 
-unpkg.com/:package@:version/:file
-Examples
-Using a fixed version:
-
-unpkg.com/react@16.7.0/umd/react.production.min.js
-unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js
-You may also use a semver range or a tag instead of a fixed version number, or omit the version/tag entirely to use the latest tag.
-
-unpkg.com/react@^16/umd/react.production.min.js
-unpkg.com/react/umd/react.production.min.js
-If you omit the file path (i.e. use a “bare” URL), unpkg will serve the file specified by the unpkg field in package.json, or fall back to main.
-
-unpkg.com/jquery
-unpkg.com/three
-Append a / at the end of a URL to view a listing of all the files in a package.
-
-unpkg.com/react/
-unpkg.com/react-router/
-Query Parameters
-?meta
-Return metadata about any file in a package as JSON (e.g./any/file?meta)
-?module
-Expands all “bare” import specifiers in JavaScript modules to unpkg URLs. This feature is very experimental
-Cache Behavior
-The CDN caches files based on their permanent URL, which includes the npm package version. This works because npm does not allow package authors to overwrite a package that has already been published with a different one at the same version number.
+#### Data Operation Methods 
 
 
+### Methods 3rd Party Libraries
+ 
 #### React
+```sh
 console.log(React)
 {Children: {…}, createRef: ƒ, Component: ƒ, PureComponent: ƒ, createContext: ƒ, …}
     Children: {map: ƒ, forEach: ƒ, count: ƒ, toArray: ƒ, only: ƒ}
@@ -314,9 +277,10 @@ console.log(React)
     __proto__: (...)
     get __proto__: ƒ __proto__()
     set __proto__: ƒ __proto__()
+```
 
-
-    //  D3- v4
+###  D3- v4
+```sh
   {event: null, format: ƒ, formatPrefix: ƒ, timeFormat: ƒ, timeParse: ƒ, …}
 active: ƒ (t, n)
 arc: ƒ ()
@@ -347,24 +311,12 @@ csvFormat: ƒ (n, e)
 csvFormatRows: ƒ (t)
 csvParse: ƒ (t, e)
 csvParseRows: ƒ n(t, n)
-cubehelix: ƒ $t(t, n, e, r)
-curveBasis: ƒ (t)
-curveBasisClosed: ƒ (t)
-curveBasisOpen: ƒ (t)
-curveBundle: ƒ e(t)
-curveCardinal: ƒ e(t)
-curveCardinalClosed: ƒ e(t)
-curveCardinalOpen: ƒ e(t)
-curveCatmullRom: ƒ e(t)
-curveCatmullRomClosed: ƒ e(t)
-curveCatmullRomOpen: ƒ e(t)
-curveLinear: ƒ oc(t)
-curveLinearClosed: ƒ (t)
-curveMonotoneX: ƒ (t)
-curveMonotoneY: ƒ (t)
-curveNatural: ƒ (t)
-curveStep: ƒ (t)
-curveStepAfter: ƒ (t)
-curveStepBefore: ƒ (t)
-customEvent: ƒ it(n, e, r, i)
-descending: ƒ (
+```
+<a style="margin-left:20%;" href="https://cryptomaven.xyz">
+
+<img width="660" src="https://tmm-nov.s3.amazonaws.com/assets/img/MaestasReykjavikBanner.jpg" title="Crypto_Maven_Background" alt="Crypto_Maven_Image_Background">
+
+</a>
+
+
+<h3 width="600" style="margin-left:50px;max-width:560px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</h3> 
