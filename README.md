@@ -19,6 +19,52 @@ This app applies data scraper to collect unstructured data. And this app structu
 ### Part III. UI Interactivity
 
 ### App Functionality
+CryptoMaven accepts user information, upon user's request. Next, the data is cleaned, structured and from which derive 17 key variables: Holding constant spurious variables, a multilinear regression analysis predicts' upper and lower confidence levels for a user's optimal crypto-trading strategy, no matter how diversied across the Bitcoin, Altcoin and NFT spaces. 
+Because CryptoMaven does not dispense financial advice, the user's own past combined with external training data. Based on user's survey data (60-question survey, 40% socio-economic/demographic variables & 60% composite variables). These psycho-sociological variables expose, through propensity analysis, a virtual twin, i.e. mirror-like toolset by which one can analyze one's own trading decisions in the past using Propensity Scoring (again using >10,000 users' from NIH datasets for the propensity matching).  
+
+Next, optimization through machine-learning uses predictive plots to generate a reliable composite model. Using this data modeling, one can feed and better interpret new data inputs, much like modern, Western Medicine employs meta-analysis for diagnosis and prediction of stochastic (random) variance.
+
+Therefore, with all of the reliable and accurate that users, what utility is it therefore that CryptoMaven shies from financial advice? Simply by amplifying the research interests for crypto-maven users to conduct breadth-first searches across their bordering fields of interests -- in the form of magazine & online addressing and scraping of unstructured. More importantly, once the ideal topic(s) of interest are identified, thenceforward the CryptoMaven algorithm engine instructs depth-first searches to new data clusters (INGRESS Edges > 2, i.e. Directed Acyclic Graphing and Sankey Tracking);
+
+Finally, D3js and JQuery-Bootstrap related javascript libraries are imported as Global variables into the Center Piece of CryptoMaven Application Worth: Interactive, Real-Time Graphical Visualization incorporating React/ReactDOM's virtual DOM as the Single Source of Truth, through which all D3 updating takes place. 
+
+The basic D3js pattern retains use for non-DOM related calculations, thus freeing up the Browser to real-time respond via the Virtual DOM. This speed, using both React Hooks and Redux one-way data flow ensures State integrity and data-to-DOM sharing between both programs. The resolution I propose is directly based on Hegelian Dialectalism whereby perfectuly unique sets for systems are identified, from which the antithesis derives it's <i> Raison D'Etre</i> and along the perfection of the original thesis, a new Synthesis is born into its own mutation toward a unique set. 
+
+Thus,the beauty of CryptoMaven utility lies in its recursive ability to deeply dive and identify uniquely repeating patterns such as the first, as yet unrecognized, great Sociologist Friedrich Hegel proffered in 1805.<sup>1</sup> In concrete terms, all Crypto Mavens have their own dashboards, from which a maximum of 16 competing dashboards may be observed, allowing the user to apply <i>their own</i> analyses, with graphical output. 
+
+So, in sum, Mirror by Crypto Maven allows one to glean the most important information buried deep within one's own subconscious actions, actions only illumined by the use of Big Data. This empowerment offered by a website invites the statistical power needed for answers -- along as the Great Philosopher Socrates commanded: <i> Gnothi Sauton </i> ...know thyself. *More on the logical construction of the app and my scholarly interest in Hegelian philosophy is shared at the bottom of document.
+
+
+<!-- //JOIN new data with old elements.: ...i.e. join the data with HTML <Element> -->
+const text = g.selectAll("text")
+.data(data, function(d) {return d;})
+
+//EXIT old elements not present in new data.
+text.exit()
+.attr("class", "exit")
+.transition(t)
+.attr("y", 60)
+.style("fill-opacity", 1e-6)
+.remove();
+
+<!-- //UPDATE old elements present in new data, through ~10 frame changes per second -->
+text.attr("class", "update")
+.attr("y", 0)
+.style("fill-opacity",1)
+.transition(t)
+.attr("x", function(d,i) {return i*32;})
+
+//ENTER new elements present in new data
+text.enter().append("text")
+.attr("class", "enter")
+.attr("dy", ".35 em")
+.attr("y", -60) 
+.attr("x", function(d, i) {return i*32;})
+.style("fill-opacity", 1e-6)
+.transition(t)
+.attr("x", function(d) {return d;})
+
+<strong>However, this model which is inexorably in conflict with React DOM's virtual-DOM is resolved through CryptoMaven's AppGroot $G3 global variable</strong>. Who else can dynamically toggle between D3 math-intensive calculations, best run using C WebAssembly; and React's Virtual DOM strong-suit offers a third path solution for DOM control and data sharing for visualization and data state management: If it's everybody's job, then it's not a job, by which I imply statelessness. 
 
 #### Performance Tools
   * Tool: https://rithmschool.github.io/function-timer-demo/
@@ -30,8 +76,8 @@ This app applies data scraper to collect unstructured data. And this app structu
 -Express
 
 ##### Development 
-```sh
-rollup index.js --file bundle.js --format umd --name "mavenBundle"
+```sh 
+
 ```
 ### Technologies 
 | Fx | Tools | URLS |
@@ -126,65 +172,9 @@ sudo service nginx restart
  [AWS-S3](https://aws.amazon.com/s3/) 
    
 
-### solidity 
-#### Custom Blockchain App
-##### Dependencies
-* crypto (built-in Node module)
-* npm run block :: Start blockchain
+### **Solidity, Smart Contracts & Blockchain code relocated to:
+#### Solidity Dir README.md
 
-### INSTRUCTIONS
-## Solidity Application
-
-Development: npm run block
-
-Start Chain: npm run start 
-
-OUTPUT::
-```sh
-$ npm run start
-
-> server-blockchain@1.0.0 start C:\w\www\git\armchair\bitcoinBuyer1-findersCalculators\server-blockchain
-> tsc && node .
-
-⛏️⛏️⛏️ mining yo ⛏️⛏️⛏️
-Solved: 11864
-⛏️⛏️⛏️ mining yo ⛏️⛏️⛏️
-Solved: 101775
-⛏️⛏️⛏️ mining yo ⛏️⛏️⛏️
-Solved: 3064
-Chain {
-  chain: [
-    Block {
-      prevHash: null,
-      transaction: [Transaction],
-      ts: 1615688487672,
-      nonce: 88872301
-    },
-    Block {
-      prevHash: '9657459a8695f7af8c217bfc4cd9b92e73314a0bbaa4169efcec9bc8d05ef00
-4',
-      transaction: [Transaction],
-      ts: 1615688488194,
-      nonce: 93574180
-    },
-    Block {
-      prevHash: 'bf3583a16e3a5a6df921e7cf0066f75754e0b0de29235ec79bf06a6b9fc4d64
-7',
-      transaction: [Transaction],
-      ts: 1615688488464,
-      nonce: 67377836
-    },
-    Block {
-      prevHash: '9b54d0d255be71e49c95b3562dd4ad71b3adf6f2d98e29fa76a92b42a6aa0f4
-a',
-      transaction: [Transaction],
-      ts: 1615688489592,
-      nonce: 9465973
-    }
-  ]
-}
-
-```
 #### REFERENCES
 ##### http://vis.stanford.edu/files/2011-D3-InfoVis.pdf
 
@@ -320,3 +310,14 @@ csvParseRows: ƒ n(t, n)
 
 
 <h3 width="600" style="margin-left:50px;max-width:560px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</h3> 
+
+
+
+### About the Author: 
+Thomas Milton Maestas, your Author. 
+
+My own provenance from Montreal in 2016 as the student of Sir Marcel Fournier (knighted by the Queen of England for Cultural Scholarship Authority). Dr. Marcel Fournier was trained by the eminent Parisian sociologist, Pierre Bourdieu, who single-handedly helped rewrite modern, contemporary interpretations on class in both Europe and the U.S.  Pierre Bourdieu in turn was trained by the equally famous philosopher Althusser, the disciple of Marx, from which 30 years earlier, Hegel created the first defensible philosophy on logic and true reality: Continental Materialism, which is the anchoring foundation of my own dissertation on Education Reforms and their effect on society. 
+
+As an expert of 18th century French National Education Forms (invention of high schools & vocational schools and also intellectual tracks), I was granted special access to the historical records in the Mitterand National Library's Underground Archives to collect the essential information, for the best <i>modern</i> interpretation of their success (raising French military might to the extent of rebuilding Napolean's wake of destruction into #1 Super Power of the world, with only the United Kingdom for competition. I applied this research to my treatise on the mis-education and absolute innumeracy of modern society, which I would put at 10%.
+
+To this effect, the only existing historical parallel to the current situation is the 18th century Prussian Education Reforms which created the first "Kinder Garten," an invention which increased <i>literacy among the population from 10% to 70% during a 15-year span. Stein Education Minister, also a Hegelian, offered a recursion solution: Building first the teacher-training institutes first, from which exponential progress created an educated population within a generation.   </i> -- a feat easily a
