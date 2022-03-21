@@ -3,7 +3,7 @@
 import  express from express;
 const router = express.Router();
 
-import Crypto from '../models/Crypto';  // for MySQL Sequelize table later
+import Crypto from '../index/models/Crypto';  // for MySQL Sequelize table later
 // const Sequelize = require('sequelize');
 // const Op = Sequelize.Op; 
 
