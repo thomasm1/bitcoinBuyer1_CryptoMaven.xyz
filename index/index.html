@@ -12,14 +12,14 @@
     <title>CryptoMaven</title> 
     <!-- <link rel="stylesheet" href="src/css/styles.css" /> -->
 
-    <script src="./app-react.js"></script><!-- ...<== un-minified for development use... https://unpkg.com/react@16.7.0/umd/react.production.min.js -->
+    <!-- <script src="./app-react.js"></script>...<== un-minified for development use... https://unpkg.com/react@16.7.0/umd/react.production.min.js -->
     <!-- /** @license React v16.7.0 
  * Copyright (c) Facebook, Inc. and its affiliates.  
  */
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */ -->
-    <script src="./app-react-dom.js"></script><!--  ..<== un-minified for development use... https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js -->
+    <!-- <script src="./app-react-dom.js"></script> ..<== un-minified for development use... https://unpkg.com/react-dom@16.7.0/umd/react-dom.production.min.js -->
     <!-- /** @license React v16.7.0
     * react-dom.production.min.js  
     Modernizr 3.0.0pre (Custom Build) | MIT
@@ -38,30 +38,36 @@
  **/-->
   
 
-    <script src="./app-d3v4.js"></script>
+    <!-- <script src="./app-d3v4.js"></script> -->
     <!-- // https://d3js.org Version 4.13.0. Copyright 2018 Mike Bostock.
     (function (t, n) {
         -->
     
-    <!-- <script src="./app-d3v7.js"></script>                                     TEMP-->
+    <script src="./app-d3v7.js"></script>                                     TEMP
     <!-- // https://d3js.org v7.3.0 Copyright 2010-2021 Mike Bostock
     !(function (t, n) {
       "object" == typeof exports && "undefined" != typeof module
     -->
 
-<!-- <script src="./appGroot.js"></script>                      -->
+<script src="./appGroot.js"></script>                     
 
     <!-- (function(global, $, d3) {
     
       //  Returns new Global Object, with 'new' an object
       var Groot = function(firstName, lastName, premier, language) {
           return new Groot.init(firstName, lastName, premier, language);   
-      }
-      
-      // hidden within the scope of the IIFE and never directly accessible
-      const supportedLangs = ['en', 'es', 'fr'];
-      
- 
+      } 
+      //internal
+      // $g3.properties
+      import "../src/assets/style.css";
+import "../src/assets/responciv.css";
+import MainRouter from "./router/mainRouter";
+import "animate.css";
+function App() {
+  return <MainRouter />;
+}
+
+export default App;
       // logger messages
       const logMessages = {
           en: 'Logged in',
