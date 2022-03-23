@@ -69,6 +69,31 @@ export class NumFilters {
         }
         return resultArr;
     }
+
+    caeserCipher(str, num) {
+        num = num % 26; 
+        const strLowerCase = str.toLowerCase();
+        const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('');
+        let newStringResult = '';
+        for (let i = 0; i<strLowerCase.length;i++){
+            let currentLetter = strLowerCase[i]
+            if(currentLetter === ' ') {
+                strLowerCase += currentLetter;
+                constinue;
+            }
+        let currentIndex = alphabet.indexOf(currentLetter) // i === 0, A
+        let newIndex = currentIndex + num;
+        if(newIndex > 25) newIndex = 26-newIndex;
+        if(newIndex<0) 26+newIndex;
+        if (str[i]===str[i].toUpperCase()) {
+            newStringResult += alphabet[newIndex].toUpperCase();
+        } else {
+            newStringResult += alphabet[newIndex];
+        }
+    }
+    return newStringResult;
+        
+    }
 }
  
 const numFilters = new NumFilters();
@@ -79,6 +104,7 @@ console.log("fibonacciMemo: "+numFilters.fibonacciMemo(testInt ));
 // console.log(numFilters.iterFibonacci(testInt ));
 numFilters.fizzBuzz(testInt);
 
+console.log("caeserCipher", numFilters.caeserCipher('Thomas', 1));
 
 ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// ////// 
 // class ArrayFilters methods:
@@ -151,10 +177,10 @@ export class ArrayFilters {
         for (let num in modeObject) {
             if(modeObject[num] > maxFrequency) {
                 modes = [num];
-                maxFrequnecy = modeObject[num];
+                maxFrequency = modeObject[num];
             } else if (modeObject[num] === maxFrequency) {modes.push(num)}// if 2 modes
         }
-        if (modes.length === Object.keys(modObject).length) { modes = []; }
+        if (modes.length === Object.keys(modeObject).length) { modes = []; }
         return modes
     }
     maxProfit(arr) {
