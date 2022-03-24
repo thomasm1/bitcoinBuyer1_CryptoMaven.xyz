@@ -1,86 +1,43 @@
 import 'dotenv/config';  // only CRYPTO_API_KEY here
 
 import axios from "axios";
-import {ApiWalker} from '../index/dataServices/dataServices.js';
+import {ApiWalker} from './index/dataServices/dataServices.js';
 
 import express from "express";
 import   CheerioApi   from "cheerio";
 
 
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
-///////////////// Web Scraping VARS
-// Crypto News
-const articles = [];
-
-
-const newsOutlets = [  // Go to these websites and scrape for keyword 
-  {
-    name: 'cointelegraph',
-    address: 'https://cointelegraph.com/',
-    baseUrl: 'https://cointelegraph.com'
-  },
-  {
-    name: 'coindesk',
-    address: 'https://www.coindesk.com/tech/',
-    baseUrl:'https://www.coindesk.com'
-  },
-] 
-
-//  
-  newsOutlets.forEach(news => {
-  axios.get(news.address).then((response) => {
-
-    const html = response.data;
-    const $ = CheerioApi.load(html)
-  
-    $('a:contains("Ethereum")', html).each(function () {
-      const title = $(this).text()
-      const url = $(this).find('a').attr('href')
-
-      articles.push({
-        title, 
-        url: news.baseUrl+url, 
-        source: news.name
-      })
-    })
+///////////////// Web Scraping VARS // Imported from app-proxy's UI inputs
+import {newsObj, getArticles, getSpecificArticles} from "./app-proxy.js"
  
 
-  })
-})
- 
-// DataScraper to return json data on NEWS topics:    MOVE    to DataScrapers   ******
+// Just serve
+// DataScraper to return json data on NEWS topics:   
 app.get("/cryptonews", (req, res) => { 
-  console.log("/cryptonews")
-  res.json(articles)
+  getArticles()
+  console.log("/cryptonews using newsObj.tempArticles: ", newsObj.tempArticles)
+  res.json(newsObj.tempArticles)
   });
 
   
-app.get("/cryptonews/:newsId", (req, res) => {
-  console.log("/cryptonews/:newsId");
-  const newsId = req.params.newsId
-  const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
-  const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
- 
-  axios.get(newsAddress)
-    .then(response => {
-      const html = response.data
-      const $ = CheerioApi.load(html)
-      const targetArticles = []
 
-      $('a:contains("Ethereum")', html).each(function () {
-        const title = $(this).text()
-        const url = $(this).attr('href')
-  
-        targetArticles.push({
-          title, 
-          url: news.baseUrl+url, 
-          source: newsId
-        })
-      })
-      res.json(targetArticles)
-    }).catch(err => console.log(err))
+
+
+let newsId = "newsId"
+  // TODO  ->  place calculations into app-proxy
+app.get(`/cryptonews/:${newsId}`, (req, res) => {
+  getSpecificArticles()
+  console.log("/cryptonews using newsObj.targetArticles: ", newsObj.targetArticles)
+ 
+  // console.log("/cryptonews/:newsId");
+  // const newsId = req.params.newsId
+  // const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
+  // const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
+  res.json(newsObj.targetArticles)
+ 
 
 }) 
  ////////////////////////////////////////////////////////////////////////////////
