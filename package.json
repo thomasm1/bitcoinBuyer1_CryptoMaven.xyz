@@ -20,6 +20,7 @@
     "axios": "^0.26.0",
     "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
+    "create-react-app": "^5.0.0",
     "d3-array": "^2.12.1",
     "d3-collection": "^1.0.7",
     "d3-geo": "^1.12.1",
