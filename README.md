@@ -311,8 +311,88 @@ csvParseRows: ƒ n(t, n)
 
 <h3 width="600" style="margin-left:50px;max-width:560px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</h3> 
 
+### API SCHEMAS
 
+```sh
+/// API      localhost:5000/api/coins '
+const response_coins = { 
+  "data": [
+    {
+      "screen_ID": "83",
+      "screen_data": {
+        "next_page": 2,
+        "crypto_data": [ 
+          {
+            "id": "672",
+            "name": "ERC20",
+            "country_id": "725",
+            "pair_id": 1072082,
+            "currency_symbol": "ERC20",
+            "inst_price_usd": "0.0000440",
+            "pair_change_arrow": "up_green",
+            "change_percent_1d": "+190.88%",
+            "pair_change_percent_numeric": "190.88",
+            "change_percent_1d_color": "#3fc932",
+            "change_percent_7d": "0.00%",
+            "percent_change_7d_plain": "0.00",
+            "change_percent_7d_color": "#c2c1c2",
+            "cross_rates_name": "ERC20",
+            "inst_price_btc": "0",
+            "inst_market_cap": "&#x24;6.81M",
+            "inst_market_cap_plain": "6813912",
+            "volume_24h_usd": "&#x24;52.59K",
+            "volume_24h_usd_plain": "52588",
+            "total_volume_plain": "0.00",
+            "total_volume": "0.00%",
+            "flag_url": "https://i-invdn-com.investing.com/ico_flags/80x80/v32/erc-20.png",
+            "logo_url": "https://i-invdn-com.investing.com/ico_flags/80x80/v32/erc-20.png"
+          },
+        ]
+      }
+    }
+  ]
+}
 
+// http://localhost:5000/cryptoNews
+const response_cryptoNews = 
+[ 
+  {
+    "title": " Ethereum Classic up 75% in 8 days, but will ETH miners migrate after ETC ‘fifthening’? ",
+    "url": "https://cointelegraph.comundefined",
+    "source": "cointelegraph"
+  },
+  {
+    "title": " Ethereum Classic up 75% in 8 days, but will ETH miners migrate after ETC ‘fifthening’? ",
+    "url": "https://cointelegraph.comundefined",
+    "source": "cointelegraph"
+  },
+  {
+    "title": " Grayscale launches smart contract fund for Ethereum competitors   ",
+    "url": "https://cointelegraph.comundefined",
+    "source": "cointelegraph"
+  },
+  {
+    "title": " ETH price hits $3K as major crypto fund adds over $110M Ethereum to Lido's staking pool ",
+    "url": "https://cointelegraph.comundefined",
+    "source": "cointelegraph"
+  }
+]
+
+// http://localhost:5000/api/nations
+const response_nations =  {
+  "countries": [
+    {
+      "ci": "104",
+      "cc": "AF",
+      "cname": "Afghanistan",
+      "country_name_translated": "Afghanistan",
+      "country_international_phone_code": "+93",
+      "flag_image_32x32": "https://i-invdn-com.investing.com/flags_32x32/circle/Afghanistan.png",
+      "flag_image_32x32_flat": "https://i-invdn-com.investing.com/flags_32x32_ios/Afghanistan.png"
+    }
+  ]
+}
+```
 ### About the Author: 
 Thomas Milton Maestas, your Author. 
 

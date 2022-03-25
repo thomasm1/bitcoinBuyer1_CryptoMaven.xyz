@@ -1,7 +1,7 @@
 import 'dotenv/config';  // only CRYPTO_API_KEY here
  
 import {ApiWalker} from './index/dataServices/dataServices.js';
-import {  getAllArticles, getTargetArticles, getMetaData, getCoinsData, getCalData} from "./app-proxy.js"
+import {  getAllArticles, getTargetArticles,FinClass} from "./app-proxy.js"
 
 import express from "express"; 
 
@@ -44,9 +44,11 @@ app.get(`/cryptonews/:newsId`, (req, res) => {
 ////////////////////////////////////////////////
 ///// FIN API ////////////////////////////////// 
  
+let finClass = new FinClass(); // one singleton per session
+
 // Data to return crypto resources     // META DATA BY NATION
 app.get("/api/nations", (req, res) => { 
-      const finMeta = getMetaData("nations") 
+      const finMeta = finClass.getMetaData("nations") 
       console.log("RUNNING /api/nations finMeta: ", finMeta);  
 
       res.json(finMeta)  
@@ -54,7 +56,7 @@ app.get("/api/nations", (req, res) => {
 
   
  app.get("/api/coins", (req, res) => {    // COINS DATA
-      const finCoins = getCoinsData()
+      const finCoins = finClass.getCoinsData()
       console.log(finCoins);
       // res.json(coins[0].screen_data[2].crypto_data) 
       res.json(finCoins)  
@@ -63,7 +65,7 @@ app.get("/api/nations", (req, res) => {
 
 // Calendar
 app.get("/api/calendar", (req, res) => {    // CALENDAR/TIME
-  const cal = getCalData()
+  const cal = finClass.getCalData()
       // let cal = response.data[0].screen_data.icoData.data
     res.json(cal)  
     }); 
