@@ -1,41 +1,43 @@
 import 'dotenv/config';  // only CRYPTO_API_KEY here
+const API_KEY = process.env.CRYPTO_API_KEY 
+const cryptoBaseUrl = "https://investing-cryptocurrency-markets.p.rapidapi.com/"
 
-import axios from "axios";
 import {ApiWalker} from './index/dataServices/dataServices.js';
 
-import express from "express";
-import   CheerioApi   from "cheerio";
+import axios from "axios";
+import  CheerioApi   from "cheerio";
 
+ 
 
-const app = express();
-const PORT = process.env.PORT || 5000;
-
+let options;
 ///////////////// Web Scraping VARS
-// Crypto News
-export const newsObj = {};
-newsObj.tempArticles = newsObj.tempArticles || [];
+// GLOBAL VARS     Crypto News
+ const newsObj = {};   
+          // later make a singleton for these 
+          newsObj.tempArticles = newsObj.tempArticles || []; 
+          // collect from UI initial keyword to search
+          newsObj.tempKey = "Ethereum"
+          newsObj.tempKeyArray = ["Ethereum","NFT", "Web3"]
 
-// collect from UI initial keyword to search
-newsObj.tempKey = "Ethereum"
-newsObj.tempKeyArray = ["Ethereum","NFT", "Web3"]
+          // collect from UI initial websites to scrape 
+          newsObj.tempSites= newsObj.tempSites || [  // Go to these websites and scrape 
+          //for keyword 
+            {
+              name: 'cointelegraph',
+              address: 'https://cointelegraph.com/',
+              baseUrl: 'https://cointelegraph.com'
+            },
+            {
+              name: 'coindesk',
+              address: 'https://www.coindesk.com/tech/',
+              baseUrl:'https://www.coindesk.com'
+            },
+          ] 
 
-// collect from UI initial websites to scrape 
-newsObj.tempSites= [  // Go to these websites and scrape 
-//for keyword 
-  {
-    name: 'cointelegraph',
-    address: 'https://cointelegraph.com/',
-    baseUrl: 'https://cointelegraph.com'
-  },
-  {
-    name: 'coindesk',
-    address: 'https://www.coindesk.com/tech/',
-    baseUrl:'https://www.coindesk.com'
-  },
-] 
-newsObj.targetArticles = [];
-//  
-export function getArticles() {
+          newsObj.targetArticles = newsObj.targetArticles || [];
+
+/// Methods for class
+export function getAllArticles() {
   newsObj.tempSites.forEach(news => {
     axios.get(news.address).then((response) => {
   
@@ -48,29 +50,23 @@ export function getArticles() {
   
         newsObj.tempArticles.push({
           title, 
-          url: news.baseUrl+url, 
+          url: news.baseUrl, 
           source: news.name
         })
-      })
-    
+      }) 
     })
   })
   return newsObj
 }
-
-
-export function getSpecificArticles() {
-  app.get("/cryptonews/:newsId", (req, res) => {
-    console.log("/cryptonews/:newsId");
-    const newsId = req.params.newsId
-    const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
-    const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
-   
+ 
+export function getTargetArticles(newsId) { 
+    const newsAddress = newsObj.tempSites.filter(news => news.name == newsId)[0].address
+    const newsBase = newsObj.tempSites.filter(news => news.name == newsId)[0].baseUrl
+  
     axios.get(newsAddress)
       .then(response => {
         const html = response.data
-        const $ = CheerioApi.load(html)
-
+        const $ = CheerioApi.load(html) 
   
         $('a:contains("Ethereum")', html).each(function () {
           const title = $(this).text()
@@ -78,179 +74,162 @@ export function getSpecificArticles() {
     
           newsObj.targetArticles.push({
             title, 
-            url: news.baseUrl+url, 
+            url: newsBase+url, 
             source: newsId
           })
         })
-        console.log("just got target", newsObj.targetArticles)
-        
-        return newsObj.targetArticles
+
+        console.log("just got target", newsObj.targetArticles)  
       }).catch(err => console.log(err))
-  
-  }) 
+
+ return newsObj
 }
+   
+///////////////// Web Scraping VARS
+// GLOBAL VARS     Crypto News
   
-app.get("/cryptonews/:newsId", (req, res) => {
-  console.log("/cryptonews/:newsId");
-  const newsId = req.params.newsId
-  const newsAddress = newsOutlets.filter(news => news.name == newsId)[0].address
-  const newsBase = newsOutlets.filter(news => news.name == newsId)[0].baseUrl
- 
-  axios.get(newsAddress)
-    .then(response => {
-      const html = response.data
-      const $ = CheerioApi.load(html)
-      const targetArticles = []
+const finObj = {}
+finObj.newObjMappers = []
+finObj.countriesMarket = []
+finObj.allLangs = []
+finObj.nations = [];
+finObj.coins = [];
+finObj.cal = [];
 
-      $('a:contains("Ethereum")', html).each(function () {
-        const title = $(this).text()
-        const url = $(this).attr('href')
-  
-        targetArticles.push({
-          title, 
-          url: news.baseUrl+url, 
-          source: newsId
-        })
-      })
-      res.json(targetArticles)
-    }).catch(err => console.log(err))
-
-}) 
- ////////////////////////////////////////////////////////////////////////////////
- ////////////////////////////////////////////////////////////////////////////////
-/// GLOBAL   VARS
-const API_KEY = process.env.CRYPTO_API_KEY 
- 
-const newObjMappers = []
-const countriesMarket = []
-const allLangs = []
- 
-//////////////////////////////////////////////////////////////////////
-let nations = [];
-let coins = [];
-
-function getParams(paramOptions){
+function getFinVars(paramOptions){
   // if coins 
 if (paramOptions=='nations' ) return  {
-  locale_info: 'en_US', 
-  lang_ID: '1', 
-  time_utc_offset: '28800'
+  params: { 
+    locale_info: 'en_US', 
+    lang_ID: '1', 
+    time_utc_offset: '28800'},
+  path: 'get-meta-data'
 };
 if (paramOptions =='calendar')  return {
-  tabname: 'ongoing',
-  lang_ID: '1',
-  time_utc_offset: '28800',
-  sort: 'related_days'
+    params: {
+      tabname: 'ongoing',
+      lang_ID: '1',
+      time_utc_offset: '28800',
+      sort: 'related_days'
+    },
+    path:'get-ico-calendar'
 }
 if (paramOptions=='coinsList')  return {
+ params: {
   edition_currency_id: '12',
   time_utc_offset: '28800',
   lang_ID: '1',
   sort: 'PERC1D_DN',
   page: '1'
+ },
+ path: 'coins/list'
 }
 if (paramOptions=='currenciesList' ) return {
-  lang_ID: '1', 
+  params: {
+    lang_ID: '1', 
   time_utc_offset: '28800'
+  }
+} 
 }
 
-}
+// // Data to return crypto resources   // META DATA
+ 
+export function getMetaData(optString){ 
+  
+  const localVars = getFinVars(optString);
 
-// Data to return crypto resources
-app.get("/api/nations", (req, res) => {    // META DATA
-  let thisPath = "get-meta-data"                       // REMOVE!
-  let thisParam = 'nations';
-  console.log("/api/nations"); 
-  let options = { 
+    options = { 
     method: 'GET',
-    url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${thisPath}`,
-    params: getParams(thisParam),
+    url: `${cryptoBaseUrl}${localVars.path}`,
+    params: localVars.params,
     headers: {
       'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
       'x-rapidapi-key':  API_KEY
     }
   }; 
+
     axios.request(options).then(response => {
       const apiWalker = new ApiWalker();
-      nations = response.data
-console.log(nations);
-      for (let i = 0;i<nations.length;i++){ 
+      finObj.nations = response.data
+
+      for (let i = 0;i<finObj.nations.length;i++){ 
         apiWalker.newObjMappers.push({
           name:"tempMapper",
-         nation: nations.countries[i]
+         nation: finObj.nations.countries[i]
         })   
-      }       const input =  "Albania"     /// REMOVE 
-    console.log("check Albania some objects from names");
-    console.log(apiWalker.getAll(nations.countries, input )); 
-    res.json(nations) 
+      }       
+    //                                const input =  "Albania"     /// REMOVE 
+    // console.log("check Albania some objects from names");
+    // console.log(apiWalker.getAll(nations.countries, input ));  
+    // console.log("nations", nations)
+
     }).catch(function (error) {
       console.error(error);
-    }); 
-  });
+    });  
+    return finObj.nations
+};
 
 
-  app.get("/api/coins", (req, res) => {    // META DATA
-    const thisPath = "coins/list"                       // REMOVE!
-    const thisParam = 'coinsList';
-    let options = { 
-      method: 'GET',
-      url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${thisPath}`,
-      params: getParams(thisParam),
-      headers: {
-        'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
-        'x-rapidapi-key':  API_KEY
-      }
-    }; 
-      axios.request(options).then(response => {
-        const apiWalker = new ApiWalker();
-        coins = response.data
-  // console.log(coins[0].screen_data.crypto_data);
-  console.log(coins);
-        for (let i = 0;i<coins.length;i++){ 
-          apiWalker.newObjMappers.push({
-            name:"tempMapper",
-            coin: coins[0].screen_data.crypto_data[i]
-          })   
-        }      
-     
-      // res.json(coins[0].screen_data[2].crypto_data) 
-      res.json(coins) 
-      }).catch(function (error) {
-        console.error(error);
-      }); 
-    });
+// // Data to return crypto resources   // COINS 
+export function getCoinsData() { 
+  const localVars = getFinVars("coinsList")  
 
-// Calendar
-app.get("/api/calendar", (req, res) => {    // META DATA
-  const thisPath = "get-ico-calendar"                       // REMOVE!
-  const thisParam = 'calendar'; 
-  let options = { 
+    options = { 
     method: 'GET',
-    url: `https://investing-cryptocurrency-markets.p.rapidapi.com/${thisPath}`,
-    params: getParams(thisParam),
+    url: `${cryptoBaseUrl}${localVars.path}`,
+    params: localVars.params,
     headers: {
       'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
       'x-rapidapi-key':  API_KEY
     }
-  }; 
+  };  
+  
+      axios.request(options).then(response => {
+        const apiWalker = new ApiWalker();
+        finObj.coins = response.data
+      // console.log(coins[0].screen_data.crypto_data); 
+
+     for (let i = 0;i<finObj.coins.length;i++){ 
+          apiWalker.newObjMappers.push({
+            name:"tempMapper",
+            coin: finObj.coins[0].screen_data.crypto_data[i]
+          })   
+        }      
+                                // UNIT TEST
+                              // res.json(coins[0].screen_data[2].crypto_data) 
+                              console.log(finObj.coins);
+      }).catch(function (error) {
+        console.error(error);
+      });  
+      return finObj.coins
+    }
+
+
+// Calendar
+export function getCalData() {    // ICO CALENDAR DATA 
+  const localVars = getFinVars("calendar");
+
+    options = { 
+    method: 'GET',
+    url: `${cryptoBaseUrl}${localVars.path}`,
+    params: localVars.params,
+    headers: {
+      'x-rapidapi-host': 'investing-cryptocurrency-markets.p.rapidapi.com',
+      'x-rapidapi-key':  API_KEY
+    }
+  };   
+ 
     axios.request(options).then(response => { 
-      let cal = response.data[0].screen_data.icoData.data
-    res.json(cal) 
+      // finObj.cal = response.data[0].screen_data.icoData.data
+      finObj.cal  = response.data
+     
     }).catch(function (error) {
       console.error(error);
     }); 
-  });
+    return finObj.cal
+  };
   
-   
-/////////////////   Static index path /
-app.use(express.static("index"));
-
-app.listen(PORT, () => {
-  setTimeout( () => {
-    console.log(` ... serving on Port ${PORT}`);  
-  }, 2500)
-})
-
+ 
  
 
 /// API      localhost:5000/api/coins '
