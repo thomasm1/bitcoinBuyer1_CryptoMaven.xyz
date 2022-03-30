@@ -31,8 +31,14 @@ newsObj.tempSites = newsObj.tempSites || [
 ]; 
 newsObj.targetArticles = newsObj.targetArticles || [];
 
+/// Class : NEWS SCRAPER: 
+// - this will take 3 input articles; 
+// articles are classified by category
+// category and breadth-first search for more news on category & direction. 
+// 
+
 /// Methods for class
-export function getAllArticles() {
+  getAllArticles() {
   newsObj.tempSites.forEach((news) => {
     axios.get(news.address).then((response) => {
       const html = response.data;
@@ -53,7 +59,7 @@ export function getAllArticles() {
   return newsObj;
 }
 
-export function getTargetArticles(newsId) {
+  getTargetArticles(newsId) {
   const newsAddress = newsObj.tempSites.filter((news) => news.name == newsId)[0]
     .address;
   const newsBase = newsObj.tempSites.filter((news) => news.name == newsId)[0]
@@ -82,6 +88,8 @@ export function getTargetArticles(newsId) {
 
   return newsObj;
 }
+
+} // END News Scraper Class
 
 ///////////////// Web Scraping VARS
 // GLOBAL VARS     Crypto News
