@@ -147,6 +147,7 @@ export class ArrayFilters {
             mode: this.getMode(arr)
         }
     }
+
     getMean(arr) {
         let sum = 0;
         arr.forEach(num => {
@@ -155,6 +156,7 @@ export class ArrayFilters {
         let mean = sum/arr.length;
         return mean;
     }
+
     getMedian(arr) {
         arr.sort(function(a,b){ return a-b}); // Sort ascending
         let median;
@@ -166,6 +168,65 @@ export class ArrayFilters {
         }
         return median
     }
+
+    // Median without ordering sides
+    getMedianOfMedians(arr, k, low, high) {
+        const medianIndex = getApproxMedIndex(arr, low, high);
+        const length = medianIndex - low + 1
+        if(length == k) {
+            return arr [medianIndex];
+        }
+        if (length > k){
+            //left
+            return findMedianOfMedians (arr, k, low, medianIndex-1);
+        } else {
+            //right
+            return findMedianOfMedians(arr, k-length, medianIndex +1, high)
+        }
+    
+    }
+
+    getApproxMedIndex() {
+        const pivot = partitionAndGet(arr,low, high);
+
+        // right index for this pivot : Quick Sort 
+        while(low < high) {
+            while(arr[low] < pivot)
+            low++;
+        while(arr[high] > pivot)
+            high--;
+        if(arr[low] == arr[high])
+            low++;
+        else if(low < high) {
+            //swap
+            let temp = arr[low];
+            arr[low] = arr[high];
+            arr[high] = temp;
+        }
+        }
+    }
+
+    partitionAndGet(arr, low, high) { 
+        if(high - low + 1 <= 9) {
+            arr.sort((a,b) => a-b);
+        }
+        // chunking
+        let temp = null;
+        const mediansArray = [];
+        while (high >= low) {
+            temp = []
+            const len = Math.min(5, high -low +1);
+            for (let i = 0; i < len && low <=high;i++){
+                temp [i] = list[low];
+                low++;
+            }
+            temp.sort((a,b) => a-b);
+            mediansArray [index] = temp PaymentMethodChangeEvent.cell(temp.length/2)];
+        }
+        // Median of medians
+        return this.partitionAndGet(mediansArray, 0, mediansArray.length-1);
+    }
+    s
     getMode(arr) {
         let modeObject = {};
         arr.forEach(num => {
@@ -217,8 +278,8 @@ console.log(arrayFilters.meanMedianMode(nearlyOrderedArray)) //mean 3.25, median
  let other = [9,10,23,10,23,9]
  console.log(arrayFilters.meanMedianMode(other)) // mean 14/median-10/mode:[]
 console.log(arrayFilters.maxProfit(unorderedArray));
-
-
+                                     
+console.log(arrayFilters.getMedianOfMedians(unorderedArray, Math.ceil(unorderedArray.length/2) +1, 0, unorderedArray.length-1))
 
 
 // class ObjectFilters methods:
