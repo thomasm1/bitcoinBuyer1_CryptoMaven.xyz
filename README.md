@@ -24,7 +24,7 @@ Because CryptoMaven does not dispense financial advice, the user's own past comb
 
 Next, optimization through machine-learning uses predictive plots to generate a reliable composite model. Using this data modeling, one can feed and better interpret new data inputs, much like modern, Western Medicine employs meta-analysis for diagnosis and prediction of stochastic (random) variance.
 
-Therefore, with all of the reliable and accurate that users, what utility is it therefore that CryptoMaven shies from financial advice? Simply by amplifying the research interests for crypto-maven users to conduct breadth-first searches across their bordering fields of interests -- in the form of magazine & online addressing and scraping of unstructured. More importantly, once the ideal topic(s) of interest are identified, thenceforward the CryptoMaven algorithm engine instructs depth-first searches to new data clusters (INGRESS Edges > 2, i.e. Directed Acyclic Graphing and Sankey Tracking);
+Therefore, with all of the reliable and accurate data models that users generate from their own data, CryptoMaven lets the user come to their conclusion; CryptoMaven App does not dispense or otherwise provide financial advice. The application amplifies the research interests for crypto-maven users to conduct breadth-first searches across their bordering fields of interests:  -- in the form of magazine & online addressing and scraping of unstructured. More importantly, once the ideal topic(s) of interest are identified, thenceforward the CryptoMaven algorithm engine instructs depth-first searches to new data clusters (INGRESS Edges > 2, i.e. Directed Acyclic Graphing and Sankey Tracking);
 
 Finally, D3js and JQuery-Bootstrap related javascript libraries are imported as Global variables into the Center Piece of CryptoMaven Application Worth: Interactive, Real-Time Graphical Visualization incorporating React/ReactDOM's virtual DOM as the Single Source of Truth, through which all D3 updating takes place. 
 
@@ -394,10 +394,21 @@ const response_nations =  {
 }
 ```
 ### About the Author: 
+```
 Thomas Milton Maestas, your Author. 
+```
 
-My own provenance from Montreal in 2016 as the student of Sir Marcel Fournier (knighted by the Queen of England for Cultural Scholarship Authority). Dr. Marcel Fournier was trained by the eminent Parisian sociologist, Pierre Bourdieu, who single-handedly helped rewrite modern, contemporary interpretations on class in both Europe and the U.S.  Pierre Bourdieu in turn was trained by the equally famous philosopher Althusser, the disciple of Marx, from which 30 years earlier, Hegel created the first defensible philosophy on logic and true reality: Continental Materialism, which is the anchoring foundation of my own dissertation on Education Reforms and their effect on society. 
+### Bio & Career Ambitions
+```
+My own provenance from Montreal in 2016 as the student of Professeur Marcel Fournier (knighted by the Queen of England for Cultural Scholarship Authority). Dr. Marcel Fournier was trained by the eminent Parisian sociologist, Pierre Bourdieu, who single-handedly helped rewrite modern, contemporary interpretations on class in both Europe and the U.S.  Pierre Bourdieu in turn was trained by the equally famous philosopher Althusser, the disciple of Marx, from which 30 years earlier, Hegel created the first defensible philosophy on logic and true reality: Continental Materialism, which is the anchoring foundation of my own dissertation on Education Reforms and their effect on society. 
+```
 
-As an expert of 18th century French National Education Forms (invention of high schools & vocational schools and also intellectual tracks), I was granted special access to the historical records in the Mitterand National Library's Underground Archives to collect the essential information, for the best <i>modern</i> interpretation of their success (raising French military might to the extent of rebuilding Napolean's wake of destruction into #1 Super Power of the world, with only the United Kingdom for competition. I applied this research to my treatise on the mis-education and absolute innumeracy of modern society, which I would put at 10%.
+### On Innumeracy and the History Patterns of Modernization:
+```
+As an expert of 18th century French National Education Forms (invention of high schools & vocational schools), I was granted special access to the historical records in the Mitterand National Library's Underground Archives to collect the essential information, for the best <i>modern</i> interpretation of their success (in spite of lackluster French military power in Napolean's wake of destruction, the new French republic managed to industrialize the labor pools' training and literacy to engineer needed reporting for the new Industrial age of the late 17th centure, by which time only United Kingdom remained for competition. Finally, as my History Bachelor's Treatise and Historiography, I traced paralells between literacy levels in the 1800's with the numeracy levels in the early 2000's and 2010's, with evidence supporting the case ofr widespread, and nationwide levels of innumeracy, which similarly imperils the modern labor pool for a modern society. Some have estimated the 2020 numeracy rate among college and all working adults at less than 10%.
+```
 
-To this effect, the only existing historical parallel to the current situation is the 18th century Prussian Education Reforms which created the first "Kinder Garten," an invention which increased <i>literacy among the population from 10% to 70% during a 15-year span. Stein Education Minister, also a Hegelian, offered a recursion solution: Building first the teacher-training institutes first, from which exponential progress created an educated population within a generation.   </i> -- a feat easily a
+### The Historical Precedence for Numeracy and the History Analogy of Prussian Education Reforms:
+```
+To this effect, the only existing historical parallel to the current situation is the 18th century Prussian Education Reforms which created the first "Kinder Garten," an invention which increased <i>literacy among the population from 10% to 70% during a 15-year span. Stein Education Minister, also a Hegelian, offered a recursion solution: Building first the teacher-training institutes first, from which exponential progress created an educated population within a generation.   </i>  
+```

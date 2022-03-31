@@ -7,17 +7,29 @@ import CheerioApi from "cheerio";
 
 ///////////////// Web Scraping VARS
 // GLOBAL VARS     Crypto News
-const newsObj = {};
+
+
+export class NewsScraper { 
+/// Class : NEWS SCRAPER: 
+// - this will take 3 input articles; 
+// articles are classified by category
+// category and breadth-first search for more news on category & direction. 
+// 
+
+constructor(newsObj) {
+  // Creating Singleton values & default values if no args passedOka
+this.newsObj = newsObj || {};
+news = this.newsObj
+
 // later make a singleton for these
-newsObj.tempArticles = newsObj.tempArticles || [];
+news.tempArticles = news.tempArticles || [];
 // collect from UI initial keyword to search
-newsObj.tempKey = "Ethereum";
-newsObj.tempKeyArray = ["Ethereum", "NFT", "Web3"];
+news.tempKey = news.tempKey || "Ethereum";
+news.tempKeyArray = news.tempKeyArray ||  ["Ethereum", "NFT", "Web3"];
 
 // collect from UI initial websites to scrape
-newsObj.tempSites = newsObj.tempSites || [
-  // Go to these websites and scrape
-  //for keyword
+news.tempSites = news.tempSites || [
+  // Go to these websites and scrape  keyword
   {
     name: "cointelegraph",
     address: "https://cointelegraph.com/",
@@ -31,11 +43,7 @@ newsObj.tempSites = newsObj.tempSites || [
 ]; 
 newsObj.targetArticles = newsObj.targetArticles || [];
 
-/// Class : NEWS SCRAPER: 
-// - this will take 3 input articles; 
-// articles are classified by category
-// category and breadth-first search for more news on category & direction. 
-// 
+}
 
 /// Methods for class
   getAllArticles() {

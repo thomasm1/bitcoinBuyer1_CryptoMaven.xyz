@@ -169,25 +169,25 @@ export class ArrayFilters {
         return median
     }
 
-    // Median without ordering sides
+    // Median without ordering
     getMedianOfMedians(arr, k, low, high) {
-        const medianIndex = getApproxMedIndex(arr, low, high);
+        const medianIndex = this.getApproxMedIndex(arr, low, high);
         const length = medianIndex - low + 1
         if(length == k) {
             return arr [medianIndex];
         }
         if (length > k){
             //left
-            return findMedianOfMedians (arr, k, low, medianIndex-1);
+            return this.getMedianOfMedians (arr, k, low, medianIndex-1);
         } else {
             //right
-            return findMedianOfMedians(arr, k-length, medianIndex +1, high)
+            return this.getMedianOfMedians(arr, k-length, medianIndex +1, high)
         }
     
     }
 
-    getApproxMedIndex() {
-        const pivot = partitionAndGet(arr,low, high);
+    getApproxMedIndex(arr,low, high) {
+        const pivot = this.partitionAndGet(arr,low, high);
 
         // right index for this pivot : Quick Sort 
         while(low < high) {
@@ -207,26 +207,32 @@ export class ArrayFilters {
     }
 
     partitionAndGet(arr, low, high) { 
+        // median of medians
         if(high - low + 1 <= 9) {
             arr.sort((a,b) => a-b);
+            return arr[Math.ceil(arr.length/2)];
         }
         // chunking
         let temp = null;
         const mediansArray = [];
+        let index = 0;
+
         while (high >= low) {
             temp = []
             const len = Math.min(5, high -low +1);
+
             for (let i = 0; i < len && low <=high;i++){
-                temp [i] = list[low];
+                temp[i] = arr[low];
                 low++;
             }
+
             temp.sort((a,b) => a-b);
-            mediansArray [index] = temp PaymentMethodChangeEvent.cell(temp.length/2)];
+            mediansArray[index] = temp [Math.ceil(temp.length/2)];
         }
         // Median of medians
         return this.partitionAndGet(mediansArray, 0, mediansArray.length-1);
     }
-    s
+
     getMode(arr) {
         let modeObject = {};
         arr.forEach(num => {
