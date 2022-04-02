@@ -32,7 +32,29 @@ newsObj.tempSites = newsObj.tempSites || [
 newsObj.targetArticles = newsObj.targetArticles || [];
 
 /// Methods for class
-export function getAllArticles() {
+
+
+///////////////// Web Scraping VARS
+// GLOBAL VARS     Crypto News
+
+export class NewsClass {
+  constructor(newsObj) {
+    this.API_KEY = process.env.CRYPTO_API_KEY;
+    this.cryptoBaseUrl =
+      "https://investing-cryptocurrency-markets.p.rapidapi.com/";
+
+    this.newsObj = newsObj || {};
+
+    this.newsObj.newObjMappers = [];
+    this.newsObj.countriesMarket = [];
+    this.newsObj.allLangs = [];
+    this.newsObj.nations = [];
+    this.newsObj.coins = [];
+    this.newsObj.cal = [];
+  }
+}
+
+  export function getAllArticles() {
   newsObj.tempSites.forEach((news) => {
     axios.get(news.address).then((response) => {
       const html = response.data;

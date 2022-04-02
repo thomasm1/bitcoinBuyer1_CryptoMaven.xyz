@@ -32,7 +32,10 @@ The basic D3js pattern retains use for non-DOM related calculations, thus freein
 
 Thus,the beauty of CryptoMaven utility lies in its recursive ability to deeply dive and identify uniquely repeating patterns such as the first, as yet unrecognized, great Sociologist Friedrich Hegel proffered in 1805.<sup>1</sup> In concrete terms, all Crypto Mavens have their own dashboards, from which a maximum of 16 competing dashboards may be observed, allowing the user to apply <i>their own</i> analyses, with graphical output. 
 
-So, in sum, Mirror by Crypto Maven allows one to glean the most important information buried deep within one's own subconscious actions, actions only illumined by the use of Big Data. This empowerment offered by a website invites the statistical power needed for answers -- along as the Great Philosopher Socrates commanded: <i> Gnothi Sauton </i> ...know thyself. *More on the logical construction of the app and my scholarly interest in Hegelian philosophy is shared at the bottom of document.
+So, in sum, Mirror by Crypto Maven allows one to glean the most important information evoked from statistical methods like Propensity Analysis and Multi-Level Hierarchical Regression Testing in order to illuminate user activitiy augmented by use of Big Data. This empowerment offered by a website invites the statistical power needed for answers -- along as the Great Philosopher Socrates commanded: <i> Gnothi Sauton </i> ...know thyself. The logical construction of the app uses Hegelian philosophical tenets to provide consistency across varying attributes and background variables.
+
+Most importantly, the essence of meta-awareness is creating a baseline in order to supplement one's own NFT meta-info. For this reason, this app utilizes a Web3 UI to order to transact identity and other data per browser session, via MetaMask plugin. Smart Contracts staged and launched on Ethereum Mainnet using Solidity, Truffle, and Gnv
+
 
 
 <!-- //JOIN new data with old elements.: ...i.e. join the data with HTML <Element> -->
@@ -394,7 +397,9 @@ const response_nations =  {
 }
 ```
 ### About the Author: 
-Thomas Milton Maestas, your Author. 
+Thomas Milton Maestas, your Author
+<a href="https://thomasmaestas.net" target="_blank">thomasmaestas.net<a>. 
+
 
 My own provenance from Montreal in 2016 as the student of Sir Marcel Fournier (knighted by the Queen of England for Cultural Scholarship Authority). Dr. Marcel Fournier was trained by the eminent Parisian sociologist, Pierre Bourdieu, who single-handedly helped rewrite modern, contemporary interpretations on class in both Europe and the U.S.  Pierre Bourdieu in turn was trained by the equally famous philosopher Althusser, the disciple of Marx, from which 30 years earlier, Hegel created the first defensible philosophy on logic and true reality: Continental Materialism, which is the anchoring foundation of my own dissertation on Education Reforms and their effect on society. 
 
