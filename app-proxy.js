@@ -7,29 +7,17 @@ import CheerioApi from "cheerio";
 
 ///////////////// Web Scraping VARS
 // GLOBAL VARS     Crypto News
-
-
-export class NewsScraper { 
-/// Class : NEWS SCRAPER: 
-// - this will take 3 input articles; 
-// articles are classified by category
-// category and breadth-first search for more news on category & direction. 
-// 
-
-constructor(newsObj) {
-  // Creating Singleton values & default values if no args passedOka
-this.newsObj = newsObj || {};
-news = this.newsObj
-
+const newsObj = {};
 // later make a singleton for these
-news.tempArticles = news.tempArticles || [];
+newsObj.tempArticles = newsObj.tempArticles || [];
 // collect from UI initial keyword to search
-news.tempKey = news.tempKey || "Ethereum";
-news.tempKeyArray = news.tempKeyArray ||  ["Ethereum", "NFT", "Web3"];
+newsObj.tempKey = "Ethereum";
+newsObj.tempKeyArray = ["Ethereum", "NFT", "Web3"];
 
 // collect from UI initial websites to scrape
-news.tempSites = news.tempSites || [
-  // Go to these websites and scrape  keyword
+newsObj.tempSites = newsObj.tempSites || [
+  // Go to these websites and scrape
+  //for keyword
   {
     name: "cointelegraph",
     address: "https://cointelegraph.com/",
@@ -43,10 +31,8 @@ news.tempSites = news.tempSites || [
 ]; 
 newsObj.targetArticles = newsObj.targetArticles || [];
 
-}
-
 /// Methods for class
-  getAllArticles() {
+export function getAllArticles() {
   newsObj.tempSites.forEach((news) => {
     axios.get(news.address).then((response) => {
       const html = response.data;
@@ -67,7 +53,7 @@ newsObj.targetArticles = newsObj.targetArticles || [];
   return newsObj;
 }
 
-  getTargetArticles(newsId) {
+export function getTargetArticles(newsId) {
   const newsAddress = newsObj.tempSites.filter((news) => news.name == newsId)[0]
     .address;
   const newsBase = newsObj.tempSites.filter((news) => news.name == newsId)[0]
@@ -96,8 +82,6 @@ newsObj.targetArticles = newsObj.targetArticles || [];
 
   return newsObj;
 }
-
-} // END News Scraper Class
 
 ///////////////// Web Scraping VARS
 // GLOBAL VARS     Crypto News

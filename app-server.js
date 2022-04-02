@@ -1,7 +1,7 @@
 import "dotenv/config"; // only CRYPTO_API_KEY here
 
 import { ApiWalker } from "./index/dataServices/dataServices.js";
-import { getAllArticles, getTargetArticles, FinClass } from "./app-proxy.js";
+import { NewsScraper, FinClass } from "./app-proxy.js";
 
 import express from "express";
 
@@ -13,11 +13,12 @@ let newsObj;
 
 ////////////////////////////////////////////////
 ///////////// NEWS API /////////////////////////
+const newsScraper = new NewsScraper()
 
 // DataScraper to return json data on NEWS topics:
 app.get("/cryptonews", (req, res) => {
   console.log("/api/coins");
-  newsObj = getAllArticles();
+  newsObj = newsScraper.getAllArticles();
 
   // delete log when making unit tests
   console.log("/cryptonews using newsObj.tempArticles: ", newsObj.tempArticles);
@@ -29,13 +30,13 @@ app.get(`/cryptonews/:newsId`, (req, res) => {
   const newsId = req.params.newsId;
 
   // Pass in user's param (calculated by getTargetArticles)
-  newsObj = getTargetArticles(newsId);
+  newsObj = newsScraper.getTargetArticles(newsId);
   // delete log after making unit tests
   console.log(" newsObj.targetArticles: ", newsObj.targetArticles);
   res.json(newsObj.targetArticles);
 });
 
-////////////////////////////////////////////////
+//////////////////////////////////////p/////////
 ///// FIN API //////////////////////////////////
 
 let finClass = new FinClass(); // one singleton per session
