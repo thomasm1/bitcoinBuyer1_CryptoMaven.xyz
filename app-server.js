@@ -5,10 +5,13 @@ import { NewsScraper, FinClass } from "./app-proxy.js";
 
 import express from "express";
 
+// import
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 let newsObj;
+
+
 /// // Imported from app-proxy's UI inputs
 
 ////////////////////////////////////////////////
@@ -61,10 +64,18 @@ app.get("/api/coins", (req, res) => {
 app.get("/api/calendar", (req, res) => {
   // CALENDAR/TIME
   const cal = finClass.getCalData();
-  // let cal = response.data[0].screen_data.icoData.data
+  // let cal = response.data.screen_data.icoData.data
+  // let cal = response.data.screen_data.icoData.categories
   res.json(cal);
 });
 
+app.get("/api/local", (req, res) => {
+  // CALENDAR/TIME
+  ;
+  // let cal = response.data.screen_data.icoData.data
+  // let cal = response.data.screen_data.icoData.categories
+  res.json(cal);
+});
 /////////////////   Static index path /
 app.use(express.static("index"));
 
