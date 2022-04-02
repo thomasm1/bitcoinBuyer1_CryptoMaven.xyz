@@ -400,7 +400,7 @@ Thomas Milton Maestas, your Author.
 
 ### Bio & Career Ambitions
 ```
-My own provenance from Montreal in 2016 as the student of Professeur Marcel Fournier (knighted by the Queen of England for Cultural Scholarship Authority). Dr. Marcel Fournier was trained by the eminent Parisian sociologist, Pierre Bourdieu, who single-handedly helped rewrite modern, contemporary interpretations on class in both Europe and the U.S.  Pierre Bourdieu in turn was trained by the equally famous philosopher Althusser, the disciple of Marx, from which 30 years earlier, Hegel created the first defensible philosophy on logic and true reality: Continental Materialism, which is the anchoring foundation of my own dissertation on Education Reforms and their effect on society. 
+My own provenance from Montreal in 2016 as the Doctoral understudy of Professeur Marcel Fournier (knighted by the Queen of England for Cultural Scholarship Authority). Dr. Marcel Fournier was trained by the eminent Parisian sociologist, Pierre Bourdieu, who single-handedly helped rewrite modern, contemporary interpretations on class in both Europe and the U.S.  Pierre Bourdieu in turn was trained by the equally famous philosopher Althusser, the disciple of Marx, from which 30 years earlier, Hegel created the first defensible philosophy on logic and true interpretions of social-cultural reality, that defined by Social and Political Capital. This and other philosophical axes derive from Hegelian Continental Materialism. I aim to adhere to this philosophical code in my professional, programming, and scholarly endeavors
 ```
 
 ### On Innumeracy and the History Patterns of Modernization:

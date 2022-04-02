@@ -4,12 +4,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Admin from '../components/admin/admin';
+import Home from "../components/home";
 
 
 const MainRouter = () => {
     return (
       <>
         <BrowserRouter>
+        <h3>blogpost Temp</h3>
           <Routes>
             <Route path="/" element={<Home />} />
              

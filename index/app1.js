@@ -3,7 +3,7 @@ import ReactDOM from './app-react-dom.js';
 console.log("REACT", React)
 import './src/css/styles.css'
 import "../src/assets/responciv.css";
-import MainRouter from "./router/mainRouter";
+import MainRouter from "./routes/mainRouter";
 import "animate.css";
 
 function App1() {

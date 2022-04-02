@@ -39,15 +39,15 @@ app.get(`/cryptonews/:newsId`, (req, res) => {
   res.json(newsObj.targetArticles);
 });
 
-////////////////////////////////////////////////
+//////////////////////////////////////p/////////
 ///// FIN API //////////////////////////////////
 
 let finClass = new FinClass(); // one singleton per session
 
 // Data to return crypto resources     // META DATA BY NATION
-app.get("/api/nations", (req, res) => {
-  const finMeta = finClass.getMetaData("nations");
-  console.log("RUNNING /api/nations finMeta: ", finMeta);
+app.get("/api/countries", (req, res) => {
+  const finMeta = finClass.getMetaData("countries");
+  console.log("RUNNING /api/countries finMeta: ", finMeta);
 
   res.json(finMeta);
 });
@@ -69,14 +69,14 @@ app.get("/api/calendar", (req, res) => {
   res.json(cal);
 });
 
-app.get("/api/local", (req, res) => {
-  // CALENDAR/TIME
-  ;
-  // let cal = response.data.screen_data.icoData.data
-  // let cal = response.data.screen_data.icoData.categories
-  res.json(cal);
-});
-/////////////////   Static index path /
+// app.get("/api/local", (req, res) => {
+//   // CALENDAR/TIME
+//   ;
+//   // let cal = response.data.screen_data.icoData.data
+//   // let cal = response.data.screen_data.icoData.categories
+//   res.json(cal);
+// });
+/////////////////   Static index path / // will put REACT build There; 
 app.use(express.static("index"));
 
 app.listen(PORT, () => {
