@@ -66,7 +66,6 @@ newsObj.targetArticles = newsObj.targetArticles || [];
   });
   return newsObj;
 }
-
   getTargetArticles(newsId) {
   const newsAddress = newsObj.tempSites.filter((news) => news.name == newsId)[0]
     .address;
@@ -261,3 +260,10 @@ export class FinClass {
     return this.finObj.cal;
   }
 }
+
+const n = new NewsScraper();
+const articles = n.getAllArticles();
+
+const targetedByUser = n.getTargetArticles();
+// const t = n.
+const fn = new FinClass();
