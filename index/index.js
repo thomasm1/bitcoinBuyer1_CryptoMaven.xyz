@@ -1,10 +1,12 @@
-const body = document.body
-const svg = document.createElement("svg")
-div.innerText = "hello innerText" 
-div.innerHTML = "<strong>   llo innerTex  </strong>"
-div.textContent = "hello textContent"
-body.append(div)
-body.append(svg)
+import { createElement, addGlobalEventListener, qs, qsa } from "./dataUtil/Dom";
+
+// const body = document.querySelector("body")
+// const svg = document.createElement("svg")
+// div.innerText = "hello innerText" 
+// div.innerHTML = "<strong>   llo innerTex  </strong>"
+// div.textContent = "hello textContent"
+// body.append(div)
+// body.append(svg)
 
 const div2 = document.querySelector("div")
 
@@ -14,7 +16,7 @@ const DUMMY_DATA = [
     { id: 'd3', value: 12, region: 'China' },
     { id: 'd4', value: 6, region: 'Germany' },
   ];
-  
+  console.log(DUMMY_DATA)
   const xScale = d3
     .scaleBand()
     .domain(DUMMY_DATA.map((dataPoint) => dataPoint.region))
