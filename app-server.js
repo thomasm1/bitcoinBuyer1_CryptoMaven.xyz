@@ -39,7 +39,7 @@ app.get(`/cryptonews/:newsId`, (req, res) => {
 //////////////////////////////////////p/////////
 ///// FIN API //////////////////////////////////
 
-let finClass = new FinClass(); // one singleton per session
+const finClass = new FinClass(); // one singleton per session
 
 // Data to return crypto resources     // META DATA BY NATION
 app.get("/api/countries", (req, res) => {

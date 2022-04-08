@@ -1,15 +1,12 @@
-import { createElement, addGlobalEventListener, qs, qsa } from "./dataUtil/Dom";
+import {FinClass} from "./FinClass.js" 
+import {DOM} from "./dataUtil/DOM.js"
 
-// const body = document.querySelector("body")
-// const svg = document.createElement("svg")
-// div.innerText = "hello innerText" 
-// div.innerHTML = "<strong>   llo innerTex  </strong>"
-// div.textContent = "hello textContent"
-// body.append(div)
-// body.append(svg)
 
-const div2 = document.querySelector("div")
+console.log("hey")
 
+const fin = new FinClass()
+const COIN_DATA = fin.getCoins()
+// screen_data.crypto_data[i]
 const DUMMY_DATA = [
     { id: 'd1', value: 10, region: 'USA' },
     { id: 'd2', value: 11, region: 'India' },
@@ -43,11 +40,23 @@ const DUMMY_DATA = [
 
 
 
-
+  const newDiv = document.createElement("div")
+  newDiv.attr
   const ul = document.createElement("ul")
   body.append(ul)
 
+  // GET LIST FROM API /api/nations
+          // Data to return crypto resources     
+          // META DATA BY NATION
+          // app.get("/api/countries", (req, res) => {
+          //   const finMeta = finClass.getMetaData("countries");
+          //   console.log("RUNNING /api/countries finMeta: ", finMeta);
+
+          //   res.json(finMeta);
+          // });
+          getMetaData
   const countryData = {
+
     items: ['China', 'India', 'USA'],
     addItem(item) {
       this.items.push(item);
@@ -97,4 +106,15 @@ const DUMMY_DATA = [
       .text('Russia');
   }, 6000);
 
- 
+//   <footer class="footer">
+//   <h5>Copyright &copy; 2022 All Rights Reserved.</h5>
+//   <h5>  <a
+//       href="mailto:thomasm1.maestas@gmail.com"
+//       title="Contact Information: thomasmaestas.net/"
+//     >
+//       Contact Thomas Maestas</a
+//     >
+//     &nbsp; &nbsp; | &nbsp;&nbsp;
+//     <a href="https://thomasmaestas.net">thomasmaestas.net</a>
+//   </h5>
+// </footer>
