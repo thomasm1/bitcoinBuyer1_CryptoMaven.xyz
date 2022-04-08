@@ -1,7 +1,7 @@
 import "dotenv/config"; // only CRYPTO_API_KEY here
 
-import { ApiWalker } from "./index/dataServices/dataServices.js";
-import { NewsScraper, FinClass } from "./app-proxy.js";
+import { getAllArticles, getTargetArticles } from "./NewsScraper.js";
+ import {FinClass} from "./FinClass.js"
 
 import express from "express";
 
@@ -9,19 +9,16 @@ import express from "express";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-let newsObj;
-
-
+let newsObj;  
 /// // Imported from app-proxy's UI inputs
 
 ////////////////////////////////////////////////
-///////////// NEWS API /////////////////////////
-const newsScraper = new NewsScraper()
+///////////// NEWS API ///////////////////////// 
 
 // DataScraper to return json data on NEWS topics:
 app.get("/cryptonews", (req, res) => {
-  console.log("/api/coins");
-  newsObj = newsScraper.getAllArticles();
+  console.log("/cryptonews");
+  newsObj = getAllArticles();
 
   // delete log when making unit tests
   console.log("/cryptonews using newsObj.tempArticles: ", newsObj.tempArticles);
@@ -33,7 +30,7 @@ app.get(`/cryptonews/:newsId`, (req, res) => {
   const newsId = req.params.newsId;
 
   // Pass in user's param (calculated by getTargetArticles)
-  newsObj = newsScraper.getTargetArticles(newsId);
+  newsObj = getTargetArticles(newsId);
   // delete log after making unit tests
   console.log(" newsObj.targetArticles: ", newsObj.targetArticles);
   res.json(newsObj.targetArticles);

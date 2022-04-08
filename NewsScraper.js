@@ -1,41 +1,37 @@
+ 
+import axios from "axios";
+import CheerioApi from "cheerio";
 
-export class NewsScraper  { 
-    /// Class : NEWS SCRAPER: 
-    // - this will take 3 input articles; 
-    // articles are classified by category
-    // category and breadth-first search for more news on category & direction. 
-    // 
-    
-      constructor(newsObj) {
-      // Creating Singleton values & default values if no args passedOka
-    this.newsObj = this.newsObj || {}; 
-    
-    // later make a singleton for these
-    this.newsObj.tempArticles =  this.newsObj.tempArticles || [];
-    // collect from UI initial keyword to search
-    this.newsObj.tempKey = this.newsObj.tempKey || "Ethereum";
-    this.newsObj.tempKeyArray =  this.newsObj.tempKeyArray ||  ["Ethereum", "NFT", "Web3"];
-    
-    // collect from UI initial websites to scrape
-    this.newsObj.tempSites =  this.newsObj.tempSites || [
-      // Go to these websites and scrape  keyword
-      {
-        name: "cointelegraph",
-        address: "https://cointelegraph.com/",
-        baseUrl: "https://cointelegraph.com",
-      },
-      {
-        name: "coindesk",
-        address: "https://www.coindesk.com/tech/",
-        baseUrl: "https://www.coindesk.com",
-      },
-    ]; 
-    this.newsObj.targetArticles =  this.newsObj.targetArticles || [];
-    
-    }
-    
+///////////////// Web Scraping VARS
+// GLOBAL VARS     Crypto News
+const newsObj = {};
+// later make a singleton for these
+newsObj.tempArticles = newsObj.tempArticles || [];
+// collect from UI initial keyword to search
+newsObj.tempKey = "Ethereum";
+newsObj.tempKeyArray = ["Ethereum", "NFT", "Web3"];
+
+// collect from UI initial websites to scrape
+newsObj.tempSites = newsObj.tempSites || [
+  // Go to these websites and scrape
+  //for keyword
+  {
+    name: "cointelegraph",
+    address: "https://cointelegraph.com/",
+    baseUrl: "https://cointelegraph.com",
+  },
+  {
+    name: "coindesk",
+    address: "https://www.coindesk.com/tech/",
+    baseUrl: "https://www.coindesk.com",
+  },
+]; 
+newsObj.targetArticles = newsObj.targetArticles || [];
+
 /// Methods for class
-  getAllArticles() {
+ 
+
+ export function getAllArticles() {
   newsObj.tempSites.forEach((news) => {
     axios.get(news.address).then((response) => {
       const html = response.data;
@@ -45,7 +41,7 @@ export class NewsScraper  {
         const title = $(this).text();
         const url = $(this).find("a").attr("href");
 
-        this.newsObj.tempArticles.push({
+        newsObj.tempArticles.push({
           title,
           url: news.baseUrl,
           source: news.name,
@@ -53,10 +49,13 @@ export class NewsScraper  {
       });
     });
   });
-  return this.newsObj;
+  return newsObj;
 }
 
-  getTargetArticles(newsId) {
+export function getTargetArticles(newsId) {
+    const localVars = this.getFinVars("coinsList");
+
+    newsId = newsId || "cointelegraph";
   const newsAddress = newsObj.tempSites.filter((news) => news.name == newsId)[0]
     .address;
   const newsBase = newsObj.tempSites.filter((news) => news.name == newsId)[0]
@@ -85,6 +84,3 @@ export class NewsScraper  {
 
   return newsObj;
 }
-
-}
-    
