@@ -2,7 +2,7 @@ package api;
 
 import com.intuit.karate.junit5.Karate;
 
-class DailyTechTest {
+class CryptoMavenTest {
      
     
     // this will run all *.feature files that exist in sub-directories

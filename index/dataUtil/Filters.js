@@ -2,7 +2,7 @@
 // class rFilters   methods: 
 
 import { geoClipAntimeridian } from "d3-geo";
-
+import {randomNumberBetween} from "./dynamic.js"
 // export class NumFilters {
 //   //   fibonacci(num); fibonacciMemo(num) fizBuzz(num);  
 // class ArrayFilters methods:
@@ -10,12 +10,12 @@ import { geoClipAntimeridian } from "d3-geo";
 
 // class ObjectFilters methods:
 //
-
-
+ 
 export class NumFilters {
     constructor(){
         console.log("Iteration SundryFilters init"); 
     }
+
 
     factorial(num) {
         if (num < 2) return 1;
@@ -79,7 +79,7 @@ export class NumFilters {
             let currentLetter = strLowerCase[i]
             if(currentLetter === ' ') {
                 strLowerCase += currentLetter;
-                constinue;
+                continue;
             }
         let currentIndex = alphabet.indexOf(currentLetter) // i === 0, A
         let newIndex = currentIndex + num;
@@ -91,9 +91,10 @@ export class NumFilters {
             newStringResult += alphabet[newIndex];
         }
     }
-    return newStringResult;
-        
+    return newStringResult; 
     }
+
+
 }
  
 const numFilters = new NumFilters();
@@ -115,16 +116,31 @@ export class ArrayFilters {
         console.log("ArrayFilters init"); 
     }
 
-  inPlaceReverse(arr) {
-        for (let i =0;i<arr.length/2;i++) {
-            let temp = arr[i];
-            arr[i] = arr[arr.length-1-i]; //swap first & last
-            arr[arr.length - 1 - i] = temp;
-        }
-        return arr;
-    } 
+    getSample(arr) {
+        return array[randomNumberBetween(0, arr.length -1)]
+    }
+
+    pluck(array, key) {
+        return array.map(element => element[key])
+    }
     
- hashArrayMapper(intArray, targetSum){
+    groupBy(array, key) {
+        return array.reduce((group, element) => {
+        const keyValue = element[key]
+        return { ...group, [keyValue]: [...(group[keyValue] ?? []), element] }
+        }, {})
+    }
+    
+    inPlaceReverse(arr) {
+            for (let i =0;i<arr.length/2;i++) {
+                let temp = arr[i];
+                arr[i] = arr[arr.length-1-i]; //swap first & last
+                arr[arr.length - 1 - i] = temp;
+            }
+            return arr;
+        } 
+        
+    hashArrayMapper(intArray, targetSum){
     let pairs =[];
     let hashArrayTable = [];
 
@@ -170,68 +186,65 @@ export class ArrayFilters {
     }
 
     // Median without ordering
-    getMedianOfMedians(arr, k, low, high) {
-        const medianIndex = this.getApproxMedIndex(arr, low, high);
-        const length = medianIndex - low + 1
-        if(length == k) {
-            return arr [medianIndex];
-        }
-        if (length > k){
-            //left
-            return this.getMedianOfMedians (arr, k, low, medianIndex-1);
-        } else {
-            //right
-            return this.getMedianOfMedians(arr, k-length, medianIndex +1, high)
-        }
-    
-    }
+            getMedianOfMedians(arr, k, low, high) {
+                const medianIndex = this.getApproxMedIndex(arr, low, high);
+                const length = medianIndex - low + 1
+                if(length == k) {
+                    return arr [medianIndex];
+                }
+                if (length > k){
+                    //left
+                    return this.getMedianOfMedians (arr, k, low, medianIndex-1);
+                } else {
+                    //right
+                    return this.getMedianOfMedians(arr, k-length, medianIndex +1, high)
+                } 
+            } 
+            getApproxMedIndex(arr,low, high) {
+                const pivot = this.partitionAndGet(arr,low, high);
 
-    getApproxMedIndex(arr,low, high) {
-        const pivot = this.partitionAndGet(arr,low, high);
+                // right index for this pivot : Quick Sort 
+                while(low < high) {
+                    while(arr[low] < pivot)
+                    low++;
+                while(arr[high] > pivot)
+                    high--;
+                if(arr[low] == arr[high])
+                    low++;
+                else if(low < high) {
+                    //swap
+                    let temp = arr[low];
+                    arr[low] = arr[high];
+                    arr[high] = temp;
+                }
+                }
+            } 
+            partitionAndGet(arr, low, high) { 
+                // median of medians
+                if(high - low + 1 <= 9) {
+                    arr.sort((a,b) => a-b);
+                    return arr[Math.ceil(arr.length/2)];
+                }
+                // chunking
+                let temp = null;
+                const mediansArray = [];
+                let index = 0;
 
-        // right index for this pivot : Quick Sort 
-        while(low < high) {
-            while(arr[low] < pivot)
-            low++;
-        while(arr[high] > pivot)
-            high--;
-        if(arr[low] == arr[high])
-            low++;
-        else if(low < high) {
-            //swap
-            let temp = arr[low];
-            arr[low] = arr[high];
-            arr[high] = temp;
-        }
-        }
-    }
+                while (high >= low) {
+                    temp = []
+                    const len = Math.min(5, high -low +1);
 
-    partitionAndGet(arr, low, high) { 
-        // median of medians
-        if(high - low + 1 <= 9) {
-            arr.sort((a,b) => a-b);
-            return arr[Math.ceil(arr.length/2)];
-        }
-        // chunking
-        let temp = null;
-        const mediansArray = [];
-        let index = 0;
+                    for (let i = 0; i < len && low <=high;i++){
+                        temp[i] = arr[low];
+                        low++;
+                    }
 
-        while (high >= low) {
-            temp = []
-            const len = Math.min(5, high -low +1);
-
-            for (let i = 0; i < len && low <=high;i++){
-                temp[i] = arr[low];
-                low++;
+                    temp.sort((a,b) => a-b);
+                    mediansArray[index] = temp [Math.ceil(temp.length/2)];
+                }
+                // Median of medians
+                return this.partitionAndGet(mediansArray, 0, mediansArray.length-1);
             }
-
-            temp.sort((a,b) => a-b);
-            mediansArray[index] = temp [Math.ceil(temp.length/2)];
-        }
-        // Median of medians
-        return this.partitionAndGet(mediansArray, 0, mediansArray.length-1);
-    }
 
     getMode(arr) {
         let modeObject = {};
@@ -270,6 +283,9 @@ export class ArrayFilters {
         }
         return maxProfit;
       }
+
+
+
     } 
 
 let arrayFilters = new ArrayFilters(); 
