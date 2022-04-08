@@ -9,7 +9,7 @@ import express from "express";
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-let newsObj;  
+let newsObj = {};  
 /// // Imported from app-proxy's UI inputs
 
 ////////////////////////////////////////////////
