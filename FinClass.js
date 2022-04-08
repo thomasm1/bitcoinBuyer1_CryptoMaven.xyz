@@ -1,33 +1,31 @@
-import "dotenv/config"; // only CRYPTO_API_KEY here 
-import axios from "axios";
+import "dotenv/config"; // only CRYPTO_API_KEY here
 
- export class FinClass {
-    constructor(finObj) {
-      this.API_KEY = process.env.CRYPTO_API_KEY;
-      this.cryptoBaseUrl =
-        "https://investing-cryptocurrency-markets.p.rapidapi.com/";
-  
-      this.finObj = finObj || {};
-  
-      this.finObj.newObjMappers = this.finObj.newObjMappers || [];
-      this.finObj.countriesMarket = this.finObj.countriesMarket|| [];
-      this.finObj.allLangs = this.finObj.allLangs || [];
-      this.finObj.nations = this.finObj.nations || [];
-      this.finObj.coins = this.finObj.coins || [];
-      this.finObj.cal =this.finObj.cal  || [];
-    }
-  getCoins() {
-    return this.finObj.coins || this.getCoinsData();
+import axios from "axios";
+import { ApiWalker } from "./index/dataServices/dataServices.js";
+
+
+///////////////// Web Scraping VARS
+// GLOBAL VARS     Crypto News
+ 
+export class FinClass {
+  constructor(finObj) {
+    this.API_KEY = process.env.CRYPTO_API_KEY;
+    this.cryptoBaseUrl =
+      "https://investing-cryptocurrency-markets.p.rapidapi.com/";
+
+    this.finObj = finObj || {};
+
+    this.finObj.newObjMappers = [];
+    this.finObj.countriesMarket = [];
+    this.finObj.allLangs = [];
+    this.finObj.countries = [];
+    this.finObj.coins = [];
+    this.finObj.cal = [];
   }
-  getTimes() {
-    return this.finObj.cal || this.getCalData();
-  }
-  getCountries() {
-    return this.finObj.countries || this.getMetaData();
-  }
+
   getFinVars(paramOptions) {
     // if coins
-    if (paramOptions == "nations")
+    if (paramOptions == "countries")
       return {
         params: {
           locale_info: "en_US",
@@ -168,4 +166,4 @@ import axios from "axios";
     return this.finObj.cal;
   }
 }
-  
+ 
