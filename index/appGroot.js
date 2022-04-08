@@ -6,7 +6,7 @@
     * Author: Thomas Maestas
     */ 
 
-;(function(global, $, d3) {
+;(function(global, jQuery, d3) {
     
     //  Returns new Global Object, with 'new' an object
     var Groot = function({firstName, lastName, premier, language}) {

@@ -4,9 +4,12 @@ import App1 from './App1';
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App1 />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <React>
+      <App1 />
+  </React>
+  // </React.StrictMode>
+  ,
   document.getElementById('root0')
 );
 
