@@ -1,4 +1,4 @@
-import "dotenv/config"; // only CRYPTO_API_KEY here
+// import "dotenv/config"; // only CRYPTO_API_KEY here
 
 import { getAllArticles, getTargetArticles } from "./NewsScraper.js";
  import {FinClass} from "./FinClass.js"
@@ -7,7 +7,7 @@ import express from "express";
 
 // import
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 let newsObj = {};  
 /// // Imported from app-proxy's UI inputs
@@ -74,7 +74,7 @@ app.get("/api/calendar", (req, res) => {
 //   res.json(cal);
 // });
 /////////////////   Static index path / // will put REACT build There; 
-app.use(express.static("index"));
+app.use(express.static("public"));
 
 app.listen(PORT, () => {
   setTimeout(() => {

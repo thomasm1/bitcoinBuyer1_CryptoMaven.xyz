@@ -1,4 +1,4 @@
-import "dotenv/config"; // only CRYPTO_API_KEY here
+// import "dotenv/config"; // only CRYPTO_API_KEY here
 
 import axios from "axios";
 import { ApiWalker } from "./public/dataServices/dataServices.js";
