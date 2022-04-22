@@ -1,6 +1,8 @@
 import {FinClass} from "./FinClass.js" 
 import {DOM} from "./dataUtil/DOM.js"
 
+// const index = document.getElementsById("")
+// index.append("div").classed("main").attr("root0width",600).attr("height",400).style("backgroundColor","yellow")
 
 console.log("hey")
 
@@ -41,9 +43,9 @@ const DUMMY_DATA = [
 
 
   const newDiv = document.createElement("div")
-  newDiv.attr
+ 
   const ul = document.createElement("ul")
-  body.append(ul)
+  newDiv.append(ul)
 
   // GET LIST FROM API /api/nations
           // Data to return crypto resources     
@@ -54,8 +56,8 @@ const DUMMY_DATA = [
 
           //   res.json(finMeta);
           // });
-          getMetaData
-  const countryData = {
+          // getMetaData()
+  const countryData = { 
 
     items: ['China', 'India', 'USA'],
     addItem(item) {

@@ -1,6 +1,6 @@
 // import "dotenv/config"; // only CRYPTO_API_KEY here
 
-import axios from "axios";
+import axios from "../node_modules/axios/src/axios.js";
 import { ApiWalker } from "./public/dataServices/dataServices.js";
 
 
