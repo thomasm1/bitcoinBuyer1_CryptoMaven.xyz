@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import MainRouter from "./router/mainRouter.js";
 // import logo from "./logo.svg";
 // import "./App.css";
 // import web3 from './web3.js';
@@ -12,6 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>CryptoMaven</h1>
+        <MainRouter />
       </div>
     );
   }

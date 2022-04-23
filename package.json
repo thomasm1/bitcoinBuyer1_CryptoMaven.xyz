@@ -2,10 +2,11 @@
   "name": "crypto-maven",
   "version": "2.0.0",
   "author": "Thomas Maestas",
+  "type": "module",
   "description": "React/Mongo/Express Data algorithms/struct. exploratory app",
   "scripts": {
     "block": "tsc -w",
-    "build": "webpack --config webpack.config.dev.js ",
+    "webpack": "webpack --config webpack.config.dev.js ",
     "prod": "webpack --config webpack.config.prod.js",
     "serve": "webpack-dev-server",
     "start": "nodemon app-server.js",
@@ -24,8 +25,10 @@
     "path": "^0.12.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
     "underscore": "^1.13.2",
+    "web-vitals": "^2.1.4",
     "web3": "^1.7.3"
   },
   "devDependencies": {
