@@ -2,6 +2,8 @@
 
 import { getAllArticles, getTargetArticles } from "./NewsScraper.js";
  import {FinClass} from "./FinClass.js"
+ import {BlogClass} from "./BlogClass.js"
+
 
 import express from "express";
 
@@ -73,6 +75,21 @@ app.get("/api/calendar", (req, res) => {
 //   // let cal = response.data.screen_data.icoData.categories
 //   res.json(cal);
 // });
+
+/// BLOG DAIL
+  const blogClass = new BlogClass(); // one singleton per session
+
+
+app.get("/api/blog", (req, res) => {
+  // blogPosts DATA
+  // const blogPosts = blogClass.getBlogData();
+   
+  // blogPosts DATA
+  const blogPosts = blogClass.getBlogData();
+  console.log(blogPosts); 
+  res.json(blogPosts); 
+});
+
 /////////////////   Static index path / // will put REACT build There; 
 app.use(express.static("public"));
 

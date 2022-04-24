@@ -4,11 +4,7 @@
   "author": "Thomas Maestas",
   "type": "module",
   "description": "React/Mongo/Express Data algorithms/struct. exploratory app",
-  "scripts": {
-    "block": "tsc -w",
-    "webpack": "webpack --config webpack.config.dev.js ",
-    "prod": "webpack --config webpack.config.prod.js",
-    "serve": "webpack-dev-server",
+  "scripts": { 
     "start": "nodemon app-server.js",
     "react": "react-scripts start"
   },
