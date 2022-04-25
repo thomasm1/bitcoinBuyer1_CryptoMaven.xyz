@@ -1,26 +1,29 @@
 import React, { useEffect, useState } from "react"; 
+import Header from './header.js'
 import { Link } from "react-router-dom";
 import * as API from "../api/index.js";
 import * as c from "../api/constant.js";
-
-const loading  = true // TEMP
-
+ 
+let blogs
 const BlogPost = () => {
   const [loading, setLoading] = useState(false);
   const [mainPost, setMainPost] = useState([]);
   const all_blog_post = async () => {
     try {
       const response = await API.all_blog();
-      console.log("response", response);
-      setMainPost(response.data.data);
+      setMainPost(response.data); 
+      blogs = JSON.stringify(response.data)
+      
+      console.log("response pre200! ", response);
       if (response.status === 200) {
         setLoading(true);
+        console.log("response ==200! ",   blogs);
       }
     } catch (error) {
       console.log("Error", error);
     }
   };
-
+ 
   useEffect(() => {
     window.scrollTo(0, 0);
     all_blog_post();
@@ -29,23 +32,19 @@ const BlogPost = () => {
     <>
       {loading ? (
         <>
-HEADER
+        <Header />                                                                                  
           <div className="container homePage">
             <div className="row">
               <div className="col-lg-3">
-             SIDEBAR
-             
-             <button className="readingBtn">
-                                <Link to={`/blog/${this.blogPosts.title}`}>
-                                  Read More...
-                                </Link>
-                              </button>
-              </div>
+             SIDEBAR <br />
+     INTEREST TAGS
+          </div> 
+
               <div className="col-lg-6">
                 <div className="blogPostCard">
-                  <>
-                    BODY BLOGPOSTCARD
-                  </>
+                  <>  
+                  {console.log("mainPost",mainPost[0])}
+                </>
                 </div>
               </div>
               <div className="col-lg-3 blogRSidebar">
@@ -57,6 +56,13 @@ HEADER
             </div>
           </div>
          FOOTER
+         <hr />
+             <button className="readingBtn">
+                                {/* <Link to={`/blog/${blogPosts.title}`}> */}
+                                  Read More...
+                                {/* </Link> */}
+                              </button>
+                <hr />
         </>
       ) : (
         <>

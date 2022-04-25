@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "author": "Thomas Maestas",
   "type": "module",
+  "hot":"false",
   "description": "React/Mongo/Express Data algorithms/struct. exploratory app",
   "scripts": { 
     "start": "nodemon app-server.js",
@@ -28,7 +29,7 @@
     "web3": "^1.7.3"
   },
   "devDependencies": {
-    "@babel/cli": "^7.17.6",
+    "@babel/cli": "^7.17.6", 
     "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",

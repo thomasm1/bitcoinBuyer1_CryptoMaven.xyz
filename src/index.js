@@ -1,14 +1,11 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client'
 // import './index.css'; 
-import App from './App.js';
-import { FinClass } from './FinClass.js';
+import App from './App.js'; 
 import './indexd3.js' 
  
 console.log("heyj-index")
-
-// const fin = new FinClass()
-// const COIN_DATA = fin.getCoins()
+ 
  
 // imp                                       ort logo from "./logo.svg";
 // import "./App.css";

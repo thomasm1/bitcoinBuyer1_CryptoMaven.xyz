@@ -1,9 +1,9 @@
-import "dotenv/config"; // AWS_API_KEY
+import "dotenv/config"; // only CRYPTO_API_KEY here
 
 import axios from "axios";
- 
 
-// GLOBAL VARS     Crypto Blog
+
+// GLOBAL VARS     Crypto News
  
 export class BlogClass {
     constructor(blogObj = {}) {

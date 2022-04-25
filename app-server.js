@@ -1,5 +1,6 @@
 // import "dotenv/config"; // only CRYPTO_API_KEY here
 
+import cors from 'cors';
 import { getAllArticles, getTargetArticles } from "./NewsScraper.js";
  import {FinClass} from "./FinClass.js"
  import {BlogClass} from "./BlogClass.js"
@@ -12,6 +13,14 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 let newsObj = {};  
+
+// app.use(cors({
+//   origin: '*' 
+// }));
+const corsOptions = {
+  origin: '*',
+  optionsSuccessStatus: 200  
+}
 /// // Imported from app-proxy's UI inputs
 
 ////////////////////////////////////////////////
@@ -80,7 +89,7 @@ app.get("/api/calendar", (req, res) => {
   const blogClass = new BlogClass(); // one singleton per session
 
 
-app.get("/api/blog", (req, res) => {
+app.get("/api/blog", cors(corsOptions), (req, res) => {
   // blogPosts DATA
   // const blogPosts = blogClass.getBlogData();
    
@@ -89,6 +98,7 @@ app.get("/api/blog", (req, res) => {
   console.log(blogPosts); 
   res.json(blogPosts); 
 });
+ 
 
 /////////////////   Static index path / // will put REACT build There; 
 app.use(express.static("public"));
