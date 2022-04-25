@@ -1,4 +1,8 @@
-(function(){
+
+(function() {
+   
+
+ 
   console.log("heyj-index D3")
 const DUMMY_DATA = [
   { id: 'd1', value: 10, region: 'USA' },
@@ -14,7 +18,9 @@ const xScale = d3
   .padding(0.1);
 const yScale = d3.scaleLinear().domain([0, 15]).range([200, 0]);
 
-const containerD3 = d3.select('svg').classed('container', true);
+
+
+const containerD3 = d3.select('svg').classed('visual', true);
 
 const bars = containerD3
   .selectAll('.bar')
@@ -33,21 +39,12 @@ setTimeout(() => {
 
 
 
-var newDiv = document.createElement("div")
-
+var newDiv = document.getElementById("d3") 
 const ul = document.createElement("ul")
+
+d3.select(ul).classed('d3ul',true)
 newDiv.append(ul)
-
-// GET LIST FROM API /api/nations
-        // Data to return crypto resources     
-        // META DATA BY NATION
-        // app.get("/api/countries", (req, res) => {
-        //   const finMeta = finClass.getMetaData("countries");
-        //   console.log("RUNNING /api/countries finMeta: ", finMeta);
-
-        //   res.json(finMeta);
-        // });
-        // getMetaData()
+ 
   const countryData = {
 
   items: ['China', 'India', 'USA'],
@@ -62,7 +59,7 @@ newDiv.append(ul)
   },
 };
 
-d3.select('ul')
+d3.select('.d3part')
   .selectAll('li')
   .data(countryData.items, data => data)
   .enter()
@@ -71,32 +68,33 @@ d3.select('ul')
 
 setTimeout(() => {
   countryData.addItem('France');
-  d3.select('ul')
+  d3.select('.d3ul')
     .selectAll('li')
     .data(countryData.items, data => data)
     .enter()
     .append('li')
     .classed('added', true)
     .text((data) => data);
-}, 2000);                                        
+}, 1400);                                        
 
 setTimeout(() => {
   countryData.removeItem(0);
-  d3.select('ul')
+  d3.select('.d3ul')
     .selectAll('li')
     .data(countryData.items, data => data)
     .exit()
     .classed('redundant', true);
-}, 4000);
+}, 1600);
 
 setTimeout(() => {
   countryData.updateItem(1, 'Russia')
-  d3.select('ul')
+  d3.select('.d3ul')
     .selectAll('li')
     .data(countryData.items, data => data)
     .exit()
     .classed('updated', true)
     .text('Russia');
-}, 6000);
+}, 2000);
 
+ 
 })()

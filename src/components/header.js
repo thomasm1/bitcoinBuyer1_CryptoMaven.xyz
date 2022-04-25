@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./navbar.js";  
 
 const Header = ({ onRefreshPage }) => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(true); 
  
   return (
     <>
