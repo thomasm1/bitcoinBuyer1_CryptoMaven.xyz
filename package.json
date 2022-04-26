@@ -1,7 +1,7 @@
 {
   "name": "crypto-maven",
   "version": "2.0.0",
-  "author": "Thomas Maestas", 
+  "author": "Thomas Maestas",
   "description": "React/Mongo/Express Data algorithms/struct. exploratory app",
   "scripts": {
     "start": "node ./src/app-server.js",

@@ -1,24 +1,25 @@
-// crypto routing table for user later 
+const Sequelize = require('sequelize');
+const db = require('../config/database.js');
 
-import  express from express;
-const router = express.Router();
+const Crypto = db.define('crypto', {
+  name: {
+    type: Sequelize.STRING
+  },
+  token: {
+    type: Sequelize.STRING
+  },
+  description: {
+    type: Sequelize.STRING
+  },
+  symbol: {
+    type: Sequelize.STRING
+  },
+  contact_email: {
+    type: Sequelize.STRING
+  }
+});
 
-import Crypto from '../index/models/Crypto';  // for MySQL Sequelize table later
-// const Sequelize = require('sequelize');
-// const Op = Sequelize.Op; 
-
-router.get('/', (req, res) => 
-Crypto.findAll()
-.then(cr => res.render('crypto', {
-    cr
-}))
-.catch(err => res.render('error', {error: err})));
-
-router.get('/home', (req, res) => 
-InputStream.findAll()
-.then(_input => res.render('_input', {
-    _input
-}))
-.catch(err=> res.render('error', {error: err})));
-
-module.exports = router;
+Crypto.sync().then(() => {
+  console.log('Crypto table created');
+});
+module.exports = Crypto;
