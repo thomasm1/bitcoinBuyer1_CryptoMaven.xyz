@@ -8,7 +8,7 @@ let blogs
 const BlogPost = () => {
   const [loading, setLoading] = useState(false);
   const [mainPost, setMainPost] = useState([]);
-  const all_blog_post = async () => {
+  const allBlogPost = async () => {
     try {
       const response = await API.all_blog();
       setMainPost(response.data); 
@@ -26,8 +26,8 @@ const BlogPost = () => {
  
   useEffect(() => {
     window.scrollTo(0, 0);
-    all_blog_post();
-  }, []);
+    allBlogPost();
+  }, [mainPost]);
   return (
     <>
       {loading ? (

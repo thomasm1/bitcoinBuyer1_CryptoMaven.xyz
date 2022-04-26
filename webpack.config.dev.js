@@ -1,8 +1,10 @@
 const currentTask = process.env.npm_lifecycle_event
 const path = require("path")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const common = require("./webpack.common");
+const merge = require("webpack-merge");
+// const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+// const { CleanWebpackPlugin } = require("clean-webpack-plugin")
  
 
 const config = {
@@ -53,10 +55,10 @@ const config = {
   },
 }
 
-if (currentTask == "build") {
-  config.mode = "production"
-  config.module.rules[0].use[0] = MiniCssExtractPlugin.loader
-  config.plugins.push(new MiniCssExtractPlugin({ filename: "main.[hash].css" }), new CleanWebpackPlugin(), new WebpackManifestPlugin())
-}
+// if (currentTask == "build") {
+//   config.mode = "production"
+//   config.module.rules[0].use[0] = MiniCssExtractPlugin.loader
+//   config.plugins.push(new MiniCssExtractPlugin({ filename: "main.[hash].css" }), new CleanWebpackPlugin(), new WebpackManifestPlugin())
+// }
 
 module.exports = config

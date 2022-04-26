@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import MainRouter from "./router/mainRouter.js";
-import logo from "./logo.svg";
+import "./assets/style.css";
+import "./assets/responciv.css";
+import MainRouter from "./router/mainRouter"; 
+import "animate.css";
 import "./App.css";
 // import web3 from './web3.js';
 

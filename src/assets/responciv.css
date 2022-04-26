@@ -1,5 +1,5 @@
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  .bannerWeva {
+  .bannerWave{
     bottom: -235px;
     height: 214px;
   }
@@ -15,13 +15,13 @@
   .mobile {
     display: none;
   }
-  .single_post_mobile {
+  .singlePostMobile {
     margin-top: 15px;
   }
   .sidebar {
     margin-bottom: 15px;
   }
-  .mobileDispalyNone {
+  .mobileDisplayNone {
     display: none;
   }
   .mobileNav {
@@ -53,7 +53,7 @@
     padding: 5px 20px;
     transition: all 0.5s;
   }
-  .mobileCatagorisActiv {
+  .mobileCategoriesActive {
     right: 15px;
     width: 50%;
     position: fixed;
@@ -68,7 +68,7 @@
     display: block;
     padding-bottom: 10px;
   }
-  .mobileToggel {
+  .mobileToggle {
     display: inline-block;
     margin-right: 5px;
   }
@@ -78,32 +78,32 @@
   .userRegistration {
     margin-bottom: 15px;
   }
-  .dectop_view {
+  .desktopView {
     display: none;
   }
-  .mobile_view_admin {
+  .mobileViewAdmin {
     display: none;
   }
-  .sidDrawer {
+  .sideDrawer {
     display: block;
   }
   .navbar-nav .dropdown-toggle::after {
     display: none;
   }
 
-  .mobile_logo {
+  .mobileLogo {
     display: none;
   }
   .mobileLogout {
     display: block;
   }
-  .navsearch {
+  .navSearch {
     display: none;
   }
-  .toggle_dec {
+  .toggleDesk {
     display: block;
   }
-  .mobile_banner {
+  .mobileBanner {
     display: none;
   }
   .logo {
@@ -112,7 +112,7 @@
   .fLogo .logo {
     width: 22%;
   }
-  .decktop {
+  .desktop {
     display: block;
   }
   .mobileNo {
