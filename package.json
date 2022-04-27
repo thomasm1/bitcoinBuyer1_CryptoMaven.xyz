@@ -2,23 +2,32 @@
   "name": "crypto-maven",
   "version": "2.0.0",
   "author": "Thomas Maestas",
-  "description": "React/Mongo/Express Data algorithms/struct. exploratory app",
+  "description": "React/Mongo/Express Data algorithms/struct. Exploratory app",
+  "keywords": [
+    "blockchain",
+    "crypto",
+    "news", 
+    "cryptocurrency",
+    "distributed ledger",
+    "blockchain solutions",
+    "tech",
+    "blog",
+    "web",
+    "development",
+    "sociology",
+    "AI"
+  ],
   "scripts": {
-    "start": "node ./src/app-server.js",
-    "serve": "webpack-dev-server --config webpack.config.dev.js"
+    "start": "webpack-dev-server --config webpack.config.dev.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
-    "axios": "^0.26.0",
     "bootstrap": "^4.6.1",
-    "cheerio": "^1.0.0-rc.10",
     "cors": "^2.8.5",
     "d3": "^7.4.4",
     "dotenv": "^8.1.0",
-    "express": "^4.17.1",
     "jsdom": "^15.1.1",
-    "moment": "^2.29.1",
-    "path": "^0.12.7",
+    "moment": "^2.29.1", 
     "underscore": "^1.13.2",
     "web-vitals": "^2.1.4",
     "web3": "^1.7.3"

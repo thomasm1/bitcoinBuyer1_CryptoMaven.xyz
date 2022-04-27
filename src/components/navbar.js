@@ -17,7 +17,7 @@ const Navbar = ({ setIsOpen, isOpen,  }) => {
             </Link>
           </div>
           <div className="col-7 col-lg-6 text-right">
-            <button className="mobileToggel" onClick={ToggleSidebar}>
+            <button className="mobileToggle" onClick={ToggleSidebar}>
               <i className="fas fa-bars"></i>
             </button>
            
@@ -72,7 +72,7 @@ const Navbar = ({ setIsOpen, isOpen,  }) => {
                   </li> */}
                   <li className="dropdownLi">
                     <i class="fas fa-user-circle"></i>
-                    <ul className="submanu">
+                    <ul className="submenu">
                       {/* <li>
                         <NavLink to="/change-password">Change password</NavLink>
                       </li> */}

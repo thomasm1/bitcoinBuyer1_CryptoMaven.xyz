@@ -43,7 +43,7 @@ const Header = ({ onRefreshPage }) => {
           {localStorage.getItem("isLogin") === null ? (
               // LOGGED INE
             <> 
-              <li className="headerNavManuItem LoginBtn">
+              <li className="headerNavMenuItem loginBtn">
                 <Link to="/login">Login</Link>
               </li> 
             </>
