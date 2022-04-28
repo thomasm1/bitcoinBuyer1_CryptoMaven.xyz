@@ -74,25 +74,16 @@ app.get("/api/calendar", (req, res) => {
   // let cal = response.data.screen_data.icoData.data
   // let cal = response.data.screen_data.icoData.categories
   res.json(cal);
-});
+}); 
 
-// app.get("/api/local", (req, res) => {
-//   // CALENDAR/TIME
-//   ;
-//   // let cal = response.data.screen_data.icoData.data
-//   // let cal = response.data.screen_data.icoData.categories
-//   res.json(cal);
-// });
 
-/// BLOG DAIL
+//////////////////////////////////////p/////////
+///// BLOG API //////////////////////////////////
+
   const blogClass = new BlogClass(); // one singleton per session 
   var blogPosts;
 
-app.get("/api/blog", cors(corsOptions), (req, res) => {
-  // blogPosts DATA
-  // const blogPosts = blogClass.getBlogData();
-   
-  // blogPosts DATA
+app.get("/api/blog", cors(corsOptions), (req, res) => {  
    blogPosts = blogPosts? blogPosts: blogClass.getBlogData();
   console.log(blogPosts); 
   res.json(blogPosts); 

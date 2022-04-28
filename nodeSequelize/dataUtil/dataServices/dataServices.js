@@ -1,4 +1,4 @@
-import { localResponse } from "../data/js/dataLocalResponse.js";
+import { localResponse } from "../../data/js/dataLocalResponse.js";
 
 const nationsShown = {
   "countries": [

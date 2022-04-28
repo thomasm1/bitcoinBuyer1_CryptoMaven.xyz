@@ -1,10 +1,11 @@
 {
   "name": "crypto-maven-api",
-  "version": "1.0.0",
+  "version": "1.0.0", 
+  "type":"module",
   "description": "Our daily tech provides blog related api with different category",
   "main": "app-server.js",
   "scripts": {
-    "start": "node ./src/app-server.js"
+    "start": "node ./app-server.js"
   },
   "author": "Thomas Maestas", 
   "dependencies": {

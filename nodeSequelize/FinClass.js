@@ -1,7 +1,7 @@
 // import "dotenv/config"; // only CRYPTO_API_KEY here
 
 import axios from 'axios';//"../node_modules/axios/src/axios.js";
-import { ApiWalker } from "./dataServices/dataServices.js";
+import { ApiWalker } from "./dataUtil/dataServices/dataServices.js";
 
 
 ///////////////// Web Scraping VARS
