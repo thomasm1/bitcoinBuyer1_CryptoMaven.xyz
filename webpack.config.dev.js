@@ -1,6 +1,6 @@
 const currentTask = process.env.npm_lifecycle_event
 const path = require("path")
-const common = require("./webpack.common");
+// const common = require("./webpack.common");
 const merge = require("webpack-merge");
 // const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
@@ -12,9 +12,9 @@ const config = {
   output: {
     filename: "mavenBundle.js",
     path: path.resolve(__dirname, "public"),
-    assetModuleFilename: "images/[ext][query]",
+    // assetModuleFilename: "images/[ext][query]",
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
+  // plugins: [new HtmlWebpackPlugin({ template: "./public/index.html" })],
   mode: "development",
   devServer: {
     port: 3000,
@@ -43,7 +43,7 @@ const config = {
           loader: "babel-loader",
           options: {
             presets: [["@babel/preset-env"], "@babel/preset-react","@babel/preset-typescript"],
-            // cacheDirectory:true
+            cacheDirectory:true
           }
         }
       }

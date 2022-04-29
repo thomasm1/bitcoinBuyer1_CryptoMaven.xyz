@@ -4,7 +4,10 @@
       "password": null,
       "database": "thomas",
       "host": "127.0.0.1",
-      "dialect": "postgres"
+      "ports":[5433,5432],
+      "port":"5432",
+      "dialect": "postgres",
+      "baseUrl":"localhost"
     },
     "test": {
       "username": "root",
