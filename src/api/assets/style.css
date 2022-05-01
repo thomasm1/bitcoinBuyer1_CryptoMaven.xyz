@@ -271,7 +271,7 @@ li {
 .footer {
   border-top: 2px solid var(--primary-black-color);
 }
-.footer_border {
+.footerBorder {
   margin-top: 5px;
   background-color: var(--primary-black-color);
   height: 1px;

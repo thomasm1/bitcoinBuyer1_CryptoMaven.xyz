@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"; 
 import Header from './header.js'
+import Footer from "./footer";
 import { Link } from "react-router-dom";
 import * as API from "../api/index.js";
 import * as c from "../api/constant.js";
@@ -47,7 +48,7 @@ const BlogPost = () => {
                 <div className="blogPostCard">
                   <>  
                   {console.log("mainPost",mainPost[0])}
-                  {console.log("mainPost",mainPost[1])}
+ 
                   {mainPost.map((item, index) => (
                     <>
    <div className="postImages" key={index}>
@@ -123,7 +124,7 @@ const BlogPost = () => {
          MOST VIEWED
             </div>
           </div>
-         FOOTER
+         <Footer />
          <hr />
              <button className="readingBtn">
                                 {/* <Link to={`/blog/${blogPosts.title}`}> */}

@@ -1,13 +1,13 @@
 {
   "name": "crypto-maven-api",
-  "version": "1.0.0", 
-  "type":"module",
+  "version": "1.0.0",
+  "type": "module",
   "description": "Our daily tech provides blog related api with different category",
   "main": "app-server.js",
   "scripts": {
     "start": "node ./app-server.js"
   },
-  "author": "Thomas Maestas", 
+  "author": "Thomas Maestas",
   "dependencies": {
     "axios": "^0.26.0",
     "bcrypt": "^5.0.1",
@@ -21,5 +21,8 @@
     "nodemailer": "^6.7.2",
     "sequelize": "^6.13.0",
     "slug": "^5.2.0"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.6"
   }
 }
