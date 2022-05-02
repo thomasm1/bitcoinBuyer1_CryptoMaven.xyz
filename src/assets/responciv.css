@@ -1,14 +1,28 @@
+/* keyframes */
+.drop {
+  animation: dropIn 1s ease forwards;
+  animation-delay: calc(var(--order)* 100ms);
+}
+@keyframes dropIn {
+  from {transform: translateY(-500px);}
+  to { transform: translateY(0)}
+}
+/* <i class="drop ace" style="--order: 1"> delete 1 </i> */
+/* <i class="drop ace" style="--order: 2"> delete 2 </i> */
 @media only screen and (min-width: 1024px) and (max-width: 1279px) {
-  .bannerWave{
+  .bannerWave {
     bottom: -235px;
     height: 214px;
   }
 }
 
+
+/* MAX WIDTH 767 */
 @media only screen and (max-width: 767px) {
   .tagsTopic {
     margin-bottom: 10px;
   }
+          /* blogPostCard */
   .blogPostCard {
     margin: 20px 0px;
   }
@@ -23,6 +37,14 @@
   }
   .mobileDisplayNone {
     display: none;
+  } 
+  .mobileCategoriesActive {
+    right: 15px;
+    width: 50%;
+    position: fixed;
+    z-index: 99;
+    top: 65px;
+    transition: all 0.5s;
   }
   .mobileNav {
     display: block;
@@ -53,14 +75,6 @@
     padding: 5px 20px;
     transition: all 0.5s;
   }
-  .mobileCategoriesActive {
-    right: 15px;
-    width: 50%;
-    position: fixed;
-    z-index: 99;
-    top: 65px;
-    transition: all 0.5s;
-  }
   .mobileNavActive a {
     color: #fff;
     font-weight: 500;
@@ -68,7 +82,8 @@
     display: block;
     padding-bottom: 10px;
   }
-  .mobileToggle {
+  /* MOBILE TOGGLE                           */
+  .mobileToggle{
     display: inline-block;
     margin-right: 5px;
   }

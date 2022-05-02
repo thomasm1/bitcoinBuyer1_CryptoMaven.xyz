@@ -25,7 +25,7 @@ const Navbar = ({ setIsOpen, isOpen,  }) => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav mr-auto">
+              <ul className="navbar-nav md-auto">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
                     Home

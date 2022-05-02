@@ -35,7 +35,7 @@ const Header = ({ onRefreshPage }) => {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/coins" className="active">
+            <NavLink to="/coins" className="active ">
               Coins
             </NavLink>
           </li>
@@ -43,7 +43,7 @@ const Header = ({ onRefreshPage }) => {
           {localStorage.getItem("isLogin") === null ? (
               // LOGGED INE
             <> 
-              <li className="headerNavMenuItem loginBtn">
+              <li className="headerNav menuItem loginBtn">
                 <Link to="/login">Login</Link>
               </li> 
             </>

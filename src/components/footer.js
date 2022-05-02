@@ -4,6 +4,7 @@ import { logo } from "../util/commonStaticData";
 import * as API from "../api/index";
 import * as c from "../api/constant";
 import moment from "moment";
+import "./footer.css";
 
 const Footer = () => {
   const [mainPost, setMainPost] = useState([]);
@@ -28,7 +29,7 @@ const Footer = () => {
             <div className="col-lg-3">
               <h3 className="footerHeading">About</h3>
               <div className="fLogo">
-                <img className="logo" src={logo} alt="logo" />
+                <img className="logo" src={logo} alt=" CryptoMaven Logo" />
               </div>
               <p>
                 Technology shapes much of my life, and in many respects it

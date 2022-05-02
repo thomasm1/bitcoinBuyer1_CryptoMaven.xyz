@@ -6,7 +6,7 @@ import * as API from "../api/index.js";
 import * as c from "../api/constant.js";
 import moment from "moment";
 import { pageLoading } from "../util/commonStaticData.js";
-
+import "./blogPost.css"; 
 
 let blogs
 const BlogPost = () => {
@@ -16,12 +16,12 @@ const BlogPost = () => {
     try {
       const response = await API.all_blog();
       setMainPost(response.data); 
-      blogs = JSON.stringify(response.data)
+      // blogs = JSON.stringify(response.data)
       
-      console.log("response pre200! ", response);
+      // console.log("response pre200! ", response);
       if (response.status === 200) {
         setLoading(true);
-        console.log("response ==200! ",   blogs);
+        // console.log("response ==200! ",   blogs);
       }
     } catch (error) {
       console.log("Error", error);
@@ -31,13 +31,13 @@ const BlogPost = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     allBlogPost();
-  }, [mainPost]);
+  }, [ mainPost]);
   return (
     <>
       {loading ? (
         <>
         <Header />                                                                                  
-          <div className="container homePage">
+          <div  className="container blogPostPage ">
             <div className="row">
               <div className="col-lg-3">
              SIDEBAR <br />
@@ -72,7 +72,7 @@ const BlogPost = () => {
                                   ""
                                 ) : (
                                   <>
-                                    <span className="d-inline-block mr-2">
+                                    <span className="d-inline-block md-2">
                                       {item.author}
                                     </span>
                            -
@@ -88,7 +88,7 @@ const BlogPost = () => {
                               </p>
                             </div>
                           </div>
-                          <div className="row mt-2">
+                          <div className="row md-2">
                             <div className="col-lg-12">
                               <p className="postDetails">
                                 <div

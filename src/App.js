@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import "./assets/style.css";
-import "./assets/responciv.css";
 import MainRouter from "./router/mainRouter"; 
 import "animate.css";
-import "./App.css";
+// import "./assets/application.scss";
+import "./assets/style.css";
+import "./assets/responciv.css";
 // import web3 from './web3.js';
 
  
