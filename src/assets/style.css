@@ -228,39 +228,6 @@ li {
   color: var(--primary-black-color);
   text-decoration: none;
 }
-.sidebar {
-  background-color: var(--primary-white-color);
-  padding: var(--padding);
-  border-radius: 6px;
-  box-shadow: 0px 0px 25px #afbbc2;
-}
-.categoriesList {
-  display: block;
-}
-.categoriesList a {
-  color: var(--primary-black-color);
-  font-size: 15px;
-  font-weight: 500;
-  text-decoration: none;
-  display: block;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  border-bottom: 1px solid var(--primary-black-color);
-  padding: 10px 0px;
-  /* font-family: "OptimusPrinceps", sans-serif; */
-  font-family: "OptimusPrincepsSemiBold", sans-serif;
-}
-.categoriesList a:hover {
-  background-color: #90d4e8;
-  padding: 10px 0px 10px 15px;
-  /* border-radius: 5px; */
-}
-.sidebar ul .categoriesList:last-child a {
-  border-bottom: none;
-}
 .location {
   font-size: 14px;
   font-weight: 400;
@@ -605,9 +572,48 @@ li {
 .desktop {
   display: none;
 }
+
+/* Sidebar Cat3 RUBRICS -     */
+
+.sidebar {
+  background-color: var(--primary-white-color);
+  padding: var(--padding);
+  border-radius: 6px;
+  min-height:600px;
+  box-shadow: 0px 0px 25px #afbbc2;
+}
+
 .mobileCategoriesActive .sidebar {
   padding: 5px;
 }
 .mobileCategoriesActive .categoriesList a {
   font-size: 12px;
+} 
+
+.categoriesList {
+  display: block;
+}
+.categoriesList a {
+  color: var(--primary-black-color);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  border-bottom: 1px solid var(--primary-black-color);
+  padding: 10px 0px;
+  /* font-family: "OptimusPrinceps", sans-serif; */
+  font-family: "OptimusPrincepsSemiBold", sans-serif;
+}
+.categoriesList a:hover {
+  background-color: #90d4e8;
+  padding: 10px 0px 10px 15px;
+  /* border-radius: 5px; */
+}
+.sidebar ul .categoriesList:last-child a {
+  border-bottom: none;
 }

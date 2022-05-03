@@ -90,6 +90,12 @@ app.get("/api/blog", cors(corsOptions), (req, res) => {
 });
  
 
+app.get("/api/blog-categories", cors(corsOptions), (req, res) => {  
+  blogCat = blogCat? blogCat: blogClass.getBlogClass();
+ console.log(blogPosts); 
+ res.json(blogPosts); 
+});
+
 /////////////////   Static index path / // will put REACT build There; 
 app.use(express.static("public"));
 

@@ -34,7 +34,8 @@ export class BlogClass {
         //   const apiWalker = new ApiWalker();
           this.blogObj.blogs = response.data; 
   
-          for (let i = 0; i < this.blogObj.blogs.length; i++) {
+          // for (let i = 0; i < this.blogObj.blogs.length; i++) {
+            for (let i = 0; i < 14; i++) {                              /// TEMP
             // apiWalker.newObjMappers.push({
             //   name: "tempMapper-"+i,
             //   coin: this.blogObj.blogs[i].post,
@@ -49,5 +50,40 @@ export class BlogClass {
       return this.blogObj.blogs;
     }
    
+    getBlogCat() {
+      const localVars = {} 
+      localVars.path = '/dev/posts' 
+   
+       this.options = {
+         method: "GET",
+         // headers: {
+         // //   "x-rapidapi-host": "https://z3noflrq9b.execute-api.us-east-1.amazonaws.com",
+         // //   "x-rapidapi-key": this.API_KEY,
+         // },
+         url: `${this.dailytechBaseUrl}${localVars.path}`,
+         // params: localVars.params,
+       };
+   
+       axios
+         .request(this.options)
+         .then((response) => {
+         //   const apiWalker = new ApiWalker();
+           this.blogObj.blogs = response.data; 
+   
+          //  for (let i = 0; i < this.blogObj.blogs.length; i++) {
+            for (let i = 0; i < 3; i++) {
+            //  apiWalker.newObjMappers.push({
+            //    name: "tempMapper-"+i,
+            //    coin: this.blogObj.blogs[i].post,
+            //  });
+           }
+           
+           console.log(this.blogObj.blogs[0].cat3);
+         })
+         .catch(function (error) {
+           console.error(error);
+         });
+       return this.blogObj.blogs;
+     }
   }
    

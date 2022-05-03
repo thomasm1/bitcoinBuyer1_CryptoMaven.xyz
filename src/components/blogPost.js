@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react"; 
-import Header from './header.js'
-import Footer from "./footer";
 import { Link } from "react-router-dom";
 import * as API from "../api/index.js";
 import * as c from "../api/constant.js";
 import moment from "moment";
 import { pageLoading } from "../util/commonStaticData.js";
 import "./blogPost.css"; 
+import Sidebar from "./sidebar";
 
 let blogs
 const BlogPost = () => {
@@ -31,21 +30,19 @@ const BlogPost = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
     allBlogPost();
-  }, [ mainPost]);
+  }, [ ]);
   return (
     <>
       {loading ? (
-        <>
-        <Header />                                                                                  
+        <>                                                                                
           <div  className="container blogPostPage ">
             <div className="row">
               <div className="col-lg-3">
-             SIDEBAR <br />
-     INTEREST TAGS
+          <Sidebar />
           </div> 
 
               <div className="col-lg-6">
-                <div className="blogPostCard">
+                <div className=" -----------">
                   <>  
                   {console.log("mainPost",mainPost[0])}
  
@@ -91,17 +88,18 @@ const BlogPost = () => {
                           <div className="row md-2">
                             <div className="col-lg-12">
                               <p className="postDetails">
-                                <div
+                                {/* <div
                                   dangerouslySetInnerHTML={{
                                     __html: item.post,
                                   }}
-                                />
+                                /> */}
                               </p>
-                              <p> <div
+                              <p> 
+                                {/* <div
                                   dangerouslySetInnerHTML={{
                                     __html: item.blogcite,
                                   }}
-                                  />
+                                  /> */}
                                   </p>
                               <button className="readingBtn">
                                 <Link to={`/blogs/${item.id}`}>
@@ -124,7 +122,6 @@ const BlogPost = () => {
          MOST VIEWED
             </div>
           </div>
-         <Footer />
          <hr />
              <button className="readingBtn">
                                 {/* <Link to={`/blog/${blogPosts.title}`}> */}
