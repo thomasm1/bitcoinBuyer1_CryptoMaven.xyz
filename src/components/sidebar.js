@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { icon } from "../util/commonStaticData";
+import { roundIcon, sidebarAllCatagories } from "../util/commonStaticData";
 import * as API from "../api/index";
 const Sidebar = ({ onRefreshPage }) => {
   const [categories, setCategories] = useState([]);
@@ -22,21 +22,15 @@ const Sidebar = ({ onRefreshPage }) => {
       <div className="sidebar mobileDisplayNone">
         <ul>
 
-          {categories.map((item, index) => (
+          {sidebarAllCatagories.map((item, index) => (
             <li className="categoriesList" key={index}>
-                LINK
-                <br />
-                LINK2
-                <br />
-                LINK3
-                <br />
+                
               <Link
                 onClick={onRefreshPage}
-                to={`/blog-categories/${item.cat3}`}
-              >
-                  LINK
-                <span>{icon}</span> 
-                {item.item.cat3}
+                to={`/blog-categories/${item.name}`}
+              > 
+                <span>{roundIcon}</span> 
+                {item.name}
               </Link>
             </li>
           ))}
