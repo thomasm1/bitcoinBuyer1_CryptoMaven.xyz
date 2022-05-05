@@ -1,7 +1,6 @@
 // import DataTrie from "../../dataStructures/dataTrie";
 import {hashMethods} from "../dataServices/dataHashTablesProto.js";
-
-
+import { sidebarAllCatagories} from "./commonStaticStr.js";
 // Tags & Searchbox
 // const trieTag = new DataTrie(); 
 
@@ -19,7 +18,9 @@ this.key = options.key || '';
 this.val = options.val || '';
 //query
 this.query = options.query || '';
-
+for (let i = 0; i <  sidebarAllCatagories.length; i++){
+  sidebarAllCatagories
+}
 quoteHash.add('title', `Bitcoin Buyer Console`);
 quoteHash.add('tocTitle', `Guiding Inspiration for Bitcoin Buyer:`);
 quoteHash.add('toc',`“Typically, momentum trading is effective in markets that 1) do not have valuation models, 2) have large amounts of volatility, and 3) have frequent mispricings. Momentum investing is not typically used in US stocks, bonds, or options – as they have clear valuation models (e.g. discounted cash flow analysis for stocks and black Scholes for options). However, for commodities and assets like crypto – momentum trading can be an effective strategy that allows protection from losses in downtrends and capture subside on the uptrends. Based on historical data, this may be an extremely effective strategy – until a valuation model has been figured out.” <sup>1</sup><br />
@@ -34,6 +35,7 @@ quoteHash.add('toc',`“Typically, momentum trading is effective in markets that
 
 data from: 07-04-2019<br />
 source -https://www.cryptodatadownload.com/data/northamerican/`);
+
 
 // Constant Time for other values added
 quoteHash.add(this.key, this.val);

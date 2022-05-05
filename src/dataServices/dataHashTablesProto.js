@@ -5,7 +5,7 @@
 // transactHash(size) 
 
 // HashTable
-console.log("%c HASH TABLE: ", "color:white; background-color:orange");
+console.log("%c DataServices HASH TABLE: ", "color:black; background-color:yellow");
 
 
 export function HashMethods(storageLimit = 10) { 
