@@ -50,7 +50,7 @@ export const RegEx = {
 
 
   // VALIDATE
-  export const validate = () => {
+  export const validateEmail = () => {
     const { emailId, password } = formData;
     let flag = true;            /// TRUE
 

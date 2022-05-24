@@ -1,6 +1,6 @@
 // import DataTrie from "../../dataStructures/dataTrie";
 import {hashMethods} from "../dataServices/dataHashTablesProto.js";
-import { sidebarAllCatagories} from "./commonStaticStr.js";
+import { sidebarAllCategories} from "./commonStaticStr.js";
 // Tags & Searchbox
 // const trieTag = new DataTrie(); 
 
@@ -18,8 +18,8 @@ this.key = options.key || '';
 this.val = options.val || '';
 //query
 this.query = options.query || '';
-for (let i = 0; i <  sidebarAllCatagories.length; i++){
-  sidebarAllCatagories
+for (let i = 0; i <  sidebarAllCategories.length; i++){
+  console.log(sidebarAllCategories[i].name)
 }
 quoteHash.add('title', `Bitcoin Buyer Console`);
 quoteHash.add('tocTitle', `Guiding Inspiration for Bitcoin Buyer:`);

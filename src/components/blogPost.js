@@ -58,18 +58,18 @@ const BlogPost = () => {
                         <div className="postDetails">
                           <div className="row">
                             <div className="col-lg-6">
-                              <p className="postDate">
+                              <p className="postDate"  key={index}>
                                 {moment(item.did).format("YY-MM-DD")}
                               </p>
                             </div>
                             <div className="col-lg-6 text-right">
-                              <p className="location font-weight-bolder">
+                              <p className="location font-weight-bolder"  key={index}>
                                 By{" "}
                                 {item.author === null ? (
                                   ""
                                 ) : (
                                   <>
-                                    <span className="d-inline-block md-2">
+                                    <span className="d-inline-block md-2" key={index}>
                                       {item.author}
                                     </span>
                            -
@@ -80,7 +80,7 @@ const BlogPost = () => {
                           </div>
                           <div className="row">
                             <div className="col-lg-12">
-                              <p className="location mt-2 font-weight-bolder">
+                              <p className="location mt-2 font-weight-bolder" key={index}>
                                 {item.title}
                               </p>
                             </div>
@@ -101,7 +101,7 @@ const BlogPost = () => {
                                   }}
                                   /> */}
                                   </p>
-                              <button className="readingBtn">
+                              <button className="readingBtn" key={index}>
                                 <Link to={`/blogs/${item.id}`}>
                                   Read More...
                                 </Link>

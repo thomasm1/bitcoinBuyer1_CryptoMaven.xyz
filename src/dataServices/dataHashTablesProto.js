@@ -16,7 +16,7 @@ export function HashMethods(storageLimit = 10) {
 HashMethods.prototype.hash = function (string, maxLength) {
   let hashResult = 0;
   for (var i = 0; i < string.length; i++) {
-    hashResult += string.charCodeAt(i)-96;
+    hashResult += string.charCodeAt(i)-96;   //    
   }
   return hashResult % maxLength;
 };

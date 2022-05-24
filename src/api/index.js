@@ -1,7 +1,7 @@
 import axios from "axios";
 import * as c from "./constant.js";
  // make into service later 
-import { sidebarAllCatagories } from "../util/commonStaticData";
+import { sidebarAllCategories } from "../util/commonStaticData";
 
 // ? ALL_BLOG
 export const all_blog = async (data) => {
