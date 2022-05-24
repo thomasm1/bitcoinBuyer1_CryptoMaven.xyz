@@ -82,3 +82,15 @@ export const user_forgot_password_otp = async (data) => {
     return e.response;
   }
 };
+
+
+// ? USER MODIFIY PASSWORD
+export const user_modify_password = async (data) => {
+  try {
+    const url = c.REGISTRATION_USER + "/modify-password";
+    const res = await axios.patch(url, data);
+    return res;
+  } catch (e) {
+    return e.response;
+  }
+};
