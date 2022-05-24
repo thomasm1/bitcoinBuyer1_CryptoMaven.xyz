@@ -26,9 +26,7 @@ export const blog_categories = async (data) => {
     return e.response;
   }
 };
-
-
-
+ 
 // ? ALL_COINS
 export const all_coins = async (data) => {
     try {
@@ -40,3 +38,47 @@ export const all_coins = async (data) => {
     }
   };
   
+
+  // LOGIN  -- REGISTRATION
+  
+
+
+// ? USER LOGIN API
+export const user_login = async (data) => {
+  try {
+    const url = c.REGISTRATION_USER + "/login";
+    console.log("url", url);
+    const res = await axios.post(url, data);
+    return res;
+  } catch (e) {
+    return e.response;
+  }
+};
+
+// ? USER FORGOT PASSWORD
+export const user_forgot_password = async (data) => {
+  try {
+    const url = c.REGISTRATION_USER + "/forgot-password-request";
+    const res = await axios.patch(url, data);
+    return res;
+  } catch (e) {
+    return e.response;
+  }
+};
+
+// ? USER FORGOT PASSWORD OTP
+export const user_forgot_password_otp = async (data) => {
+  try {
+    const url =
+      c.REGISTRATION_USER +
+      "/otp-verification/" +
+      data.emailId +
+      "/" +
+      data.otp;
+    console.log("url", url);
+    const res = await axios.get(url, data);
+    return res;
+  } catch (e) {
+    return e.response;
+  }
+};
