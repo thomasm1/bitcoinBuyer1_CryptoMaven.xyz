@@ -31,6 +31,17 @@ newsObj.targetArticles = newsObj.targetArticles || [];
 /// Methods for class
  
 
+/**
+ * 
+ * [  description]
+ * @param  {[type]} arg1 [description]
+ * @param  {[type]} arg2 [description]
+ * @return {[type]}      [description]
+ */
+var someFunction = function (arg1, arg2) {
+	// 
+};
+
  export function getAllArticles() {
   newsObj.tempSites.forEach((news) => {
     axios.get(news.address).then((response) => {

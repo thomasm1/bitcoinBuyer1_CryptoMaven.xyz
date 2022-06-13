@@ -1,7 +1,28 @@
+
 import axios from "axios";
 import * as c from "./constant.js";
  // make into service later 
 import { sidebarAllCategories } from "../util/commonStaticData";
+
+/**
+ * DATA USER FROM LAMBDA AWS ->DYNAMODB
+ *#1 c.REGISTRATION_USER_BASE + "/login";
+*#2 c.REGISTRATION_USER_BASE + "/forgot-password-request";
+
+*#3 c.REGISTRATION_USER_BASE + "/otp-verification/" +data.emailId +"/" +data.otp;
+*#4 c.REGISTRATION_USER_BASE + "/modify-password";
+
+ * [  description]
+ * @param  {[type]} arg1 [description]
+ * @param  {[type]} arg2 [description]
+ * @return {[type]}      [description]
+ */
+ var someFunction = function (arg1, arg2) {
+	// 
+};
+
+ 
+
 
 // ? ALL_BLOG
 export const all_blog = async (data) => {
@@ -46,7 +67,7 @@ export const all_coins = async (data) => {
 // ? USER LOGIN API
 export const user_login = async (data) => {
   try {
-    const url = c.REGISTRATION_USER + "/login";
+    const url = c.REGISTRATION_USER_BASE + "/login";
     console.log("url", url);
     const res = await axios.post(url, data);
     return res;
@@ -57,8 +78,8 @@ export const user_login = async (data) => {
 
 // ? USER FORGOT PASSWORD
 export const user_forgot_password = async (data) => {
-  try {
-    const url = c.REGISTRATION_USER + "/forgot-password-request";
+  try { 
+    const url = c.REGISTRATION_USER_BASE + "/forgot-password-request";
     const res = await axios.patch(url, data);
     return res;
   } catch (e) {
@@ -66,11 +87,16 @@ export const user_forgot_password = async (data) => {
   }
 };
 
+c.REGISTRATION_USER +
+"/otp-verification/" +
+data.emailId +
+"/" +
+data.otp;
+
 // ? USER FORGOT PASSWORD OTP
 export const user_forgot_password_otp = async (data) => {
-  try {
-    const url =
-      c.REGISTRATION_USER +
+  try { 
+      const url = c.REGISTRATION_USER_BASE  +
       "/otp-verification/" +
       data.emailId +
       "/" +
@@ -86,11 +112,12 @@ export const user_forgot_password_otp = async (data) => {
 
 // ? USER MODIFIY PASSWORD
 export const user_modify_password = async (data) => {
-  try {
-    const url = c.REGISTRATION_USER + "/modify-password";
+  try { 
+    const url = c.REGISTRATION_USER_BASE + "/modify-password";
     const res = await axios.patch(url, data);
     return res;
   } catch (e) {
     return e.response;
   }
 };
+
