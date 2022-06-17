@@ -2,6 +2,8 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom"; 
 import Home from "../components/home.js"; 
 import Login from "../components/login.js";
+import News from "../components/news";
+
 // import Admin from '../components/admin/admin';
 
 const MainRouter = () => {

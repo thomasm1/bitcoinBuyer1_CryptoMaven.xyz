@@ -21,7 +21,16 @@ import { sidebarAllCategories } from "../util/commonStaticData";
 	// 
 };
 
- 
+// ? NEWS  ALL_NEWS
+export const all_news = async (data) => {
+  try {
+    const url = c.NEWS;
+    const res = await axios.get(url, data);
+    return res;
+  } catch (e) {
+    return e.response;
+  }
+};
 
 
 // ? ALL_BLOG
@@ -86,21 +95,12 @@ export const user_forgot_password = async (data) => {
     return e.response;
   }
 };
-
-c.REGISTRATION_USER +
-"/otp-verification/" +
-data.emailId +
-"/" +
-data.otp;
+ 
 
 // ? USER FORGOT PASSWORD OTP
 export const user_forgot_password_otp = async (data) => {
   try { 
-      const url = c.REGISTRATION_USER_BASE  +
-      "/otp-verification/" +
-      data.emailId +
-      "/" +
-      data.otp;
+      const url = c.REGISTRATION_USER_BASE  +    "/otp-verification/" +data.emailId + "/" + data.otp;
     console.log("url", url);
     const res = await axios.get(url, data);
     return res;

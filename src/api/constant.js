@@ -24,9 +24,10 @@ export const BLOG_CATEGORIES =  [
   { name: "A.I.Now." } 
 ];
 
-// ? NEWS
+// ? NEWS  ==> all_news()
 
 export const NEWS = `${URL}/api/news`;
+
 
 //LOGIN?REG
 export const REGISTRATION_USER = `${AWS_USER_URL}`;
