@@ -5,6 +5,14 @@
 ### App Purpose: Data algorithms/structures Exploratory Application ;
 ### App Name: Pleaides, inspired by the Gree God with 7 Sisters Cluster. 
 
+## Instructions
+API served on localhost
+127.0.0.1:3001/cryptonews
+      /api/countries
+      /api/coins
+      /api/blog
+api/countries
+./startMaven.sh
 ```sh
 This app applies data scraper to collect unstructured data. And this app structures into meaningful data, based on the parameters as profiled by self-assessment, and propensity for success
 ```

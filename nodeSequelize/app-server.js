@@ -82,6 +82,7 @@ app.get("/api/calendar", (req, res) => {
 
   const blogClass = new BlogClass(); // one singleton per session 
   var blogPosts;
+  var blogCat;
 
 app.get("/api/blog", cors(corsOptions), (req, res) => {  
    blogPosts = blogPosts? blogPosts: blogClass.getBlogData();
@@ -91,9 +92,9 @@ app.get("/api/blog", cors(corsOptions), (req, res) => {
  
 
 app.get("/api/blog-categories", cors(corsOptions), (req, res) => {  
-  blogCat = blogCat? blogCat: blogClass.getBlogClass();
- console.log(blogPosts); 
- res.json(blogPosts); 
+  blogCat = blogCat? blogCat: blogClass.getBlogCat();
+ console.log(blogCat); 
+ res.json(blogCat); 
 });
 
 /////////////////   Static index path / // will put REACT build There; 

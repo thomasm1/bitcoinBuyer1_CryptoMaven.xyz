@@ -19,34 +19,28 @@ export class BlogClass {
      localVars.path = '/dev/posts' 
   
       this.options = {
-        method: "GET",
-        // headers: {
-        // //   "x-rapidapi-host": "https://z3noflrq9b.execute-api.us-east-1.amazonaws.com",
-        // //   "x-rapidapi-key": this.API_KEY,
-        // },
+        method: "GET", 
         url: `${this.dailytechBaseUrl}${localVars.path}`,
-        // params: localVars.params,
       };
   
-      axios
-        .request(this.options)
-        .then((response) => {
-        //   const apiWalker = new ApiWalker();
-          this.blogObj.blogs = response.data; 
-  
-          // for (let i = 0; i < this.blogObj.blogs.length; i++) {
-            for (let i = 0; i < 14; i++) {                              /// TEMP
-            // apiWalker.newObjMappers.push({
-            //   name: "tempMapper-"+i,
-            //   coin: this.blogObj.blogs[i].post,
-            // });
-          }
-          
-          console.log(this.blogObj.blogs[0].post);
-        })
-        .catch(function (error) {
-          console.error(error);
-        });
+  const sendBlogRequest = async () => {
+    try {
+      const response = await axios
+      .request(this.options);
+      // .then((response) => {
+      //   const apiWalker = new ApiWalker();
+        this.blogObj.blogs = response.data; 
+
+        // for (let i = 0; i < this.blogObj.blogs.length; i++) {
+          for (let i = 0; i < 14; i++) {                              /// TEMP
+ 
+        console.log(this.blogObj.blogs[0].post); 
+      };
+    } catch (err) {
+      console.log(err)
+    }
+  }
+     sendBlogRequest();
       return this.blogObj.blogs;
     }
    
@@ -55,34 +49,20 @@ export class BlogClass {
       localVars.path = '/dev/posts' 
    
        this.options = {
-         method: "GET",
-         // headers: {
-         // //   "x-rapidapi-host": "https://z3noflrq9b.execute-api.us-east-1.amazonaws.com",
-         // //   "x-rapidapi-key": this.API_KEY,
-         // },
+         method: "GET", 
          url: `${this.dailytechBaseUrl}${localVars.path}`,
-         // params: localVars.params,
        };
    
-       axios
-         .request(this.options)
-         .then((response) => {
-         //   const apiWalker = new ApiWalker();
-           this.blogObj.blogs = response.data; 
-   
-          //  for (let i = 0; i < this.blogObj.blogs.length; i++) {
-            for (let i = 0; i < 3; i++) {
-            //  apiWalker.newObjMappers.push({
-            //    name: "tempMapper-"+i,
-            //    coin: this.blogObj.blogs[i].post,
-            //  });
-           }
-           
-           console.log(this.blogObj.blogs[0].cat3);
-         })
-         .catch(function (error) {
-           console.error(error);
-         });
+    const sendCategoryRequest = async () => {
+      try {
+      const response = await axios.request(this.options);
+       this.blogObj.blogs = response.data; 
+      //  console.log(this.blogObj.blogs[0].cat3); 
+      } catch(err) {
+    console.log(err)
+      }
+    }
+     sendCategoryRequest();
        return this.blogObj.blogs;
      }
   }

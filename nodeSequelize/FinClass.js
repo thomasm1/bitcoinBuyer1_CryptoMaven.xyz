@@ -1,12 +1,11 @@
 // import "dotenv/config"; // only CRYPTO_API_KEY here
 
-import axios from 'axios';//"../node_modules/axios/src/axios.js";
+import axios from "axios"; //"../node_modules/axios/src/axios.js";
 import { ApiWalker } from "./dataUtil/dataServices/dataServices.js";
-
 
 ///////////////// Web Scraping VARS
 // GLOBAL VARS     Crypto News
- 
+
 export class FinClass {
   constructor(finObj) {
     this.API_KEY = process.env.CRYPTO_API_KEY;
@@ -68,7 +67,7 @@ export class FinClass {
 
   getMetaData(optString) {
     const localVars = this.getFinVars(optString);
-    
+
     this.options = {
       method: "GET",
       headers: {
@@ -79,26 +78,24 @@ export class FinClass {
       params: localVars.params,
     };
 
-    axios
-      .request(this.options)
-      .then((response) => {
+    const sendCountriesRequest = async () => {
+      try {
+        const response = await axios.request(this.options);
         const apiWalker = new ApiWalker();
-        this.finObj.countries = response.data;
 
+        this.finObj.countries = response.data;
         for (let i = 0; i < this.finObj.countries.length; i++) {
           apiWalker.newObjMappers.push({
             name: "tempMapper",
             nation: this.finObj.countries.countries[i],
           });
         }
-        //                                const input =  "Albania"     /// REMOVE
-        // console.log("check Albania some objects from names");
-        // console.log(apiWalker.getAll(countries.countries, input ));
-        // console.log("countries", countries)
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+       
+      } catch (err) {
+        console.log(response.data);
+      }
+    };
+    sendCountriesRequest();
     return this.finObj.countries;
   }
 
@@ -116,9 +113,10 @@ export class FinClass {
       params: localVars.params,
     };
 
-    axios
-      .request(this.options)
-      .then((response) => {
+  const sendCoinsRequest = async () => {
+    try {
+    const response = await  axios.request(this.options);
+      
         const apiWalker = new ApiWalker();
         this.finObj.coins = response.data;
         // console.log(coins[0].screen_data.crypto_data);
@@ -132,10 +130,12 @@ export class FinClass {
         // UNIT TEST
         // res.json(coins[0].screen_data[2].crypto_data)
         console.log(this.finObj.coins);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    } catch(err) {
+      console.log(err);
+    }
+  }
+   
+   sendCoinsRequest()
     return this.finObj.coins;
   }
 
@@ -154,16 +154,17 @@ export class FinClass {
       params: localVars.params,
     };
 
-    axios
-      .request(this.options)
-      .then((response) => {
+   const sendCalendarRequest = async () => {
+    try {
+      const response = await  axios.request(this.options);
+     
         // finObj.cal = response.data[0].screen_data.icoData.data
         this.finObj.cal = response.data;
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
+    } catch (err) {
+      console.log(err)
+    }
+   }
+     sendCalendarRequest()
     return this.finObj.cal;
   }
 }
- 
