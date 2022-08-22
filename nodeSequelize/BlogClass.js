@@ -1,16 +1,12 @@
 import "dotenv/config"; // only CRYPTO_API_KEY here
 
 import axios from "axios";
-
-
-// GLOBAL VARS     Crypto News
  
 export class BlogClass {
-    constructor(blogObj = {}) {
+    constructor(blogObj = {}) { 
       this.blogObj = blogObj 
       this.API_KEY = process.env.AWS_API_KEY;
       this.dailytechBaseUrl =  "https://z3noflrq9b.execute-api.us-east-1.amazonaws.com";
- 
     }
    
     // // Data to return crypto Blog   // Blog
@@ -18,25 +14,17 @@ export class BlogClass {
      const localVars = {} 
      localVars.path = '/dev/posts' 
   
-      this.options = {
-        method: "GET", 
+      this.options = { 
         url: `${this.dailytechBaseUrl}${localVars.path}`,
       };
   
   const sendBlogRequest = async () => {
     try {
-      const response = await axios
-      .request(this.options);
-      // .then((response) => {
-      //   const apiWalker = new ApiWalker();
-        this.blogObj.blogs = response.data; 
-
-        // for (let i = 0; i < this.blogObj.blogs.length; i++) {
-          for (let i = 0; i < 14; i++) {                              /// TEMP
+      const response = await axios.request(this.options);  
+        this.blogObj.blogs = await response.data; 
  
         console.log(this.blogObj.blogs[0].post); 
-      };
-    } catch (err) {
+      }  catch (err) {
       console.log(err)
     }
   }
@@ -48,8 +36,7 @@ export class BlogClass {
       const localVars = {} 
       localVars.path = '/dev/posts' 
    
-       this.options = {
-         method: "GET", 
+       this.options = { 
          url: `${this.dailytechBaseUrl}${localVars.path}`,
        };
    
@@ -57,7 +44,7 @@ export class BlogClass {
       try {
       const response = await axios.request(this.options);
        this.blogObj.blogs = response.data; 
-      //  console.log(this.blogObj.blogs[0].cat3); 
+      //  console.log(this.blogObj.blogs[0].cat3); FOR TEST
       } catch(err) {
     console.log(err)
       }

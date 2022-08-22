@@ -50,31 +50,20 @@ const coinsShown = {"data": [
 ]
 }
   // Financial API
-
-  export class ApiLister {
-    constructor(apiArray, apiObj) {
-      this.apiArray = apiArray || [];
-      ///
-      this.newsOutlets = this.newsOutlets || [];
-      this.apiObj = apiObj || {};
-    }
-    // Metadata API
-    getLocalAll() {
-      for (let i = 0; i < localResponse.countries.length; i++) {
-        this.apiObj = localResponse.countries[i];
-  
-        this.apiArray.push(this.apiObj);
-      }
-      return this.apiObj;
-    }
-  }
+ 
 
 export class ApiWalker {
-  constructor(apiArray, apiObj) {
+  constructor(newObjMappers, apiArray, apiObj, newsOutlets) {
+    // Collect New Fin API session duration vars
+    this.newObjMappers = newObjMappers || []
+
+    /// collect local data initially  for testing
     this.apiArray = apiArray || [];
-    ///
-    this.newsOutlets = this.newsOutlets || [];
     this.apiObj = apiObj || {};
+
+      /// user's local stored news prefs (for later)
+    // this.newsOutlets =  newsOutlets || [];
+
   }
   // Metadata API
   getLocalAll() {

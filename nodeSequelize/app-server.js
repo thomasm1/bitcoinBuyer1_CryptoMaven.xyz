@@ -34,6 +34,11 @@ app.get("/cryptonews", (req, res) => {
   console.log("/cryptonews using newsObj.tempArticles: ", newsObj.tempArticles);
   res.json(newsObj.tempArticles);
 });
+// Default is news
+app.get("/", (req, res) => { 
+  newsObj = getAllArticles();
+  res.json(newsObj.tempArticles);
+});
 
 // TODO  ->  place calculations into app-proxy
 app.get(`/cryptonews/:newsId`, (req, res) => {
@@ -52,14 +57,14 @@ app.get(`/cryptonews/:newsId`, (req, res) => {
 const finClass = new FinClass(); // one singleton per session
 
 // Data to return crypto resources     // META DATA BY NATION
-app.get("/api/countries", (req, res) => {
+app.get("/countries", (req, res) => {
   const finMeta = finClass.getMetaData("countries");
-  console.log("RUNNING /api/countries finMeta: ", finMeta);
+  console.log("RUNNING /countries finMeta: ", finMeta);
 
   res.json(finMeta);
 });
 
-app.get("/api/coins", (req, res) => {
+app.get("/coins", (req, res) => {
   // COINS DATA
   const finCoins = finClass.getCoinsData();
   console.log(finCoins);
@@ -68,7 +73,7 @@ app.get("/api/coins", (req, res) => {
 });
 
 // Calendar
-app.get("/api/calendar", (req, res) => {
+app.get("/calendar", (req, res) => {
   // CALENDAR/TIME
   const cal = finClass.getCalData();
   // let cal = response.data.screen_data.icoData.data
@@ -84,14 +89,14 @@ app.get("/api/calendar", (req, res) => {
   var blogPosts;
   var blogCat;
 
-app.get("/api/blog", cors(corsOptions), (req, res) => {  
+app.get("/blog", cors(corsOptions), (req, res) => {  
    blogPosts = blogPosts? blogPosts: blogClass.getBlogData();
   console.log(blogPosts); 
   res.json(blogPosts); 
 });
  
 
-app.get("/api/blog-categories", cors(corsOptions), (req, res) => {  
+app.get("/blog-categories", cors(corsOptions), (req, res) => {  
   blogCat = blogCat? blogCat: blogClass.getBlogCat();
  console.log(blogCat); 
  res.json(blogCat); 

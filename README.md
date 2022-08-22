@@ -6,13 +6,17 @@
 ### App Name: Pleaides, inspired by the Gree God with 7 Sisters Cluster. 
 
 ## Instructions
-API served on localhost
+### API 
+#### served on localhost
+```
 127.0.0.1:3001/cryptonews
       /api/countries
       /api/coins
       /api/blog
 api/countries
 ./startMaven.sh
+```
+
 ```sh
 This app applies data scraper to collect unstructured data. And this app structures into meaningful data, based on the parameters as profiled by self-assessment, and propensity for success
 ```
@@ -89,7 +93,10 @@ text.enter().append("text")
 | Cloud Data | Amazon RDS |  [AWS-RDS] | 
 | Cloud Assets | Amazon S3 |  [AWS-S3]  | 
  
-      
+     
+     
+#### Data Operation Methods 
+  
 ### CryptoMaven's Data Structures: 
 ```sh
 {
@@ -119,41 +126,78 @@ text.enter().append("text")
  * https://unpkg.com/simple-statistics@2.0.0/dist/simple-statistics.min.js
  * https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.10.3/babel.min.js
  
- 
-###  server-nginx  
-* located in server-nginx/README.md 
-  
-
-### Methods & Data Operation Methods
-* located in nodeSequelize/README.md 
-
-
-### **Solidity, Smart Contracts & Blockchain code :
-* located in Web3/README.md
-
-
 ### Database: 
 * commuterlink.cmcadlepsyx9.us-east-1.rds.amazonaws.com
 * AWS PostgreSQL 
 * Auto-detected PostgreSQL 10 installation with the data directory at C:\Program Files\PostgreSQL\10\data
 
+###  server-nginx
+* located in server-nginx/README.md 
+
+##pm2 
+https://www.npmjs.com/package/pm2
+https://pm2.keymetrics.io/
+npm i pm2 -g 
+pm2 start app.js [[instead of node app.js]]
+
+auto-restart after reboot:
+pm2 startup ubuntu 
+or...
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup ubuntu -u ubuntu --hp /home/ubuntu
+pm2 status
+
+##ufw
+ufw enable
+ufw allow ssh
+ufw allow http
+ufw allow https
+
+##nginx
+sudo apt install nginx
+sudo nano /etc/nginx/sites-available/default  
+sudo nginx -t
+sudo service nginx restart
+
+
+#### Load Balancer 
+* localhost port 5000
+* NGINX -Digital Ocean:  [134.122.15.249] 
+          -https://hexstat.xyz
+          -local: /home/ubuntu/nfs
+
+* NGINX -AWS - [35.175.138.209]  
+          * local: /home/thomas/apps/
+          * bitcoinBuyer1-findersCalculators
+          * https://cryptomaven.xyz https://cryptomaven.us 
+
+
 ** DB Cloud Software **
 
+db's README.md inside NODESEQUEL INFO MOVED TO NodeSequel
  [MySQL](https://www.mysql.com/)
  [Sequelize](https://sequelize.org/)
  [AWS-RDS](https://aws.amazon.com/rds/)
  [AWS-S3](https://aws.amazon.com/s3/) 
    
 
+### **Solidity, Smart Contracts & Blockchain code relocated to:
+#### Solidity Dir README.md
+
 #### REFERENCES
 ##### http://vis.stanford.edu/files/2011-D3-InfoVis.pdf
 
 ### REACT Natively Implemented with React-Dom, JQuery, D3 and webpack for bundler
 
+### Methods 
+
+#### Data Operation Methods 
+
+
 ### Methods 3rd Party Libraries
  
-#### React Methods
-```sh 
+#### React  Sample Methods
+```sh
+console.log(React)
 {Children: {…}, createRef: ƒ, Component: ƒ, PureComponent: ƒ, createContext: ƒ, …}
     Children: {map: ƒ, forEach: ƒ, count: ƒ, toArray: ƒ, only: ƒ}
     Component: ƒ r(a, b, d)
@@ -171,8 +215,8 @@ text.enter().append("text")
     [[Prototype]]: ƒ ()
     [[Scopes]]: Scopes[2]
     Fragment: Symbol(react.fragment)
-    PureComponent: ƒ M(a, b, d)
-    StrictMode: Symbol(react.strict_mode)
+    PureComponent: ƒ M(a, b, d) 
+ StrictMode: Symbol(react.strict_mode)
     Suspense: Symbol(react.suspense)
     cloneElement: ƒ (a, b, d)
     createContext: ƒ (a, b)
@@ -196,44 +240,9 @@ text.enter().append("text")
     entries: ƒ entries()
     freeze: ƒ freeze()
     fromEntries: ƒ fromEntries()
-    getOwnPropertyDescriptor: ƒ getOwnPropertyDescriptor()
-    getOwnPropertyDescriptors: ƒ getOwnPropertyDescriptors()
-    getOwnPropertyNames: ƒ getOwnPropertyNames()
-    getOwnPropertySymbols: ƒ getOwnPropertySymbols()
-    getPrototypeOf: ƒ getPrototypeOf()
-    hasOwn: ƒ hasOwn()
-    is: ƒ is()
-    isExtensible: ƒ isExtensible()
-    isFrozen: ƒ isFrozen()
-    isSealed: ƒ isSealed()
-    keys: ƒ keys()
-    length: 1
-    name: "Object"
-    preventExtensions: ƒ preventExtensions()
-    prototype: {constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
-    seal: ƒ seal()
-    setPrototypeOf: ƒ setPrototypeOf()
-    values: ƒ values()
-    arguments: (...)
-    caller: (...)
-    [[Prototype]]: ƒ ()
-    [[Scopes]]: Scopes[0]
-    hasOwnProperty: ƒ hasOwnProperty()
-    isPrototypeOf: ƒ isPrototypeOf()
-    propertyIsEnumerable: ƒ propertyIsEnumerable()
-    toLocaleString: ƒ toLocaleString()
-    toString: ƒ toString()
-    valueOf: ƒ valueOf()
-    __defineGetter__: ƒ __defineGetter__()
-    __defineSetter__: ƒ __defineSetter__()
-    __lookupGetter__: ƒ __lookupGetter__()
-    __lookupSetter__: ƒ __lookupSetter__()
-    __proto__: (...)
-    get __proto__: ƒ __proto__()
-    set __proto__: ƒ __proto__()
 ```
 
-###  D3- v4
+###  D3- v4 Sample Methods
 ```sh
   {event: null, format: ƒ, formatPrefix: ƒ, timeFormat: ƒ, timeParse: ƒ, …}
 active: ƒ (t, n)
@@ -243,13 +252,20 @@ areaRadial: ƒ gc()
 ascending: ƒ n(t, n)
 axisBottom: ƒ (t)
 axisLeft: ƒ (t)
-axisRight: ƒ (t) 
+axisRight: ƒ (t)
+axisTop: ƒ (t)
+bisect: ƒ (n, e, r, i)
+bisectLeft: ƒ (n, e, r, i)
+bisectRight: ƒ (n, e, r, i)
+bisector: ƒ e(t)
+brush: ƒ ()
+brushSelection: ƒ (t) 
 ```
 <a style="margin-left:20%;" href="https://cryptomaven.xyz">
 
-<img height="460" src="https://tmm-nov.s3.amazonaws.com/assets/img/MaestasReykjavikBanner.jpg" title="Crypto_Maven_Background" alt="Crypto_Maven_Image_Background">
+<img width="660" src="https://tmm-nov.s3.amazonaws.com/assets/img/MaestasReykjavikBanner.jpg" title="Crypto_Maven_Background" alt="Crypto_Maven_Image_Background">
 
-</a> S4 
+</a>
 
 
 <h3 width="600" style="margin-left:50px;max-width:560px;font-style:italic;no-wrap">"Pleiades are a group of more than 800 stars located about 410 light-years from Earth in the constellation Taurus."</h3> 
@@ -342,7 +358,7 @@ Thomas Milton Maestas, your Author.
 ```
 Je me spécialise dans les dernières technologies full-stack, notamment React/Redux 18, TypeScript et Java 8/11, avec une compréhension de niveau Master de l'analyse et de la visualisation des données. J'ai 7 ans d'expérience avec les frameworks Web, les bibliothèques, les coureurs de tâches Webpack et la maîtrise complète d'AWS, y compris les bases de données sans serveur et les fonctions lambda. Mon expérience en analyse de données comprend à la fois des analyses qualitatives et quantitatives, en utilisant R, Python et JavaScript. Les bases de données incluent MySQL, PostgreSQL et Oracle ; AWS DynamoDB et MongoDB, à l'aide de la gestion relationnelle d'objets non relationnels Sequelize. Méthodologie Agile/SCRUM.
 
-I specialize in the latest full-stack technologies including React/Redux 18, TypeScript & Java 8/11, with a Masters-level understanding of data analytics and visualization. I have  7 years of experience with web frameworks, libraries, webpack task-runners and full AWS proficiency, including serverless database & lambda functions. My data analysis experience includes both qualitative and quantitative analytics,using R, Python, and JavaScript.  Databases include MySQL, PostgreSQL, and Oracle; AWS DynamoDB and MongoDB, using Sequelize non-relational Object Relational Management. Agile/SCRUM Methodology.
+I specialize in the latest full-stack technologies including React/Redux 18, TypeScript & Java 8/11; this, along with a Masters-level understanding of data analytics and visualization. I have  7 years of experience with web frameworks, libraries, webpack task-runners and AWS proficiency, based on 3 AWS certifications, including serverless database & lambda functions. My data analysis experience includes both qualitative and quantitative analytics,using R, Python, and JavaScript.  Databases include MySQL, PostgreSQL, and Oracle; along with AWS DynamoDB and MongoDB, using Sequelize non-relational Object Relational Management. Agile/SCRUM Methodology. 
 
 #### WRITING
 
