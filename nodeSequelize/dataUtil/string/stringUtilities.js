@@ -1,3 +1,12 @@
+
+//////////// Unicode \u
+// \b - backspace  // \f - formfeed
+// \r - carriage return  // \t - tab && \v - vertical tab
+// 
+//- Emojis
+let unicode ="\u{1F601}" // 5-length Hex codes 1F601-1F64F
+
+/////////////  FORMAT   /////////////////
 const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
     currency: "USD",
     style: "currency",
@@ -42,8 +51,8 @@ const CURRENCY_FORMATTER = new Intl.NumberFormat(undefined, {
     }
   }
 
-
-  // ENCODE  a string   // BTOA == encode
+/////////////// ENCODE ////////////////////
+// Encode a string   // BTOA == encode
  
 export function encodeData(str) {
     return window.btoa(str);       
