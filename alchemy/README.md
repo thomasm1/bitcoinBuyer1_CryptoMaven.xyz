@@ -63,8 +63,29 @@ console.log(nfts);
         }
     ]
 }
+//////////// 
+window.ethereum.request({
+    method: "wallet_addEthereumChain",
+    params: [{
+        chainId: "0x89",
+        rpcUrls: ["https://rpc-mainnet.matic.network/"],
+        chainName: "Matic Mainnet",
+        nativeCurrency: {
+            name: "MATIC",
+            symbol: "MATIC",
+            decimals: 18
+        },
+        blockExplorerUrls: ["https://polygonscan.com/"]
+        }]
+});
 
+//////////////////// Optimistic UI Patterns
+const contractAddress = 'address of deployed contract';
+const contractABI = abi.abi
 
+const provider = new ethers.providers.Web3Provider(window.ethereum);
+const signer = provider.getSigner();
+const lugiaBattleContract =new ethers.Contract(contractAddress, contractABI, signer);
 
 ```
 ### Blockchain Technologies 
