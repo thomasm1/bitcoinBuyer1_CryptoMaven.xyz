@@ -15,9 +15,9 @@ const BlogPost = () => {
     try {
       const response = await API.all_blog();
       setMainPost(response.data); 
-      // blogs = JSON.stringify(response.data)
+      blogs = JSON.stringify(response.data)
       
-      // console.log("response pre200! ", response);
+      console.log("response pre200! ", response);
       if (response.status === 200) {
         setLoading(true);
         // console.log("response ==200! ",   blogs);
