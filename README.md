@@ -158,6 +158,22 @@ sudo nano /etc/nginx/sites-available/default
 sudo nginx -t
 sudo service nginx restart
 
+SSL
+// RHEL-CENTOS
+sudo yum install certbot-apache
+-or-
+sudo amazon-linux-extras install epel
+sudo yum install certbot-apache
+
+sudo yum install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+sudo yum install certbot
+// UBUNTU
+sudo add-apt-repository ppa:certbot/certbot
+sudo apt-get update
+sudo apt-get install python-certbot-nginx
+sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
+ 
+certbot renew --dry-run
 
 #### Load Balancer 
 * localhost port 5000
