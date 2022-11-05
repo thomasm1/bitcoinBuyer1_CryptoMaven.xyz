@@ -5,15 +5,15 @@ function mySet() {
   // collection holding set
   var collection = [];
   // check for presence, return true or false
-  this.has = function(element) {
+  this.has = function (element) {
     return collection.indexOf(element) !== -1;
   };
   //return all els in set
-  this.values = function() {
+  this.values = function () {
     return collection;
   };
   //add el to a set
-  this.add = function(element) {
+  this.add = function (element) {
     if (!this.has(element)) {
       collection.push(element);
       return true; // added
@@ -21,7 +21,7 @@ function mySet() {
     return false; // alread in set
   };
   //remove el from set
-  this.remove = function(element) {
+  this.remove = function (element) {
     if (this.has(element)) {
       var index = collection.indexOf(element);
       collection.splice(index, 1);
@@ -29,27 +29,27 @@ function mySet() {
     }
     return false; // none to remve
   };
-  this.size = function() {
+  this.size = function () {
     return collection.length; // col size
   };
   //  returns the union of two sets
-  this.union = function(otherSet) {
+  this.union = function (otherSet) {
     var unionSet = new Set();
     var firstSet = this.values();
     var secondSet = otherSet.values();
-    firstSet.forEach(function(e) {
+    firstSet.forEach(function (e) {
       unionSet.add(e);
     });
-    secondSet.forEach(function(e) {
+    secondSet.forEach(function (e) {
       unionSet.add(e);
     });
     return unionSet;
   };
   // returns intersection of 2 sets AS A NEW SET
-  this.intersection = function(otherSet) {
+  this.intersection = function (otherSet) {
     var intersectionSet = new mySet();
     var firstSet = this.values();
-    firstSet.forEach(function(e) {
+    firstSet.forEach(function (e) {
       if (otherSet.has(e)) {
         intersectionSet.add(e);
       }
@@ -57,10 +57,10 @@ function mySet() {
     return intersectionSet;
   };
   // returns DIFFERENCE of 2 sets as a new set
-  this.difference = function(otherSet) {
+  this.difference = function (otherSet) {
     var differenceSet = new Set();
     var firstSet = this.values();
-    firstSet.forEach(function(e) {
+    firstSet.forEach(function (e) {
       if (!otherSet.has(e)) {
         differenceSet.add(e);
       }
@@ -68,9 +68,9 @@ function mySet() {
     return differenceSet;
   };
   // tests if set is a subset of a different set
-  this.subset = function(otherSet) {
+  this.subset = function (otherSet) {
     var firstSet = this.values();
-    return firstSet.every(function(value) {
+    return firstSet.every(function (value) {
       return otherSet.has(value);
     });
   };
