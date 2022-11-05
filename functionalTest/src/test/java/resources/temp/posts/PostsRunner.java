@@ -1,4 +1,4 @@
- package api.posts;
+ package resources.temp.posts;
 
  import com.intuit.karate.junit5.Karate;
 
