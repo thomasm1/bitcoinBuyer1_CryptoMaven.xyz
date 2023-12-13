@@ -22,7 +22,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content=Hi R"width=device-width, initial-scale=1">
     <script src="lib/rxjs.5.4.3.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/5.4.3/Rx.js"></script> -->
     <script src="lib/d3.v4.min.js"></script>
