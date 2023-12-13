@@ -20,7 +20,7 @@ Feature: Users API karate test script
       {
         "name": "Thomas",
         "username": "thomas.maestas",
-        "email": "thomasm1.maestas@gmail.com",
+        "email": "thomas1.maestas@gmail.com",
         "address": {
           "street": "5405 Stanton Ave.",
           "suite": "Apt. 3",

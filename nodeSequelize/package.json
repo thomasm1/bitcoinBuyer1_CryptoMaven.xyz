@@ -24,6 +24,7 @@
     "slug": "^5.2.0"
   },
   "devDependencies": {
+    "nodemon": "^3.0.2",
     "sqlite3": "^5.0.6"
   }
 }
