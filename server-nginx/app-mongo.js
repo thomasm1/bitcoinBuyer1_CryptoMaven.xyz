@@ -16,8 +16,9 @@ app.use(cors());
 
 // Apply strategy to passport
 applyPassportStrategy(passport);
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+app.use(express.urlencoded({ extended: true }));
+// app.use(bodyParser.json());
+app.use(express.json());
 
 // API
 app.use('/', userController);

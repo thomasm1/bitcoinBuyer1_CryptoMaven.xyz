@@ -1,0 +1,136 @@
+/* keyframes */
+.drop {
+  animation: dropIn 1s ease forwards;
+  animation-delay: calc(var(--order)* 100ms);
+}
+@keyframes dropIn {
+  from {transform: translateY(-500px);}
+  to { transform: translateY(0)}
+}
+/* <i class="drop ace" style="--order: 1"> delete 1 </i> */
+/* <i class="drop ace" style="--order: 2"> delete 2 </i> */
+@media only screen and (min-width: 1024px) and (max-width: 1279px) {
+  .bannerWave {
+    bottom: -235px;
+    height: 214px;
+  }
+}
+
+
+/* MAX WIDTH 767 */
+@media only screen and (max-width: 767px) {
+  .tagsTopic {
+    margin-bottom: 10px;
+  }
+          /* blogPostCard */
+  .blogPostCard {
+    margin: 20px 0px;
+  }
+  .mobile {
+    display: none;
+  }
+  .singlePostMobile {
+    margin-top: 15px;
+  }
+  .sidebar {
+    margin-bottom: 15px;
+  }
+  .mobileDisplayNone {
+    display: none;
+  } 
+  .mobileCategoriesActive {
+    right: 15px;
+    width: 50%;
+    position: fixed;
+    z-index: 99;
+    top: 65px;
+    transition: all 0.5s;
+  }
+  .mobileNav {
+    display: block;
+    background-color: #3d4b51;
+    width: 0;
+    position: fixed;
+    z-index: 99;
+    top: 100px;
+    padding: 5px 20px;
+    left: -105px;
+    transition: all 0.5s;
+    color: #fff;
+  }
+  .mobileNav a {
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: block;
+    padding-bottom: 10px;
+  }
+  .mobileNavActive {
+    left: 0;
+    background-color: #3d4b51;
+    width: 50%;
+    position: fixed;
+    z-index: 99;
+    top: 65px;
+    padding: 5px 20px;
+    transition: all 0.5s;
+  }
+  .mobileNavActive a {
+    color: #fff;
+    font-weight: 500;
+    text-transform: capitalize;
+    display: block;
+    padding-bottom: 10px;
+  }
+  /* MOBILE TOGGLE                           */
+  .mobileToggle{
+    display: inline-block;
+    margin-right: 5px;
+  }
+  .regiFormHeading {
+    font-size: 20px;
+  }
+  .userRegistration {
+    margin-bottom: 15px;
+  }
+  .desktopView {
+    display: none;
+  }
+  .mobileViewAdmin {
+    display: none;
+  }
+  .sideDrawer {
+    display: block;
+  }
+  .navbar-nav .dropdown-toggle::after {
+    display: none;
+  }
+
+  .mobileLogo {
+    display: none;
+  }
+  .mobileLogout {
+    display: block;
+  }
+  .navSearch {
+    display: none;
+  }
+  .toggleDesk {
+    display: block;
+  }
+  .mobileBanner {
+    display: none;
+  }
+  .logo {
+    width: 55%;
+  }
+  .fLogo .logo {
+    width: 22%;
+  }
+  .desktop {
+    display: block;
+  }
+  .mobileNo {
+    display: none;
+  }
+}

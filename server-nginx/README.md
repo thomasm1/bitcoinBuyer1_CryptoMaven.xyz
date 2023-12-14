@@ -32,8 +32,10 @@ ctrl+C
 ```
 ## 6. Setup PM2 process manager to keep your app running
 ```
+https://www.npmjs.com/package/pm2
+https://pm2.keymetrics.io/
 sudo npm i pm2 -g
-pm2 start app (or whatever your file name)
+pm2 start app.js  [[instead of node app.js]]
 
 # Other pm2 commands
 pm2 show app
@@ -44,7 +46,11 @@ pm2 logs (Show log stream)
 pm2 flush (Clear logs)
 
 # To make sure app starts when reboot
-pm2 startup ubuntu
+# auto-restart after reboot:
+pm2 startup ubuntu 
+or...
+sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup ubuntu -u ubuntu --hp /home/ubuntu
+pm2 status
 ```
 ###  access app using your IP and port.  setup a firewall blocking that port and setup NGINX as a reverse proxy to access it directly using port 80 (http)
 
@@ -52,16 +58,17 @@ pm2 startup ubuntu
 ```
 sudo ufw enable
 sudo ufw status
-sudo ufw allow ssh (Port 22)
-sudo ufw allow http (Port 80)
-sudo ufw allow https (Port 443)
+sudo ufw allow ssh #(Port 22)
+sudo ufw allow http #Port 80)
+sudo ufw allow https #(Port 443)
 ```
 
 ## 8. Install NGINX and configure
 ```
-sudo apt install nginx
-
+sudo apt install nginx 
 sudo nano /etc/nginx/sites-available/default
+sudo nginx -t
+sudo service nginx restart
 ```
 Add the following to the location part of the server block
 ```
@@ -104,13 +111,30 @@ Choose "Custom nameservers" and add these 3
  
 10. Add SSL with LetsEncrypt
 ```
-sudo add-apt-repository ppa:certbot/certbot
+sudo add-apt-repository ppa:certbot/certbot  #deprecated use==>
+  curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
+
 sudo apt-get update
 sudo apt-get install python-certbot-nginx
-sudo certbot --nginx -d hexstat.xyz -d www.hexstat.xyz
-
+# sudo certbot --nginx -d hexstat.xyz -d www.hexstat.xyz
+sudo certbot --nginx -d mavencrypto.xyz -d www.mavencrypto.xyz
 # Only valid for 90 days, test the renewal process with
 certbot renew --dry-run
+
+sudo apt-get install python-certbot-apache
+sudo certbot --apache -d mavencrypto.xyz -d www.mavencrypto.xyz
 ```
  
 
+
+
+#### Load Balancer 
+* localhost port 5000
+* NGINX -Digital Ocean:  [134.122.15.249] 
+          -https://hexstat.xyz
+          -local: /home/ubuntu/nfs
+
+* NGINX -AWS - [35.175.138.209]  
+          * local: /home/thomas/apps/
+          * bitcoinBuyer1-findersCalculators
+          * https://cryptomaven.xyz https://cryptomaven.us 
