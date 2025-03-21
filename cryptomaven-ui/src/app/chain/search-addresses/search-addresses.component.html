@@ -1,0 +1,63 @@
+<div class="chain"> 
+    <h2>All Addresss</h2> 
+    <mat-form-field class="search-bar"> 
+      <input matInput placeholder="Type your search" #searchInput autocomplete="off"> 
+    </mat-form-field>
+  
+    <button class="search" mat-raised-button color="primary"
+            (click)="onSearch(searchInput.value)" >
+      <mat-icon>search</mat-icon>
+      Filter by owner<strong>,</strong> chain (optional)
+    </button>
+    <app-loader></app-loader>
+
+      <ng-container  *ngIf="!activeAddress; else detail">
+  
+          <ng-container *ngIf="(searchResults$ | async) as addresses">
+  
+           <mat-card>
+           <mat-card-content>
+            <table class="addresses-table mat-elevation-z7">
+  
+                <thead>
+                <th>Owner</th>  
+                <th>Chain</th> 
+                <th>Address</th> 
+                </thead>
+
+                <tr class="addresses-row" *ngFor="let address of addresses"
+                    (click)="openAddress(address)">
+                    <td class="owner-cell">{{address.owner }}</td> 
+                    <td class="owner-cell">{{address.chain}}</td>
+                     <td class="explorer-cell">...{{address.address | slice:-10:-1 }}</td>
+                 
+                    
+                </tr>
+
+            </table>
+           </mat-card-content>
+           </mat-card>
+  
+          </ng-container>
+  
+      </ng-container>
+  
+      <ng-template #detail>
+  
+          <button mat-raised-button class="back-btn" (click)="onBackToSearch()">
+              <mat-icon>arrow_back_ios</mat-icon>
+              Back to Search
+          </button>
+  
+          <app-address [inputAddress]="activeAddress"></app-address>
+  
+      </ng-template>
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  

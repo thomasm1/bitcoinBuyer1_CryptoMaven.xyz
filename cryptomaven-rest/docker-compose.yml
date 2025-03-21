@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  mysqldb:
+    container_name: mysqldb
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: cryptomav3n
+    networks:
+      cryptomaven-mysql-net:
+
+  dailytech-rest:
+    container_name: cryptomaven-rest
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysqldb
+    networks:
+      cryptomaven-mysql-net:
+    restart: on-failure
+
+networks:
+  cryptomaven-mysql-net:

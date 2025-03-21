@@ -1,0 +1,43 @@
+<div *ngIf="isFetching; else noPlaces">
+  <p>Loading...</p>
+</div>
+
+<section>
+  <h2>{{ title() }}</h2>
+  <ng-content />
+  <ng-template #noPlaces>
+    <p>No places available.</p>
+  </ng-template>
+  <div *ngIf="error" class="error">
+    <div>
+      <!-- <p>{{ error }}</p>   -->
+    </div>
+  </div>
+  <h2>{{ description }}</h2>
+  <div *ngIf="userCoins.length > 0">
+    <ul>
+      <div *ngFor="let coin of userCoins" class="place-item">
+        <li class="place-item
+        ">
+          <button (click)="onSelectCoin(coin)">
+            <img [src]="coin.nfts[0].metadata.image" [alt]="coin.nfts[0].name" />
+            <h3>{{ coin.nfts[0].metadata.image}} </h3>
+          </button>
+        </li>
+      </div>
+    </ul>
+  </div>
+  <div *ngIf="coins()">
+    <!-- <div *ngFor="let place of coins" class="place-item">
+      <li class="place-item">
+        <button (click)="onSelectCoin(place)">
+          <img [src]="place.image" [alt]="place.name" />
+          <h3>{{ place.name }}</h3>
+        </button>
+      </li>
+    </div>
+    <div *ngIf="(places()?.length) === 0">
+      <p class="fallback-text">Not Found!</p>
+    </div> -->
+  </div>
+</section>

@@ -1,0 +1,78 @@
+<div class="address">
+
+    <mat-card>
+        <img class="logo" src="https://s3.amazonaws.com/tmm.net/images/crypto/ether.png" />
+        <div class="address-detail">
+            <mat-card-content>
+                <p><strong>Owner:</strong> {{address.owner}}</p>
+                <p><strong>OwnerId:</strong> {{address.ownerId}}</p>
+                <p><strong>Chain:</strong> {{address.chain}}</p>
+                <p><strong>Desc:</strong> {{address.description}}</p>
+                <p><strong>Addr:</strong>{{address.address | slice:-15:-1}} </p>
+                <p><strong>Explorer:</strong> {{address.blockExplorerUrl }} </p>
+            </mat-card-content>
+        </div>
+
+        <div class="spinner-container" *ngIf="loading">
+            <mat-spinner></mat-spinner>
+        </div>
+        <mat-card-actions class="chain-actions">
+            <button mat-button mat-raised-button class="mat-elevation-z8" color="primary"
+                [routerLink]="['/nfts']">Close</button>
+            <!-- <button mat-button mat-raised-button color="accent" (click)="editChain(data.chain)">Edit</button> -->
+        </mat-card-actions>
+    </mat-card>
+
+    <div class="scrolling-container">
+        <!-- <table mat-table class="nft-table mat-elevation-z8"
+               matSort matSortDisableClear matSortActive="chainId" matSortDirection="asc"
+               [dataSource]="nft" multiTemplateDataRows>
+            <ng-container matColumnDef="select" sticky>
+                <th mat-header-cell *matHeaderCellDef>
+                    <mat-checkbox [checked]="selection.hasValue() && isAllSelected()"
+                                  [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                  (change)="toggleAll()">
+                    </mat-checkbox>
+                </th>
+                <td  mat-cell *matCellDef="let nft" (click)="$event.stopPropagation()">
+                    <mat-checkbox (change)="onNftToggled(nft)"
+                                  [checked]="selection.isSelected(nft)">
+                    </mat-checkbox>
+                </td>
+            </ng-container>
+            <ng-container matColumnDef="rpcUrl" sticky>
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>#</th>
+                <td mat-cell *matCellDef="let nft">{{nft.rpcUrl}}</td>
+            </ng-container>
+            <ng-container matColumnDef="description">
+                <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
+                <td mat-cell *matCellDef="let nft">{{nft.description}}</td>
+            </ng-container>
+            <ng-container matColumnDef="blockExplorerUrl">
+                <th mat-header-cell *matHeaderCellDef>blockExplorerUrl</th>
+                <td class="duration-cell" mat-cell *matCellDef="let nft">{{nft.blockExplorerUrl}}</td>
+            </ng-container>
+            <ng-container matColumnDef="expandedDetail">
+                <td mat-cell *matCellDef="let nft" colspan="4">
+                    {{nft.longDescription}}
+                </td>
+            </ng-container>
+            <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky:true">
+            </tr>
+            <tr mat-row
+                (click)="onToggleNft(nft)"
+                *matRowDef="let nft; columns:displayedColumns">
+            </tr>
+            <tr mat-row *matRowDef="let nft; columns:['expandedDetail']"
+                [class.collapsed-detail]="nft != expandedNft">
+            </tr>
+        </table> -->
+    </div>
+
+    <!-- [length]="addresss?.length" -->
+    <!-- <mat-paginator class="mat-elevation-z8"
+
+                   [pageSize]="3"
+                   [pageSizeOptions]="[3, 5, 10]">
+    </mat-paginator> -->
+</div>

@@ -1,0 +1,48 @@
+<ng-container *ngIf="(data$ | async) as data">
+    <mat-card class="chain">
+        <mat-card-header>
+            <mat-card-title>
+                   <h3>{{data.chain?.name | pipeUppercase}}</h3>
+            </mat-card-title> 
+        </mat-card-header>
+        <br/>
+        <mat-card-content>
+      <div class="row">
+        <div class="col-md-8">
+            <p><strong>Chain Name:</strong> {{data.chain?.description}}</p> 
+            <p><strong>Chain ID: </strong>{{data.chain?.chainId}}</p>
+            <p><strong>Chain Symbol:</strong> {{data.chain?.symbol | pipeUppercase }}</p>
+            <p><strong>Chain RPC URL:</strong> {{data.chain?.rpcUrl}}</p>
+            <p><strong>Chain Block Explorer URL:</strong> {{data.chain?.blockExplorerUrl}}</p>
+
+        </div>
+        <div class="col-md-4 img" >
+            <img class="mat-card-image" alt="Chain Logo" [src]="data.chain?.iconUrl" *ngIf="data.chain" />
+           </div>
+      </div>
+        </mat-card-content>
+             <table class="addresses-table mat-elevation-z7" *ngIf="data.addresses.length">
+
+                <thead>
+                    <tr>                       
+                        <th>ID</th>
+                        <th>Owner</th> 
+                        <th>Address</th>
+
+                    </tr>
+                </thead>
+
+                <tr class="address-row" *ngFor="let address of data.addresses">
+                    <td>{{address.chainId}}</td>
+                    <td>{{address.owner | slice:0:20 }}...</td> 
+                    <td>{{address.address | slice:-10:-1}}...</td>
+                </tr>
+            </table>  
+            <br />
+        <mat-card-actions  class="chain-actions">
+            <button mat-button mat-raised-button class="mat-elevation-z8"  color="primary" [routerLink]="['']">Close</button>
+            <!-- <button mat-button mat-raised-button color="accent" (click)="editChain(data.chain)">Edit</button> -->
+        </mat-card-actions>
+        <br />
+        </mat-card>
+</ng-container>

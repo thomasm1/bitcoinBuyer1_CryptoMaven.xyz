@@ -1,0 +1,22 @@
+<div id="status">
+  <!-- @if (chainConnection === 'online')   { -->
+  <div *nfIf="chainConnection === 'online'">
+    <p>Servers are online</p>
+    <p>All systems are operational.</p>
+  </div>
+  <!-- } @else if (chainConnection === 'offline') { -->
+  <div *nfIf="chainConnection === 'offline'">
+    <p>Servers are offline</p>
+    <p>Some systems are offline.</p>
+  </div>
+  <!-- } @else if (chainConnection === 'unvailable') { -->
+  <div *nfIf="chainConnection === 'unvailable'">
+    <p>Servers are in unvailable</p>
+    <p>Some systems are not available.</p>
+  </div>
+  <!-- } @else {   unknown   }-->
+  <div *nfIf="chainConnection === 'unknown'">
+    <p>Server status is unknown</p>
+    <p>Some systems are not available.</p>
+  </div>
+</div>

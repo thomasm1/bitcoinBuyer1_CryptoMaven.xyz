@@ -1,0 +1,25 @@
+
+ 
+  <div *ngIf="coins.length > 0; else noPlaces"> 
+    <ul>
+      <div *ngFor="let coin of coins; track coin.id" class="place-item">
+        <li class="place-item
+        ">
+          <button (click)="onSelectCoin(coin)">
+            <img [src]="coin.nfts[0].metadata.image" [alt]="coin.nfts[0].name" />
+            <h3>{{ coin.nfts[0].metadata.description}} </h3>  
+          </button>
+        </li>
+      </div>
+    </ul>
+  </div>    
+
+<app-available-chains></app-available-chains>
+<app-traffic></app-traffic>
+<app-server-status></app-server-status>
+<app-new-proto-coin></app-new-proto-coin>
+ ng-template #noPlaces>
+  <p>No places available.</p>
+ 
+
+ 

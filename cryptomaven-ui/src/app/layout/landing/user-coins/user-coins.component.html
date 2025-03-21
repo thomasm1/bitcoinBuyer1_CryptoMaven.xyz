@@ -1,0 +1,16 @@
+<app-places-container title="Chains of the Land">
+
+  <div *ngIf="landings.length > 0; else noPlaces">
+    <ul>
+      <div *ngFor="let land of landings" class="place-item">
+        <li class="place-item">
+          <button (click)="onSelectChain(land)">
+            <img [src]="'http://localhost:3000/' + land.image.src" [alt]="land.image.alt" />
+            <h3>{{ land.title }}</h3>
+          </button>
+        </li>
+      </div>
+    </ul>
+  </div>
+
+</app-places-container>

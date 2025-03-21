@@ -1,0 +1,23 @@
+<mat-card *ngFor="let chain of chains"
+class="chain-card mat-elevation-z7">
+
+    <mat-card-header>
+        <img mat-card-image [src]="chain.iconUrl" [alt]="chain.name" class="chain-logo">
+    </mat-card-header>
+    <mat-card-content>
+        <p><strong>Chain Name:</strong> {{chain.name | titlecase}}</p>
+        <p><strong>Category</strong> {{chain.category}}</p> 
+        <p><strong>Chain ID:</strong> {{chain.id}}</p>
+        <p><strong>Chain Symbol:</strong> {{chain.symbol | pipeUppercase }}</p>
+        <p><strong>Chain RPC URL:</strong><br /> {{chain.rpcUrl | slice:0:50}} </p> 
+    </mat-card-content>
+
+    <mat-card-actions class="chain-actions">
+        <button mat-button mat-raised-button class="mat-elevation-z8"  color="primary" 
+        [routerLink]="['/chains', chain.id]">View</button>
+        <button mat-button mat-raised-button class="mat-elevation-z8"   color="accent" 
+        (click)="editChain(chain)">Edit</button> 
+        <button mat-button mat-raised-button class="mat-elevation-z8"   color="warning" 
+        (click)="deleteChain(chain.id)">Delete</button> 
+    </mat-card-actions>
+</mat-card>

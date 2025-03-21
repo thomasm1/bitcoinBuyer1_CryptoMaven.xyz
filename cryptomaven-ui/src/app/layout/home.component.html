@@ -1,0 +1,42 @@
+<div class="container-panel">
+    <h3>All Chains</h3>
+
+    <mat-tab-group>
+        <mat-tab label="Chains">
+
+            <app-chains-card-list [chains]="chains$ | async">
+
+            </app-chains-card-list>
+
+        </mat-tab>
+
+        <mat-tab label="Ethereum">
+
+            <app-chains-card-list [chains]="ethereumChains$ | async">
+
+            </app-chains-card-list>
+
+        </mat-tab>
+
+
+        <mat-tab label="PulseChain">
+
+            <app-chains-card-list [chains]="pulseChains$ | async">
+    
+            </app-chains-card-list>
+    
+    
+        </mat-tab>
+    <mat-tab label="Polygon">
+
+        <app-chains-card-list [chains]="polygonChains$ | async">
+
+        </app-chains-card-list>
+
+
+    </mat-tab>
+
+</mat-tab-group>
+
+
+</div>>

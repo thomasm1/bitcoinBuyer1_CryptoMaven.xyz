@@ -1,0 +1,17 @@
+<!-- <app-places-container title="Available Places">
+  @if (places()) {
+  <app-places [places]="places()!" />
+  } @else if (places()?.length === 0) {
+  <p class="fallback-text">Unfortunately, no places could be found.</p>
+  } -->
+  <app-places-container description="Available Chains">
+ <div *ngIf="chains.length > 0; else noPlaces">
+   <div *ngFor="let ch of chains">
+      {{ch.name}}
+      {{ch.symbol}}
+      {{ch.address}}
+      {{ch.chainId}} 
+
+    </div>
+  </div>
+</app-places-container>

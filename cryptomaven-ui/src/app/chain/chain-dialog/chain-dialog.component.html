@@ -1,0 +1,74 @@
+<h3 mat-dialog-title>{{chain.description}}</h3>
+<app-loader></app-loader>
+<mat-dialog-content [formGroup]="form">
+  
+  <mat-form-field>
+    <input matInput placeholder="Network Name" formControlName="name">
+    </mat-form-field>  
+        <mat-form-field>
+        <input matInput placeholder="Currency Symbol" formControlName="symbol">
+        </mat-form-field> 
+
+        <mat-form-field>
+          <input matInput placeholder="Chain ID" formControlName="chainId">
+          </mat-form-field> 
+       
+          <mat-form-field>
+            <input matInput placeholder="Block Explorer URL" formControlName="blockExplorerUrl">
+            </mat-form-field> 
+     
+            <mat-form-field>
+              <input matInput placeholder="Release Date" formControlName="releaseDate">
+              </mat-form-field> 
+      
+  <!-- <mat-form-field>
+    <input matInput [matDatepicker]="myDatepicker" #searchInput
+           formControlName="releaseDate">
+    <mat-datepicker-toggle matSuffix
+                           [for]="myDatepicker">
+    </mat-datepicker-toggle>
+    <mat-datepicker #myDatepicker></mat-datepicker>
+  </mat-form-field>  -->
+
+  <mat-form-field>
+    <input matInput placeholder="RPC URL" formControlName="rpcUrl">
+    </mat-form-field> 
+  <mat-form-field>
+    <input matInput placeholder="Icon Url" formControlName="iconUrl">
+    </mat-form-field> 
+  <mat-form-field>
+    <input matInput placeholder="Short Description" formControlName="description">
+    </mat-form-field> 
+
+    <mat-form-field>
+      <input matInput placeholder="Category" formControlName="category">
+      </mat-form-field> 
+  <mat-form-field>
+
+    <textarea matInput placeholder="Long Description"
+              formControlName="longDescription">
+
+    </textarea>
+
+</mat-form-field>
+    </mat-dialog-content>
+
+    
+<mat-dialog-actions>
+
+    <button mat-raised-button  class="mat-elevation-z8" 
+            (click)="close()">
+      Close
+    </button>
+  
+    <button mat-raised-button class="mat-elevation-z8"  color="primary" #updateButton (click)="update()">
+      Update
+    </button>
+   
+    <button mat-raised-button class="mat-elevation-z8"  color="primary" #saveButton (click)="save()">
+      Save New
+    </button>
+  </mat-dialog-actions>
+  
+  
+  

@@ -1,0 +1,93 @@
+<mat-nav-list>
+  <div class="logo-box" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+    <a routerLink="/" (click)="onClose()">
+      <img class="logo" alt="Groot Logo" src="assets/groot.png" />
+    </a>
+  </div>
+  <hr>
+  <ul>
+    <li routerLinkActive="active">
+      <a mat-list-item routerLink="/nfts" (click)="onClose()">
+        <mat-icon>token</mat-icon>
+        <span class="nav-caption daily-tech monoton">NFTS</span>
+      </a>
+    </li>
+    <li routerLinkActive="active">
+      <a mat-list-item routerLink="/chains" (click)="onClose()">
+        <mat-icon>Ethereum &<br/>a other chains</mat-icon>
+        <span class="nav-caption daily-tech monoton">CHAINS</span>
+      </a>
+    </li>
+     
+    <li routerLinkActive="active">
+      <a mat-list-item routerLink="/" (click)="onClose()">
+        <mat-icon>computer</mat-icon>
+        <span class="nav-caption daily-tech monoton">DASHBOARD</span>
+      </a> 
+    </li>
+
+    <li routerLinkActive="active"   >
+    <!-- <li routerLinkActive="active"  *ngIf="((authStore.isLoggedIn$ | async) || (adminAuth.isAdminLoggedIn$ | async))" > -->
+      <a mat-list-item routerLink="/users" (click)="onClose()">
+        <mat-icon>person</mat-icon>
+        <span class="nav-caption daily-tech monoton">USERS</span>
+      </a> 
+    </li>
+
+    <li routerLinkActive="active"   >
+      <!-- <li routerLinkActive="active"  *ngIf="((authStore.isLoggedIn$ | async) || (adminAuth.isAdminLoggedIn$ | async))" > -->
+        <a mat-list-item routerLink="/coins" (click)="onClose()">
+          <mat-icon>money</mat-icon>
+          <span class="nav-caption daily-tech monoton">COINS</span>
+        </a> 
+      </li>
+
+
+    <li routerLinkActive="active"   >
+      <!-- <li routerLinkActive="active"  *ngIf="((authStore.isLoggedIn$ | async) || (adminAuth.isAdminLoggedIn$ | async))" > -->
+        <a mat-list-item routerLink="/addresses" (click)="onClose()">
+          <mat-icon>portfolio</mat-icon>
+          <span class="nav-caption daily-tech monoton">ADDRESSES</span>
+        </a> 
+      </li>
+
+    <li routerLinkActive="active"   >
+    <!-- <li routerLinkActive="active"  *ngIf="((authStore.isLoggedIn$ | async) || (adminAuth.isAdminLoggedIn$ | async))" > -->
+      <a mat-list-item routerLink="/search-addresses" (click)="onClose()">
+        <mat-icon>search</mat-icon>
+        <span class="nav-caption daily-tech monoton">SEARCH</span>
+      </a> 
+    </li>
+   
+    <li routerLinkActive="active" *ngIf="!((authStore.isLoggedIn$ | async) || (adminAuth.isAdminLoggedIn$ | async))"   >
+      <a mat-list-item routerLink="/login"  (click)="onClose()"> 
+        <span class="nav-caption daily-tech monoton">LOGIN</span>
+      </a> 
+      </li>
+
+      <li routerLinkActive="active" *ngIf="((authStore.isLoggedIn$ | async) || (adminAuth.isAdminLoggedIn$ | async))"    > 
+      <a mat-list-item  title="LOGOUT"  routerLink="/login" 
+      (click)="logout();onClose()">  
+        <span class="nav-caption daily-tech monoton">LOGOUT
+          <mat-icon>exit_to_app</mat-icon></span>
+      </a> 
+    </li>
+  </ul>
+<!--  
+  <hr> 
+ 
+  <a mat-list-item routerLink="/news" (click)="onClose()">
+    <mat-icon>import_contacts</mat-icon>
+    <span class="nav-caption daily-tech monoton">NEWS</span>
+  </a>   -->
+
+  <hr />
+  <!-- <a mat-list-item routerLink="search/">Search</a> --> 
+
+  <a mat-list-item id="photos" 
+  [ngClass]="{'nopointer':(this.adminAuth.isAdminLoggedOut$ |async)}"  routerLinkActive="active"
+  *ngIf="isAdmin$ | async"    routerLink="admin/users">Admin</a>
+  <!-- <a mat-list-item routerLink="photos/:id">Photos</a>  -->
+
+
+</mat-nav-list>

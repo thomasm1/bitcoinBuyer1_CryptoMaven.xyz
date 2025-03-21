@@ -1,0 +1,109 @@
+<div class="containment" fxLayout="column" fxLayoutAlign="space-evenly center">
+
+  <div class="medium-list">
+    <div class="list-viewer-wrapper">
+      <div class="list-header-title">
+        <h3 class="page-title middle">Register</h3>
+      </div>
+
+
+
+
+      <mat-tab-group>
+        <mat-tab label="Members">
+ 
+          <mat-card class="login-page">
+            <mat-card-title>New Members</mat-card-title>
+            <mat-card-content>
+          <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onAwsRegister()" >
+            <!-- novalidate -->
+            <div class="form-container">
+              <mat-form-field>
+                <input id="firstName" matInput formControlName="firstName" placeholder="&nbsp;&nbsp;First Name" class="form-control"
+                />
+                <!-- [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"  -->
+              </mat-form-field>
+    
+              <mat-form-field>
+                <input id="lastName" matInput formControlName="lastName" class="form-control"
+                  placeholder="&nbsp;&nbsp;Last Name" />
+              </mat-form-field>
+              <mat-form-field>
+                <input id="email" matInput formControlName="email" class="form-control" placeholder="&nbsp;&nbsp;Email" />
+              </mat-form-field>
+    
+              <mat-form-field>
+                <input id="password" matInput formControlName="password" class="form-control"
+                  placeholder="&nbsp;&nbsp;Password" [type]="hide ? 'password':'text'" />
+                <mat-icon class="visibility" matSuffix (click)="hide = !hide" ng-class="hide ? 'fas fa-eye' : 'far fa-eye-slash' "> 
+                  <a>{{hide ? 'visibility' : 'visibility_off'}}</a> 
+                </mat-icon>
+              </mat-form-field>
+    
+              <button mat-button type="submit" class="mat-raised-button mat-primary   register"
+                [disabled]="!registerForm.valid">
+                <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                Register</button>
+                <a mat-button routerLink="/login"  class="mat-raised-button mat-secondary "><small>Already registered?</small></a>
+            
+                <a  mat-button  routerLink="/"  class="mat-raised-button mat-secondary "><small>Cancel</small></a>
+               
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+      
+        </mat-tab>
+
+        <mat-tab label="Administration">
+
+         
+      <mat-card class="login-page">
+        <mat-card-title>Administration</mat-card-title>
+        <mat-card-content>
+      <form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onFirebaseRegister()" >
+        <!-- novalidate -->
+        <div class="form-container">
+          <mat-form-field>
+            <input id="firstName" matInput formControlName="firstName" placeholder="&nbsp;&nbsp;First Name" class="form-control"
+            />
+            <!-- [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }"  -->
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="lastName" matInput formControlName="lastName" class="form-control"
+              placeholder="&nbsp;&nbsp;Last Name" />
+          </mat-form-field>
+          <mat-form-field>
+            <input id="email" matInput formControlName="email" class="form-control" placeholder="&nbsp;&nbsp;Email" />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input id="password" matInput formControlName="password" class="form-control"
+              placeholder="&nbsp;&nbsp;Password" [type]="hide ? 'password':'text'" />
+            <mat-icon class="visibility" matSuffix (click)="hide = !hide" ng-class="hide ? 'fas fa-eye' : 'far fa-eye-slash' "> 
+              <a>{{hide ? 'visibility' : 'visibility_off'}}</a> 
+            </mat-icon>
+          </mat-form-field>
+
+          <button mat-button type="submit" class="mat-raised-button mat-primary   register"
+          [disabled]="!registerForm.valid">
+          <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+          Administer</button>
+          <a mat-button routerLink="/login"  class="mat-raised-button mat-secondary "><small>Already registered?</small></a>
+        
+            <a  mat-button  routerLink="/"  class="mat-raised-button mat-secondary "><small>Cancel</small></a>
+          
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  
+        </mat-tab>
+ 
+</mat-tab-group>
+
+
+
+    </div>
+  </div>

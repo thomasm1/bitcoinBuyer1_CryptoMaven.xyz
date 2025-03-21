@@ -1,0 +1,56 @@
+.logo  {
+max-width:80px;
+margin:30px 33% 40px;
+cursor:pointer;
+} 
+.nopointer {
+  cursor:not-allowed;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: lightgray;
+}
+.active {
+  background-color: rgba(70, 131, 180, 0.360);
+  border-radius:15px;
+}
+.navigation-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-caption {
+  display: inline-block;
+  padding-left: 6px;
+}
+ 
+
+// nav
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 130px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+ 
+img { 
+  margin-top:60px; 
+  margin-left:0px; 
+}
