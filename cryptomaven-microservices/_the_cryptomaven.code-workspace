@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "blog",
+			"path": "../../../Downloads/84-updating/blog"
+		},
+		{
+			"name": "env",
+			"path": "../../_javaclient/mini/env"
+		},
+		{
+			"path": "../../groot-material"
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+}

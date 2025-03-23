@@ -14,4 +14,3 @@ echo "Running nodes 1 - 5"
 """
 kill $(ps aux | grep '[n]ode' | awk '{print $2}')
 """
-

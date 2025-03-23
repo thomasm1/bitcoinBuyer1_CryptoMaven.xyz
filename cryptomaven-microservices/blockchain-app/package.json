@@ -2,14 +2,16 @@
   "name": "blockchain",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon index.js", 
-    "node_1": "nodemon --watch dev -e js dev-network-node.js 9001 http://localhost:9001",
-    "node_2": "nodemon --watch dev -e js dev-network-node.js 9002 http://localhost:9002",
-    "node_3": "nodemon --watch dev -e js dev-network-node.js 9003 http://localhost:9003",
-    "node_4": "nodemon --watch dev -e js dev-network-node.js 9004 http://localhost:9004",
-    "node_5": "nodemon --watch dev -e js dev-network-node.js 9005 http://localhost:9005"
+  "main": "index.js", 
+  "scripts": { 
+    "dev": "tsc -w & nodemon src/index.js", 
+    "build": "tsc",
+    "start": "nodemon src/blockchain-node.js",
+    "node_1": "nodemon --watch dev -e js src/blockchain-node.js 9001 http://localhost:9001",
+    "node_2": "nodemon --watch dev -e js src/blockchain-node.js 9002 http://localhost:9002",
+    "node_3": "nodemon --watch dev -e js src/blockchain-node.js 9003 http://localhost:9003",
+    "node_4": "nodemon --watch dev -e js src/blockchain-node.js 9004 http://localhost:9004",
+    "node_5": "nodemon --watch dev -e js src/blockchain-node.js 9005 http://localhost:9005"
   },
   "keywords": [],
   "author": "",
@@ -19,8 +21,7 @@
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "nodemon": "^2.0.20",
+    "express": "^4.18.2", 
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
     "sha256": "^0.2.0",
@@ -29,8 +30,15 @@
   "devDependencies": {
     "@types/cors": "^2.8.17",
     "@types/express": "^5.0.0",
-    "@types/node": "^20.10.2",
+    "@types/json-schema": "^7.0.15",
+    "@types/node": "^20.17.25",
+    "@types/node-forge": "^1.3.11",
+    "@types/sha256": "^0.2.2",
+    "@types/testing-library__jest-dom": "^5.14.9",
     "@types/uuid": "^9.0.8",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",    
+    "nodemon": "^3.1.0" 
+  
+
   }
 }

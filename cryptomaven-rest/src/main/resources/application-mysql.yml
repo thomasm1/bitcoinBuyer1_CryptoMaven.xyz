@@ -1,4 +1,3 @@
-app.version: 1.0.0
 
 system.environment: mysql
 #spring.config.import: optional:configserver:http://localhost:8071

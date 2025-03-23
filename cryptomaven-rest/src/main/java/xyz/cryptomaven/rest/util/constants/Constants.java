@@ -28,7 +28,9 @@ public class Constants {
   public static final String USER_PATH = "/api/users";
   public static final String USER_PATH_ID = USER_PATH + "/{userId}";
 
+  public static final String API = "/api";
   public static final String API_KEYS = "/api/keys";
+  public static final String API_EVENT = "/api/event";
   // FILES
 
     public static final String SRC_DATA_STARTUP_TEXT_ADMIN_TXT  = "src/data/STARTUP_TEXT_ADMIN.txt" ;;
