@@ -1,5 +1,6 @@
 package xyz.cryptomaven.rest.services;
 
+import org.springframework.transaction.annotation.Transactional;
 import xyz.cryptomaven.rest.models.NftCoin;
 import xyz.cryptomaven.rest.models.dto.NftCoinDto;
 import xyz.cryptomaven.rest.exception.ResourceNotFoundException;
@@ -9,6 +10,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import xyz.cryptomaven.rest.repositories.NftRepository;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -23,6 +25,7 @@ public class NftServiceImpl implements NftService {
         this.nftMapper = nftMapper;
     }
 
+    @Override
     public NftCoinDto createNft(NftCoinDto nftCoinDto) {
         NftCoin coin = nftMapper.toEntity(nftCoinDto);
 //    if (coin != null && (coin.getChainId() == 0)) {
@@ -34,11 +37,15 @@ public class NftServiceImpl implements NftService {
     }
 
 
-    public NftCoinDto getNft(Long id) {
+    @Transactional(readOnly=true)
+    @Override
+    public Optional<NftCoinDto> getNft(Long id) {
         NftCoin coin = nftRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("not found", "not found", Long.toString(id)));
-        return nftMapper.toDto(coin);
+        return Optional.ofNullable(nftMapper.toDto(coin));
     }
 
+    @Transactional(readOnly=true)
+    @Override
     public List<NftCoinDto> getAllNFTsByName(String name) {
         List<NftCoin> coins = nftRepository.findAll();
         List<NftCoinDto> content = coins.stream().map(nftMapper::toDto).collect(Collectors.toList());
@@ -46,6 +53,8 @@ public class NftServiceImpl implements NftService {
 
     }
 
+    @Transactional(readOnly=true)
+    @Override
     public List<NftCoinDto> getAllNFTs() {
         List<NftCoin> adds = nftRepository.findAll();
         List<NftCoinDto> nftCoinDtos = adds.stream().map(nftMapper::toDto).collect(Collectors.toList());
@@ -53,6 +62,7 @@ public class NftServiceImpl implements NftService {
     }
 
 
+    @Override
     public boolean updateNft(NftCoinDto change) {
         try {
             NftCoin coin = nftMapper.toEntity(change);
@@ -65,6 +75,7 @@ public class NftServiceImpl implements NftService {
         }
     }
 
+    @Override
     public boolean deleteNft(Long id) {
   try {
             nftRepository.deleteById(id);

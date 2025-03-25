@@ -15,11 +15,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @CrossOrigin(origins = "*")
-@RequestMapping(Constants.API_NFTS)
+@RequestMapping(Constants.API_NFT_COINS)
 @RestController
-public class NftController {
+public class NftCoinController {
 
-  private static final Logger log = LoggerFactory.getLogger(NftController.class);
+  private static final Logger log = LoggerFactory.getLogger(NftCoinController.class);
   @Autowired
   private NftService nftService;
 
@@ -29,14 +29,16 @@ public class NftController {
   @ApiResponse(responseCode = "200", description = "NFT found")
   @GetMapping(value = "/{id}")
   public ResponseEntity<NftCoinDto> getNft(@PathVariable("id") Long id) {
-
-    return new ResponseEntity<>(nftService.getNft(id), HttpStatus.OK);
+    return nftService.getNft(id)
+            .map(nftDto -> new ResponseEntity<>(nftDto, HttpStatus.OK))
+            .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
 
   @Operation(summary = "Get all NFTs")
   @ApiResponse(responseCode = "200", description = "NFTs found")
   @GetMapping(value = {"", "/"})
   public ResponseEntity<List<NftCoinDto>> getAllNfts() {
+
     return new ResponseEntity<>(nftService.getAllNFTs(), HttpStatus.OK);
   }
 

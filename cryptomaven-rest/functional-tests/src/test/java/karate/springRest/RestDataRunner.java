@@ -5,10 +5,10 @@ import com.intuit.karate.junit5.Karate;
 /**
  *
  */
-public class SpringRestRunner {
+public class RestDataRunner {
 
     @Karate.Test
     Karate testREST() {
-        return Karate.run("springRest").relativeTo(getClass());
+        return Karate.run("restData").relativeTo(getClass());
     }
 }

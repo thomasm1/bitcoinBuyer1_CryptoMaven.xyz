@@ -97,8 +97,10 @@ Blockchain.prototype.chainIsValid = function (blockchain) {
         const blockHash = this.hashBlock(prevBlock.hash, { transactions: currentBlock.transactions, index: currentBlock.index }, currentBlock.nonce);
         if (blockHash.substring(0, 4) !== '0000')
             validChain = false;
+        console.log('Invalid hash: ', blockHash);
         if (currentBlock.previousBlockHash !== prevBlock.hash)
             validChain = false;
+        console.log('Invalid previousBlockHash: ', currentBlock.previousBlockHash);
     }
     ;
     const genesisBlock = blockchain[0];

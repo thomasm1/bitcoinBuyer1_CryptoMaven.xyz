@@ -80,7 +80,9 @@ public class UsersController {
     if (usersService.getUser(userId).isEmpty()) {
       throw new ResourceNotFoundException("User " + userId + "not found");
     }
-    return new ResponseEntity<>(usersService.getUser(userId).get(), HttpStatus.OK);
+    return usersService.getUser(userId)
+            .map(userDto -> new ResponseEntity<>(userDto, HttpStatus.OK))
+            .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
   }
 
   @Operation(
@@ -164,7 +166,7 @@ public class UsersController {
     description = "HTTP Status 200 SUCCESS"
   )
 
-  @PutMapping(value = { USER_PATH}, consumes = "application/json")  // userId in body
+  @PutMapping(value = { USER_PATH, USER_PATH_ID}, consumes = "application/json")  // userId in body
   public ResponseEntity<UserDto> updateUser( @RequestBody UserDto userDto) {
     Optional<UserDto> updated = usersService.updateUser(userDto);
     return updated.map(dto -> new ResponseEntity<>(

@@ -38,7 +38,7 @@
 					</button>
 					<p ng-if="!block && !transaction && !addressData && initialSearchMade" class="no-data-text">
 						No data found for search.
-					</p>
+					</p> 
 				</form>
 			</div>
 		</div>
@@ -53,7 +53,7 @@
 							<td class="bold">Block Hash</td>
 							<td>{{ block.hash }}</td>
 						</tr>
-						<tr>	
+						<tr>	 
 							<td class="bold">Index</td>
 							<td>{{ block.index }}</td>
 						</tr>
@@ -131,6 +131,14 @@
 			$scope.addressData = null;
 			$scope.initialSearchMade = false;
 
+			$scope.fetchBlock = function(block) {
+				$http.get(`/blockchain`)
+				.then(response => {
+					$scope.block = response.data.blockchain;
+					$scope.transaction = null;
+					$scope.addressData = null;
+				});
+			};
 			$scope.fetchBlock = function(blockHash) {
 				$http.get(`/block/${blockHash}`)
 				.then(response => {

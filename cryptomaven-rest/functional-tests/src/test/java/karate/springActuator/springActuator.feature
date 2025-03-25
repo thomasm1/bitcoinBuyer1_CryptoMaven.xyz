@@ -12,7 +12,7 @@ Feature: Spring REST feature api health,info,env,metrics,loggers,auditevents,htt
     Then status 200
     * json res = response
     * def payload = res.data
-    * print payload
+#    * print payload
 
 #  health,info,env,metrics,loggers
     Examples:

@@ -428,7 +428,7 @@ app.get('/block-explorer', function (
 	req: BlockExplorerRequest,
 	res: BlockExplorerResponse
 ): void {
-	res.sendFile('./block-explorer/index.html', { root: __dirname } as SendFileOptions);
+	res.sendFile('./block-explorer.html', { root: __dirname } as SendFileOptions);
 });
 
 

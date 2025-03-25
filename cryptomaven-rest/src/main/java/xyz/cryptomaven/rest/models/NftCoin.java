@@ -27,7 +27,7 @@ public class NftCoin extends AbstractDomainClass {
   @JoinColumn(name = "metadata_id") // ✅ Fixed foreign key name
   private Metadata metadata;
 
-  @ManyToOne(fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
   @JoinColumn(name = "coin_id") // ✅ Fixed foreign key name
   @ToString.Exclude
   @JsonIgnore

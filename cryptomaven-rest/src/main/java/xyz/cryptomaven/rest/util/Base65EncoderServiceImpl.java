@@ -1,4 +1,4 @@
-package xyz.cryptomaven.rest.services;
+package xyz.cryptomaven.rest.util;
 
 import org.springframework.stereotype.Service;
 

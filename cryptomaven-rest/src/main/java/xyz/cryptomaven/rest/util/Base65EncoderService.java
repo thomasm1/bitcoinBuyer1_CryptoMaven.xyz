@@ -1,4 +1,4 @@
-package xyz.cryptomaven.rest.services;
+package xyz.cryptomaven.rest.util;
 
 public interface Base65EncoderService {
 

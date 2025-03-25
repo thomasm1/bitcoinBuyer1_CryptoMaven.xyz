@@ -16,8 +16,9 @@ Feature: chains feature api
 
     Examples:
       | _path     | _meth | _stat | _var1 | _var2 | _var3 |
-      | addresses | GET   | 200   |/10001    |   |   |
+      | addresses | GET   | 200   |/20    |   |   |
       | addresses | GET   | 200   |   |   |   |
+        | addresses | GET   | 200   |/20/chains    |   |   |
 #      | addresses | PUT   | 201   |/10000    |   |   |
 #      | addresses | POST   | 201   |   |   |   |
 #      | addresses | PATCH   | 201   |/10000    |   |   |

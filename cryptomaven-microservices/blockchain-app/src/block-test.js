@@ -1,5 +1,5 @@
 const { DATA_BLOCKCHAIN }  = require('./db-blockchain')
-const Blockchain = require('.Blockchain');
+const Blockchain = require('./blockchain-prototype');
 const bitcoin = new Blockchain();
 
 

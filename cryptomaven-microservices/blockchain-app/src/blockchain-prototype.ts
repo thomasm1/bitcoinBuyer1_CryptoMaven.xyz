@@ -122,9 +122,12 @@ Blockchain.prototype.chainIsValid = function(blockchain: Block[]): boolean {
     for (let i = 1; i < blockchain.length; i++) {
         const currentBlock: Block = blockchain[i];
         const prevBlock: Block = blockchain[i - 1];
-        const blockHash: string = this.hashBlock(prevBlock.hash, { transactions: currentBlock.transactions, index: currentBlock.index }, currentBlock.nonce);
-        if (blockHash.substring(0, 4) !== '0000') validChain = false;
-        if (currentBlock.previousBlockHash !== prevBlock.hash) validChain = false;
+        const blockHash: string = this.hashBlock(
+            prevBlock.hash, 
+            { transactions: currentBlock.transactions, index: currentBlock.index }, 
+            currentBlock.nonce);
+        if (blockHash.substring(0, 4) !== '0000') validChain = false; console.log('Invalid hash: ', blockHash);
+        if (currentBlock.previousBlockHash !== prevBlock.hash) validChain = false; console.log('Invalid previousBlockHash: ', currentBlock.previousBlockHash);
     };
 
     const genesisBlock: Block = blockchain[0];

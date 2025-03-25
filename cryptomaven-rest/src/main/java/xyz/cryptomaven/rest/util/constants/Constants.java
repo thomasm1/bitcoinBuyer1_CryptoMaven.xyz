@@ -5,7 +5,7 @@ public class Constants {
 
     public static final String API_COINS = "/api/coins";
     public static final String API_ADDRESSES = "/api/addresses";
-    public static final String API_NFTS = "/api/nfts";
+    public static final String API_NFT_COINS = "/api/nftCoins";
     public static final String API_CHAINS = "/api/chains";
 
     public static final String ANSI_RESET = "\u001B[0m";

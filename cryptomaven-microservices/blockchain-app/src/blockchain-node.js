@@ -211,7 +211,7 @@ app.get('/address/:address', function (req, res) {
     });
 });
 app.get('/block-explorer', function (req, res) {
-    res.sendFile('./block-explorer/index.html', { root: __dirname });
+    res.sendFile('./block-explorer.html', { root: __dirname });
 });
 app.listen(NETWORK_NODE_PORT, () => {
     console.log(`⚡️[comments server]: Server is running at https://${NETWORK_HOST}:${NETWORK_NODE_PORT}`);
