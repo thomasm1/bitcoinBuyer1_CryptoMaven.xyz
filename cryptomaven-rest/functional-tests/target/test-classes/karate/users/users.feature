@@ -1,10 +1,14 @@
 Feature:  users karate test script
 
   Background:
-#    * url 'http://34.199.129.2:8080/api/'
-    * url 'http://localhost:8080/api/'
+  Background: background
+#    * url 'http://52.3.58.191:8083/api'
+#    * url 'http://localhost:8083/api/'
 
-#  * url baseUrl
+    * url baseUrl + '/api/'
+
+
+
   @Order(1)
   Scenario: get all users and then get the first user by id
     Given path 'users'
@@ -46,7 +50,7 @@ Feature:  users karate test script
     }
       """
 # 1 CREATE
-    Given path '/users'
+    Given path 'users'
     And request user
     When method POST
     Then status 201

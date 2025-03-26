@@ -3,7 +3,11 @@ Feature: To access the GET end point which is secure with Basic Auth
   GET /api/chains
 
   Background: Setup the Base path
-    Given url 'http://localhost:8080'
+#    * url 'http://52.3.58.191:8083/api'
+#    * url 'http://localhost:8083/api/'
+
+    * url baseUrl + '/api/'
+
 
   Scenario: To access the GET end point with basic auth
     Given path '/api/chains'

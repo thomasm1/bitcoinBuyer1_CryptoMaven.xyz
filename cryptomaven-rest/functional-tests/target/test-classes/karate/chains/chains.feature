@@ -1,10 +1,11 @@
 Feature: chains feature api
 
   Background: background
-#
-#    * url 'http://34.199.129.2:8080/api'
-    * url 'http://localhost:8080/api/'
-#    * url baseUrl
+#    * url 'http://52.3.58.191:8083/api'
+#    * url 'http://localhost:8083/api/'
+
+    * url baseUrl + '/api/'
+
 
   Scenario Outline: '<_path>'
     Given path '<_path>' + '<_var1>'
@@ -15,11 +16,11 @@ Feature: chains feature api
     * print payload
 
     Examples:
-      | _path     | _meth | _stat | _var1 | _var2 | _var3 |
+      | _path       | _meth | _stat | _var1     | _var2 | _var3 |
 
-      | chains | GET   | 200   |   |   |   |
-      | chains | GET   | 200   | /31    |   |   |
-      | chains/name | GET   | 200   | /Ethereum  |   |   |
+      | chains      | GET   | 200   |           |       |       |
+      | chains      | GET   | 200   | /31       |       |       |
+      | chains/name | GET   | 200   | /Ethereum |       |       |
 
 
 #    @Test

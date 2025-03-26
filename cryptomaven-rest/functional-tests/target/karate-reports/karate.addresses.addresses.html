@@ -30,19 +30,19 @@
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2025-03-25 01:19:59 AM</div>
+    <div>2025-03-25 09:53:49 PM</div>
   </div>        
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1.1:19]"><span>[1.1:19]</span> <span></span></a>
+            <a href="#[1.1:21]"><span>[1.1:21]</span> <span></span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[1.2:20]"><span>[1.2:20]</span> <span></span></a>
+            <a href="#[1.2:22]"><span>[1.2:22]</span> <span></span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[1.3:21]"><span>[1.3:21]</span> <span></span></a>
+            <a href="#[1.3:23]"><span>[1.3:23]</span> <span></span></a>
           </div>
         </div>
       </div>
@@ -56,30 +56,57 @@
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1.1:19]">
+          <div class="scenario-heading" id="[1.1:21]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1.1:19]</span>
+                Scenario: <span>[1.1:21]</span>
                 <span class="scenario-name"></span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>335</span>
+              <span>ms:</span>&nbsp;<span>75</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1.1:19]bg">
+            <div class="step-container" id="[1.1:21]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1.1:19]bg"><div>
+          <div data-parent="[1.1:21]bg"><div>
   
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://52.3.58.191:8083/api&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://localhost:8083/api/&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    Given def baseUrl =  config.baseUrl</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
 
   <div class="step-row">
     <div class="step-container">
@@ -91,20 +118,11 @@
   </div>
 
   <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment">#    * url &#39;http://34.199.129.2:8080/api&#39;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="1.6">
-      <div class="step-ref bg-step">6</div>
+    <div class="step-container" id="1.8">
+      <div class="step-ref bg-step">8</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/api/&#39;</span>
+        <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -116,87 +134,10 @@
 
   
 
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.10">
-      <div class="step-ref passed">10</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;/20&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.11">
-      <div class="step-ref passed">11</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">329</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.11">01:19:57.383 request:
-1 &gt; GET http://localhost:8080/api/addresses/20
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:19:57.709 response time in milliseconds: 325
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:19:57 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{&quot;id&quot;:20,&quot;description&quot;:&quot;ETH: Ethereum&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas1@gmail.com&quot;,&quot;address&quot;:&quot;0xAAA111...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;,&quot;nftAddress&quot;:&quot;0xAAA111...&quot;,&quot;chains&quot;:[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}],&quot;user&quot;:{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;}}
+  <div class="preformatted" data-parent="1.8">21:53:48.883 karate.env system property was: null 
+21:53:48.884 karate.env is: mysql 
+21:53:48.884 Database Password:  
+21:53:48.885 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
 </div>   
 
   
@@ -213,7 +154,7 @@
       <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;/20&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -241,10 +182,10 @@
       <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>json res = response</span>
+        <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">71</div>
   </div>
 
    
@@ -253,7 +194,32 @@
 
   
 
-     
+  <div class="preformatted" data-parent="1.13">21:53:48.888 request:
+1 &gt; GET http://52.3.58.191:8083/api/addresses/20
+1 &gt; Host: 52.3.58.191:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:48.957 response time in milliseconds: 67
+1 &lt; 200
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Wed, 26 Mar 2025 01:53:50 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{&quot;id&quot;:20,&quot;description&quot;:&quot;ETH: Ethereum&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas1@gmail.com&quot;,&quot;address&quot;:&quot;0xAAA111...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;,&quot;nftAddress&quot;:&quot;0xAAA111...&quot;,&quot;chains&quot;:[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}],&quot;user&quot;:{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;}}
+</div>   
 
   
 
@@ -267,212 +233,6 @@
   <div class="step-row">
     <div class="step-container" id="1.14">
       <div class="step-ref passed">14</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def payload = res.data</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.15">
-      <div class="step-ref passed">15</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print payload</span>
-      </div>
-    </div>
-    <div class="time-cell passed">2</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.15">01:19:57.715 [print] null 
-</div>   
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[1.2:20]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[1.2:20]</span>
-                <span class="scenario-name"></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1700</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[1.2:20]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[1.2:20]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment">#</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment">#    * url &#39;http://34.199.129.2:8080/api&#39;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="2.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/api/&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.10">
-      <div class="step-ref passed">10</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.11">
-      <div class="step-ref passed">11</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">1698</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="2.11">01:19:57.726 request:
-1 &gt; GET http://localhost:8080/api/addresses
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:19:59.419 response time in milliseconds: 1693
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:19:59 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-[{&quot;id&quot;:20,&quot;description&quot;:&quot;ETH: Ethereum&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas1@gmail.com&quot;,&quot;address&quot;:&quot;0xAAA111...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;,&quot;nftAddress&quot;:&quot;0xAAA111...&quot;,&quot;chains&quot;:[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}],&quot;user&quot;:{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;}},{&quot;id&quot;:21,&quot;description&quot;:&quot;BSC: Binance&quot;,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas2@gmail.com&quot;,&quot;address&quot;:&quot;0xBBB222...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;,&quot;nftAddress&quot;:&quot;0xBBB222...&quot;,&quot;chains&quot;:[{&quot;id&quot;:31,&quot;name&quot;:&quot;BSC&quot;,&quot;symbol&quot;:&quot;BNB&quot;,&quot;description&quot;:&quot;BinanceChain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://bsc-dataseed.binance.org&quot;,&quot;chainId&quot;:56,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:41,&quot;nativeToken&quot;:0.1,&quot;tokens&quot;:[{&quot;id&quot;:81,&quot;rawToken&quot;:&quot;RawBeta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:71,&quot;name&quot;:&quot;NFTTwo&quot;,&quot;amount&quot;:2.5}]}],&quot;user&quot;:{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;}},{&quot;id&quot;:22,&quot;description&quot;:&quot;MATIC: Polygon&quot;,&quot;email&quot;:&quot;thomas@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas3@gmail.com&quot;,&quot;address&quot;:&quot;0xCCC333...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;,&quot;nftAddress&quot;:&quot;0xCCC333...&quot;,&quot;chains&quot;:[{&quot;id&quot;:32,&quot;name&quot;:&quot;Polygon&quot;,&quot;symbol&quot;:&quot;MATIC&quot;,&quot;description&quot;:&quot;Sidechain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc-mainnet.maticvigil.com&quot;,&quot;chainId&quot;:137,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:42,&quot;nativeToken&quot;:10.0,&quot;tokens&quot;:[{&quot;id&quot;:82,&quot;rawToken&quot;:&quot;RawGamma&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:72,&quot;name&quot;:&quot;NFTThree&quot;,&quot;amount&quot;:3.75}]}],&quot;user&quot;:{&quot;userId&quot;:12,&quot;username&quot;:&quot;thomas3@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas3&quot;,&quot;organizationCode&quot;:&quot;ORG3&quot;,&quot;dashboardCode&quot;:&quot;DASH3&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,&quot;userType&quot;:2,&quot;email&quot;:&quot;thomas3@gmail.com&quot;,&quot;contactType&quot;:103,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas3@gmail.com&quot;}},{&quot;id&quot;:23,&quot;description&quot;:&quot;AVAX: Avalanche&quot;,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas4@gmail.com&quot;,&quot;address&quot;:&quot;0xDDD444...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;,&quot;nftAddress&quot;:&quot;0xDDD444...&quot;,&quot;chains&quot;:[{&quot;id&quot;:33,&quot;name&quot;:&quot;Avalanche&quot;,&quot;symbol&quot;:&quot;AVAX&quot;,&quot;description&quot;:&quot;C-Chain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/avax.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://api.avax.network&quot;,&quot;chainId&quot;:43114,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:43,&quot;nativeToken&quot;:0.05,&quot;tokens&quot;:[{&quot;id&quot;:83,&quot;rawToken&quot;:&quot;RawDelta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:73,&quot;name&quot;:&quot;NFTFour&quot;,&quot;amount&quot;:10.0}]}],&quot;user&quot;:{&quot;userId&quot;:13,&quot;username&quot;:&quot;thomas4@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas4&quot;,&quot;organizationCode&quot;:&quot;ORG4&quot;,&quot;dashboardCode&quot;:&quot;DASH4&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;contactType&quot;:104,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas4@gmail.com&quot;}},{&quot;id&quot;:24,&quot;description&quot;:&quot;PLS: PulseChain&quot;,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas4@gmail.com&quot;,&quot;address&quot;:&quot;0xEEE555...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;,&quot;nftAddress&quot;:&quot;0xEEE555...&quot;,&quot;chains&quot;:[{&quot;id&quot;:34,&quot;name&quot;:&quot;PulseChain&quot;,&quot;symbol&quot;:&quot;PLS&quot;,&quot;description&quot;:&quot;Fork of ETH&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc.pulsechain.io&quot;,&quot;chainId&quot;:369,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:44,&quot;nativeToken&quot;:999.999,&quot;tokens&quot;:[{&quot;id&quot;:84,&quot;rawToken&quot;:&quot;RawEpsilon&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:74,&quot;name&quot;:&quot;NFTFive&quot;,&quot;amount&quot;:50.0}]}],&quot;user&quot;:{&quot;userId&quot;:14,&quot;username&quot;:&quot;thomas5@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas5&quot;,&quot;organizationCode&quot;:&quot;ORG5&quot;,&quot;dashboardCode&quot;:&quot;DASH5&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas5@gmail.com&quot;,&quot;contactType&quot;:105,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas5@gmail.com&quot;}},{&quot;id&quot;:25,&quot;description&quot;:&quot;description&quot;,&quot;email&quot;:&quot;d.maestas@gmail.com&quot;,&quot;owner&quot;:&quot;d.maestas@gmail.com&quot;,&quot;address&quot;:&quot;0x900bE021E38B8d08435A03c05657C8cFA837cAeF&quot;,&quot;iconUrl&quot;:&quot;https://icons.example.com/icon1.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://explorer1.com&quot;,&quot;nftAddress&quot;:&quot;abc123!!&quot;,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:26,&quot;description&quot;:&quot;description&quot;,&quot;email&quot;:&quot;d.maestas@gmail.com&quot;,&quot;owner&quot;:&quot;d.maestas@gmail.com&quot;,&quot;address&quot;:&quot;0x900bE021E38B8d08435A03c05657C8cFA837cAeF&quot;,&quot;iconUrl&quot;:&quot;https://icons.example.com/icon1.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://explorer1.com&quot;,&quot;nftAddress&quot;:&quot;abc123!!&quot;,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:27,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:28,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:29,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:30,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:31,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:32,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:33,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:34,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:35,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:36,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:37,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:38,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null}]
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="2.12">
-      <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
         <span>Then</span>&nbsp;<span>status 200</span>
@@ -499,8 +259,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="2.13">
-      <div class="step-ref passed">13</div>
+    <div class="step-container" id="1.15">
+      <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>json res = response</span>
@@ -527,11 +287,239 @@
   
 
   <div class="step-row">
+    <div class="step-container" id="1.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = res.data</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.17">21:53:48.961 [print] null 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.2:22]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.2:22]</span>
+                <span class="scenario-name"></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>83</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.2:22]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.2:22]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://52.3.58.191:8083/api&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://localhost:8083/api/&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    Given def baseUrl =  config.baseUrl</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="2.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.8">21:53:48.967 karate.env system property was: null 
+21:53:48.967 karate.env is: mysql 
+21:53:48.967 Database Password:  
+21:53:48.968 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="2.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">80</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="2.13">21:53:48.971 request:
+1 &gt; GET http://52.3.58.191:8083/api/addresses
+1 &gt; Host: 52.3.58.191:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:49.048 response time in milliseconds: 76
+1 &lt; 200
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Wed, 26 Mar 2025 01:53:50 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+[{&quot;id&quot;:20,&quot;description&quot;:&quot;ETH: Ethereum&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas1@gmail.com&quot;,&quot;address&quot;:&quot;0xAAA111...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;,&quot;nftAddress&quot;:&quot;0xAAA111...&quot;,&quot;chains&quot;:[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}],&quot;user&quot;:{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;}},{&quot;id&quot;:21,&quot;description&quot;:&quot;BSC: Binance&quot;,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas2@gmail.com&quot;,&quot;address&quot;:&quot;0xBBB222...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;,&quot;nftAddress&quot;:&quot;0xBBB222...&quot;,&quot;chains&quot;:[{&quot;id&quot;:31,&quot;name&quot;:&quot;BSC&quot;,&quot;symbol&quot;:&quot;BNB&quot;,&quot;description&quot;:&quot;BinanceChain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://bsc-dataseed.binance.org&quot;,&quot;chainId&quot;:56,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:41,&quot;nativeToken&quot;:0.1,&quot;tokens&quot;:[{&quot;id&quot;:81,&quot;rawToken&quot;:&quot;RawBeta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:71,&quot;name&quot;:&quot;NFTTwo&quot;,&quot;amount&quot;:2.5}]}],&quot;user&quot;:{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;}},{&quot;id&quot;:22,&quot;description&quot;:&quot;MATIC: Polygon&quot;,&quot;email&quot;:&quot;thomas@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas3@gmail.com&quot;,&quot;address&quot;:&quot;0xCCC333...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;,&quot;nftAddress&quot;:&quot;0xCCC333...&quot;,&quot;chains&quot;:[{&quot;id&quot;:32,&quot;name&quot;:&quot;Polygon&quot;,&quot;symbol&quot;:&quot;MATIC&quot;,&quot;description&quot;:&quot;Sidechain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc-mainnet.maticvigil.com&quot;,&quot;chainId&quot;:137,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:42,&quot;nativeToken&quot;:10.0,&quot;tokens&quot;:[{&quot;id&quot;:82,&quot;rawToken&quot;:&quot;RawGamma&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:72,&quot;name&quot;:&quot;NFTThree&quot;,&quot;amount&quot;:3.75}]}],&quot;user&quot;:{&quot;userId&quot;:12,&quot;username&quot;:&quot;thomas3@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas3&quot;,&quot;organizationCode&quot;:&quot;ORG3&quot;,&quot;dashboardCode&quot;:&quot;DASH3&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,&quot;userType&quot;:2,&quot;email&quot;:&quot;thomas3@gmail.com&quot;,&quot;contactType&quot;:103,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas3@gmail.com&quot;}},{&quot;id&quot;:23,&quot;description&quot;:&quot;AVAX: Avalanche&quot;,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas4@gmail.com&quot;,&quot;address&quot;:&quot;0xDDD444...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;,&quot;nftAddress&quot;:&quot;0xDDD444...&quot;,&quot;chains&quot;:[{&quot;id&quot;:33,&quot;name&quot;:&quot;Avalanche&quot;,&quot;symbol&quot;:&quot;AVAX&quot;,&quot;description&quot;:&quot;C-Chain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/avax.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://api.avax.network&quot;,&quot;chainId&quot;:43114,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:43,&quot;nativeToken&quot;:0.05,&quot;tokens&quot;:[{&quot;id&quot;:83,&quot;rawToken&quot;:&quot;RawDelta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:73,&quot;name&quot;:&quot;NFTFour&quot;,&quot;amount&quot;:10.0}]}],&quot;user&quot;:{&quot;userId&quot;:13,&quot;username&quot;:&quot;thomas4@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas4&quot;,&quot;organizationCode&quot;:&quot;ORG4&quot;,&quot;dashboardCode&quot;:&quot;DASH4&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;contactType&quot;:104,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas4@gmail.com&quot;}},{&quot;id&quot;:24,&quot;description&quot;:&quot;PLS: PulseChain&quot;,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas4@gmail.com&quot;,&quot;address&quot;:&quot;0xEEE555...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;,&quot;nftAddress&quot;:&quot;0xEEE555...&quot;,&quot;chains&quot;:[{&quot;id&quot;:34,&quot;name&quot;:&quot;PulseChain&quot;,&quot;symbol&quot;:&quot;PLS&quot;,&quot;description&quot;:&quot;Fork of ETH&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc.pulsechain.io&quot;,&quot;chainId&quot;:369,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:44,&quot;nativeToken&quot;:999.999,&quot;tokens&quot;:[{&quot;id&quot;:84,&quot;rawToken&quot;:&quot;RawEpsilon&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:74,&quot;name&quot;:&quot;NFTFive&quot;,&quot;amount&quot;:50.0}]}],&quot;user&quot;:{&quot;userId&quot;:14,&quot;username&quot;:&quot;thomas5@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas5&quot;,&quot;organizationCode&quot;:&quot;ORG5&quot;,&quot;dashboardCode&quot;:&quot;DASH5&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas5@gmail.com&quot;,&quot;contactType&quot;:105,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas5@gmail.com&quot;}},{&quot;id&quot;:25,&quot;description&quot;:&quot;description&quot;,&quot;email&quot;:&quot;d.maestas@gmail.com&quot;,&quot;owner&quot;:&quot;d.maestas@gmail.com&quot;,&quot;address&quot;:&quot;0x900bE021E38B8d08435A03c05657C8cFA837cAeF&quot;,&quot;iconUrl&quot;:&quot;https://icons.example.com/icon1.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://explorer1.com&quot;,&quot;nftAddress&quot;:&quot;abc123!!&quot;,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:26,&quot;description&quot;:&quot;description&quot;,&quot;email&quot;:&quot;d.maestas@gmail.com&quot;,&quot;owner&quot;:&quot;d.maestas@gmail.com&quot;,&quot;address&quot;:&quot;0x900bE021E38B8d08435A03c05657C8cFA837cAeF&quot;,&quot;iconUrl&quot;:&quot;https://icons.example.com/icon1.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://explorer1.com&quot;,&quot;nftAddress&quot;:&quot;abc123!!&quot;,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:27,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:28,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:29,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:30,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:31,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:32,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:33,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:34,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:35,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:36,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:37,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:38,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:39,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null}]
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="2.14">
       <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def payload = res.data</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -559,216 +547,10 @@
       <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print payload</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="2.15">01:19:59.422 [print] null 
-</div>   
-
-  
-
-</div>
-</div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[1.3:21]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[1.3:21]</span>
-                <span class="scenario-name"></span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>306</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[1.3:21]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[1.3:21]bg"><div>
-  
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment">#</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container">
-      <div class="step-ref passed"></div>
-      
-      <div class="step-cell comment">#    * url &#39;http://34.199.129.2:8080/api&#39;</div>
-    </div>
-    <div class="time-cell comment"></div>            
-  </div>
-
-  <div class="step-row">
-    <div class="step-container" id="3.6">
-      <div class="step-ref bg-step">6</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/api/&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.10">
-      <div class="step-ref passed">10</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;/20/chains&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.11">
-      <div class="step-ref passed">11</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">304</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="3.11">01:19:59.426 request:
-1 &gt; GET http://localhost:8080/api/addresses/20/chains
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:19:59.728 response time in milliseconds: 301
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:19:59 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}]
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.12">
-      <div class="step-ref passed">12</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="3.13">
-      <div class="step-ref passed">13</div>
-      
-      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -789,8 +571,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="3.14">
-      <div class="step-ref passed">14</div>
+    <div class="step-container" id="2.16">
+      <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
@@ -817,8 +599,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="3.15">
-      <div class="step-ref passed">15</div>
+    <div class="step-container" id="2.17">
+      <div class="step-ref passed">17</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print payload</span>
@@ -833,7 +615,291 @@
 
   
 
-  <div class="preformatted" data-parent="3.15">01:19:59.731 [print] null 
+  <div class="preformatted" data-parent="2.17">21:53:49.052 [print] null 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1.3:23]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1.3:23]</span>
+                <span class="scenario-name"></span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>63</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[1.3:23]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[1.3:23]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://52.3.58.191:8083/api&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://localhost:8083/api/&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    Given def baseUrl =  config.baseUrl</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="3.8">
+      <div class="step-ref bg-step">8</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.8">21:53:49.057 karate.env system property was: null 
+21:53:49.057 karate.env is: mysql 
+21:53:49.058 Database Password:  
+21:53:49.058 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;/20/chains&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">61</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.13">21:53:49.063 request:
+1 &gt; GET http://52.3.58.191:8083/api/addresses/20/chains
+1 &gt; Host: 52.3.58.191:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:49.121 response time in milliseconds: 57
+1 &lt; 200
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Wed, 26 Mar 2025 01:53:50 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}]
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.14">
+      <div class="step-ref passed">14</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.15">
+      <div class="step-ref passed">15</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>json res = response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def payload = res.data</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="3.17">
+      <div class="step-ref passed">17</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print payload</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="3.17">21:53:49.123 [print] null 
 </div>   
 
   

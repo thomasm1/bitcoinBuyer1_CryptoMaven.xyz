@@ -148,7 +148,7 @@
 				});
 			};
 
-			$scope.fetchTransaction = function(transactionId) {
+			$scope.fetchTransaction = function(transactionI) {
 				$http.get(`/transaction/${transactionId}`)
 				.then(response => {
 					$scope.transaction = response.data.transaction;

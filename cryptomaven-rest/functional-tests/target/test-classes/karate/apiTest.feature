@@ -1,10 +1,13 @@
 Feature: chains feature api
 
   Background: background
+
+#    * url 'http://52.3.58.191:8083/api'
+#    * url 'http://localhost:8083/api/'
 #
-#    * url 'http://34.199.129.2:8080/api'
-    * url 'http://localhost:8080/api/'
-#    * url baseUrl
+    * url baseUrl + '/api/'
+
+
 
   Scenario Outline: '<_path>'
     Given path '<_path>' + '<_var1>'

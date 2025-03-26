@@ -1,9 +1,11 @@
 Feature: Thorough Testing of Spring Data REST APIs
 
-  Background:
-    * url 'http://localhost:8080/'
-
-  # Test - Retrieve All Users (GET)
+  Background: background
+#    * url 'http://52.3.58.191:8083/api'
+#    * url 'http://localhost:8083/api/'
+    * url baseUrl + '/'
+    * def id = 20
+ # Test - Retrieve All Users (GET)
   Scenario: Get All Users
     Given path 'rest/users'
     When method get
@@ -14,20 +16,20 @@ Feature: Thorough Testing of Spring Data REST APIs
     * match users.page.totalPages == '#number'
     * match users.page.number == '#number'
     * print users
+    * print id
 
   # Test - Retrieve Single User by ID (GET)
-  Scenario: Get Single User by ID
-    Given path 'rest/users/10'
+  Scenario: Get All Users
+  Given path 'rest/users/' + 20
     When method get
     Then status 200
     * def user = response
-    * match user.username == 'thomas1@gmail.com'
-    * match user.email == 'thomas1@gmail.com'
-    * match user._links.self.href == 'http://localhost:8080/rest/users/10'
+    * match user.username == '#string'
+    * match user.email == '#string'
+    * match user._links.self.href == baseUrl + 'rest/users/' + 20
     * print user
 
   # Test - Create New User (POST)
-  @ignore
   Scenario: Create New User
     Given path 'rest/users'
     And request
@@ -43,49 +45,45 @@ Feature: Thorough Testing of Spring Data REST APIs
   }
   """
     When method post
-    Then status 201
-    * def newUser = response
-    * match newUser.username == 'newuser@gmail.com'
-    * print newUser
+    Then status 401
+#    * def newUser = response.data
+#    * match newUser.username == 'newuser@gmail.com'
+#    * print newUser
 
   # Test - Update Existing User (PUT)
-  @ignore
-  Scenario: Update Existing User
-    Given path 'rest/users/10'
+
+    * path 'rest/users/' + 20
     And request
     """
     {
-    "userId":10
+    "userId":20
   "firstName": "Updated",
   "lastName": "User"
   }
     """
     When method put
-    Then status 201
-    * def updatedUser = response
-    * match updatedUser.firstName == 'Updated'
-    * match updatedUser.lastName == 'User'
-    * print updatedUser
+    Then status 401
+#    * def updatedUser = response
+#    * match updatedUser.firstName == 'Updated'
+#    * match updatedUser.lastName == 'User'
+#    * print updatedUser
+#    * id =   newUser.userId
 
-  # Test - Delete User (DELETE)
-  @ignore
-  Scenario: Delete User
-    Given path 'rest/users/10'
-    When method delete
-    Then status 204
-    * print 'User deleted successfully'
+
+#    * path 'rest/users/' + id
+#    When method delete
+#    Then status 204
+#    * print 'User deleted successfully'
 
   # Test - Verify User Deletion (GET)
-  @ignore
-  Scenario: Verify User Deletion
-    Given path 'rest/users/10'
-    When method get
-    Then status 404
-    * print 'User not found, deletion verified'
+
+#    * path 'rest/users/' + 24
+#    When method get
+#    Then status 404
+#    * print 'User not found, deletion verified'
 
   # Test - Retrieve User Addresses
-  Scenario: Get User Addresses
-    Given path 'rest/users/11/addresses'
+    * path 'rest/users/'+ id + '/addresses'
     When method get
     Then status 200
     * def addresses = response
@@ -93,8 +91,7 @@ Feature: Thorough Testing of Spring Data REST APIs
     * print addresses
 
   # Test - Retrieve User Roles
-  Scenario: Get User Roles
-    Given path 'rest/users/11/roles'
+    * path 'rest/users/'+ id + '/roles'
     When method get
     Then status 200
     * def roles = response

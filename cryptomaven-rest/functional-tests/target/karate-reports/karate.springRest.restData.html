@@ -22,7 +22,7 @@
       <img src="karate-logo.svg" alt="Karate"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">4</div>
+      <div id="nav-pass" class="bg-success">3</div>
       <div id="nav-fail" class="bg-danger">0</div>
     </div>
   </div>
@@ -30,22 +30,19 @@
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2025-03-25 01:20:01 AM</div>
+    <div>2025-03-25 09:53:50 PM</div>
   </div>        
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[1:7]"><span>[1:7]</span> <span>Get All Users</span></a>
+            <a href="#[1:9]"><span>[1:9]</span> <span>Get All Users</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[2:19]"><span>[2:19]</span> <span>Get Single User by ID</span></a>
+            <a href="#[2:22]"><span>[2:22]</span> <span>Get All Users</span></a>
           </div>
           <div class="nav-item passed">
-            <a href="#[7:87]"><span>[7:87]</span> <span>Get User Addresses</span></a>
-          </div>
-          <div class="nav-item passed">
-            <a href="#[8:96]"><span>[8:96]</span> <span>Get User Roles</span></a>
+            <a href="#[3:33]"><span>[3:33]</span> <span>Create New User</span></a>
           </div>
         </div>
       </div>
@@ -59,42 +56,58 @@
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:7]">
+          <div class="scenario-heading" id="[1:9]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:7]</span>
+                Scenario: <span>[1:9]</span>
                 <span class="scenario-name">Get All Users</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>212</span>
+              <span>ms:</span>&nbsp;<span>131</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:7]bg">
+            <div class="step-container" id="[1:9]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:7]bg"><div>
-  
-
+          <div data-parent="[1:9]bg"><div>
   
 
   <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://52.3.58.191:8083/api&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://localhost:8083/api/&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/&#39;</span>
+        <span>*</span>&nbsp;<span>url baseUrl + &#39;/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -103,658 +116,39 @@
 
   
 
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref passed">8</div>
-      
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;rest/users&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.9">
-      <div class="step-ref passed">9</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">184</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.9">01:20:00.540 request:
-1 &gt; GET http://localhost:8080/rest/users
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:20:00.720 response time in milliseconds: 178
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/hal+json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:20:00 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{
-  &quot;_embedded&quot; : {
-    &quot;users&quot; : [ {
-      &quot;username&quot; : &quot;thomas1@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-      &quot;lastName&quot; : &quot;Maestas&quot;,
-      &quot;firstName&quot; : &quot;Thomas1&quot;,
-      &quot;userType&quot; : 0,
-      &quot;email&quot; : &quot;thomas1@gmail.com&quot;,
-      &quot;organizationCode&quot; : &quot;ORG1&quot;,
-      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,
-      &quot;dashboardCode&quot; : &quot;DASH1&quot;,
-      &quot;isActive&quot; : 1,
-      &quot;contactType&quot; : 101,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/10&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/10&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/10/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/10/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;thomas2@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-      &quot;lastName&quot; : &quot;Maestas&quot;,
-      &quot;firstName&quot; : &quot;Thomas2&quot;,
-      &quot;userType&quot; : 1,
-      &quot;email&quot; : &quot;thomas2@gmail.com&quot;,
-      &quot;organizationCode&quot; : &quot;ORG2&quot;,
-      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,
-      &quot;dashboardCode&quot; : &quot;DASH2&quot;,
-      &quot;isActive&quot; : 1,
-      &quot;contactType&quot; : 102,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/11&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/11&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/11/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/11/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;thomas3@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-      &quot;lastName&quot; : &quot;Maestas&quot;,
-      &quot;firstName&quot; : &quot;Thomas3&quot;,
-      &quot;userType&quot; : 2,
-      &quot;email&quot; : &quot;thomas3@gmail.com&quot;,
-      &quot;organizationCode&quot; : &quot;ORG3&quot;,
-      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,
-      &quot;dashboardCode&quot; : &quot;DASH3&quot;,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 103,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/12&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/12&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/12/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/12/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;thomas4@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-      &quot;lastName&quot; : &quot;Maestas&quot;,
-      &quot;firstName&quot; : &quot;Thomas4&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;thomas4@gmail.com&quot;,
-      &quot;organizationCode&quot; : &quot;ORG4&quot;,
-      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,
-      &quot;dashboardCode&quot; : &quot;DASH4&quot;,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 104,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/13&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/13&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/13/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/13/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;thomas5@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-      &quot;lastName&quot; : &quot;Maestas&quot;,
-      &quot;firstName&quot; : &quot;Thomas5&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;thomas5@gmail.com&quot;,
-      &quot;organizationCode&quot; : &quot;ORG5&quot;,
-      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,
-      &quot;dashboardCode&quot; : &quot;DASH5&quot;,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 105,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/14&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/14&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/14/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/14/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;bb@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$5bnI4neoZdcw1CB9dqS4FuKTQLogNjc1vlxSa.LVmmJ3VQLDfjkKq&quot;,
-      &quot;lastName&quot; : null,
-      &quot;firstName&quot; : null,
-      &quot;userType&quot; : 0,
-      &quot;email&quot; : &quot;bb@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : null,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 0,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/15&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/15&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/15/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/15/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;bbb@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$3K6P69aUT6wfNKLaDNMpPevSwhi8S.iCcPxQVqknCYKS1MkD7MKPW&quot;,
-      &quot;lastName&quot; : null,
-      &quot;firstName&quot; : null,
-      &quot;userType&quot; : 0,
-      &quot;email&quot; : &quot;bbb@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : null,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 0,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/16&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/16&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/16/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/16/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user625@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$pIiw0xai0MlQgAPL6YAQMulS3sXQlJs7dTFZgYAB8EthjoZ6St5qO&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user625@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/17&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/17&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/17/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/17/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user676@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$NshbPfpZ7SKlg927U7tEpeCVkySDm/1y3Zacfqed0LmEupjh28ZHe&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user676@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/18&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/18&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/18/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/18/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user696@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$8jOPDDeeUrnn1k7iKhagX.Cg5OoOrCMyC3nVpbpFuHHxESsqOShxm&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user696@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/19&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/19&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/19/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/19/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user754@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$cVvDqR7bfy.PWhG.oJAixuQTDOspNdcwqWniuher0PqeNq1MQh8he&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user754@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/20&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/20&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/20/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/20/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user217@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$PVH3mvqKz4Ww0lP3fzI/A.WCYx3ZR1A401is8dAOg/pSrQHApg6ha&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user217@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-217.fancyPhotos.com/photos/217&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/21&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/21&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/21/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/21/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user739@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$CCgNGWS1uVFrxgqPXDwQFuVIeBAPrhRXFyAjLM4fOymAbL4zUlYaa&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user739@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-739.fancyPhotos.com/photos/739&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/22&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/22&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/22/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/22/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user588@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$fBWvHV6Uj5oInzKuJtNCU.B2EdDJYRGO1xDV7BygN2WlSL6xOcCOO&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user588@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-588.fancyPhotos.com/photos/588&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/23&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/23&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/23/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/23/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user883@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$vDpmHynA.hDS4LNJU8X0UeLzh2k6TgbgkRkZ87x03zIN6CmfxmxES&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user883@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-883.fancyPhotos.com/photos/883&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/24&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/24&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/24/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/24/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user699@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$u4zQJUXxOOMl2FF2EbWsYu6hSjStDFPtQGCY6Ea7PftI9WsPv4Tde&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user699@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-699.fancyPhotos.com/photos/699&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/25&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/25&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/25/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/25/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user290@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$bQ78SImHGOGxLWtAPzhP5OIpYLFsIsunYD24Gr7q5W/uKn1ZMs2Cu&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user290@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-290.fancyPhotos.com/photos/290&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/27&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/27&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/27/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/27/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user494@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$b3IoS5WL7TFgJFE1cc4QWeFKlsKCTex5oJO1nYlRo4xO6ZH5QSU8C&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user494@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-494.fancyPhotos.com/photos/494&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/28&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/28&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/28/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/28/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user528@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$y/mUYuE2lsxngmLClkucQu4LIOwTr7/OKOQuNblP3zUad83KyP7JC&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user528@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-528.fancyPhotos.com/photos/528&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/29&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/29&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/29/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/29/roles&quot;
-        }
-      }
-    }, {
-      &quot;username&quot; : &quot;user506@gmail.com&quot;,
-      &quot;password&quot; : &quot;$2a$10$EcDZqbCKoe5jA0RGc/97a.ymE7xwSZEgZg9oBw7Ou8aT/dskFXEeK&quot;,
-      &quot;lastName&quot; : &quot;Smith&quot;,
-      &quot;firstName&quot; : &quot;Tom1&quot;,
-      &quot;userType&quot; : 3,
-      &quot;email&quot; : &quot;user506@gmail.com&quot;,
-      &quot;organizationCode&quot; : null,
-      &quot;cusUrl&quot; : &quot;www.photo-506.fancyPhotos.com/photos/506&quot;,
-      &quot;dashboardCode&quot; : null,
-      &quot;isActive&quot; : 0,
-      &quot;contactType&quot; : 1,
-      &quot;id&quot; : null,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/30&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/30&quot;
-        },
-        &quot;addresses&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/30/addresses&quot;
-        },
-        &quot;roles&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/users/30/roles&quot;
-        }
-      }
-    } ]
-  },
-  &quot;_links&quot; : {
-    &quot;first&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users?page=0&amp;size=20&quot;
-    },
-    &quot;self&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users?page=0&amp;size=20&quot;
-    },
-    &quot;next&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users?page=1&amp;size=20&quot;
-    },
-    &quot;last&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users?page=2&amp;size=20&quot;
-    },
-    &quot;profile&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/profile/users&quot;
-    },
-    &quot;search&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/search&quot;
-    }
-  },
-  &quot;page&quot; : {
-    &quot;size&quot; : 20,
-    &quot;totalElements&quot; : 41,
-    &quot;totalPages&quot; : 3,
-    &quot;number&quot; : 0
-  }
-}
+  <div class="preformatted" data-parent="0.6">21:53:50.223 karate.env system property was: null 
+21:53:50.223 karate.env is: mysql 
+21:53:50.223 Database Password:  
+21:53:50.224 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
 </div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[1:9]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def id = 20</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
 
   
 
@@ -770,7 +164,7 @@
       <div class="step-ref passed">10</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>Given</span>&nbsp;<span>path &#39;rest/users&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -798,6 +192,657 @@
       <div class="step-ref passed">11</div>
       
       <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">95</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.11">21:53:50.228 request:
+1 &gt; GET http://52.3.58.191:8083/rest/users
+1 &gt; Host: 52.3.58.191:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:50.320 response time in milliseconds: 92
+1 &lt; 200
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Type: application/hal+json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Wed, 26 Mar 2025 01:53:51 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{
+  &quot;_embedded&quot; : {
+    &quot;users&quot; : [ {
+      &quot;username&quot; : &quot;thomas1@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
+      &quot;lastName&quot; : &quot;Maestas&quot;,
+      &quot;firstName&quot; : &quot;Thomas1&quot;,
+      &quot;userType&quot; : 0,
+      &quot;email&quot; : &quot;thomas1@gmail.com&quot;,
+      &quot;organizationCode&quot; : &quot;ORG1&quot;,
+      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,
+      &quot;dashboardCode&quot; : &quot;DASH1&quot;,
+      &quot;isActive&quot; : 1,
+      &quot;contactType&quot; : 101,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/10&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/10&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/10/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/10/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;thomas2@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
+      &quot;lastName&quot; : &quot;Maestas&quot;,
+      &quot;firstName&quot; : &quot;Thomas2&quot;,
+      &quot;userType&quot; : 1,
+      &quot;email&quot; : &quot;thomas2@gmail.com&quot;,
+      &quot;organizationCode&quot; : &quot;ORG2&quot;,
+      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,
+      &quot;dashboardCode&quot; : &quot;DASH2&quot;,
+      &quot;isActive&quot; : 1,
+      &quot;contactType&quot; : 102,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/11&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/11&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/11/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/11/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;thomas3@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
+      &quot;lastName&quot; : &quot;Maestas&quot;,
+      &quot;firstName&quot; : &quot;Thomas3&quot;,
+      &quot;userType&quot; : 2,
+      &quot;email&quot; : &quot;thomas3@gmail.com&quot;,
+      &quot;organizationCode&quot; : &quot;ORG3&quot;,
+      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,
+      &quot;dashboardCode&quot; : &quot;DASH3&quot;,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 103,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/12&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/12&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/12/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/12/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;thomas4@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
+      &quot;lastName&quot; : &quot;Maestas&quot;,
+      &quot;firstName&quot; : &quot;Thomas4&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;thomas4@gmail.com&quot;,
+      &quot;organizationCode&quot; : &quot;ORG4&quot;,
+      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,
+      &quot;dashboardCode&quot; : &quot;DASH4&quot;,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 104,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/13&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/13&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/13/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/13/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;thomas5@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
+      &quot;lastName&quot; : &quot;Maestas&quot;,
+      &quot;firstName&quot; : &quot;Thomas5&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;thomas5@gmail.com&quot;,
+      &quot;organizationCode&quot; : &quot;ORG5&quot;,
+      &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,
+      &quot;dashboardCode&quot; : &quot;DASH5&quot;,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 105,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/14&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/14&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/14/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/14/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;bb@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$5bnI4neoZdcw1CB9dqS4FuKTQLogNjc1vlxSa.LVmmJ3VQLDfjkKq&quot;,
+      &quot;lastName&quot; : null,
+      &quot;firstName&quot; : null,
+      &quot;userType&quot; : 0,
+      &quot;email&quot; : &quot;bb@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : null,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 0,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/15&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/15&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/15/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/15/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;bbb@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$3K6P69aUT6wfNKLaDNMpPevSwhi8S.iCcPxQVqknCYKS1MkD7MKPW&quot;,
+      &quot;lastName&quot; : null,
+      &quot;firstName&quot; : null,
+      &quot;userType&quot; : 0,
+      &quot;email&quot; : &quot;bbb@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : null,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 0,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/16&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/16&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/16/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/16/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user625@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$pIiw0xai0MlQgAPL6YAQMulS3sXQlJs7dTFZgYAB8EthjoZ6St5qO&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user625@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/17&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/17&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/17/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/17/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user676@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$NshbPfpZ7SKlg927U7tEpeCVkySDm/1y3Zacfqed0LmEupjh28ZHe&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user676@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/18&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/18&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/18/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/18/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user696@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$8jOPDDeeUrnn1k7iKhagX.Cg5OoOrCMyC3nVpbpFuHHxESsqOShxm&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user696@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/19&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/19&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/19/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/19/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user754@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$cVvDqR7bfy.PWhG.oJAixuQTDOspNdcwqWniuher0PqeNq1MQh8he&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user754@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user217@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$PVH3mvqKz4Ww0lP3fzI/A.WCYx3ZR1A401is8dAOg/pSrQHApg6ha&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user217@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-217.fancyPhotos.com/photos/217&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/21&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/21&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/21/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/21/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user739@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$CCgNGWS1uVFrxgqPXDwQFuVIeBAPrhRXFyAjLM4fOymAbL4zUlYaa&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user739@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-739.fancyPhotos.com/photos/739&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/22&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/22&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/22/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/22/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user588@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$fBWvHV6Uj5oInzKuJtNCU.B2EdDJYRGO1xDV7BygN2WlSL6xOcCOO&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user588@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-588.fancyPhotos.com/photos/588&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/23&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/23&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/23/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/23/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user883@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$vDpmHynA.hDS4LNJU8X0UeLzh2k6TgbgkRkZ87x03zIN6CmfxmxES&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user883@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-883.fancyPhotos.com/photos/883&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/24&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/24&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/24/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/24/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user699@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$u4zQJUXxOOMl2FF2EbWsYu6hSjStDFPtQGCY6Ea7PftI9WsPv4Tde&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user699@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-699.fancyPhotos.com/photos/699&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/25&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/25&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/25/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/25/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user290@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$bQ78SImHGOGxLWtAPzhP5OIpYLFsIsunYD24Gr7q5W/uKn1ZMs2Cu&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user290@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-290.fancyPhotos.com/photos/290&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/27&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/27&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/27/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/27/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user494@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$b3IoS5WL7TFgJFE1cc4QWeFKlsKCTex5oJO1nYlRo4xO6ZH5QSU8C&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user494@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-494.fancyPhotos.com/photos/494&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/28&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/28&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/28/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/28/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user528@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$y/mUYuE2lsxngmLClkucQu4LIOwTr7/OKOQuNblP3zUad83KyP7JC&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user528@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-528.fancyPhotos.com/photos/528&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/29&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/29&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/29/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/29/roles&quot;
+        }
+      }
+    }, {
+      &quot;username&quot; : &quot;user506@gmail.com&quot;,
+      &quot;password&quot; : &quot;$2a$10$EcDZqbCKoe5jA0RGc/97a.ymE7xwSZEgZg9oBw7Ou8aT/dskFXEeK&quot;,
+      &quot;lastName&quot; : &quot;Smith&quot;,
+      &quot;firstName&quot; : &quot;Tom1&quot;,
+      &quot;userType&quot; : 3,
+      &quot;email&quot; : &quot;user506@gmail.com&quot;,
+      &quot;organizationCode&quot; : null,
+      &quot;cusUrl&quot; : &quot;www.photo-506.fancyPhotos.com/photos/506&quot;,
+      &quot;dashboardCode&quot; : null,
+      &quot;isActive&quot; : 0,
+      &quot;contactType&quot; : 1,
+      &quot;id&quot; : null,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/30&quot;
+        },
+        &quot;user&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/30&quot;
+        },
+        &quot;addresses&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/30/addresses&quot;
+        },
+        &quot;roles&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/30/roles&quot;
+        }
+      }
+    } ]
+  },
+  &quot;_links&quot; : {
+    &quot;first&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users?page=0&amp;size=20&quot;
+    },
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users?page=0&amp;size=20&quot;
+    },
+    &quot;next&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users?page=1&amp;size=20&quot;
+    },
+    &quot;last&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users?page=3&amp;size=20&quot;
+    },
+    &quot;profile&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/profile/users&quot;
+    },
+    &quot;search&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/search&quot;
+    }
+  },
+  &quot;page&quot; : {
+    &quot;size&quot; : 20,
+    &quot;totalElements&quot; : 69,
+    &quot;totalPages&quot; : 4,
+    &quot;number&quot; : 0
+  }
+}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
+      
+      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def users = response</span>
       </div>
     </div>
@@ -822,14 +867,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.12">
-      <div class="step-ref passed">12</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match users._embedded.users != null</span>
       </div>
     </div>
-    <div class="time-cell passed">21</div>
+    <div class="time-cell passed">24</div>
   </div>
 
    
@@ -850,8 +895,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.13">
-      <div class="step-ref passed">13</div>
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match users.page.size == &#39;#number&#39;</span>
@@ -878,14 +923,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match users.page.totalPages == &#39;#number&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -906,8 +951,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.15">
-      <div class="step-ref passed">15</div>
+    <div class="step-container" id="0.17">
+      <div class="step-ref passed">17</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match users.page.number == &#39;#number&#39;</span>
@@ -934,14 +979,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.16">
-      <div class="step-ref passed">16</div>
+    <div class="step-container" id="0.18">
+      <div class="step-ref passed">18</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print users</span>
       </div>
     </div>
-    <div class="time-cell passed">5</div>
+    <div class="time-cell passed">7</div>
   </div>
 
    
@@ -950,7 +995,7 @@
 
   
 
-  <div class="preformatted" data-parent="0.16">01:20:00.748 [print] {
+  <div class="preformatted" data-parent="0.18">21:53:50.355 [print] {
   &quot;_embedded&quot;: {
     &quot;users&quot;: [
       {
@@ -968,16 +1013,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/10&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/10&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/10&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/10&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/10/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/10/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/10/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/10/roles&quot;
           }
         }
       },
@@ -996,16 +1041,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/11&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/11&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/11&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/11&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/11/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/11/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/11/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/11/roles&quot;
           }
         }
       },
@@ -1024,16 +1069,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/12&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/12&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/12&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/12&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/12/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/12/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/12/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/12/roles&quot;
           }
         }
       },
@@ -1052,16 +1097,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/13&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/13&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/13&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/13&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/13/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/13/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/13/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/13/roles&quot;
           }
         }
       },
@@ -1080,16 +1125,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/14&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/14&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/14&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/14&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/14/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/14/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/14/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/14/roles&quot;
           }
         }
       },
@@ -1108,16 +1153,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/15&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/15&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/15&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/15&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/15/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/15/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/15/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/15/roles&quot;
           }
         }
       },
@@ -1136,16 +1181,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/16&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/16&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/16&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/16&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/16/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/16/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/16/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/16/roles&quot;
           }
         }
       },
@@ -1164,16 +1209,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/17&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/17&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/17&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/17&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/17/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/17/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/17/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/17/roles&quot;
           }
         }
       },
@@ -1192,16 +1237,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/18&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/18&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/18&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/18&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/18/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/18/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/18/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/18/roles&quot;
           }
         }
       },
@@ -1220,16 +1265,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/19&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/19&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/19&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/19&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/19/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/19/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/19/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/19/roles&quot;
           }
         }
       },
@@ -1248,16 +1293,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/20&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/20&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/20/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/20/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20/roles&quot;
           }
         }
       },
@@ -1276,16 +1321,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/21&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/21&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/21&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/21&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/21/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/21/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/21/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/21/roles&quot;
           }
         }
       },
@@ -1304,16 +1349,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/22&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/22&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/22&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/22&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/22/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/22/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/22/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/22/roles&quot;
           }
         }
       },
@@ -1332,16 +1377,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/23&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/23&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/23&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/23&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/23/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/23/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/23/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/23/roles&quot;
           }
         }
       },
@@ -1360,16 +1405,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/24&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/24&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/24&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/24&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/24/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/24/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/24/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/24/roles&quot;
           }
         }
       },
@@ -1388,16 +1433,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/25&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/25&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/25&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/25&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/25/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/25/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/25/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/25/roles&quot;
           }
         }
       },
@@ -1416,16 +1461,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/27&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/27&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/27&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/27&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/27/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/27/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/27/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/27/roles&quot;
           }
         }
       },
@@ -1444,16 +1489,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/28&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/28&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/28&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/28&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/28/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/28/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/28/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/28/roles&quot;
           }
         }
       },
@@ -1472,16 +1517,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/29&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/29&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/29&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/29&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/29/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/29/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/29/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/29/roles&quot;
           }
         }
       },
@@ -1500,16 +1545,16 @@
         &quot;id&quot;: null,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/30&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/30&quot;
           },
           &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/30&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/30&quot;
           },
           &quot;addresses&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/30/addresses&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/30/addresses&quot;
           },
           &quot;roles&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/users/30/roles&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/30/roles&quot;
           }
         }
       }
@@ -1517,28 +1562,28 @@
   },
   &quot;_links&quot;: {
     &quot;first&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users?page=0&amp;size=20&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users?page=0&amp;size=20&quot;
     },
     &quot;self&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users?page=0&amp;size=20&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users?page=0&amp;size=20&quot;
     },
     &quot;next&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users?page=1&amp;size=20&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users?page=1&amp;size=20&quot;
     },
     &quot;last&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users?page=2&amp;size=20&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users?page=3&amp;size=20&quot;
     },
     &quot;profile&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/profile/users&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/profile/users&quot;
     },
     &quot;search&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/search&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/search&quot;
     }
   },
   &quot;page&quot;: {
     &quot;size&quot;: 20,
-    &quot;totalElements&quot;: 41,
-    &quot;totalPages&quot;: 3,
+    &quot;totalElements&quot;: 69,
+    &quot;totalPages&quot;: 4,
     &quot;number&quot;: 0
   }
 }
@@ -1549,72 +1594,20 @@
 
 </div>
 </div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[2:19]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[2:19]</span>
-                <span class="scenario-name">Get Single User by ID</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>143</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[2:19]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[2:19]bg"><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/&#39;</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
           <div><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.20">
-      <div class="step-ref passed">20</div>
+    <div class="step-container" id="0.19">
+      <div class="step-ref passed">19</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;rest/users/10&#39;</span>
+        <span>*</span>&nbsp;<span>print id</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1623,103 +1616,96 @@
 
   
 
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.21">
-      <div class="step-ref passed">21</div>
-      
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">140</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.21">01:20:00.752 request:
-1 &gt; GET http://localhost:8080/rest/users/10
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:20:00.891 response time in milliseconds: 139
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/hal+json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:20:00 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{
-  &quot;username&quot; : &quot;thomas1@gmail.com&quot;,
-  &quot;password&quot; : &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-  &quot;lastName&quot; : &quot;Maestas&quot;,
-  &quot;firstName&quot; : &quot;Thomas1&quot;,
-  &quot;userType&quot; : 0,
-  &quot;email&quot; : &quot;thomas1@gmail.com&quot;,
-  &quot;organizationCode&quot; : &quot;ORG1&quot;,
-  &quot;cusUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,
-  &quot;dashboardCode&quot; : &quot;DASH1&quot;,
-  &quot;isActive&quot; : 1,
-  &quot;contactType&quot; : 101,
-  &quot;id&quot; : null,
-  &quot;_links&quot; : {
-    &quot;self&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/10&quot;
-    },
-    &quot;user&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/10&quot;
-    },
-    &quot;addresses&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/10/addresses&quot;
-    },
-    &quot;roles&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/10/roles&quot;
-    }
-  }
-}
+  <div class="preformatted" data-parent="0.19">21:53:50.356 [print] 20 
 </div>   
 
   
 
 </div>
 </div>
-          <div><div>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[2:22]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[2:22]</span>
+                <span class="scenario-name">Get All Users</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>76</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[2:22]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[2:22]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://52.3.58.191:8083/api&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://localhost:8083/api/&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl + &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.6">21:53:50.359 karate.env system property was: null 
+21:53:50.360 karate.env is: mysql 
+21:53:50.360 Database Password:  
+21:53:50.360 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[2:22]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref passed">22</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>*</span>&nbsp;<span>def id = 20</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1747,10 +1733,10 @@
       <div class="step-ref passed">23</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def user = response</span>
+        <span>Given</span>&nbsp;<span>path &#39;rest/users/&#39; + 20</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1775,10 +1761,10 @@
       <div class="step-ref passed">24</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match user.username == &#39;thomas1@gmail.com&#39;</span>
+        <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">69</div>
   </div>
 
    
@@ -1787,7 +1773,59 @@
 
   
 
-     
+  <div class="preformatted" data-parent="0.24">21:53:50.363 request:
+1 &gt; GET http://52.3.58.191:8083/rest/users/20
+1 &gt; Host: 52.3.58.191:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:50.431 response time in milliseconds: 67
+1 &lt; 200
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Type: application/hal+json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Date: Wed, 26 Mar 2025 01:53:51 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+{
+  &quot;username&quot; : &quot;user754@gmail.com&quot;,
+  &quot;password&quot; : &quot;$2a$10$cVvDqR7bfy.PWhG.oJAixuQTDOspNdcwqWniuher0PqeNq1MQh8he&quot;,
+  &quot;lastName&quot; : &quot;Smith&quot;,
+  &quot;firstName&quot; : &quot;Tom1&quot;,
+  &quot;userType&quot; : 3,
+  &quot;email&quot; : &quot;user754@gmail.com&quot;,
+  &quot;organizationCode&quot; : null,
+  &quot;cusUrl&quot; : &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
+  &quot;dashboardCode&quot; : null,
+  &quot;isActive&quot; : 0,
+  &quot;contactType&quot; : 1,
+  &quot;id&quot; : null,
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20&quot;
+    },
+    &quot;user&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20&quot;
+    },
+    &quot;addresses&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20/addresses&quot;
+    },
+    &quot;roles&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20/roles&quot;
+    }
+  }
+}
+</div>   
 
   
 
@@ -1803,7 +1841,7 @@
       <div class="step-ref passed">25</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match user.email == &#39;thomas1@gmail.com&#39;</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1831,7 +1869,7 @@
       <div class="step-ref passed">26</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>match user._links.self.href == &#39;http://localhost:8080/rest/users/10&#39;</span>
+        <span>*</span>&nbsp;<span>def user = response</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1859,7 +1897,7 @@
       <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print user</span>
+        <span>*</span>&nbsp;<span>match user.username == &#39;#string&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">1</div>
@@ -1871,31 +1909,115 @@
 
   
 
-  <div class="preformatted" data-parent="0.27">01:20:00.894 [print] {
-  &quot;username&quot;: &quot;thomas1@gmail.com&quot;,
-  &quot;password&quot;: &quot;$2a$10$4IjU5vHSf/oB8yyU/vTN2evgS8r9HBksZ9Eq8Aq4LN2LqnrvFX9jC&quot;,
-  &quot;lastName&quot;: &quot;Maestas&quot;,
-  &quot;firstName&quot;: &quot;Thomas1&quot;,
-  &quot;userType&quot;: 0,
-  &quot;email&quot;: &quot;thomas1@gmail.com&quot;,
-  &quot;organizationCode&quot;: &quot;ORG1&quot;,
-  &quot;cusUrl&quot;: &quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,
-  &quot;dashboardCode&quot;: &quot;DASH1&quot;,
-  &quot;isActive&quot;: 1,
-  &quot;contactType&quot;: 101,
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.28">
+      <div class="step-ref passed">28</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match user.email == &#39;#string&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.29">
+      <div class="step-ref passed">29</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>match user._links.self.href == baseUrl + &#39;rest/users/&#39; + 20</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.30">
+      <div class="step-ref passed">30</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print user</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.30">21:53:50.437 [print] {
+  &quot;username&quot;: &quot;user754@gmail.com&quot;,
+  &quot;password&quot;: &quot;$2a$10$cVvDqR7bfy.PWhG.oJAixuQTDOspNdcwqWniuher0PqeNq1MQh8he&quot;,
+  &quot;lastName&quot;: &quot;Smith&quot;,
+  &quot;firstName&quot;: &quot;Tom1&quot;,
+  &quot;userType&quot;: 3,
+  &quot;email&quot;: &quot;user754@gmail.com&quot;,
+  &quot;organizationCode&quot;: null,
+  &quot;cusUrl&quot;: &quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,
+  &quot;dashboardCode&quot;: null,
+  &quot;isActive&quot;: 0,
+  &quot;contactType&quot;: 1,
   &quot;id&quot;: null,
   &quot;_links&quot;: {
     &quot;self&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/10&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20&quot;
     },
     &quot;user&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/10&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20&quot;
     },
     &quot;addresses&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/10/addresses&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20/addresses&quot;
     },
     &quot;roles&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/10/roles&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20/roles&quot;
     }
   }
 }
@@ -1908,39 +2030,87 @@
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[7:87]">
+          <div class="scenario-heading" id="[3:33]">
             <div class="heading-container">
               <div class="scenario-tags">
                 
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[7:87]</span>
-                <span class="scenario-name">Get User Addresses</span>
+                Scenario: <span>[3:33]</span>
+                <span class="scenario-name">Create New User</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>157</span>
+              <span>ms:</span>&nbsp;<span>331</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[7:87]bg">
+            <div class="step-container" id="[3:33]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[7:87]bg"><div>
+          <div data-parent="[3:33]bg"><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://52.3.58.191:8083/api&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * url &#39;http://localhost:8083/api/&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref bg-step">6</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>url baseUrl + &#39;/&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.6">21:53:50.443 karate.env system property was: null 
+21:53:50.443 karate.env is: mysql 
+21:53:50.443 Database Password:  
+21:53:50.444 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:33]bg"><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/&#39;</span>
+        <span>*</span>&nbsp;<span>def id = 20</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1964,11 +2134,550 @@
   
 
   <div class="step-row">
+    <div class="step-container" id="0.34">
+      <div class="step-ref passed">34</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;rest/users&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.35">
+      <div class="step-ref passed">35</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.35">{
+&quot;username&quot;: &quot;newuser@gmail.com&quot;,
+&quot;password&quot;: &quot;newpassword&quot;,
+&quot;firstName&quot;: &quot;New&quot;,
+&quot;lastName&quot;: &quot;User&quot;,
+&quot;userType&quot;: 1,
+&quot;email&quot;: &quot;newuser@gmail.com&quot;,
+&quot;isActive&quot;: 1
+}</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.47">
+      <div class="step-ref passed">47</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">124</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.47">21:53:50.496 request:
+1 &gt; POST http://52.3.58.191:8083/rest/users
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 147
+1 &gt; Host: 52.3.58.191:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;newuser@gmail.com&quot;,&quot;password&quot;:&quot;newpassword&quot;,&quot;firstName&quot;:&quot;New&quot;,&quot;lastName&quot;:&quot;User&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;newuser@gmail.com&quot;,&quot;isActive&quot;:1}
+
+21:53:50.572 response time in milliseconds: 76
+1 &lt; 401
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 26 Mar 2025 01:53:51 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.48">
+      <div class="step-ref passed">48</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * def newUser = response.data</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * match newUser.username == &#39;newuser@gmail.com&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * print newUser</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Test - Update Existing User (PUT)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.55">
+      <div class="step-ref passed">55</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>path &#39;rest/users/&#39; + 20</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.56">
+      <div class="step-ref passed">56</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  <div class="preformatted" data-parent="0.56">{
+&quot;userId&quot;:20
+  &quot;firstName&quot;: &quot;Updated&quot;,
+  &quot;lastName&quot;: &quot;User&quot;
+  }</div>
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.64">
+      <div class="step-ref passed">64</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method put</span>
+      </div>
+    </div>
+    <div class="time-cell passed">59</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.64">21:53:50.576 request:
+2 &gt; PUT http://52.3.58.191:8083/rest/users/20
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 63
+2 &gt; Host: 52.3.58.191:8083
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;userId&quot;:&quot;20\n  \&quot;firstName\&quot;: \&quot;Updated\&quot;&quot;,&quot;lastName&quot;:&quot;User&quot;}
+
+21:53:50.633 response time in milliseconds: 57
+2 &lt; 401
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-XSS-Protection: 0
+2 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 &lt; Pragma: no-cache
+2 &lt; Expires: 0
+2 &lt; X-Frame-Options: SAMEORIGIN
+2 &lt; Content-Length: 0
+2 &lt; Date: Wed, 26 Mar 2025 01:53:51 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Connection: keep-alive
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.65">
+      <div class="step-ref passed">65</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 401</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * def updatedUser = response</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * match updatedUser.firstName == &#39;Updated&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * match updatedUser.lastName == &#39;User&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * print updatedUser</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * id =   newUser.userId</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * path &#39;rest/users/&#39; + id</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    When method delete</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    Then status 204</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * print &#39;User deleted successfully&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Test - Verify User Deletion (GET)</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * path &#39;rest/users/&#39; + 24</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    When method get</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    Then status 404</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#    * print &#39;User not found, deletion verified&#39;</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Test - Retrieve User Addresses</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.86">
+      <div class="step-ref passed">86</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>path &#39;rest/users/&#39;+ id + &#39;/addresses&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.87">
+      <div class="step-ref passed">87</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">70</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.87">21:53:50.635 request:
+3 &gt; GET http://52.3.58.191:8083/rest/users/20/addresses
+3 &gt; Host: 52.3.58.191:8083
+3 &gt; Connection: Keep-Alive
+3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+3 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:50.704 response time in milliseconds: 69
+3 &lt; 200
+3 &lt; Vary: Origin
+3 &lt; Vary: Access-Control-Request-Method
+3 &lt; Vary: Access-Control-Request-Headers
+3 &lt; X-Content-Type-Options: nosniff
+3 &lt; X-XSS-Protection: 0
+3 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 &lt; Pragma: no-cache
+3 &lt; Expires: 0
+3 &lt; X-Frame-Options: SAMEORIGIN
+3 &lt; Content-Type: application/hal+json
+3 &lt; Transfer-Encoding: chunked
+3 &lt; Date: Wed, 26 Mar 2025 01:53:51 GMT
+3 &lt; Keep-Alive: timeout=60
+3 &lt; Connection: keep-alive
+{
+  &quot;_embedded&quot; : {
+    &quot;addresses&quot; : [ ]
+  },
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20/addresses&quot;
+    }
+  }
+}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="0.88">
       <div class="step-ref passed">88</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;rest/users/11/addresses&#39;</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -1996,121 +2705,6 @@
       <div class="step-ref passed">89</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">155</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.89">01:20:00.897 request:
-1 &gt; GET http://localhost:8080/rest/users/11/addresses
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:20:01.050 response time in milliseconds: 152
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/hal+json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:20:01 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{
-  &quot;_embedded&quot; : {
-    &quot;addresses&quot; : [ {
-      &quot;description&quot; : &quot;BSC: Binance&quot;,
-      &quot;owner&quot; : &quot;Thomas2@gmail.com&quot;,
-      &quot;email&quot; : &quot;thomas2@gmail.com&quot;,
-      &quot;address&quot; : &quot;0xBBB222...&quot;,
-      &quot;iconUrl&quot; : &quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,
-      &quot;blockExplorerUrl&quot; : &quot;https://bscscan.com&quot;,
-      &quot;nftAddress&quot; : &quot;0xBBB222...&quot;,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/addresses/21&quot;
-        },
-        &quot;address&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/addresses/21&quot;
-        },
-        &quot;coins&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/addresses/21/coins&quot;
-        },
-        &quot;chains&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/addresses/21/chains&quot;
-        },
-        &quot;user&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/addresses/21/user&quot;
-        }
-      }
-    } ]
-  },
-  &quot;_links&quot; : {
-    &quot;self&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/11/addresses&quot;
-    }
-  }
-}
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.90">
-      <div class="step-ref passed">90</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.91">
-      <div class="step-ref passed">91</div>
-      
-      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def addresses = response</span>
       </div>
     </div>
@@ -2135,11 +2729,86 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.92">
-      <div class="step-ref passed">92</div>
+    <div class="step-container" id="0.90">
+      <div class="step-ref passed">90</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match addresses._embedded.addresses != null</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.91">
+      <div class="step-ref passed">91</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>print addresses</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.91">21:53:50.707 [print] {
+  &quot;_embedded&quot;: {
+    &quot;addresses&quot;: [
+    ]
+  },
+  &quot;_links&quot;: {
+    &quot;self&quot;: {
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20/addresses&quot;
+    }
+  }
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment"># Test - Retrieve User Roles</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.94">
+      <div class="step-ref passed">94</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>path &#39;rest/users/&#39;+ id + &#39;/roles&#39;</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2163,14 +2832,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.93">
-      <div class="step-ref passed">93</div>
+    <div class="step-container" id="0.95">
+      <div class="step-ref passed">95</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print addresses</span>
+        <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">69</div>
   </div>
 
    
@@ -2179,85 +2848,70 @@
 
   
 
-  <div class="preformatted" data-parent="0.93">01:20:01.052 [print] {
-  &quot;_embedded&quot;: {
-    &quot;addresses&quot;: [
-      {
-        &quot;description&quot;: &quot;BSC: Binance&quot;,
-        &quot;owner&quot;: &quot;Thomas2@gmail.com&quot;,
-        &quot;email&quot;: &quot;thomas2@gmail.com&quot;,
-        &quot;address&quot;: &quot;0xBBB222...&quot;,
-        &quot;iconUrl&quot;: &quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,
-        &quot;blockExplorerUrl&quot;: &quot;https://bscscan.com&quot;,
-        &quot;nftAddress&quot;: &quot;0xBBB222...&quot;,
-        &quot;_links&quot;: {
-          &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/addresses/21&quot;
-          },
-          &quot;address&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/addresses/21&quot;
-          },
-          &quot;coins&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/addresses/21/coins&quot;
-          },
-          &quot;chains&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/addresses/21/chains&quot;
-          },
-          &quot;user&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/addresses/21/user&quot;
-          }
+  <div class="preformatted" data-parent="0.95">21:53:50.708 request:
+4 &gt; GET http://52.3.58.191:8083/rest/users/20/roles
+4 &gt; Host: 52.3.58.191:8083
+4 &gt; Connection: Keep-Alive
+4 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+4 &gt; Accept-Encoding: gzip,deflate
+
+
+21:53:50.775 response time in milliseconds: 67
+4 &lt; 200
+4 &lt; Vary: Origin
+4 &lt; Vary: Access-Control-Request-Method
+4 &lt; Vary: Access-Control-Request-Headers
+4 &lt; X-Content-Type-Options: nosniff
+4 &lt; X-XSS-Protection: 0
+4 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+4 &lt; Pragma: no-cache
+4 &lt; Expires: 0
+4 &lt; X-Frame-Options: SAMEORIGIN
+4 &lt; Content-Type: application/hal+json
+4 &lt; Transfer-Encoding: chunked
+4 &lt; Date: Wed, 26 Mar 2025 01:53:51 GMT
+4 &lt; Keep-Alive: timeout=60
+4 &lt; Connection: keep-alive
+{
+  &quot;_embedded&quot; : {
+    &quot;roles&quot; : [ {
+      &quot;name&quot; : &quot;ROLE_USER&quot;,
+      &quot;_links&quot; : {
+        &quot;self&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/roles/2&quot;
+        },
+        &quot;role&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/roles/2&quot;
+        },
+        &quot;users&quot; : {
+          &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/roles/2/users&quot;
         }
       }
-    ]
+    } ]
   },
-  &quot;_links&quot;: {
-    &quot;self&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/11/addresses&quot;
+  &quot;_links&quot; : {
+    &quot;self&quot; : {
+      &quot;href&quot; : &quot;http://52.3.58.191:8083/rest/users/20/roles&quot;
     }
   }
 }
- 
 </div>   
 
   
 
 </div>
 </div>
-        </div>
-        <div class="scenario">
-          <div class="scenario-heading" id="[8:96]">
-            <div class="heading-container">
-              <div class="scenario-tags">
-                
-              </div>
-              <div class="scenario-keyword">
-                Scenario: <span>[8:96]</span>
-                <span class="scenario-name">Get User Roles</span>
-                <span></span>
-              </div>
-            </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>198</span>
-            </div>
-          </div>
-          <div class="step-row">
-            <div class="step-container" id="[8:96]bg">
-              <div class="step-ref bg-step">&gt;&gt;</div>
-              <div class="step-cell passed">Background:</div>
-            </div>
-            <div class="time-cell passed"></div>
-          </div>
-          <div data-parent="[8:96]bg"><div>
+          <div><div>
   
 
   
 
   <div class="step-row">
-    <div class="step-container" id="0.4">
-      <div class="step-ref bg-step">4</div>
+    <div class="step-container" id="0.96">
+      <div class="step-ref passed">96</div>
       
       <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>url &#39;http://localhost:8080/&#39;</span>
+        <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2285,7 +2939,7 @@
       <div class="step-ref passed">97</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;rest/users/11/roles&#39;</span>
+        <span>*</span>&nbsp;<span>def roles = response</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -2313,137 +2967,6 @@
       <div class="step-ref passed">98</div>
       
       <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">195</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.98">01:20:01.056 request:
-1 &gt; GET http://localhost:8080/rest/users/11/roles
-1 &gt; Host: localhost:8080
-1 &gt; Connection: Keep-Alive
-1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-1 &gt; Accept-Encoding: gzip,deflate
-
-
-01:20:01.250 response time in milliseconds: 194
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; X-Content-Type-Options: nosniff
-1 &lt; X-XSS-Protection: 0
-1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-1 &lt; Pragma: no-cache
-1 &lt; Expires: 0
-1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/hal+json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Tue, 25 Mar 2025 05:20:01 GMT
-1 &lt; Keep-Alive: timeout=60
-1 &lt; Connection: keep-alive
-{
-  &quot;_embedded&quot; : {
-    &quot;roles&quot; : [ {
-      &quot;name&quot; : &quot;ROLE_USER&quot;,
-      &quot;_links&quot; : {
-        &quot;self&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/roles/2&quot;
-        },
-        &quot;role&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/roles/2&quot;
-        },
-        &quot;users&quot; : {
-          &quot;href&quot; : &quot;http://localhost:8080/rest/roles/2/users&quot;
-        }
-      }
-    } ]
-  },
-  &quot;_links&quot; : {
-    &quot;self&quot; : {
-      &quot;href&quot; : &quot;http://localhost:8080/rest/users/11/roles&quot;
-    }
-  }
-}
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.99">
-      <div class="step-ref passed">99</div>
-      
-      <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.100">
-      <div class="step-ref passed">100</div>
-      
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def roles = response</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.101">
-      <div class="step-ref passed">101</div>
-      
-      <div class="step-cell passed">
         <span>*</span>&nbsp;<span>match roles._embedded.roles != null</span>
       </div>
     </div>
@@ -2468,8 +2991,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.102">
-      <div class="step-ref passed">102</div>
+    <div class="step-container" id="0.99">
+      <div class="step-ref passed">99</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print roles</span>
@@ -2484,20 +3007,20 @@
 
   
 
-  <div class="preformatted" data-parent="0.102">01:20:01.254 [print] {
+  <div class="preformatted" data-parent="0.99">21:53:50.777 [print] {
   &quot;_embedded&quot;: {
     &quot;roles&quot;: [
       {
         &quot;name&quot;: &quot;ROLE_USER&quot;,
         &quot;_links&quot;: {
           &quot;self&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/roles/2&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/roles/2&quot;
           },
           &quot;role&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/roles/2&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/roles/2&quot;
           },
           &quot;users&quot;: {
-            &quot;href&quot;: &quot;http://localhost:8080/rest/roles/2/users&quot;
+            &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/roles/2/users&quot;
           }
         }
       }
@@ -2505,7 +3028,7 @@
   },
   &quot;_links&quot;: {
     &quot;self&quot;: {
-      &quot;href&quot;: &quot;http://localhost:8080/rest/users/11/roles&quot;
+      &quot;href&quot;: &quot;http://52.3.58.191:8083/rest/users/20/roles&quot;
     }
   }
 }
