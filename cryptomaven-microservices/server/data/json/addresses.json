@@ -1,0 +1,102 @@
+[ 
+    {
+        "id": 0,
+        "description": "NFT - 0x1",
+        "owner": "thomas1.maestas@gmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "ethereum",
+        "blockExplorerUrl": "https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 0,
+        "chainId": 1
+    },
+  
+    {
+        "id": 1,
+        "description": "NFT - 0x1",
+        "owner": "thomas1.maestas@gmail.com",
+        "address": "0x5f7B0DDd217D55bFC4927b3E49E3CbF57FA81834",
+        "chain": "ethereum",
+        "blockExplorerUrl":"https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 0,
+        "chainId": 1
+    },
+   {
+        "id": 2,
+        "description": "NFT - 0x1",
+        "owner": "thomas.maestas@hotmail.com",
+        "address": "0xcfCa3FEBAceA3AbB643bA90C670D7c4E6D74b633",
+        "chain": "ethereum",
+        "blockExplorerUrl":"https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 1,
+        "chainId": 1
+    },
+   {
+        "id": 3,
+        "description": "NFT - 0x1",
+        "owner": "crypto.mavn@gmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "ethereum",
+        "blockExplorerUrl":"https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 2,
+        "chainId": 1
+    },
+   {
+        "id": 4,
+        "description": "NFT - 0x1",
+        "owner": "thomas1.maestas@gmail.com",
+        "address": "0x5f7B0DDd217D55bFC4927b3E49E3CbF57FA81834",
+        "chain": "polygon",
+        "blockExplorerUrl":"https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 0,
+        "chainId": 137
+    },   
+    {
+        "id": 5,
+        "description": "NFT - 0x1",
+        "owner": "thomas1.maestas@gmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "polygon",
+        "blockExplorerUrl":"https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 0,
+        "chainId": 137
+    },
+    {
+        "id": 6,
+        "description": "NFT - 0x1",
+        "owner": "thomas1.maestas@gmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "avalanche",
+        "blockExplorerUrl":"https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 0,
+        "chainId": 43114
+    },
+    {
+        "id": 7,
+        "description": "Pulsechain is a high-performance blockchain that provides a fast and cost-effective platform for decentralized applications and token transactions. With its focus on scalability and efficiency, Pulsechain offers developers an innovative environment for building blockchain-based solutions.",
+        "owner": "thomas1.maestas@gmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "pulsechain",
+        "blockExplorerUrl": "https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 0,
+        "chainId": 369
+    },
+   {
+        "id": 8,
+        "description": "Pulsechain is a high-performance blockchain that provides a fast and cost-effective platform for decentralized applications and token transactions. With its focus on scalability and efficiency, Pulsechain offers developers an innovative environment for building blockchain-based solutions.",
+        "owner": "thomas.maestas@hotmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "pulsechain",
+        "blockExplorerUrl": "https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 1,
+        "chainId": 369
+    },   {
+        "id": 9,
+        "description": "Pulsechain is a high-performance blockchain that provides a fast and cost-effective platform for decentralized applications and token transactions. With its focus on scalability and efficiency, Pulsechain offers developers an innovative environment for building blockchain-based solutions.",
+        "owner": "crypto.mavn@gmail.com",
+        "address": "0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "chain": "pulsechain",
+        "blockExplorerUrl": "https://explorer-mainnet.maticvigil.com/address/0x900bE021E38B8d08435A03c05657C8cFA837cAeF",
+        "ownerId": 2,
+        "chainId": 369
+    }
+  ]
