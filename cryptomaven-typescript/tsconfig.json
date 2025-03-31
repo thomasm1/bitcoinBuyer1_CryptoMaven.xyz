@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      "typeRoots": ["node_modules/@types", "./src/types"],
+      "target": "es6",
+      "lib": ["ESNext", "DOM", "ES2015.Iterable"],
+      "allowJs": true,
+      "skipLibCheck": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "strict": false,
+      "skipDefaultLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "module": "esnext",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "isolatedModules": true,
+      "noEmit": true,
+      "jsx": "react-jsx",
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "strictNullChecks": false,
+      "downlevelIteration": true,
+      "baseUrl": "src"
+    },
+    "include": ["src"]
+  }
+  

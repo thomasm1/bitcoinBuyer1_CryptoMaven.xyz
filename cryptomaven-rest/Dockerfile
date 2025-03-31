@@ -4,6 +4,6 @@ LABEL maintainer="thomas1.maestas@gmail.com"
 
 WORKDIR /app
 
-COPY target/mapl-data-1.2.0.war /app/mapl-data.war
+COPY build/libs/cryptomaven-rest-1.3.0.jar /app/cryptomaven-rest.jar
 
-ENTRYPOINT ["java", "-jar", "mapl-data.war"]
+ENTRYPOINT ["java", "-jar", "cryptomaven-rest.jar"]
