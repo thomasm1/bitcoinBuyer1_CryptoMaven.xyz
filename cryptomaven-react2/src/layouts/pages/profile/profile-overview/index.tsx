@@ -106,7 +106,7 @@ function Overview(): JSX.Element {
           </MDTypography>
           <MDBox mb={1}>
             <MDTypography variant="button" color="text">
-              Architects design houses
+              `Blockchain Explorer Microservice`
             </MDTypography>
           </MDBox>
         </MDBox>
