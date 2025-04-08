@@ -268,7 +268,7 @@ class OpenType:
     NAME_ID_UNIQUE = 3
     NAME_ID_FULL = 4
     NAME_ID_VERSION = 5
-    NAME_ID_POSTSCRIPT = 6
+    NAME_ID_ADDRESSESCRIPT = 6
     PLATFORM_ID_UNICODE = 0                 # Mac OS uses this typically
     PLATFORM_ID_MICROSOFT = 3
     ENCODING_ID_MICROSOFT_UNICODEBMP = 1    # with Microsoft platformID BMP-only Unicode encoding

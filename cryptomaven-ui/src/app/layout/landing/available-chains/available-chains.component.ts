@@ -5,7 +5,7 @@ import { PlacesContainerComponent } from '../places-container/places-container.c
 import { BehaviorSubject, Observable } from 'rxjs';
 import { ChainService } from '../../../../services/chain-service';
 import { ChainStore } from 'cryptomaven-ui/src/app/services/chain-store.service';
-import { AddressService } from 'cryptomaven-ui/src/app/services/address.service';
+import { addressesService } from 'cryptomaven-ui/src/app/services/address.service';
 import { Address } from '../../../../models/Address';
 @Component({
   selector: 'app-available-chains',
@@ -15,7 +15,7 @@ import { Address } from '../../../../models/Address';
   // imports: [PlacesContainerComponent],
   providers: [
     ChainService, 
-    ChainStore, AddressService
+    ChainStore, addressesService
   ],
 })
 export class AvailableChainsComponent {
@@ -25,7 +25,7 @@ export class AvailableChainsComponent {
   addresses: Address[] = [];
   constructor(
     @Inject(ChainService) private chainsServices: ChainService,
-    @Inject(AddressService) private addressesService: AddressService
+    @Inject(addressesService) private addressesService: addressesService
   ) {
    
     this.chainsServices.loadAllChains().subscribe((chains: Chain[]) => {

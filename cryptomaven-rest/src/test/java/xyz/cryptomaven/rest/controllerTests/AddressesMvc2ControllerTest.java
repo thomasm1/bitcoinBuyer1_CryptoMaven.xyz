@@ -46,7 +46,7 @@ public class AddressesMvc2ControllerTest {
         client.post()
                 .uri("/api/addresses")
                 .contentType(MediaType.APPLICATION_JSON)
-                .body(  newAddress , AddressDto.class)
+                .bodyValue(  newAddress)
                 .exchange()
                 .expectStatus().isOk();
 

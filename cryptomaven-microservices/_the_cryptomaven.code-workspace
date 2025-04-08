@@ -16,6 +16,9 @@
 		},
 		{
 			"path": "../../daily"
+		},
+		{
+			"path": "../../_javaclient/mini/mapl-authorization/dashboard-ui"
 		}
 	],
 	"settings": {}

@@ -1606,7 +1606,7 @@ var wysihtml5 = {
                 } else {
                     var textParts = [], iterator = new RangeIterator(this, true);
                     iterateSubtree(iterator, function(node) {
-                        // Accept only text or CDATA nodes, not comments
+                        // Accept only text or CDATA nodes, not coins
                         if (node.nodeType == 3 || node.nodeType == 4) {
                             textParts.push(node.data);
                         }
@@ -2552,7 +2552,7 @@ var wysihtml5 = {
                 boundaryNode = workingNode.nextSibling;
 
                 if (comparison == -1 && boundaryNode && isCharacterDataNode(boundaryNode)) {
-                    // This is a character data node (text, comment, cdata). The working range is collapsed at the start of
+                    // This is a character data node (text, coin, cdata). The working range is collapsed at the start of
                     // the node containing the text range's boundary, so we move the end of the working range to the
                     // boundary point and measure the length of its text to get the boundary's offset within the node.
                     workingRange.setEndPoint(isStart ? "EndToStart" : "EndToEnd", textRange);
@@ -3135,7 +3135,7 @@ var wysihtml5 = {
 
         if (isHostMethod(testSelection, "getRangeAt")) {
             // try/catch is present because getRangeAt() must have thrown an error in some browser and some situation.
-            // Unfortunately, I didn't write a comment about the specifics and am now scared to take it out. Let that be a
+            // Unfortunately, I didn't write a coin about the specifics and am now scared to take it out. Let that be a
             // lesson to us all, especially me.
             getSelectionRangeAt = function(sel, index) {
                 try {
@@ -6463,7 +6463,7 @@ wysihtml5.dom.parse = function(elementOrHtml_current, config_current) {
   }
 
   function _handleComment(oldNode) {
-    if (currentRules.comments) {
+    if (currentRules.coins) {
       return oldNode.ownerDocument.createComment(oldNode.nodeValue);
     }
   }
@@ -8948,7 +8948,7 @@ wysihtml5.quirks.ensureProperClearing = (function() {
       }
 
       if (ret && ret.nodeType !== 3 && ret.nodeType !== 1) {
-         // do not count comments and other node types
+         // do not count coins and other node types
          ret = this.getPreviousNode(ret, ignoreEmpty);
       } else if (ret && ret.nodeType === 3 && (/^\s*$/).test(ret.textContent)) {
         // do not count empty textnodes as previus nodes

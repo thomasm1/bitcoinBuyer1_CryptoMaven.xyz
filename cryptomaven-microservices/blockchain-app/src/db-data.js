@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.NFT_REFS = exports.POSTS = exports.USERS = exports.BLOCKCHAIN_SCHEMA = exports.BLOCKCHAIN = exports.DATA_BLOCKCHAIN = exports.LOGIN = void 0;
+exports.NFT_REFS = exports.ADDRESSES = exports.USERS = exports.BLOCKCHAIN_SCHEMA = exports.BLOCKCHAIN = exports.DATA_BLOCKCHAIN = exports.LOGIN = void 0;
 exports.LOGIN = [
     { email: "thomas1.maestas@gmail.com", password: "pass" },
     { email: "walter.white@gmail.com",
@@ -308,8 +308,8 @@ exports.USERS = [
             ],
         } },
 ];
-/////////// POSTS //////////////////////////////////////// //////////////////////////////////////
-exports.POSTS = {
+/////////// ADDRESSES //////////////////////////////////////// //////////////////////////////////////
+exports.ADDRESSES = {
     "1": {
         "id": "1",
         "title": "Hello World"

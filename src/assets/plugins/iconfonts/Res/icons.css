@@ -532,7 +532,7 @@
 .fa-random:before {
   content: "\f074";
 }
-.fa-comment:before {
+.fa-coin:before {
   content: "\f075";
 }
 .fa-magnet:before {
@@ -582,7 +582,7 @@
 .fa-cogs:before {
   content: "\f085";
 }
-.fa-comments:before {
+.fa-coins:before {
   content: "\f086";
 }
 .fa-thumbs-o-up:before {
@@ -828,10 +828,10 @@
 .fa-tachometer:before {
   content: "\f0e4";
 }
-.fa-comment-o:before {
+.fa-coin-o:before {
   content: "\f0e5";
 }
-.fa-comments-o:before {
+.fa-coins-o:before {
   content: "\f0e6";
 }
 .fa-flash:before,
@@ -2020,10 +2020,10 @@
 .fa-map:before {
   content: "\f279";
 }
-.fa-commenting:before {
+.fa-coining:before {
   content: "\f27a";
 }
-.fa-commenting-o:before {
+.fa-coining-o:before {
   content: "\f27b";
 }
 .fa-houzz:before {
@@ -3545,43 +3545,43 @@
 .zmdi-wrap-text:before {
   content: '\f259'; }
 
-.zmdi-comment-alert:before {
+.zmdi-coin-alert:before {
   content: '\f25a'; }
 
-.zmdi-comment-alt-text:before {
+.zmdi-coin-alt-text:before {
   content: '\f25b'; }
 
-.zmdi-comment-alt:before {
+.zmdi-coin-alt:before {
   content: '\f25c'; }
 
-.zmdi-comment-edit:before {
+.zmdi-coin-edit:before {
   content: '\f25d'; }
 
-.zmdi-comment-image:before {
+.zmdi-coin-image:before {
   content: '\f25e'; }
 
-.zmdi-comment-list:before {
+.zmdi-coin-list:before {
   content: '\f25f'; }
 
-.zmdi-comment-more:before {
+.zmdi-coin-more:before {
   content: '\f260'; }
 
-.zmdi-comment-outline:before {
+.zmdi-coin-outline:before {
   content: '\f261'; }
 
-.zmdi-comment-text-alt:before {
+.zmdi-coin-text-alt:before {
   content: '\f262'; }
 
-.zmdi-comment-text:before {
+.zmdi-coin-text:before {
   content: '\f263'; }
 
-.zmdi-comment-video:before {
+.zmdi-coin-video:before {
   content: '\f264'; }
 
-.zmdi-comment:before {
+.zmdi-coin:before {
   content: '\f265'; }
 
-.zmdi-comments:before {
+.zmdi-coins:before {
   content: '\f266'; }
 
 .zmdi-check-all:before {
@@ -5878,43 +5878,43 @@
 .zmdi-wrap-text:before {
   content: '\f259'; }
 
-.zmdi-comment-alert:before {
+.zmdi-coin-alert:before {
   content: '\f25a'; }
 
-.zmdi-comment-alt-text:before {
+.zmdi-coin-alt-text:before {
   content: '\f25b'; }
 
-.zmdi-comment-alt:before {
+.zmdi-coin-alt:before {
   content: '\f25c'; }
 
-.zmdi-comment-edit:before {
+.zmdi-coin-edit:before {
   content: '\f25d'; }
 
-.zmdi-comment-image:before {
+.zmdi-coin-image:before {
   content: '\f25e'; }
 
-.zmdi-comment-list:before {
+.zmdi-coin-list:before {
   content: '\f25f'; }
 
-.zmdi-comment-more:before {
+.zmdi-coin-more:before {
   content: '\f260'; }
 
-.zmdi-comment-outline:before {
+.zmdi-coin-outline:before {
   content: '\f261'; }
 
-.zmdi-comment-text-alt:before {
+.zmdi-coin-text-alt:before {
   content: '\f262'; }
 
-.zmdi-comment-text:before {
+.zmdi-coin-text:before {
   content: '\f263'; }
 
-.zmdi-comment-video:before {
+.zmdi-coin-video:before {
   content: '\f264'; }
 
-.zmdi-comment:before {
+.zmdi-coin:before {
   content: '\f265'; }
 
-.zmdi-comments:before {
+.zmdi-coins:before {
   content: '\f266'; }
 
 .zmdi-check-all:before {
@@ -7191,7 +7191,7 @@
 .zmdi-rate-review:before {
   content: '\f103'; }
 
-.zmdi-comment-sign:before {
+.zmdi-coin-sign:before {
   content: '\f25a'; }
 
 .zmdi-network-warning:before {
@@ -7348,7 +7348,7 @@
 .zmdi-folder-special:before {
   content: '\f226'; }
 
-.zmdi-comment-dots:before {
+.zmdi-coin-dots:before {
   content: '\f260'; }
 
 .zmdi-reorder:before {
@@ -7727,13 +7727,13 @@
 .ti-crown:before {
   content: "\e642"; }
 
-.ti-comments:before {
+.ti-coins:before {
   content: "\e643"; }
 
-.ti-comment:before {
+.ti-coin:before {
   content: "\e644"; }
 
-.ti-comment-alt:before {
+.ti-coin-alt:before {
   content: "\e645"; }
 
 .ti-close:before {
@@ -8408,7 +8408,7 @@
 .ti-control-eject:before {
   content: "\e725"; }
 
-.ti-comments-smiley:before {
+.ti-coins-smiley:before {
   content: "\e726"; }
 
 .ti-brush-alt:before {

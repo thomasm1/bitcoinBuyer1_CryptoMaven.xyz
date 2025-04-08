@@ -6708,7 +6708,7 @@ var requestAnimationFrame = (
     typeof window !== 'undefined'
     && (
         (window.requestAnimationFrame && window.requestAnimationFrame.bind(window))
-        // https://github.com/ecomfe/zrender/issues/189#issuecomment-224919809
+        // https://github.com/ecomfe/zrender/issues/189#issuecoin-224919809
         || (window.msRequestAnimationFrame && window.msRequestAnimationFrame.bind(window))
         || window.mozRequestAnimationFrame
         || window.webkitRequestAnimationFrame
@@ -9605,7 +9605,7 @@ function clientToLocal(el, e, out, calculate) {
     // BTW1, Webkit don't return the same results as FF in non-simple cases (like add
     // zoom-factor, overflow / opacity layers, transforms ...)
     // BTW2, (ev.offsetY || ev.pageY - $(ev.target).offset().top) is not correct in preserve-3d.
-    // <https://bugs.jquery.com/ticket/8523#comment:14>
+    // <https://bugs.jquery.com/ticket/8523#coin:14>
     // BTW3, In ff, offsetX/offsetY is always 0.
     else if (env$1.browser.firefox && e.layerX != null && e.layerX !== e.offsetX) {
         out.zrX = e.layerX;
@@ -15968,7 +15968,7 @@ function cacheElementStl(el) {
 
         var normalStyle = {};
         for (var name in hoverStyle) {
-            // See comment in `doSingleEnterHover`.
+            // See coin in `doSingleEnterHover`.
             if (hoverStyle[name] != null) {
                 normalStyle[name] = el.style[name];
             }
@@ -18699,7 +18699,7 @@ var colorPaletteMixin = {
  * (2) In `merge option` mode, if a component has no id/name specified, it
  * will be merged by index, and the result sequence of the components is
  * consistent to the original sequence.
- * (3) `reset` feature (in toolbox). Find detailed info in comments about
+ * (3) `reset` feature (in toolbox). Find detailed info in coins about
  * `mergeOption` in module:echarts/model/OptionManager.
  */
 
@@ -60322,7 +60322,7 @@ proto.setInputRanges = function (areas, ecModel) {
             // where area.coordRange remains unchanged but area.range may be changed.
             // (2) Only support converting one coordRange to pixel range in brush
             // component. So do not consider `coordRanges`.
-            // (3) About __rangeOffset, see comment above.
+            // (3) About __rangeOffset, see coin above.
             var result = coordConvert[area.brushType](0, targetInfo.coordSys, area.coordRange);
             var rangeOffset = area.__rangeOffset;
             area.range = rangeOffset

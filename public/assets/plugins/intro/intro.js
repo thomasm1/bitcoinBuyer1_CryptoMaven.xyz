@@ -409,7 +409,7 @@
      * recommended to only assign one target per step. However, there are
      * some use cases which require multiple step targets to be supplied. In
      * this event, we will use the first target in the array that we can
-     * locate on the page. See the comments for getStepTargetHelper for more
+     * locate on the page. See the coins for getStepTargetHelper for more
      * information.
      *
      * @private

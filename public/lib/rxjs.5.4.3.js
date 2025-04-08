@@ -183,7 +183,7 @@
     boilerplate notice, with the fields enclosed by brackets "[]"
     replaced with your own identifying information. (Don't include
     the brackets!)  The text should be enclosed in the appropriate
-    comment syntax for the file format. We also recommend that a
+    coin syntax for the file format. We also recommend that a
     file or class name and description of purpose be included on the
     same "printed page" as the copyright notice for easier
     identification within third-party archives.
@@ -686,7 +686,7 @@ var Subscriber = (function (_super) {
     return Subscriber;
 }(Subscription));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -1110,7 +1110,7 @@ var ObjectUnsubscribedError = (function (_super) {
 }(Error));
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -1339,7 +1339,7 @@ var AsyncSubject = (function (_super) {
 }(Subject));
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -1600,7 +1600,7 @@ var bindCallback = BoundCallbackObservable.create;
 Observable.bindCallback = bindCallback;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -1860,7 +1860,7 @@ function isScheduler(value) {
 }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -1910,7 +1910,7 @@ var ScalarObservable = (function (_super) {
 }(Observable));
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -1983,7 +1983,7 @@ var EmptyObservable = (function (_super) {
 }(Observable));
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -2094,7 +2094,7 @@ var ArrayObservable = (function (_super) {
 }(Observable));
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -2156,7 +2156,7 @@ var iterator = symbolIteratorPonyfill(_root);
  */
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -2323,7 +2323,7 @@ var CombineLatestOperator = (function () {
     return CombineLatestOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -2580,7 +2580,7 @@ var MergeAllOperator = (function () {
     return MergeAllOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -2794,7 +2794,7 @@ var concat$$1 = concatStatic;
 Observable.concat = concat$$1;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -2891,7 +2891,7 @@ var empty$1 = EmptyObservable.create;
 Observable.empty = empty$1;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -2938,7 +2938,7 @@ var ForkJoinObservable = (function (_super) {
     return ForkJoinObservable;
 }(Observable));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -2995,7 +2995,7 @@ var forkJoin = ForkJoinObservable.create;
 Observable.forkJoin = forkJoin;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -3107,7 +3107,7 @@ function dispatchError$2(arg) {
 }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -3260,7 +3260,7 @@ function sign(value) {
 }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -3505,7 +3505,7 @@ var ObserveOnOperator = (function () {
     return ObserveOnOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -3545,7 +3545,7 @@ var ObserveOnMessage = (function () {
 }());
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -3669,7 +3669,7 @@ function isEventTarget(sourceObj) {
     return !!sourceObj && typeof sourceObj.addEventListener === 'function' && typeof sourceObj.removeEventListener === 'function';
 }
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -3785,7 +3785,7 @@ var fromEvent = FromEventObservable.create;
 Observable.fromEvent = fromEvent;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -3897,7 +3897,7 @@ Observable.fromPromise = fromPromise;
 
 var selfSelector = function (value) { return value; };
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -4026,7 +4026,7 @@ var generate = GenerateObservable.create;
 Observable.generate = generate;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -4125,7 +4125,7 @@ var Action = (function (_super) {
 }(Subscription));
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -4392,7 +4392,7 @@ var AsyncScheduler = (function (_super) {
 var async = new AsyncScheduler(AsyncAction);
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -4662,7 +4662,7 @@ var RaceOperator = (function () {
     return RaceOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -4720,7 +4720,7 @@ Observable.race = race$$1;
 function noop() { }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -4918,7 +4918,7 @@ function dispatch$1(state) {
     this.schedule(state);
 }
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -4988,7 +4988,7 @@ var pairs = PairsObservable.create;
 Observable.pairs = pairs;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -5080,7 +5080,7 @@ var range = RangeObservable.create;
 Observable.range = range;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -5135,7 +5135,7 @@ var using = UsingObservable.create;
 Observable.using = using;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -5218,7 +5218,7 @@ function isDate(value) {
 }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -5383,7 +5383,7 @@ var ZipOperator = (function () {
     return ZipOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -5526,7 +5526,7 @@ var StaticArrayIterator = (function () {
     return StaticArrayIterator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -5633,7 +5633,7 @@ var MapOperator = (function () {
     return MapOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -5724,7 +5724,7 @@ function ajaxGetJSON(url, headers) {
 }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -5800,7 +5800,7 @@ var AjaxObservable = (function (_super) {
     return AjaxObservable;
 }(Observable));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -6058,7 +6058,7 @@ var ajax = AjaxObservable.create;
 Observable.ajax = ajax;
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -6281,7 +6281,7 @@ function getAssign(root$$1) {
 var assign = getAssign(_root);
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -6563,7 +6563,7 @@ var BufferOperator = (function () {
     return BufferOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -6649,7 +6649,7 @@ var BufferCountOperator = (function () {
     return BufferCountOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -6678,7 +6678,7 @@ var BufferCountSubscriber = (function (_super) {
     return BufferCountSubscriber;
 }(Subscriber));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -6801,7 +6801,7 @@ var Context = (function () {
     return Context;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -6964,7 +6964,7 @@ var BufferToggleOperator = (function () {
     return BufferToggleOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -7102,7 +7102,7 @@ var BufferWhenOperator = (function () {
     return BufferWhenOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -7242,7 +7242,7 @@ var CatchOperator = (function () {
     return CatchOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -7463,7 +7463,7 @@ var MergeMapOperator = (function () {
     return MergeMapOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -7676,7 +7676,7 @@ var MergeMapToOperator = (function () {
     return MergeMapToOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -7878,7 +7878,7 @@ var CountOperator = (function () {
     return CountOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -7973,7 +7973,7 @@ var DeMaterializeOperator = (function () {
     return DeMaterializeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8045,7 +8045,7 @@ var DebounceOperator = (function () {
     return DebounceOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8171,7 +8171,7 @@ var DebounceTimeOperator = (function () {
     return DebounceTimeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8264,7 +8264,7 @@ var DefaultIfEmptyOperator = (function () {
     return DefaultIfEmptyOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8346,7 +8346,7 @@ var DelayOperator = (function () {
     return DelayOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8478,7 +8478,7 @@ var DelayWhenOperator = (function () {
     return DelayWhenOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8548,7 +8548,7 @@ var DelayWhenSubscriber = (function (_super) {
     return DelayWhenSubscriber;
 }(OuterSubscriber));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8565,7 +8565,7 @@ var SubscriptionDelayObservable = (function (_super) {
     return SubscriptionDelayObservable;
 }(Observable));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8688,7 +8688,7 @@ var DistinctOperator = (function () {
     return DistinctOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8794,7 +8794,7 @@ var DistinctUntilChangedOperator = (function () {
     return DistinctUntilChangedOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -8968,7 +8968,7 @@ var DoOperator = (function () {
     return DoOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9064,7 +9064,7 @@ var SwitchFirstOperator = (function () {
     return SwitchFirstOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9159,7 +9159,7 @@ var SwitchFirstMapOperator = (function () {
     return SwitchFirstMapOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9294,7 +9294,7 @@ var ExpandOperator = (function () {
     return ExpandOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9450,7 +9450,7 @@ var ElementAtOperator = (function () {
     return ElementAtOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9538,7 +9538,7 @@ var FilterOperator = (function () {
     return FilterOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9591,7 +9591,7 @@ var FinallyOperator = (function () {
     return FinallyOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9660,7 +9660,7 @@ var FindValueOperator = (function () {
     return FindValueOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -9826,7 +9826,7 @@ var FirstOperator = (function () {
     return FirstOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10066,7 +10066,7 @@ var GroupByOperator = (function () {
     return GroupByOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10166,7 +10166,7 @@ var GroupBySubscriber = (function (_super) {
     return GroupBySubscriber;
 }(Subscriber));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10218,7 +10218,7 @@ var GroupedObservable = (function (_super) {
     return GroupedObservable;
 }(Observable));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10267,7 +10267,7 @@ var IgnoreElementsOperator = (function () {
     return IgnoreElementsOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10305,7 +10305,7 @@ var IsEmptyOperator = (function () {
     return IsEmptyOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10383,7 +10383,7 @@ var AuditOperator = (function () {
     return AuditOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10494,7 +10494,7 @@ var AuditTimeOperator = (function () {
     return AuditTimeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10568,7 +10568,7 @@ var LastOperator = (function () {
     return LastOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10688,7 +10688,7 @@ var EveryOperator = (function () {
     return EveryOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10768,7 +10768,7 @@ var MapToOperator = (function () {
     return MapToOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10842,7 +10842,7 @@ var MaterializeOperator = (function () {
     return MaterializeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -10939,7 +10939,7 @@ var ReduceOperator = (function () {
     return ReduceOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -11082,7 +11082,7 @@ var MergeScanOperator = (function () {
     return MergeScanOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -11457,7 +11457,7 @@ var PairwiseOperator = (function () {
     return PairwiseOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -11735,7 +11735,7 @@ var RepeatOperator = (function () {
     return RepeatOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -11790,7 +11790,7 @@ var RepeatWhenOperator = (function () {
     return RepeatWhenOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -11892,7 +11892,7 @@ var RetryOperator = (function () {
     return RetryOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -11948,7 +11948,7 @@ var RetryWhenOperator = (function () {
     return RetryWhenOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12061,7 +12061,7 @@ var SampleOperator = (function () {
     return SampleOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12143,7 +12143,7 @@ var SampleTimeOperator = (function () {
     return SampleTimeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12239,7 +12239,7 @@ var ScanOperator = (function () {
     return ScanOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12355,7 +12355,7 @@ var SequenceEqualOperator = (function () {
     return SequenceEqualOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12513,7 +12513,7 @@ var SingleOperator = (function () {
     return SingleOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12593,7 +12593,7 @@ var SkipOperator = (function () {
     return SkipOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12669,7 +12669,7 @@ var SkipLastOperator = (function () {
     return SkipLastOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12725,7 +12725,7 @@ var SkipUntilOperator = (function () {
     return SkipUntilOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -12789,7 +12789,7 @@ var SkipWhileOperator = (function () {
     return SkipWhileOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13072,7 +13072,7 @@ var ImmediateDefinition = (function () {
 var Immediate = new ImmediateDefinition(_root);
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13183,7 +13183,7 @@ var AsapScheduler = (function (_super) {
 var asap = new AsapScheduler(AsapAction);
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @extends {Ignored}
  * @hide true
  */
@@ -13305,7 +13305,7 @@ var SwitchOperator = (function () {
     return SwitchOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13415,7 +13415,7 @@ var SwitchMapOperator = (function () {
     return SwitchMapOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13543,7 +13543,7 @@ var SwitchMapToOperator = (function () {
     return SwitchMapToOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13658,7 +13658,7 @@ var TakeOperator = (function () {
     return TakeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13742,7 +13742,7 @@ var TakeLastOperator = (function () {
     return TakeLastOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13830,7 +13830,7 @@ var TakeUntilOperator = (function () {
     return TakeUntilOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13901,7 +13901,7 @@ var TakeWhileOperator = (function () {
     return TakeWhileOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -13998,7 +13998,7 @@ var ThrottleOperator = (function () {
     return ThrottleOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc
+ * We need this JSDoc coin for affecting ESDoc
  * @ignore
  * @extends {Ignored}
  */
@@ -14130,7 +14130,7 @@ var ThrottleTimeOperator = (function () {
     return ThrottleTimeOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14209,7 +14209,7 @@ var TimeIntervalOperator = (function () {
     return TimeIntervalOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14334,7 +14334,7 @@ var TimeoutOperator = (function () {
     return TimeoutOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14410,7 +14410,7 @@ var TimeoutWithOperator = (function () {
     return TimeoutWithOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14519,7 +14519,7 @@ var ToArrayOperator = (function () {
     return ToArrayOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14666,7 +14666,7 @@ var WindowOperator = (function () {
     return WindowOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14777,7 +14777,7 @@ var WindowCountOperator = (function () {
     return WindowCountOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -14891,7 +14891,7 @@ var CountedSubject = (function (_super) {
     return CountedSubject;
 }(Subject));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15044,7 +15044,7 @@ var WindowToggleOperator = (function () {
     return WindowToggleOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15209,7 +15209,7 @@ var WindowOperator$1 = (function () {
     return WindowOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15337,7 +15337,7 @@ var WithLatestFromOperator = (function () {
     return WithLatestFromOperator;
 }());
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15449,7 +15449,7 @@ function applyMixins(derivedCtor, baseCtors) {
 }
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15484,7 +15484,7 @@ var ColdObservable = (function (_super) {
 applyMixins(ColdObservable, [SubscriptionLoggable]);
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15555,7 +15555,7 @@ var VirtualTimeScheduler = (function (_super) {
     return VirtualTimeScheduler;
 }(AsyncScheduler));
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */
@@ -15865,7 +15865,7 @@ var RequestAnimationFrameDefinition = (function () {
 var AnimationFrame = new RequestAnimationFrameDefinition(_root);
 
 /**
- * We need this JSDoc comment for affecting ESDoc.
+ * We need this JSDoc coin for affecting ESDoc.
  * @ignore
  * @extends {Ignored}
  */

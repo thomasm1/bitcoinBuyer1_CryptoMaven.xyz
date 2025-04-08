@@ -1231,7 +1231,7 @@ $exports.store = store;
 "use strict";
 
 
-// https://github.com/zloirock/core-js/issues/86#issuecomment-115759028
+// https://github.com/zloirock/core-js/issues/86#issuecoin-115759028
 var global = module.exports = typeof window != 'undefined' && window.Math == Math ? window : typeof self != 'undefined' && self.Math == Math ? self
 // eslint-disable-next-line no-new-func
 : Function('return this')();
@@ -21945,7 +21945,7 @@ var Tooltip = function () {
           var capturedSeries = capj.capturedSeries;
 
           if (capj.hoverX < 0 || capj.hoverX > w.globals.gridWidth) {
-            // capj.hoverY causing issues in grouped charts, so commented out that condition for now
+            // capj.hoverY causing issues in grouped charts, so coined out that condition for now
             // if (capj.hoverX < 0 || capj.hoverX > w.globals.gridWidth || capj.hoverY < 0 || capj.hoverY > w.globals.gridHeight) {
             self.handleMouseOut(opt);
             return;

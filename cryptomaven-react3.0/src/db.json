@@ -1,0 +1,98 @@
+[
+    {
+        "id": 10,
+        "name": "A.I.Now.",
+        "description": "AI Technology nftCoins",
+        "nftCoins": [
+            {
+                "id": 42,
+                "title": "Tech Giant Merges",
+                "url": "https://nftCoins3.com"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "name": "Web Dev Affairs",
+        "description": "Web-Dev & Coding updates",
+        "nftCoins": [
+            {
+                "id": 41,
+                "title": "Health App Innovations",
+                "url": "https://nftCoins2.com"
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "name": "Sociology Tomorrow!",
+        "description": "Sociology Apps & updates",
+        "nftCoins": [
+            {
+                "id": 43,
+                "title": "Local Team Wins",
+                "url": "https://nftCoins4.com"
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "name": "Quantum Data",
+        "description": "Quantum nftCoins & tips",
+        "nftCoins": [
+            {
+                "id": 44,
+                "title": "Finance Reforms",
+                "url": "https://nftCoins5.com"
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "name": "Musing Blockchain",
+        "description": " Blockchain Cryptocurrency insights",
+        "nftCoins": [
+            {
+                "id": 40,
+                "title": "Crypto Market Surges",
+                "url": "https://nftCoins1.com"
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "name": "A.I.Now.",
+        "description": "A.I.Now. as nftCoin",
+        "nftCoins": []
+    },
+    {
+        "id": 16,
+        "name": "h",
+        "description": "h",
+        "nftCoins": []
+    },
+    {
+        "id": 17,
+        "name": "h",
+        "description": "h",
+        "nftCoins": []
+    },
+    {
+        "id": 18,
+        "name": "h",
+        "description": "h",
+        "nftCoins": []
+    },
+    {
+        "id": 19,
+        "name": "h",
+        "description": "h",
+        "nftCoins": []
+    },
+    {
+        "id": 20,
+        "name": "h",
+        "description": "h",
+        "nftCoins": []
+    }
+]

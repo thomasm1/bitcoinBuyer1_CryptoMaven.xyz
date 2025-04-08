@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 // import {DestroyRef} from '@angular/common';
 import { ChainComponent } from '../../../chain/chain/chain.component';
 import { PlacesContainerComponent } from '../places-container/places-container.component';
-import { AddressService } from '../../../../services/address.service';
+import { addressesService } from '../../../../services/address.service';
 // import { CoinService } from '../../../../services/address.service';
 
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
@@ -17,16 +17,16 @@ import { tap } from 'rxjs/operators';
   imports: [],
   templateUrl: './user-coins.component.html',
   styleUrls: ['./user-coins.component.css'],
-  providers: [AddressService,]
+  providers: [addressesService,]
 })
 export class UserCoinsComponent implements OnInit {
   isFetching = new BehaviorSubject<boolean>(false);
   placeSelected: BehaviorSubject<Coin[]> = new BehaviorSubject<Coin[]>([]);
   error: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  private addressService = inject(AddressService);
+  private addressesService = inject(addressesService);
   // private destroyed = inject(DestroyRef);
   constructor() { 
-    this.addressService = inject(AddressService);
+    this.addressesService = inject(addressesService);
     // this.destroyed = inject(DestroyRef);
 
   }
@@ -54,7 +54,7 @@ export class UserCoinsComponent implements OnInit {
   loadUserCoins(): Observable<Coin[]> {
     // Logic to load user coins, this could be an API call or some other logic
     console.log('Loading user coins...');
-    return this.addressService.fetchUserCoins(null, null).pipe(
+    return this.addressesService.fetchUserCoins(null, null).pipe(
       tap((coins) => {
         this.placeSelected.next(coins);
       })

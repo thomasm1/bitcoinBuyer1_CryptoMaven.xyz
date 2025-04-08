@@ -70,7 +70,7 @@ public class AddressesController {
 
   @ApiResponse(responseCode = "201", description = "Address created")
   @Operation(summary = "Create a new address")
-  @RequestMapping(value = "", method = RequestMethod.POST, consumes = "application/json")
+  @RequestMapping(value = "",  method = RequestMethod.POST, consumes = "application/json")
   public ResponseEntity<AddressDto> createAddress(@RequestBody AddressDto c) {
 
     return new ResponseEntity<>(addressesService.createAddress(c), HttpStatus.CREATED);

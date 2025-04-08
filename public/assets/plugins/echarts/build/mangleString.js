@@ -157,7 +157,7 @@ function mangleString(source) {
         ast,
         {
             format: {escapeless: true},
-            comment: true
+            coin: true
         }
     );
 }

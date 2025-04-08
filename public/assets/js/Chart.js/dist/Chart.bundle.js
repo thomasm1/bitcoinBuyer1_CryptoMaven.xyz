@@ -8120,7 +8120,7 @@ module.exports = function(Chart) {
 				data: [],
 				dataset: null,
 				controller: null,
-				hidden: null,			// See isDatasetVisible() comment
+				hidden: null,			// See isDatasetVisible() coin
 				xAxisID: null,
 				yAxisID: null
 			};
@@ -9220,7 +9220,7 @@ module.exports = function(Chart) {
 		}
 
 		// Scale mouse coordinates into canvas coordinates
-		// by following the pattern laid out by 'jerryj' in the comments of
+		// by following the pattern laid out by 'jerryj' in the coins of
 		// http://www.html5canvastutorials.com/advanced/html5-canvas-mouse-coordinates/
 		var paddingLeft = parseFloat(helpers.getStyle(canvas, 'padding-left'));
 		var paddingTop = parseFloat(helpers.getStyle(canvas, 'padding-top'));
@@ -9990,7 +9990,7 @@ module.exports = function(Chart) {
 			var ci = this.chart;
 			var meta = ci.getDatasetMeta(index);
 
-			// See controller.isDatasetVisible comment
+			// See controller.isDatasetVisible coin
 			meta.hidden = meta.hidden === null? !ci.data.datasets[index].hidden : null;
 
 			// We hid a dataset ... rerender the chart

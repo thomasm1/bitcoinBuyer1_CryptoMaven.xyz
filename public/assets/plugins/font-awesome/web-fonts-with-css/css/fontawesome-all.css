@@ -724,13 +724,13 @@ readers do not read off random characters that represent icons */
 .fa-columns:before {
   content: "\f0db"; }
 
-.fa-comment:before {
+.fa-coin:before {
   content: "\f075"; }
 
-.fa-comment-alt:before {
+.fa-coin-alt:before {
   content: "\f27a"; }
 
-.fa-comments:before {
+.fa-coins:before {
   content: "\f086"; }
 
 .fa-compass:before {

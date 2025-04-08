@@ -2,7 +2,7 @@ import { Component, Input, Output, Inject } from '@angular/core';
 import { Subject } from 'rxjs';
 import { CommonModule, NgFor } from '@angular/common';
 import { Address } from '.models/Address';
-import { AddressService } from '../../../services/address.service';
+import { addressesService } from '../../../services/address.service';
 import { Coin } from '../../../models/Coin'; 
 import { EventEmitter } from '@angular/core'; 
 import { environment } from 'src/environments/environment';
@@ -15,7 +15,7 @@ import { PlacesContainerComponent } from './places-container/places-container.co
   imports: [CommonModule, PlacesContainerComponent],
   templateUrl: './landing.component.html',
   styleUrls: ['./landing.component.css'],
-  providers: [AddressService],
+  providers: [addressesService],
 })
  
 export class LandingComponent {
@@ -30,16 +30,16 @@ export class LandingComponent {
   baseUrl: string;
   coins: Coin[] = [];
 
-  constructor(@Inject(AddressService) private addressService: AddressService ) { }
+  constructor(@Inject(addressesService) private addressesService: addressesService ) { }
   ngOnInit() {
     this.baseUrl = environment.nft_url;
-    this.addressService.loadUserCoins("1", "error from LandingComponent NgOniti").subscribe(coins => {
+    this.addressesService.loadUserCoins("1", "error from LandingComponent NgOniti").subscribe(coins => {
       this.userCoins.next(coins);
     });
   }
 
   onSelectCoin(coin: Coin) {
-    const subscription = this.addressService.editCoinFromUserCoins(coin, "1").subscribe({
+    const subscription = this.addressesService.editCoinFromUserCoins(coin, "1").subscribe({
       next: (coin) => {
         console.log('coin edited from user coins');
         console.log(coin);

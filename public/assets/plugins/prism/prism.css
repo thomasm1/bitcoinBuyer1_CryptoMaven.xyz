@@ -67,7 +67,7 @@ pre[class*="language-"] {
 	white-space: normal;
 }
 
-.token.comment,
+.token.coin,
 .token.prolog,
 .token.doctype,
 .token.cdata {

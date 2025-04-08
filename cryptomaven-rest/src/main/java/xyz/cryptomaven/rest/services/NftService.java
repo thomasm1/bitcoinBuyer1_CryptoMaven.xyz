@@ -6,17 +6,15 @@ import java.util.List;
 import java.util.Optional;
 
 public interface NftService {
-  NftCoinDto createNft(NftCoinDto c);
+  NftCoinDto createNft(NftCoinDto nftCoinDto);
 
-  public Optional<NftCoinDto> getNft(Long id) ;
+  Optional<NftCoinDto> getNft(Long id);
 
-    List<NftCoinDto> getAllNFTsByName(String name);
+  List<NftCoinDto> getAllNFTs();
 
-    List<NftCoinDto> getAllNFTs();
+  boolean updateNft(NftCoinDto nftCoinDto);
 
-    boolean updateNft(NftCoinDto change);
+  boolean deleteNft(Long id);
 
-    boolean deleteNft(Long id) ;
-
-    void nftlotViewAll();
+  void nftlotViewAll();
 }

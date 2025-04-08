@@ -287,15 +287,15 @@
   content: "\e642";
 }
 
-.ti-comments:before {
+.ti-coins:before {
   content: "\e643";
 }
 
-.ti-comment:before {
+.ti-coin:before {
   content: "\e644";
 }
 
-.ti-comment-alt:before {
+.ti-coin-alt:before {
   content: "\e645";
 }
 
@@ -1195,7 +1195,7 @@
   content: "\e725";
 }
 
-.ti-comments-smiley:before {
+.ti-coins-smiley:before {
   content: "\e726";
 }
 

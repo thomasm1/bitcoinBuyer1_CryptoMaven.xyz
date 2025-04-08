@@ -3245,7 +3245,7 @@ var Chartist = {
   'use strict';
 
   /**
-   * Default options in line charts. Expand the code view to see a detailed list of options with comments.
+   * Default options in line charts. Expand the code view to see a detailed list of options with coins.
    *
    * @memberof Chartist.Line
    */
@@ -3658,7 +3658,7 @@ var Chartist = {
   'use strict';
 
   /**
-   * Default options in bar charts. Expand the code view to see a detailed list of options with comments.
+   * Default options in bar charts. Expand the code view to see a detailed list of options with coins.
    *
    * @memberof Chartist.Bar
    */
@@ -4101,7 +4101,7 @@ var Chartist = {
   'use strict';
 
   /**
-   * Default options in line charts. Expand the code view to see a detailed list of options with comments.
+   * Default options in line charts. Expand the code view to see a detailed list of options with coins.
    *
    * @memberof Chartist.Pie
    */

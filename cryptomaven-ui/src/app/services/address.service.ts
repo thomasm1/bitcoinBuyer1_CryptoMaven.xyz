@@ -11,7 +11,7 @@ import { error } from 'console';
 @Injectable({
   providedIn: 'root',
 })
-export class AddressService implements OnInit {
+export class addressesService implements OnInit {
   
   
   private userPlaces = new BehaviorSubject<Address[]>([]);

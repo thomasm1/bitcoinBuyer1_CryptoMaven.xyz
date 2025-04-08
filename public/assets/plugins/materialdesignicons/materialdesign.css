@@ -287,15 +287,15 @@
   content: "\e642";
 }
 
-.ti-comments:before {
+.ti-coins:before {
   content: "\e643";
 }
 
-.ti-comment:before {
+.ti-coin:before {
   content: "\e644";
 }
 
-.ti-comment-alt:before {
+.ti-coin-alt:before {
   content: "\e645";
 }
 
@@ -1195,7 +1195,7 @@
   content: "\e725";
 }
 
-.ti-comments-smiley:before {
+.ti-coins-smiley:before {
   content: "\e726";
 }
 
@@ -5897,67 +5897,67 @@
   content: "\F179";
 }
 
-.mdi-comment:before {
+.mdi-coin:before {
   content: "\F17A";
 }
 
-.mdi-comment-account:before {
+.mdi-coin-account:before {
   content: "\F17B";
 }
 
-.mdi-comment-account-outline:before {
+.mdi-coin-account-outline:before {
   content: "\F17C";
 }
 
-.mdi-comment-alert:before {
+.mdi-coin-alert:before {
   content: "\F17D";
 }
 
-.mdi-comment-alert-outline:before {
+.mdi-coin-alert-outline:before {
   content: "\F17E";
 }
 
-.mdi-comment-check:before {
+.mdi-coin-check:before {
   content: "\F17F";
 }
 
-.mdi-comment-check-outline:before {
+.mdi-coin-check-outline:before {
   content: "\F180";
 }
 
-.mdi-comment-multiple-outline:before {
+.mdi-coin-multiple-outline:before {
   content: "\F181";
 }
 
-.mdi-comment-outline:before {
+.mdi-coin-outline:before {
   content: "\F182";
 }
 
-.mdi-comment-plus-outline:before {
+.mdi-coin-plus-outline:before {
   content: "\F183";
 }
 
-.mdi-comment-processing:before {
+.mdi-coin-processing:before {
   content: "\F184";
 }
 
-.mdi-comment-processing-outline:before {
+.mdi-coin-processing-outline:before {
   content: "\F185";
 }
 
-.mdi-comment-question-outline:before {
+.mdi-coin-question-outline:before {
   content: "\F186";
 }
 
-.mdi-comment-remove-outline:before {
+.mdi-coin-remove-outline:before {
   content: "\F187";
 }
 
-.mdi-comment-text:before {
+.mdi-coin-text:before {
   content: "\F188";
 }
 
-.mdi-comment-text-outline:before {
+.mdi-coin-text-outline:before {
   content: "\F189";
 }
 
@@ -13188,7 +13188,7 @@
 .glyphicon-random:before {
   content: "\e110";
 }
-.glyphicon-comment:before {
+.glyphicon-coin:before {
   content: "\e111";
 }
 .glyphicon-magnet:before {

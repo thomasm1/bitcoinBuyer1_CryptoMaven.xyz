@@ -6163,7 +6163,7 @@
       }
     }
   },
-  "comment": {
+  "coin": {
     "changes": [
       "1",
       "5.0.0"
@@ -6188,7 +6188,7 @@
       "regular"
     ],
     "unicode": "f075",
-    "label": "comment",
+    "label": "coin",
     "svg": {
       "solid": {
         "last_modified": 1500927880000,
@@ -6218,7 +6218,7 @@
       }
     }
   },
-  "comment-alt": {
+  "coin-alt": {
     "changes": [
       "4.4",
       "5.0.0"
@@ -6236,8 +6236,8 @@
         "texting",
         "sms",
         "conversation",
-        "commenting",
-        "commenting"
+        "coining",
+        "coining"
       ]
     },
     "styles": [
@@ -6275,7 +6275,7 @@
       }
     }
   },
-  "comments": {
+  "coins": {
     "changes": [
       "1",
       "5.0.0"
@@ -6300,7 +6300,7 @@
       "regular"
     ],
     "unicode": "f086",
-    "label": "comments",
+    "label": "coins",
     "svg": {
       "solid": {
         "last_modified": 1500927880000,

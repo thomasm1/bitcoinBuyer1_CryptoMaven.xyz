@@ -21,6 +21,8 @@ public class NftCoinDto implements Serializable {
   private Long id;
   private String name;
   private double amount;
+  private MetadataDto metadata;
+  private CoinDto coin;
 
 
 }

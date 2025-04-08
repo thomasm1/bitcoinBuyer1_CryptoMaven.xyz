@@ -17,14 +17,14 @@ export class PlacesContainerComponent {
 
   isFetching: Subject<boolean> = new Subject<boolean>();
   error: Subject<string> = new Subject<string>();
-  private addressService: any;
+  private addressesService: any;
 
   ngOnInit() {
     this.coins();
   }
   onSelectCoin(coin: Coin) {
     console.log('coin selected', coin);
-    const subscription = this.addressService.editCoinFromUserCoins(coin, "1").subscribe({
+    const subscription = this.addressesService.editCoinFromUserCoins(coin, "1").subscribe({
       next: (coin) => {
         console.log('coin edited from user coins');
         console.log(coin);
@@ -39,7 +39,7 @@ export class PlacesContainerComponent {
   constructor() { }
   coins() {
     this.isFetching.next(true);
-    const subscription = this.addressService.loadUserCoins("1", "error from PlacesContainerComponent NgOniti").subscribe(coins => {
+    const subscription = this.addressesService.loadUserCoins("1", "error from PlacesContainerComponent NgOniti").subscribe(coins => {
       this.isFetching.next(false);
       this.userCoins = coins;
     });

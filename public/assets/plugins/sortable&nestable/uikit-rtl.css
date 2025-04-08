@@ -3295,43 +3295,43 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 /* Sections
  ========================================================================== */
-.uk-comment-body {
+.uk-coin-body {
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
-.uk-comment-header {
+.uk-coin-header {
   margin-bottom: 20px;
 }
 /*
  * Micro clearfix
  */
-.uk-comment-body::before,
-.uk-comment-body::after,
-.uk-comment-header::before,
-.uk-comment-header::after {
+.uk-coin-body::before,
+.uk-coin-body::after,
+.uk-coin-header::before,
+.uk-coin-header::after {
   content: "";
   display: table;
 }
-.uk-comment-body::after,
-.uk-comment-header::after {
+.uk-coin-body::after,
+.uk-coin-header::after {
   clear: both;
 }
 /*
  * Remove margin from the last-child
  */
-.uk-comment-body > :last-child,
-.uk-comment-header > :last-child {
+.uk-coin-body > :last-child,
+.uk-coin-header > :last-child {
   margin-bottom: 0;
 }
 /* Title
  ========================================================================== */
-.uk-comment-title {
+.uk-coin-title {
   font-size: 1.25rem;
   line-height: 1.4;
 }
 /* Meta
  ========================================================================== */
-.uk-comment-meta {
+.uk-coin-meta {
   font-size: 0.875rem;
   line-height: 1.4;
   color: #999;
@@ -3340,36 +3340,36 @@ select.uk-form-width-xsmall {
  ========================================================================== */
 /* List
  ========================================================================== */
-.uk-comment-list {
+.uk-coin-list {
   padding: 0;
   list-style: none;
 }
 /* Adjacent siblings */
-.uk-comment-list > :nth-child(n+2) {
+.uk-coin-list > :nth-child(n+2) {
   margin-top: 70px;
 }
 /*
  * Sublists
- * Note: General sibling selector allows reply block between comment and sublist
+ * Note: General sibling selector allows reply block between coin and sublist
  */
-.uk-comment-list .uk-comment ~ ul {
+.uk-coin-list .uk-coin ~ ul {
   margin: 70px 0 0 0;
   padding-right: 30px;
   list-style: none;
 }
 /* Tablet and bigger */
 @media (min-width: 960px) {
-  .uk-comment-list .uk-comment ~ ul {
+  .uk-coin-list .uk-coin ~ ul {
     padding-right: 100px;
   }
 }
 /* Adjacent siblings */
-.uk-comment-list .uk-comment ~ ul > :nth-child(n+2) {
+.uk-coin-list .uk-coin ~ ul > :nth-child(n+2) {
   margin-top: 70px;
 }
 /* Style modifier
  ========================================================================== */
-.uk-comment-primary {
+.uk-coin-primary {
   padding: 30px;
   background-color: #f8f8f8;
 }

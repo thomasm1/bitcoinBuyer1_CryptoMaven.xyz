@@ -420,14 +420,14 @@
     "tachometer-alt"
   ],
   [
-    "comment-o",
+    "coin-o",
     "far",
-    "comment"
+    "coin"
   ],
   [
-    "comments-o",
+    "coins-o",
     "far",
-    "comments"
+    "coins"
   ],
   [
     "flash",
@@ -1875,14 +1875,14 @@
     "map"
   ],
   [
-    "commenting",
+    "coining",
     null,
-    "comment-alt"
+    "coin-alt"
   ],
   [
-    "commenting-o",
+    "coining-o",
     "far",
-    "comment-alt"
+    "coin-alt"
   ],
   [
     "houzz",

@@ -2099,11 +2099,11 @@ columns:
   styles:
     - solid
   unicode: f0db
-comment:
+coin:
   changes:
     - '1'
     - 5.0.0
-  label: comment
+  label: coin
   search:
     terms:
       - speech
@@ -2120,7 +2120,7 @@ comment:
     - solid
     - regular
   unicode: f075
-comment-alt:
+coin-alt:
   changes:
     - '4.4'
     - 5.0.0
@@ -2137,17 +2137,17 @@ comment-alt:
       - texting
       - sms
       - conversation
-      - commenting
-      - commenting
+      - coining
+      - coining
   styles:
     - solid
     - regular
   unicode: f27a
-comments:
+coins:
   changes:
     - '1'
     - 5.0.0
-  label: comments
+  label: coins
   search:
     terms:
       - speech
