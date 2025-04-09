@@ -1,4 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: karate.jwtGetRequest.TestSecureGetRunner
 -------------------------------------------------------------------------------
-Tests run: 0, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0 s - in karate.jwtGetRequest.TestSecureGetRunner
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.599 s <<< FAILURE! - in karate.jwtGetRequest.TestSecureGetRunner
+runTest[2][1]  Time elapsed: 0.458 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+
+runTest[2][2]  Time elapsed: 0.138 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+

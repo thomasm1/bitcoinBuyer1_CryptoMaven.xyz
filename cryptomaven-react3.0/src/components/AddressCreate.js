@@ -1,7 +1,5 @@
-import React from "react";
-import axios from "axios";
-import Form from "./Form";
-import { ADDRESSES_BASE_URL } from "../config";
+import React from "react"; 
+import Form from "./Form"; 
 import FormGroup from "./FormGroup";
 import addressesService from "../services/addressesService";
 

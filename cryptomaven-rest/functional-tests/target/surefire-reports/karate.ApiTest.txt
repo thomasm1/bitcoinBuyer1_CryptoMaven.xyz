@@ -1,4 +1,90 @@
 -------------------------------------------------------------------------------
 Test set: karate.ApiTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.925 s - in karate.ApiTest
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 8.147 s <<< FAILURE! - in karate.ApiTest
+testParallel  Time elapsed: 8.137 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/chains/30, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/users/11, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/coins, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/coins/40, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 40, url: http://localhost:8083/api/nftCoins, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/nftCoins/70, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/actuator/health, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/actuator/info, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/actuator/env, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/metrics, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/loggers, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users, response: 
+
+classpath:karate/springRest/restData.feature:12
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/rest/users/20, response: 
+
+classpath:karate/springRest/restData.feature:25
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users/20/addresses, response: 
+
+classpath:karate/springRest/restData.feature:88
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains/31, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/chains/name/Ethereum, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 19, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/addresses/20/chains, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:15
+status code was: 401, expected: 201, response time in milliseconds: 9, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:55 ==> expected: <0> but was: <28>
+	at karate.ApiTest.testParallel(ApiTest.java:17)
+

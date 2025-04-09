@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="karate.ApiTest" time="7.925" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="karate.ApiTest" time="8.147" tests="1" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\test-classes;C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\classes;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-junit5\1.1.0\karate-junit5-1.1.0.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-core\1.1.0\karate-core-1.1.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js-scriptengine\21.2.0\js-scriptengine-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\sdk\graal-sdk\21.2.0\graal-sdk-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js\21.2.0\js-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\regex\regex\21.2.0\regex-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\truffle\truffle-api\21.2.0\truffle-api-21.2.0.jar;C:\Users\thoma\.m2\repository\com\ibm\icu\icu4j\69.1\icu4j-69.1.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\thoma\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\thoma\.m2\repository\com\jayway\jsonpath\json-path\2.6.0\json-path-2.6.0.jar;C:\Users\thoma\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.29\snakeyaml-1.29.jar;C:\Users\thoma\.m2\repository\de\siegmar\fastcsv\2.0.0\fastcsv-2.0.0.jar;C:\Users\thoma\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;C:\Users\thoma\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\thoma\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\thoma\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\thoma\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\thoma\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\thoma\.m2\repository\net\masterthought\cucumber-reporting\5.4.0\cucumber-reporting-5.4.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.1\jackson-datatype-jsr310-2.10.1.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-core\2.1\velocity-engine-core-2.1.jar;C:\Users\thoma\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\thoma\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\thoma\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\thoma\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\thoma\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\thoma\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20191001.1\owasp-java-html-sanitizer-20191001.1.jar;C:\Users\thoma\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\thoma\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\thoma\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-netty\5.11.1\mockserver-netty-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-client-java\5.11.1\mockserver-client-java-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-core\5.11.1\mockserver-core-5.11.1.jar;C:\Users\thoma\.m2\repository\com\lmax\disruptor\3.4.2\disruptor-3.4.2.jar;C:\Users\thoma\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-socks\4.1.50.Final\netty-codec-socks-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler-proxy\4.1.50.Final\netty-handler-proxy-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\jcraft\jzlib\1.1.3\jzlib-1.1.3.jar;C:\Users\thoma\.m2\repository\com\fasterxml\uuid\java-uuid-generator\4.0\java-uuid-generator-4.0.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-scripting\2.2\velocity-engine-scripting-2.2.jar;C:\Users\thoma\.m2\repository\net\javacrumbs\json-unit\json-unit-core\2.14.0\json-unit-core-2.14.0.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest-core\2.1\hamcrest-core-2.1.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\thoma\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\thoma\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\thoma\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\thoma\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser\2.0.20\swagger-parser-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v2-converter\2.0.20\swagger-parser-v2-converter-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-core\1.6.1\swagger-core-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-models\1.6.1\swagger-models-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-annotations\1.6.1\swagger-annotations-1.6.1.jar;C:\Users\thoma\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-parser\1.0.51\swagger-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-compat-spec-parser\1.0.51\swagger-compat-spec-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-models\2.1.2\swagger-models-2.1.2.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-core\2.0.20\swagger-parser-core-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v3\2.0.20\swagger-parser-v3-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-core\2.1.2\swagger-core-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\thoma\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.2\swagger-annotations-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.10.2\jackson-dataformat-yaml-2.10.2.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-ext\1.7.30\slf4j-ext-1.7.30.jar;C:\Users\thoma\.m2\repository\javax\xml\bind\jaxb-api\2.4.0-b180830.0359\jaxb-api-2.4.0-b180830.0359.jar;C:\Users\thoma\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-placeholders\2.7.0\xmlunit-placeholders-2.7.0.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\thoma\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\thoma\.m2\repository\io\netty\netty-buffer\4.1.50.Final\netty-buffer-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec\4.1.50.Final\netty-codec-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http\4.1.50.Final\netty-codec-http-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-common\4.1.50.Final\netty-common-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler\4.1.50.Final\netty-handler-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver\4.1.50.Final\netty-resolver-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport\4.1.50.Final\netty-transport-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\thoma\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\thoma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\thoma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\thoma\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\thoma\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-gatling\1.1.0\karate-gatling-1.1.0.jar;C:\Users\thoma\.m2\repository\io\gatling\highcharts\gatling-charts-highcharts\3.6.0\gatling-charts-highcharts-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-app\3.6.0\gatling-app-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-core\3.6.0\gatling-core-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons\3.6.0\gatling-commons-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared\3.6.0\gatling-commons-shared-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-reflect\2.13.6\scala-reflect-2.13.6.jar;C:\Users\thoma\.m2\repository\io\suzaku\boopickle_2.13\1.3.3\boopickle_2.13-1.3.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared-unstable\3.6.0\gatling-commons-shared-unstable-3.6.0.jar;C:\Users\thoma\.m2\repository\org\typelevel\spire-macros_2.13\0.17.0\spire-macros_2.13-0.17.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.3\scala-logging_2.13-3.9.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jsonpath\3.6.0\gatling-jsonpath-3.6.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-slf4j_2.13\2.6.14\akka-slf4j_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\lightning-csv\8.2.3\lightning-csv-8.2.3.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\sfm-util\8.2.3\sfm-util-8.2.3.jar;C:\Users\thoma\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.1\caffeine-2.9.1.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-qual\3.10.0\checker-qual-3.10.0.jar;C:\Users\thoma\.m2\repository\io\pebbletemplates\pebble\3.1.5\pebble-3.1.5.jar;C:\Users\thoma\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.13\2.0.0\scala-parser-combinators_2.13-2.0.0.jar;C:\Users\thoma\.m2\repository\com\github\scopt\scopt_2.13\3.7.1\scopt_2.13-3.7.1.jar;C:\Users\thoma\.m2\repository\com\softwaremill\quicklens\quicklens_2.13\1.7.2\quicklens_2.13-1.7.2.jar;C:\Users\thoma\.m2\repository\net\sf\saxon\Saxon-HE\10.5\Saxon-HE-10.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-lagarto\6.0.5\jodd-lagarto-6.0.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-util\6.0.1\jodd-util-6.0.1.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-jackson\0.5.0\jmespath-jackson-0.5.0.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-core\0.5.0\jmespath-core-0.5.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http\3.6.0\gatling-http-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http-client\3.6.0\gatling-http-client-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-netty-util\3.6.0\gatling-netty-util-3.6.0.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver-dns\4.1.64.Final\netty-resolver-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-dns\4.1.64.Final\netty-codec-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-epoll\4.1.64.Final\netty-transport-native-epoll-4.1.64.Final-linux-x86_64.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.64.Final\netty-transport-native-unix-common-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http2\4.1.64.Final\netty-codec-http2-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.39.Final\netty-tcnative-boringssl-static-2.0.39.Final.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.4.2\brotli4j-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-x86_64\1.4.2\native-linux-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-aarch64\1.4.2\native-linux-aarch64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-osx-x86_64\1.4.2\native-osx-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.4.2\native-windows-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jms\3.6.0\gatling-jms-3.6.0.jar;C:\Users\thoma\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar;C:\Users\thoma\.m2\repository\com\eatthepath\fast-uuid\0.1\fast-uuid-0.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jdbc\3.6.0\gatling-jdbc-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-redis\3.6.0\gatling-redis-3.6.0.jar;C:\Users\thoma\.m2\repository\net\debasishg\redisclient_2.13\3.30\redisclient_2.13-3.30.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-graphite\3.6.0\gatling-graphite-3.6.0.jar;C:\Users\thoma\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-charts\3.6.0\gatling-charts-3.6.0.jar;C:\Users\thoma\.m2\repository\com\tdunning\t-digest\3.1\t-digest-3.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-recorder\3.6.0\gatling-recorder-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-swing_2.13\3.0.0\scala-swing_2.13-3.0.0.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.68\bcpkix-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.68\bcprov-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-actor_2.13\2.6.14\akka-actor_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\com\typesafe\config\1.4.0\config-1.4.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.8\jackson-databind-2.8.8.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.8\jackson-core-2.8.8.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\thoma\.m2\repository\org\mongodb\mongo-java-driver\3.6.3\mongo-java-driver-3.6.3.jar;C:\Users\thoma\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\8.4.1.jre11\mssql-jdbc-8.4.1.jre11.jar;"/>
+    <property name="java.class.path" value="C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\test-classes;C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\classes;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-junit5\1.1.0\karate-junit5-1.1.0.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-core\1.1.0\karate-core-1.1.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js-scriptengine\21.2.0\js-scriptengine-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\sdk\graal-sdk\21.2.0\graal-sdk-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js\21.2.0\js-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\regex\regex\21.2.0\regex-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\truffle\truffle-api\21.2.0\truffle-api-21.2.0.jar;C:\Users\thoma\.m2\repository\com\ibm\icu\icu4j\69.1\icu4j-69.1.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\thoma\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\thoma\.m2\repository\com\jayway\jsonpath\json-path\2.6.0\json-path-2.6.0.jar;C:\Users\thoma\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.29\snakeyaml-1.29.jar;C:\Users\thoma\.m2\repository\de\siegmar\fastcsv\2.0.0\fastcsv-2.0.0.jar;C:\Users\thoma\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;C:\Users\thoma\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\thoma\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\thoma\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\thoma\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\thoma\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\thoma\.m2\repository\net\masterthought\cucumber-reporting\5.4.0\cucumber-reporting-5.4.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.1\jackson-datatype-jsr310-2.10.1.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-core\2.1\velocity-engine-core-2.1.jar;C:\Users\thoma\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\thoma\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\thoma\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\thoma\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\thoma\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\thoma\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20191001.1\owasp-java-html-sanitizer-20191001.1.jar;C:\Users\thoma\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\thoma\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\thoma\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-netty\5.11.1\mockserver-netty-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-client-java\5.11.1\mockserver-client-java-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-core\5.11.1\mockserver-core-5.11.1.jar;C:\Users\thoma\.m2\repository\com\lmax\disruptor\3.4.2\disruptor-3.4.2.jar;C:\Users\thoma\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-socks\4.1.50.Final\netty-codec-socks-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler-proxy\4.1.50.Final\netty-handler-proxy-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\jcraft\jzlib\1.1.3\jzlib-1.1.3.jar;C:\Users\thoma\.m2\repository\com\fasterxml\uuid\java-uuid-generator\4.0\java-uuid-generator-4.0.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-scripting\2.2\velocity-engine-scripting-2.2.jar;C:\Users\thoma\.m2\repository\net\javacrumbs\json-unit\json-unit-core\2.14.0\json-unit-core-2.14.0.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest-core\2.1\hamcrest-core-2.1.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\thoma\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\thoma\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\thoma\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\thoma\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser\2.0.20\swagger-parser-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v2-converter\2.0.20\swagger-parser-v2-converter-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-core\1.6.1\swagger-core-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-models\1.6.1\swagger-models-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-annotations\1.6.1\swagger-annotations-1.6.1.jar;C:\Users\thoma\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-parser\1.0.51\swagger-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-compat-spec-parser\1.0.51\swagger-compat-spec-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-models\2.1.2\swagger-models-2.1.2.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-core\2.0.20\swagger-parser-core-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v3\2.0.20\swagger-parser-v3-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-core\2.1.2\swagger-core-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\thoma\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.2\swagger-annotations-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.10.2\jackson-dataformat-yaml-2.10.2.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-ext\1.7.30\slf4j-ext-1.7.30.jar;C:\Users\thoma\.m2\repository\javax\xml\bind\jaxb-api\2.4.0-b180830.0359\jaxb-api-2.4.0-b180830.0359.jar;C:\Users\thoma\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-placeholders\2.7.0\xmlunit-placeholders-2.7.0.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\thoma\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\thoma\.m2\repository\io\netty\netty-buffer\4.1.50.Final\netty-buffer-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec\4.1.50.Final\netty-codec-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http\4.1.50.Final\netty-codec-http-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-common\4.1.50.Final\netty-common-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler\4.1.50.Final\netty-handler-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver\4.1.50.Final\netty-resolver-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport\4.1.50.Final\netty-transport-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\thoma\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\thoma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\thoma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\thoma\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\thoma\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-gatling\1.1.0\karate-gatling-1.1.0.jar;C:\Users\thoma\.m2\repository\io\gatling\highcharts\gatling-charts-highcharts\3.6.0\gatling-charts-highcharts-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-app\3.6.0\gatling-app-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-core\3.6.0\gatling-core-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons\3.6.0\gatling-commons-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared\3.6.0\gatling-commons-shared-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-reflect\2.13.6\scala-reflect-2.13.6.jar;C:\Users\thoma\.m2\repository\io\suzaku\boopickle_2.13\1.3.3\boopickle_2.13-1.3.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared-unstable\3.6.0\gatling-commons-shared-unstable-3.6.0.jar;C:\Users\thoma\.m2\repository\org\typelevel\spire-macros_2.13\0.17.0\spire-macros_2.13-0.17.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.3\scala-logging_2.13-3.9.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jsonpath\3.6.0\gatling-jsonpath-3.6.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-slf4j_2.13\2.6.14\akka-slf4j_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\lightning-csv\8.2.3\lightning-csv-8.2.3.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\sfm-util\8.2.3\sfm-util-8.2.3.jar;C:\Users\thoma\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.1\caffeine-2.9.1.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-qual\3.10.0\checker-qual-3.10.0.jar;C:\Users\thoma\.m2\repository\io\pebbletemplates\pebble\3.1.5\pebble-3.1.5.jar;C:\Users\thoma\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.13\2.0.0\scala-parser-combinators_2.13-2.0.0.jar;C:\Users\thoma\.m2\repository\com\github\scopt\scopt_2.13\3.7.1\scopt_2.13-3.7.1.jar;C:\Users\thoma\.m2\repository\com\softwaremill\quicklens\quicklens_2.13\1.7.2\quicklens_2.13-1.7.2.jar;C:\Users\thoma\.m2\repository\net\sf\saxon\Saxon-HE\10.5\Saxon-HE-10.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-lagarto\6.0.5\jodd-lagarto-6.0.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-util\6.0.1\jodd-util-6.0.1.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-jackson\0.5.0\jmespath-jackson-0.5.0.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-core\0.5.0\jmespath-core-0.5.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http\3.6.0\gatling-http-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http-client\3.6.0\gatling-http-client-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-netty-util\3.6.0\gatling-netty-util-3.6.0.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver-dns\4.1.64.Final\netty-resolver-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-dns\4.1.64.Final\netty-codec-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-epoll\4.1.64.Final\netty-transport-native-epoll-4.1.64.Final-linux-x86_64.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.64.Final\netty-transport-native-unix-common-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http2\4.1.64.Final\netty-codec-http2-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.39.Final\netty-tcnative-boringssl-static-2.0.39.Final.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.4.2\brotli4j-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-x86_64\1.4.2\native-linux-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-aarch64\1.4.2\native-linux-aarch64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-osx-x86_64\1.4.2\native-osx-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.4.2\native-windows-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jms\3.6.0\gatling-jms-3.6.0.jar;C:\Users\thoma\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar;C:\Users\thoma\.m2\repository\com\eatthepath\fast-uuid\0.1\fast-uuid-0.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jdbc\3.6.0\gatling-jdbc-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-redis\3.6.0\gatling-redis-3.6.0.jar;C:\Users\thoma\.m2\repository\net\debasishg\redisclient_2.13\3.30\redisclient_2.13-3.30.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-graphite\3.6.0\gatling-graphite-3.6.0.jar;C:\Users\thoma\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-charts\3.6.0\gatling-charts-3.6.0.jar;C:\Users\thoma\.m2\repository\com\tdunning\t-digest\3.1\t-digest-3.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-recorder\3.6.0\gatling-recorder-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-swing_2.13\3.0.0\scala-swing_2.13-3.0.0.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.68\bcpkix-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.68\bcprov-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-actor_2.13\2.6.14\akka-actor_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\com\typesafe\config\1.4.0\config-1.4.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.8\jackson-databind-2.8.8.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.8\jackson-core-2.8.8.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\thoma\.m2\repository\org\mongodb\mongo-java-driver\3.6.3\mongo-java-driver-3.6.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-17\bin"/>
-    <property name="sun.java.command" value="C:\Users\thoma\AppData\Local\Temp\surefire14975639533339494667\surefirebooter11740502848548658569.jar C:\Users\thoma\AppData\Local\Temp\surefire14975639533339494667 2025-03-25T21-53-43_077-jvmRun1 surefire14077069269438098730tmp surefire_02717370620586219042tmp"/>
+    <property name="sun.java.command" value="C:\Users\thoma\AppData\Local\Temp\surefire3152788090009447961\surefirebooter16431235047508500455.jar C:\Users\thoma\AppData\Local\Temp\surefire3152788090009447961 2025-04-09T13-34-31_441-jvmRun1 surefire735646345363253729tmp surefire_09838738873198480594tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\test-classes;C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\classes;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-junit5\1.1.0\karate-junit5-1.1.0.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-core\1.1.0\karate-core-1.1.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js-scriptengine\21.2.0\js-scriptengine-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\sdk\graal-sdk\21.2.0\graal-sdk-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js\21.2.0\js-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\regex\regex\21.2.0\regex-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\truffle\truffle-api\21.2.0\truffle-api-21.2.0.jar;C:\Users\thoma\.m2\repository\com\ibm\icu\icu4j\69.1\icu4j-69.1.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\thoma\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\thoma\.m2\repository\com\jayway\jsonpath\json-path\2.6.0\json-path-2.6.0.jar;C:\Users\thoma\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.29\snakeyaml-1.29.jar;C:\Users\thoma\.m2\repository\de\siegmar\fastcsv\2.0.0\fastcsv-2.0.0.jar;C:\Users\thoma\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;C:\Users\thoma\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\thoma\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\thoma\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\thoma\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\thoma\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\thoma\.m2\repository\net\masterthought\cucumber-reporting\5.4.0\cucumber-reporting-5.4.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.1\jackson-datatype-jsr310-2.10.1.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-core\2.1\velocity-engine-core-2.1.jar;C:\Users\thoma\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\thoma\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\thoma\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\thoma\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\thoma\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\thoma\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20191001.1\owasp-java-html-sanitizer-20191001.1.jar;C:\Users\thoma\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\thoma\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\thoma\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-netty\5.11.1\mockserver-netty-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-client-java\5.11.1\mockserver-client-java-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-core\5.11.1\mockserver-core-5.11.1.jar;C:\Users\thoma\.m2\repository\com\lmax\disruptor\3.4.2\disruptor-3.4.2.jar;C:\Users\thoma\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-socks\4.1.50.Final\netty-codec-socks-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler-proxy\4.1.50.Final\netty-handler-proxy-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\jcraft\jzlib\1.1.3\jzlib-1.1.3.jar;C:\Users\thoma\.m2\repository\com\fasterxml\uuid\java-uuid-generator\4.0\java-uuid-generator-4.0.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-scripting\2.2\velocity-engine-scripting-2.2.jar;C:\Users\thoma\.m2\repository\net\javacrumbs\json-unit\json-unit-core\2.14.0\json-unit-core-2.14.0.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest-core\2.1\hamcrest-core-2.1.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\thoma\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\thoma\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\thoma\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\thoma\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser\2.0.20\swagger-parser-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v2-converter\2.0.20\swagger-parser-v2-converter-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-core\1.6.1\swagger-core-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-models\1.6.1\swagger-models-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-annotations\1.6.1\swagger-annotations-1.6.1.jar;C:\Users\thoma\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-parser\1.0.51\swagger-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-compat-spec-parser\1.0.51\swagger-compat-spec-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-models\2.1.2\swagger-models-2.1.2.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-core\2.0.20\swagger-parser-core-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v3\2.0.20\swagger-parser-v3-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-core\2.1.2\swagger-core-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\thoma\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.2\swagger-annotations-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.10.2\jackson-dataformat-yaml-2.10.2.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-ext\1.7.30\slf4j-ext-1.7.30.jar;C:\Users\thoma\.m2\repository\javax\xml\bind\jaxb-api\2.4.0-b180830.0359\jaxb-api-2.4.0-b180830.0359.jar;C:\Users\thoma\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-placeholders\2.7.0\xmlunit-placeholders-2.7.0.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\thoma\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\thoma\.m2\repository\io\netty\netty-buffer\4.1.50.Final\netty-buffer-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec\4.1.50.Final\netty-codec-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http\4.1.50.Final\netty-codec-http-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-common\4.1.50.Final\netty-common-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler\4.1.50.Final\netty-handler-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver\4.1.50.Final\netty-resolver-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport\4.1.50.Final\netty-transport-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\thoma\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\thoma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\thoma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\thoma\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\thoma\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-gatling\1.1.0\karate-gatling-1.1.0.jar;C:\Users\thoma\.m2\repository\io\gatling\highcharts\gatling-charts-highcharts\3.6.0\gatling-charts-highcharts-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-app\3.6.0\gatling-app-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-core\3.6.0\gatling-core-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons\3.6.0\gatling-commons-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared\3.6.0\gatling-commons-shared-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-reflect\2.13.6\scala-reflect-2.13.6.jar;C:\Users\thoma\.m2\repository\io\suzaku\boopickle_2.13\1.3.3\boopickle_2.13-1.3.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared-unstable\3.6.0\gatling-commons-shared-unstable-3.6.0.jar;C:\Users\thoma\.m2\repository\org\typelevel\spire-macros_2.13\0.17.0\spire-macros_2.13-0.17.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.3\scala-logging_2.13-3.9.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jsonpath\3.6.0\gatling-jsonpath-3.6.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-slf4j_2.13\2.6.14\akka-slf4j_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\lightning-csv\8.2.3\lightning-csv-8.2.3.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\sfm-util\8.2.3\sfm-util-8.2.3.jar;C:\Users\thoma\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.1\caffeine-2.9.1.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-qual\3.10.0\checker-qual-3.10.0.jar;C:\Users\thoma\.m2\repository\io\pebbletemplates\pebble\3.1.5\pebble-3.1.5.jar;C:\Users\thoma\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.13\2.0.0\scala-parser-combinators_2.13-2.0.0.jar;C:\Users\thoma\.m2\repository\com\github\scopt\scopt_2.13\3.7.1\scopt_2.13-3.7.1.jar;C:\Users\thoma\.m2\repository\com\softwaremill\quicklens\quicklens_2.13\1.7.2\quicklens_2.13-1.7.2.jar;C:\Users\thoma\.m2\repository\net\sf\saxon\Saxon-HE\10.5\Saxon-HE-10.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-lagarto\6.0.5\jodd-lagarto-6.0.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-util\6.0.1\jodd-util-6.0.1.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-jackson\0.5.0\jmespath-jackson-0.5.0.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-core\0.5.0\jmespath-core-0.5.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http\3.6.0\gatling-http-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http-client\3.6.0\gatling-http-client-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-netty-util\3.6.0\gatling-netty-util-3.6.0.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver-dns\4.1.64.Final\netty-resolver-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-dns\4.1.64.Final\netty-codec-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-epoll\4.1.64.Final\netty-transport-native-epoll-4.1.64.Final-linux-x86_64.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.64.Final\netty-transport-native-unix-common-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http2\4.1.64.Final\netty-codec-http2-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.39.Final\netty-tcnative-boringssl-static-2.0.39.Final.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.4.2\brotli4j-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-x86_64\1.4.2\native-linux-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-aarch64\1.4.2\native-linux-aarch64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-osx-x86_64\1.4.2\native-osx-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.4.2\native-windows-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jms\3.6.0\gatling-jms-3.6.0.jar;C:\Users\thoma\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar;C:\Users\thoma\.m2\repository\com\eatthepath\fast-uuid\0.1\fast-uuid-0.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jdbc\3.6.0\gatling-jdbc-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-redis\3.6.0\gatling-redis-3.6.0.jar;C:\Users\thoma\.m2\repository\net\debasishg\redisclient_2.13\3.30\redisclient_2.13-3.30.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-graphite\3.6.0\gatling-graphite-3.6.0.jar;C:\Users\thoma\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-charts\3.6.0\gatling-charts-3.6.0.jar;C:\Users\thoma\.m2\repository\com\tdunning\t-digest\3.1\t-digest-3.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-recorder\3.6.0\gatling-recorder-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-swing_2.13\3.0.0\scala-swing_2.13-3.0.0.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.68\bcpkix-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.68\bcprov-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-actor_2.13\2.6.14\akka-actor_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\com\typesafe\config\1.4.0\config-1.4.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.8\jackson-databind-2.8.8.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.8\jackson-core-2.8.8.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\thoma\.m2\repository\org\mongodb\mongo-java-driver\3.6.3\mongo-java-driver-3.6.3.jar;C:\Users\thoma\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\8.4.1.jre11\mssql-jdbc-8.4.1.jre11.jar;"/>
+    <property name="surefire.test.class.path" value="C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\test-classes;C:\Users\thoma\git\bitcoinBuyer1_CryptoMaven.xyz\cryptomaven-rest\functional-tests\target\classes;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-junit5\1.1.0\karate-junit5-1.1.0.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-core\1.1.0\karate-core-1.1.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js-scriptengine\21.2.0\js-scriptengine-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\sdk\graal-sdk\21.2.0\graal-sdk-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\js\js\21.2.0\js-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\regex\regex\21.2.0\regex-21.2.0.jar;C:\Users\thoma\.m2\repository\org\graalvm\truffle\truffle-api\21.2.0\truffle-api-21.2.0.jar;C:\Users\thoma\.m2\repository\com\ibm\icu\icu4j\69.1\icu4j-69.1.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\thoma\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\thoma\.m2\repository\org\slf4j\jcl-over-slf4j\1.7.25\jcl-over-slf4j-1.7.25.jar;C:\Users\thoma\.m2\repository\com\jayway\jsonpath\json-path\2.6.0\json-path-2.6.0.jar;C:\Users\thoma\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\thoma\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-java\1.2.5\cucumber-java-1.2.5.jar;C:\Users\thoma\.m2\repository\info\cukes\cucumber-core\1.2.5\cucumber-core-1.2.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.29\snakeyaml-1.29.jar;C:\Users\thoma\.m2\repository\de\siegmar\fastcsv\2.0.0\fastcsv-2.0.0.jar;C:\Users\thoma\.m2\repository\info\picocli\picocli\4.6.1\picocli-4.6.1.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.7.2\junit-jupiter-api-5.7.2.jar;C:\Users\thoma\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\thoma\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-commons\1.7.2\junit-platform-commons-1.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.7.2\junit-jupiter-engine-5.7.2.jar;C:\Users\thoma\.m2\repository\org\junit\platform\junit-platform-engine\1.7.2\junit-platform-engine-1.7.2.jar;C:\Users\thoma\.m2\repository\com\github\javafaker\javafaker\1.0.2\javafaker-1.0.2.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-lang3\3.5\commons-lang3-3.5.jar;C:\Users\thoma\.m2\repository\org\yaml\snakeyaml\1.23\snakeyaml-1.23-android.jar;C:\Users\thoma\.m2\repository\com\github\mifmif\generex\1.0.2\generex-1.0.2.jar;C:\Users\thoma\.m2\repository\dk\brics\automaton\automaton\1.11-8\automaton-1.11-8.jar;C:\Users\thoma\.m2\repository\net\masterthought\cucumber-reporting\5.4.0\cucumber-reporting-5.4.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.10.1\jackson-datatype-jsr310-2.10.1.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-core\2.1\velocity-engine-core-2.1.jar;C:\Users\thoma\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\thoma\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\thoma\.m2\repository\commons-io\commons-io\2.6\commons-io-2.6.jar;C:\Users\thoma\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar;C:\Users\thoma\.m2\repository\org\jsoup\jsoup\1.12.1\jsoup-1.12.1.jar;C:\Users\thoma\.m2\repository\com\googlecode\owasp-java-html-sanitizer\owasp-java-html-sanitizer\20191001.1\owasp-java-html-sanitizer-20191001.1.jar;C:\Users\thoma\.m2\repository\commons-configuration\commons-configuration\1.10\commons-configuration-1.10.jar;C:\Users\thoma\.m2\repository\commons-lang\commons-lang\2.6\commons-lang-2.6.jar;C:\Users\thoma\.m2\repository\commons-logging\commons-logging\1.1.1\commons-logging-1.1.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-netty\5.11.1\mockserver-netty-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-client-java\5.11.1\mockserver-client-java-5.11.1.jar;C:\Users\thoma\.m2\repository\org\mock-server\mockserver-core\5.11.1\mockserver-core-5.11.1.jar;C:\Users\thoma\.m2\repository\com\lmax\disruptor\3.4.2\disruptor-3.4.2.jar;C:\Users\thoma\.m2\repository\javax\servlet\javax.servlet-api\4.0.1\javax.servlet-api-4.0.1.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-socks\4.1.50.Final\netty-codec-socks-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler-proxy\4.1.50.Final\netty-handler-proxy-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\jcraft\jzlib\1.1.3\jzlib-1.1.3.jar;C:\Users\thoma\.m2\repository\com\fasterxml\uuid\java-uuid-generator\4.0\java-uuid-generator-4.0.jar;C:\Users\thoma\.m2\repository\org\apache\velocity\velocity-engine-scripting\2.2\velocity-engine-scripting-2.2.jar;C:\Users\thoma\.m2\repository\net\javacrumbs\json-unit\json-unit-core\2.14.0\json-unit-core-2.14.0.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest-core\2.1\hamcrest-core-2.1.jar;C:\Users\thoma\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\thoma\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\thoma\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\thoma\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\thoma\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\thoma\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser\2.0.20\swagger-parser-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v2-converter\2.0.20\swagger-parser-v2-converter-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-core\1.6.1\swagger-core-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-models\1.6.1\swagger-models-1.6.1.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-annotations\1.6.1\swagger-annotations-1.6.1.jar;C:\Users\thoma\.m2\repository\javax\validation\validation-api\1.1.0.Final\validation-api-1.1.0.Final.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-parser\1.0.51\swagger-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\io\swagger\swagger-compat-spec-parser\1.0.51\swagger-compat-spec-parser-1.0.51.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpclient\4.5.2\httpclient-4.5.2.jar;C:\Users\thoma\.m2\repository\org\apache\httpcomponents\httpcore\4.4.4\httpcore-4.4.4.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-models\2.1.2\swagger-models-2.1.2.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-core\2.0.20\swagger-parser-core-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\parser\v3\swagger-parser-v3\2.0.20\swagger-parser-v3-2.0.20.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-core\2.1.2\swagger-core-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\2.3.2\jakarta.xml.bind-api-2.3.2.jar;C:\Users\thoma\.m2\repository\jakarta\activation\jakarta.activation-api\1.2.1\jakarta.activation-api-1.2.1.jar;C:\Users\thoma\.m2\repository\io\swagger\core\v3\swagger-annotations\2.1.2\swagger-annotations-2.1.2.jar;C:\Users\thoma\.m2\repository\jakarta\validation\jakarta.validation-api\2.0.2\jakarta.validation-api-2.0.2.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\dataformat\jackson-dataformat-yaml\2.10.2\jackson-dataformat-yaml-2.10.2.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-ext\1.7.30\slf4j-ext-1.7.30.jar;C:\Users\thoma\.m2\repository\javax\xml\bind\jaxb-api\2.4.0-b180830.0359\jaxb-api-2.4.0-b180830.0359.jar;C:\Users\thoma\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-core\2.7.0\xmlunit-core-2.7.0.jar;C:\Users\thoma\.m2\repository\org\xmlunit\xmlunit-placeholders\2.7.0\xmlunit-placeholders-2.7.0.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-text\1.8\commons-text-1.8.jar;C:\Users\thoma\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar;C:\Users\thoma\.m2\repository\io\netty\netty-buffer\4.1.50.Final\netty-buffer-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec\4.1.50.Final\netty-codec-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http\4.1.50.Final\netty-codec-http-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-common\4.1.50.Final\netty-common-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-handler\4.1.50.Final\netty-handler-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver\4.1.50.Final\netty-resolver-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport\4.1.50.Final\netty-transport-4.1.50.Final.jar;C:\Users\thoma\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\thoma\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\thoma\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\thoma\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\thoma\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\thoma\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\thoma\.m2\repository\com\intuit\karate\karate-gatling\1.1.0\karate-gatling-1.1.0.jar;C:\Users\thoma\.m2\repository\io\gatling\highcharts\gatling-charts-highcharts\3.6.0\gatling-charts-highcharts-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-library\2.13.6\scala-library-2.13.6.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-app\3.6.0\gatling-app-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-core\3.6.0\gatling-core-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons\3.6.0\gatling-commons-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared\3.6.0\gatling-commons-shared-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\scala-reflect\2.13.6\scala-reflect-2.13.6.jar;C:\Users\thoma\.m2\repository\io\suzaku\boopickle_2.13\1.3.3\boopickle_2.13-1.3.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-commons-shared-unstable\3.6.0\gatling-commons-shared-unstable-3.6.0.jar;C:\Users\thoma\.m2\repository\org\typelevel\spire-macros_2.13\0.17.0\spire-macros_2.13-0.17.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\scala-logging\scala-logging_2.13\3.9.3\scala-logging_2.13-3.9.3.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jsonpath\3.6.0\gatling-jsonpath-3.6.0.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-slf4j_2.13\2.6.14\akka-slf4j_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\lightning-csv\8.2.3\lightning-csv-8.2.3.jar;C:\Users\thoma\.m2\repository\org\simpleflatmapper\sfm-util\8.2.3\sfm-util-8.2.3.jar;C:\Users\thoma\.m2\repository\com\github\ben-manes\caffeine\caffeine\2.9.1\caffeine-2.9.1.jar;C:\Users\thoma\.m2\repository\org\checkerframework\checker-qual\3.10.0\checker-qual-3.10.0.jar;C:\Users\thoma\.m2\repository\io\pebbletemplates\pebble\3.1.5\pebble-3.1.5.jar;C:\Users\thoma\.m2\repository\org\unbescape\unbescape\1.1.6.RELEASE\unbescape-1.1.6.RELEASE.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-parser-combinators_2.13\2.0.0\scala-parser-combinators_2.13-2.0.0.jar;C:\Users\thoma\.m2\repository\com\github\scopt\scopt_2.13\3.7.1\scopt_2.13-3.7.1.jar;C:\Users\thoma\.m2\repository\com\softwaremill\quicklens\quicklens_2.13\1.7.2\quicklens_2.13-1.7.2.jar;C:\Users\thoma\.m2\repository\net\sf\saxon\Saxon-HE\10.5\Saxon-HE-10.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-lagarto\6.0.5\jodd-lagarto-6.0.5.jar;C:\Users\thoma\.m2\repository\org\jodd\jodd-util\6.0.1\jodd-util-6.0.1.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-jackson\0.5.0\jmespath-jackson-0.5.0.jar;C:\Users\thoma\.m2\repository\io\burt\jmespath-core\0.5.0\jmespath-core-0.5.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http\3.6.0\gatling-http-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-http-client\3.6.0\gatling-http-client-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-netty-util\3.6.0\gatling-netty-util-3.6.0.jar;C:\Users\thoma\.m2\repository\io\netty\netty-resolver-dns\4.1.64.Final\netty-resolver-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-dns\4.1.64.Final\netty-codec-dns-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-epoll\4.1.64.Final\netty-transport-native-epoll-4.1.64.Final-linux-x86_64.jar;C:\Users\thoma\.m2\repository\io\netty\netty-transport-native-unix-common\4.1.64.Final\netty-transport-native-unix-common-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-codec-http2\4.1.64.Final\netty-codec-http2-4.1.64.Final.jar;C:\Users\thoma\.m2\repository\io\netty\netty-tcnative-boringssl-static\2.0.39.Final\netty-tcnative-boringssl-static-2.0.39.Final.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\brotli4j\1.4.2\brotli4j-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-x86_64\1.4.2\native-linux-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-linux-aarch64\1.4.2\native-linux-aarch64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-osx-x86_64\1.4.2\native-osx-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\com\aayushatharva\brotli4j\native-windows-x86_64\1.4.2\native-windows-x86_64-1.4.2.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jms\3.6.0\gatling-jms-3.6.0.jar;C:\Users\thoma\.m2\repository\javax\jms\javax.jms-api\2.0.1\javax.jms-api-2.0.1.jar;C:\Users\thoma\.m2\repository\com\eatthepath\fast-uuid\0.1\fast-uuid-0.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-jdbc\3.6.0\gatling-jdbc-3.6.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-redis\3.6.0\gatling-redis-3.6.0.jar;C:\Users\thoma\.m2\repository\net\debasishg\redisclient_2.13\3.30\redisclient_2.13-3.30.jar;C:\Users\thoma\.m2\repository\org\apache\commons\commons-pool2\2.8.0\commons-pool2-2.8.0.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-graphite\3.6.0\gatling-graphite-3.6.0.jar;C:\Users\thoma\.m2\repository\org\hdrhistogram\HdrHistogram\2.1.12\HdrHistogram-2.1.12.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-charts\3.6.0\gatling-charts-3.6.0.jar;C:\Users\thoma\.m2\repository\com\tdunning\t-digest\3.1\t-digest-3.1.jar;C:\Users\thoma\.m2\repository\io\gatling\gatling-recorder\3.6.0\gatling-recorder-3.6.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-swing_2.13\3.0.0\scala-swing_2.13-3.0.0.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.68\bcpkix-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.68\bcprov-jdk15on-1.68.jar;C:\Users\thoma\.m2\repository\com\typesafe\akka\akka-actor_2.13\2.6.14\akka-actor_2.13-2.6.14.jar;C:\Users\thoma\.m2\repository\com\typesafe\config\1.4.0\config-1.4.0.jar;C:\Users\thoma\.m2\repository\org\scala-lang\modules\scala-java8-compat_2.13\0.9.0\scala-java8-compat_2.13-0.9.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.8.8\jackson-databind-2.8.8.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.8.0\jackson-annotations-2.8.0.jar;C:\Users\thoma\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.8.8\jackson-core-2.8.8.jar;C:\Users\thoma\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\thoma\.m2\repository\org\mongodb\mongo-java-driver\3.6.3\mongo-java-driver-3.6.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\thoma"/>
     <property name="user.language" value="en"/>
@@ -30,7 +30,8 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\thoma\AppData\Local\Temp\surefire14975639533339494667\surefirebooter11740502848548658569.jar"/>
+    <property name="karate.options" value="--tags ~@ignore"/>
+    <property name="surefire.real.class.path" value="C:\Users\thoma\AppData\Local\Temp\surefire3152788090009447961\surefirebooter16431235047508500455.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.10+11-LTS-240"/>
@@ -56,5 +57,1161 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testParallel" classname="karate.ApiTest" time="7.914"/>
+  <testcase name="testParallel" classname="karate.ApiTest" time="8.137">
+    <failure message="unexpected &apos;configure&apos; key: &apos;karate.baseUrl&apos;&#10;classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6&#10;unexpected &apos;configure&apos; key: &apos;karate.baseUrl&apos;&#10;classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6&#10;status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses/20, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/chains, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/chains/30, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/api/users, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/users/11, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/coins, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/coins/40, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 40, url: http://localhost:8083/api/nftCoins, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/nftCoins/70, response: &#10;&#10;classpath:karate/apiTest.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/actuator/health, response: &#10;&#10;classpath:karate/springActuator/springActuator.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/actuator/info, response: &#10;&#10;classpath:karate/springActuator/springActuator.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/actuator/env, response: &#10;&#10;classpath:karate/springActuator/springActuator.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/metrics, response: &#10;&#10;classpath:karate/springActuator/springActuator.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/loggers, response: &#10;&#10;classpath:karate/springActuator/springActuator.feature:15&#10;status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users, response: &#10;&#10;classpath:karate/springRest/restData.feature:12&#10;status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/rest/users/20, response: &#10;&#10;classpath:karate/springRest/restData.feature:25&#10;status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users/20/addresses, response: &#10;&#10;classpath:karate/springRest/restData.feature:88&#10;status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains, response: &#10;&#10;classpath:karate/chains/chains.feature:13&#10;status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains/31, response: &#10;&#10;classpath:karate/chains/chains.feature:13&#10;status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/chains/name/Ethereum, response: &#10;&#10;classpath:karate/chains/chains.feature:13&#10;status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/addresses/20, response: &#10;&#10;classpath:karate/addresses/addresses.feature:14&#10;status code was: 401, expected: 200, response time in milliseconds: 19, url: http://localhost:8083/api/addresses, response: &#10;&#10;classpath:karate/addresses/addresses.feature:14&#10;status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/addresses/20/chains, response: &#10;&#10;classpath:karate/addresses/addresses.feature:14&#10;status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/users, response: &#10;&#10;classpath:karate/users/users.feature:15&#10;status code was: 401, expected: 201, response time in milliseconds: 9, url: http://localhost:8083/api/users, response: &#10;&#10;classpath:karate/users/users.feature:55 ==&gt; expected: &lt;0&gt; but was: &lt;28&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/chains/30, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/users/11, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/coins, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/coins/40, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 40, url: http://localhost:8083/api/nftCoins, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/nftCoins/70, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/actuator/health, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/actuator/info, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/actuator/env, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/metrics, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/loggers, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users, response: 
+
+classpath:karate/springRest/restData.feature:12
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/rest/users/20, response: 
+
+classpath:karate/springRest/restData.feature:25
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users/20/addresses, response: 
+
+classpath:karate/springRest/restData.feature:88
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains/31, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/chains/name/Ethereum, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 19, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/addresses/20/chains, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:15
+status code was: 401, expected: 201, response time in milliseconds: 9, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:55 ==> expected: <0> but was: <28>
+	at karate.ApiTest.testParallel(ApiTest.java:17)
+]]></failure>
+    <system-out><![CDATA[13:34:32.955 [main] INFO  com.intuit.karate.Runner - using system property 'karate.options': --tags ~@ignore
+13:34:34.535 [main] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+13:34:35.780 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:35.785 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:35.786 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:35.788 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:35.792 [main] INFO  com.intuit.karate - >> lock acquired, begin callSingle: classpath:utils/createToken.feature
+13:34:36.346 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8083//api/users/auth/register
+1 > Accept: application/json
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 134
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+{"username":"thomas1@gmail.com","password":"password","email":"thomas1@gmail.com","lastName":"#(lastName)","firstName":"#(firstName)"}
+
+13:34:36.440 [main] DEBUG com.intuit.karate - response time in milliseconds: 91
+1 < 200
+1 < Vary: Origin
+1 < Vary: Access-Control-Request-Method
+1 < Vary: Access-Control-Request-Headers
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.446 [main] DEBUG com.intuit.karate - request:
+2 > POST http://localhost:8083//api/users/auth/login
+2 > Accept: application/json
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 54
+2 > Host: localhost:8083
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+2 > Accept-Encoding: gzip,deflate
+{"username":"thomas1@gmail.com","password":"password"}
+
+13:34:36.710 [main] DEBUG com.intuit.karate - response time in milliseconds: 263
+2 < 200
+2 < Vary: Origin
+2 < Vary: Access-Control-Request-Method
+2 < Vary: Access-Control-Request-Headers
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 0
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: SAMEORIGIN
+2 < Content-Length: 0
+2 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+
+13:34:36.717 [main] INFO  com.intuit.karate - << lock released, cached callSingle: classpath:utils/createToken.feature
+13:34:36.740 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/addresses
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.750 [main] DEBUG com.intuit.karate - response time in milliseconds: 10
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.753 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.767 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.768 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.768 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.769 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.777 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/addresses/20
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.788 [main] DEBUG com.intuit.karate - response time in milliseconds: 10
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.791 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.802 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.803 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.803 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.804 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.816 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/chains
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.832 [main] DEBUG com.intuit.karate - response time in milliseconds: 15
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.835 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.845 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.846 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.846 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.847 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.855 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/chains/30
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.866 [main] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.868 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/chains/30, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.877 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.877 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.878 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.878 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.883 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/users
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.896 [main] DEBUG com.intuit.karate - response time in milliseconds: 12
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.898 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.906 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.906 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.907 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.907 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.920 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/users/11
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.932 [main] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.933 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/users/11, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.942 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.942 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.943 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.943 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.948 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/coins
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.963 [main] DEBUG com.intuit.karate - response time in milliseconds: 15
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.965 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/coins, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:36.974 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:36.974 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:36.975 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:36.975 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:36.981 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/coins/40
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:36.994 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:36.995 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/coins/40, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:37.003 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:37.003 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:37.005 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:37.005 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:37.036 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/nftCoins
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:37.076 [main] DEBUG com.intuit.karate - response time in milliseconds: 40
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:37 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:37.078 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 40, url: http://localhost:8083/api/nftCoins, response: 
+
+classpath:karate/apiTest.feature:15
+13:34:37.086 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:37.087 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:37.087 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:37.088 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:37.094 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/nftCoins/70
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:37.111 [main] DEBUG com.intuit.karate - response time in milliseconds: 16
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:37 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:37.112 [main] ERROR com.intuit.karate - classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/nftCoins/70, response: 
+
+classpath:karate/apiTest.feature:15
+---------------------------------------------------------
+feature: classpath:karate/apiTest.feature
+scenarios: 10 | passed:  0 | failed: 10 | time: 0.2024
+---------------------------------------------------------
+
+13:34:38.804 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 1 of 9 (0 remaining) classpath:karate/apiTest.feature
+13:34:38.822 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:38.823 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:38.824 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:38.825 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:38.835 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/addresses/20
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:38.849 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:38 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:38.851 [main] ERROR com.intuit.karate - classpath:karate/addresses/addresses.feature:14
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/addresses/addresses.feature:14
+13:34:38.862 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:38.863 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:38.863 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:38.865 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:38.872 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/addresses
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:38.892 [main] DEBUG com.intuit.karate - response time in milliseconds: 19
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:38 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:38.894 [main] ERROR com.intuit.karate - classpath:karate/addresses/addresses.feature:14
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 19, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/addresses/addresses.feature:14
+13:34:38.901 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:38.901 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:38.902 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:38.902 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:38.908 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/addresses/20/chains
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:38.924 [main] DEBUG com.intuit.karate - response time in milliseconds: 16
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:38 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:38.926 [main] ERROR com.intuit.karate - classpath:karate/addresses/addresses.feature:14
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/addresses/20/chains, response: 
+
+classpath:karate/addresses/addresses.feature:14
+---------------------------------------------------------
+feature: classpath:karate/addresses/addresses.feature
+scenarios:  3 | passed:  0 | failed:  3 | time: 0.0670
+---------------------------------------------------------
+
+13:34:39.216 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 2 of 9 (0 remaining) classpath:karate/addresses/addresses.feature
+13:34:39.241 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.243 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.244 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.245 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.253 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/chains
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.275 [main] DEBUG com.intuit.karate - response time in milliseconds: 21
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.277 [main] ERROR com.intuit.karate - classpath:karate/chains/chains.feature:13
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/chains/chains.feature:13
+13:34:39.285 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.285 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.285 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.286 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.290 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/chains/31
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.311 [main] DEBUG com.intuit.karate - response time in milliseconds: 21
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.312 [main] ERROR com.intuit.karate - classpath:karate/chains/chains.feature:13
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains/31, response: 
+
+classpath:karate/chains/chains.feature:13
+13:34:39.318 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.319 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.319 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.319 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.324 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/chains/name/Ethereum
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.340 [main] DEBUG com.intuit.karate - response time in milliseconds: 16
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.342 [main] ERROR com.intuit.karate - classpath:karate/chains/chains.feature:13
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/chains/name/Ethereum, response: 
+
+classpath:karate/chains/chains.feature:13
+---------------------------------------------------------
+feature: classpath:karate/chains/chains.feature
+scenarios:  3 | passed:  0 | failed:  3 | time: 0.0744
+---------------------------------------------------------
+
+13:34:39.642 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 3 of 9 (0 remaining) classpath:karate/chains/chains.feature
+13:34:39.660 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.661 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.661 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.662 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.666 [main] ERROR com.intuit.karate - classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+* configure karate.baseUrl = karate.properties['baseUrl']
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+13:34:39.671 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.672 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.672 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.672 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.677 [main] ERROR com.intuit.karate - classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+* configure karate.baseUrl = karate.properties['baseUrl']
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+---------------------------------------------------------
+feature: classpath:karate/jwtGetRequest/getWithJwtRequest.feature
+scenarios:  2 | passed:  0 | failed:  2 | time: 0.0023
+---------------------------------------------------------
+
+13:34:39.814 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 5 of 9 (0 remaining) classpath:karate/jwtGetRequest/getWithJwtRequest.feature
+13:34:39.821 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.822 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.822 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.822 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.827 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/actuator/health
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.843 [main] DEBUG com.intuit.karate - response time in milliseconds: 15
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.844 [main] ERROR com.intuit.karate - classpath:karate/springActuator/springActuator.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/actuator/health, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+13:34:39.849 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.849 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.850 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.850 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.853 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/actuator/info
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.865 [main] DEBUG com.intuit.karate - response time in milliseconds: 11
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.866 [main] ERROR com.intuit.karate - classpath:karate/springActuator/springActuator.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/actuator/info, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+13:34:39.871 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.872 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.872 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.872 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.880 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/actuator/env
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.894 [main] DEBUG com.intuit.karate - response time in milliseconds: 14
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.895 [main] ERROR com.intuit.karate - classpath:karate/springActuator/springActuator.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/actuator/env, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+13:34:39.900 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.901 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.901 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.901 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.905 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/actuator/metrics
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.917 [main] DEBUG com.intuit.karate - response time in milliseconds: 12
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.918 [main] ERROR com.intuit.karate - classpath:karate/springActuator/springActuator.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/metrics, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+13:34:39.923 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:39.923 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:39.923 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:39.924 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:39.929 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/actuator/loggers
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:39.941 [main] DEBUG com.intuit.karate - response time in milliseconds: 12
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:39 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:39.942 [main] ERROR com.intuit.karate - classpath:karate/springActuator/springActuator.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/loggers, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+---------------------------------------------------------
+feature: classpath:karate/springActuator/springActuator.feature
+scenarios:  5 | passed:  0 | failed:  5 | time: 0.0863
+---------------------------------------------------------
+
+13:34:40.069 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 6 of 9 (0 remaining) classpath:karate/springActuator/springActuator.feature
+13:34:40.079 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:40.080 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:40.080 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:40.080 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:40.089 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/rest/users
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:40.103 [main] DEBUG com.intuit.karate - response time in milliseconds: 14
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:40.105 [main] ERROR com.intuit.karate - classpath:karate/springRest/restData.feature:12
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users, response: 
+
+classpath:karate/springRest/restData.feature:12
+13:34:40.109 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:40.110 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:40.110 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:40.111 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:40.115 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/rest/users/20
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:40.128 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:40.129 [main] ERROR com.intuit.karate - classpath:karate/springRest/restData.feature:25
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/rest/users/20, response: 
+
+classpath:karate/springRest/restData.feature:25
+13:34:40.133 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:40.134 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:40.134 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:40.134 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:40.138 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8083/rest/users
+1 > Authorization: Bearer null
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 147
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+{"username":"newuser@gmail.com","password":"newpassword","firstName":"New","lastName":"User","userType":1,"email":"newuser@gmail.com","isActive":1}
+
+13:34:40.156 [main] DEBUG com.intuit.karate - response time in milliseconds: 17
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:40.160 [main] DEBUG com.intuit.karate - request:
+2 > PUT http://localhost:8083/rest/users/20
+2 > Authorization: Bearer null
+2 > Content-Type: application/json; charset=UTF-8
+2 > Content-Length: 63
+2 > Host: localhost:8083
+2 > Connection: Keep-Alive
+2 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+2 > Accept-Encoding: gzip,deflate
+{"userId":"20\n  \"firstName\": \"Updated\"","lastName":"User"}
+
+13:34:40.177 [main] DEBUG com.intuit.karate - response time in milliseconds: 17
+2 < 401
+2 < X-Content-Type-Options: nosniff
+2 < X-XSS-Protection: 0
+2 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 < Pragma: no-cache
+2 < Expires: 0
+2 < X-Frame-Options: SAMEORIGIN
+2 < Content-Length: 0
+2 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+2 < Keep-Alive: timeout=60
+2 < Connection: keep-alive
+
+13:34:40.182 [main] DEBUG com.intuit.karate - request:
+3 > GET http://localhost:8083/rest/users/20/addresses
+3 > Authorization: Bearer null
+3 > Host: localhost:8083
+3 > Connection: Keep-Alive
+3 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+3 > Accept-Encoding: gzip,deflate
+
+
+13:34:40.196 [main] DEBUG com.intuit.karate - response time in milliseconds: 14
+3 < 401
+3 < X-Content-Type-Options: nosniff
+3 < X-XSS-Protection: 0
+3 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+3 < Pragma: no-cache
+3 < Expires: 0
+3 < X-Frame-Options: SAMEORIGIN
+3 < Content-Length: 0
+3 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+3 < Keep-Alive: timeout=60
+3 < Connection: keep-alive
+
+13:34:40.197 [main] ERROR com.intuit.karate - classpath:karate/springRest/restData.feature:88
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users/20/addresses, response: 
+
+classpath:karate/springRest/restData.feature:88
+---------------------------------------------------------
+feature: classpath:karate/springRest/restData.feature
+scenarios:  3 | passed:  0 | failed:  3 | time: 0.1005
+---------------------------------------------------------
+
+13:34:40.410 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 7 of 9 (0 remaining) classpath:karate/springRest/restData.feature
+13:34:40.417 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:40.418 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:40.418 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:40.418 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:40.422 [main] DEBUG com.intuit.karate - request:
+1 > GET http://localhost:8083/api/users
+1 > Authorization: Bearer null
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+
+
+13:34:40.435 [main] DEBUG com.intuit.karate - response time in milliseconds: 13
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:40.437 [main] ERROR com.intuit.karate - classpath:karate/users/users.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:15
+13:34:40.443 [main] INFO  com.intuit.karate - karate.env system property was: null 
+13:34:40.443 [main] INFO  com.intuit.karate - karate.env is: local 
+13:34:40.444 [main] INFO  com.intuit.karate - Database Password: abc123!! 
+13:34:40.444 [main] INFO  com.intuit.karate - Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:40.455 [main] INFO  com.intuit.karate - [print] _______________________ID____:user1005@gmail.com 
+13:34:40.460 [main] DEBUG com.intuit.karate - request:
+1 > POST http://localhost:8083/api/users
+1 > Authorization: Bearer null
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 292
+1 > Host: localhost:8083
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 > Accept-Encoding: gzip,deflate
+{"username":"user1005@gmail.com","lastName":"Wonderland","firstName":"Alice","organizationCode":"ORG001","dashboardCode":"DASH-A","cusUrl":"https:\/\/example.com\/alice","userType":1,"email":"user1005@gmail.com","contactType":101,"isActive":1,"roles":[{"id":1,"name":"ROLE_ADMIN"}],"id":null}
+
+13:34:40.469 [main] DEBUG com.intuit.karate - response time in milliseconds: 9
+1 < 401
+1 < X-Content-Type-Options: nosniff
+1 < X-XSS-Protection: 0
+1 < Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 < Pragma: no-cache
+1 < Expires: 0
+1 < X-Frame-Options: SAMEORIGIN
+1 < Content-Length: 0
+1 < Date: Wed, 09 Apr 2025 17:34:40 GMT
+1 < Keep-Alive: timeout=60
+1 < Connection: keep-alive
+
+13:34:40.470 [main] ERROR com.intuit.karate - classpath:karate/users/users.feature:55
+Then status 201
+status code was: 401, expected: 201, response time in milliseconds: 9, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:55
+---------------------------------------------------------
+feature: classpath:karate/users/users.feature
+scenarios:  2 | passed:  0 | failed:  2 | time: 0.0417
+---------------------------------------------------------
+
+13:34:40.613 [main] INFO  com.intuit.karate.Suite - <<fail>> feature 9 of 9 (0 remaining) classpath:karate/users/users.feature
+13:34:40.614 [main] DEBUG com.intuit.karate.Suite - waiting for 9 features to complete
+Karate version: 1.1.0
+======================================================
+elapsed:   7.67 | threads:    1 | thread time: 0.57 
+features:     7 | skipped:    2 | efficiency: 0.07
+scenarios:   28 | passed:     0 | failed: 28
+======================================================
+>>> failed features:
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+unexpected 'configure' key: 'karate.baseUrl'
+classpath:karate/jwtGetRequest/getWithJwtRequest.feature:6
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/chains/30, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/users/11, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/coins, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/coins/40, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 40, url: http://localhost:8083/api/nftCoins, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/nftCoins/70, response: 
+
+classpath:karate/apiTest.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/actuator/health, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/actuator/info, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/actuator/env, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/metrics, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/actuator/loggers, response: 
+
+classpath:karate/springActuator/springActuator.feature:15
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users, response: 
+
+classpath:karate/springRest/restData.feature:12
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/rest/users/20, response: 
+
+classpath:karate/springRest/restData.feature:25
+status code was: 401, expected: 200, response time in milliseconds: 14, url: http://localhost:8083/rest/users/20/addresses, response: 
+
+classpath:karate/springRest/restData.feature:88
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 21, url: http://localhost:8083/api/chains/31, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/chains/name/Ethereum, response: 
+
+classpath:karate/chains/chains.feature:13
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 19, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/addresses/20/chains, response: 
+
+classpath:karate/addresses/addresses.feature:14
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:15
+status code was: 401, expected: 201, response time in milliseconds: 9, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:55
+<<<
+
+HTML report: (paste into browser to view) | Karate version: 1.1.0
+file:///C:/Users/thoma/git/bitcoinBuyer1_CryptoMaven.xyz/cryptomaven-rest/functional-tests/target/karate-reports/karate-summary.html
+===================================================================
+
+]]></system-out>
+  </testcase>
 </testsuite>

@@ -22,24 +22,24 @@
       <img src="karate-logo.svg" alt="Karate"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">2</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">2</div>
     </div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2025-03-25 09:53:51 PM</div>
+    <div>2025-04-09 01:34:40 PM</div>
   </div>        
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
-            <a href="#[1:13]"><span>[1:13]</span> <span>get all users and then get the first user by id</span></a>
+          <div class="nav-item failed">
+            <a href="#[1:12]"><span>[1:12]</span> <span>get all users and then get the first user by id</span></a>
           </div>
-          <div class="nav-item passed">
-            <a href="#[2.1:84]"><span>[2.1:84]</span> <span>create a user and then get it by id</span></a>
+          <div class="nav-item failed">
+            <a href="#[2.1:83]"><span>[2.1:83]</span> <span>create a user and then get it by id</span></a>
           </div>
         </div>
       </div>
@@ -53,29 +53,29 @@
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[1:13]">
+          <div class="scenario-heading" id="[1:12]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">Order(1)</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[1:13]</span>
+                Scenario: <span>[1:12]</span>
                 <span class="scenario-name">get all users and then get the first user by id</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>243</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>18</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[1:13]bg">
+            <div class="step-container" id="[1:12]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[1:13]bg"><div>
+          <div data-parent="[1:12]bg"><div>
   
 
   <div class="step-row">
@@ -97,8 +97,8 @@
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="0.8">
-      <div class="step-ref bg-step">8</div>
+    <div class="step-container" id="0.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
@@ -113,10 +113,10 @@
 
   
 
-  <div class="preformatted" data-parent="0.8">21:53:50.871 karate.env system property was: null 
-21:53:50.871 karate.env is: mysql 
-21:53:50.872 Database Password:  
-21:53:50.872 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="0.7">13:34:40.417 karate.env system property was: null 
+13:34:40.418 karate.env is: local 
+13:34:40.418 Database Password: abc123!! 
+13:34:40.418 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -129,8 +129,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.14">
-      <div class="step-ref passed">14</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
         <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
@@ -157,14 +157,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.15">
-      <div class="step-ref passed">15</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">153</div>
+    <div class="time-cell passed">16</div>
   </div>
 
    
@@ -173,31 +173,28 @@
 
   
 
-  <div class="preformatted" data-parent="0.15">21:53:50.874 request:
-1 &gt; GET http://52.3.58.191:8083/api/users
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="0.14">13:34:40.422 request:
+1 &gt; GET http://localhost:8083/api/users
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:51.025 response time in milliseconds: 150
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:40.436 response time in milliseconds: 13
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:52 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:40 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-[{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;},{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;},{&quot;userId&quot;:12,&quot;username&quot;:&quot;thomas3@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas3&quot;,&quot;organizationCode&quot;:&quot;ORG3&quot;,&quot;dashboardCode&quot;:&quot;DASH3&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,&quot;userType&quot;:2,&quot;email&quot;:&quot;thomas3@gmail.com&quot;,&quot;contactType&quot;:103,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas3@gmail.com&quot;},{&quot;userId&quot;:13,&quot;username&quot;:&quot;thomas4@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas4&quot;,&quot;organizationCode&quot;:&quot;ORG4&quot;,&quot;dashboardCode&quot;:&quot;DASH4&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;contactType&quot;:104,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas4@gmail.com&quot;},{&quot;userId&quot;:14,&quot;username&quot;:&quot;thomas5@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas5&quot;,&quot;organizationCode&quot;:&quot;ORG5&quot;,&quot;dashboardCode&quot;:&quot;DASH5&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas5@gmail.com&quot;,&quot;contactType&quot;:105,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas5@gmail.com&quot;},{&quot;userId&quot;:15,&quot;username&quot;:&quot;bb@gmail.com&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;bb@gmail.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;bb@gmail.com&quot;},{&quot;userId&quot;:16,&quot;username&quot;:&quot;bbb@gmail.com&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;bbb@gmail.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;bbb@gmail.com&quot;},{&quot;userId&quot;:17,&quot;username&quot;:&quot;user625@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user625@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user625@gmail.com&quot;},{&quot;userId&quot;:18,&quot;username&quot;:&quot;user676@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user676@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user676@gmail.com&quot;},{&quot;userId&quot;:19,&quot;username&quot;:&quot;user696@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user696@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user696@gmail.com&quot;},{&quot;userId&quot;:20,&quot;username&quot;:&quot;user754@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user754@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user754@gmail.com&quot;},{&quot;userId&quot;:21,&quot;username&quot;:&quot;user217@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-217.fancyPhotos.com/photos/217&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user217@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user217@gmail.com&quot;},{&quot;userId&quot;:22,&quot;username&quot;:&quot;user739@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-739.fancyPhotos.com/photos/739&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user739@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user739@gmail.com&quot;},{&quot;userId&quot;:23,&quot;username&quot;:&quot;user588@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-588.fancyPhotos.com/photos/588&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user588@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user588@gmail.com&quot;},{&quot;userId&quot;:24,&quot;username&quot;:&quot;user883@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-883.fancyPhotos.com/photos/883&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user883@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user883@gmail.com&quot;},{&quot;userId&quot;:25,&quot;username&quot;:&quot;user699@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-699.fancyPhotos.com/photos/699&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user699@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user699@gmail.com&quot;},{&quot;userId&quot;:27,&quot;username&quot;:&quot;user290@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-290.fancyPhotos.com/photos/290&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user290@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user290@gmail.com&quot;},{&quot;userId&quot;:28,&quot;username&quot;:&quot;user494@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-494.fancyPhotos.com/photos/494&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user494@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user494@gmail.com&quot;},{&quot;userId&quot;:29,&quot;username&quot;:&quot;user528@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-528.fancyPhotos.com/photos/528&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user528@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user528@gmail.com&quot;},{&quot;userId&quot;:30,&quot;username&quot;:&quot;user506@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-506.fancyPhotos.com/photos/506&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user506@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user506@gmail.com&quot;},{&quot;userId&quot;:31,&quot;username&quot;:&quot;user654@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-654.fancyPhotos.com/photos/654&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user654@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user654@gmail.com&quot;},{&quot;userId&quot;:32,&quot;username&quot;:&quot;user537@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-537.fancyPhotos.com/photos/537&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user537@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user537@gmail.com&quot;},{&quot;userId&quot;:33,&quot;username&quot;:&quot;user1007@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-1007.fancyPhotos.com/photos/1007&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user1007@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user1007@gmail.com&quot;},{&quot;userId&quot;:34,&quot;username&quot;:&quot;user107@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-107.fancyPhotos.com/photos/107&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user107@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user107@gmail.com&quot;},{&quot;userId&quot;:35,&quot;username&quot;:&quot;user866@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-866.fancyPhotos.com/photos/866&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user866@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user866@gmail.com&quot;},{&quot;userId&quot;:36,&quot;username&quot;:&quot;user755@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-755.fancyPhotos.com/photos/755&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user755@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user755@gmail.com&quot;},{&quot;userId&quot;:37,&quot;username&quot;:&quot;user557@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-557.fancyPhotos.com/photos/557&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user557@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user557@gmail.com&quot;},{&quot;userId&quot;:38,&quot;username&quot;:&quot;user365@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-365.fancyPhotos.com/photos/365&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user365@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user365@gmail.com&quot;},{&quot;userId&quot;:39,&quot;username&quot;:&quot;user835@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-835.fancyPhotos.com/photos/835&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user835@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user835@gmail.com&quot;},{&quot;userId&quot;:40,&quot;username&quot;:&quot;alice222@example.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;alice222@example.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;alice222@example.com&quot;},{&quot;userId&quot;:41,&quot;username&quot;:&quot;user482@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user482@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user482@gmail.com&quot;},{&quot;userId&quot;:42,&quot;username&quot;:&quot;user271@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user271@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user271@gmail.com&quot;},{&quot;userId&quot;:43,&quot;username&quot;:&quot;user201@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user201@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user201@gmail.com&quot;},{&quot;userId&quot;:44,&quot;username&quot;:&quot;user255@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user255@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user255@gmail.com&quot;},{&quot;userId&quot;:46,&quot;username&quot;:&quot;user162@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user162@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user162@gmail.com&quot;},{&quot;userId&quot;:47,&quot;username&quot;:&quot;New Name&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;user@user.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[],&quot;id&quot;:null,&quot;password&quot;:&quot;New Name&quot;},{&quot;userId&quot;:49,&quot;username&quot;:&quot;user170@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user170@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user170@gmail.com&quot;},{&quot;userId&quot;:50,&quot;username&quot;:&quot;user141@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user141@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user141@gmail.com&quot;},{&quot;userId&quot;:51,&quot;username&quot;:&quot;user690@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user690@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user690@gmail.com&quot;},{&quot;userId&quot;:52,&quot;username&quot;:&quot;New Name&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;user@user.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[],&quot;id&quot;:null,&quot;password&quot;:&quot;New Name&quot;},{&quot;userId&quot;:54,&quot;username&quot;:&quot;user193@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user193@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user193@gmail.com&quot;},{&quot;userId&quot;:55,&quot;username&quot;:&quot;user630@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user630@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user630@gmail.com&quot;},{&quot;userId&quot;:56,&quot;username&quot;:&quot;New Name&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;user@user.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[],&quot;id&quot;:null,&quot;password&quot;:&quot;New Name&quot;},{&quot;userId&quot;:58,&quot;username&quot;:&quot;user191@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user191@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user191@gmail.com&quot;},{&quot;userId&quot;:59,&quot;username&quot;:&quot;user681@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user681@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user681@gmail.com&quot;},{&quot;userId&quot;:60,&quot;username&quot;:&quot;user879@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user879@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user879@gmail.com&quot;},{&quot;userId&quot;:61,&quot;username&quot;:&quot;user751@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user751@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user751@gmail.com&quot;},{&quot;userId&quot;:62,&quot;username&quot;:&quot;user928@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user928@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user928@gmail.com&quot;},{&quot;userId&quot;:63,&quot;username&quot;:&quot;user1003@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user1003@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user1003@gmail.com&quot;},{&quot;userId&quot;:64,&quot;username&quot;:&quot;user442@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user442@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user442@gmail.com&quot;},{&quot;userId&quot;:65,&quot;username&quot;:&quot;user110@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user110@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user110@gmail.com&quot;},{&quot;userId&quot;:66,&quot;username&quot;:&quot;user735@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user735@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user735@gmail.com&quot;},{&quot;userId&quot;:67,&quot;username&quot;:&quot;user474@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user474@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user474@gmail.com&quot;},{&quot;userId&quot;:68,&quot;username&quot;:&quot;user236@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user236@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user236@gmail.com&quot;},{&quot;userId&quot;:69,&quot;username&quot;:&quot;user444@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user444@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user444@gmail.com&quot;},{&quot;userId&quot;:70,&quot;username&quot;:&quot;user607@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user607@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user607@gmail.com&quot;},{&quot;userId&quot;:71,&quot;username&quot;:&quot;user366@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user366@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user366@gmail.com&quot;},{&quot;userId&quot;:72,&quot;username&quot;:&quot;user829@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user829@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user829@gmail.com&quot;},{&quot;userId&quot;:73,&quot;username&quot;:&quot;user822@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user822@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user822@gmail.com&quot;},{&quot;userId&quot;:74,&quot;username&quot;:&quot;user1029@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user1029@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user1029@gmail.com&quot;},{&quot;userId&quot;:75,&quot;username&quot;:&quot;user898@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user898@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user898@gmail.com&quot;},{&quot;userId&quot;:76,&quot;username&quot;:&quot;user904@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user904@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user904@gmail.com&quot;},{&quot;userId&quot;:77,&quot;username&quot;:&quot;user706@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user706@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user706@gmail.com&quot;},{&quot;userId&quot;:78,&quot;username&quot;:&quot;user902@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user902@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user902@gmail.com&quot;},{&quot;userId&quot;:79,&quot;username&quot;:&quot;user532@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user532@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user532@gmail.com&quot;},{&quot;userId&quot;:80,&quot;username&quot;:&quot;user31@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user31@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user31@gmail.com&quot;},{&quot;userId&quot;:81,&quot;username&quot;:&quot;user876@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user876@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user876@gmail.com&quot;},{&quot;userId&quot;:82,&quot;username&quot;:&quot;user411@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user411@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user411@gmail.com&quot;},{&quot;userId&quot;:83,&quot;username&quot;:&quot;user988@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user988@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user988@gmail.com&quot;}]
+
 </div>   
 
   
@@ -210,14 +207,47 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.16">
-      <div class="step-ref passed">16</div>
+    <div class="step-container" id="0.15">
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.15">13:34:40.437 classpath:karate/users/users.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:15
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.17">
+      <div class="step-ref skipped">17</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>def first = response[1]</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -238,14 +268,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
+    <div class="step-container" id="0.19">
+      <div class="step-ref skipped">19</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>def first = response[1]</span>
+      <div class="step-cell skipped">
+        <span>Given</span>&nbsp;<span>path &#39;users/&#39; + first.userId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -267,13 +297,13 @@
 
   <div class="step-row">
     <div class="step-container" id="0.20">
-      <div class="step-ref passed">20</div>
+      <div class="step-ref skipped">20</div>
       
-      <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users/&#39; + first.userId</span>
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method get</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -295,66 +325,13 @@
 
   <div class="step-row">
     <div class="step-container" id="0.21">
-      <div class="step-ref passed">21</div>
+      <div class="step-ref skipped">21</div>
       
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method get</span>
-      </div>
-    </div>
-    <div class="time-cell passed">88</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="0.21">21:53:51.028 request:
-2 &gt; GET http://52.3.58.191:8083/api/users/11
-2 &gt; Host: 52.3.58.191:8083
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-2 &gt; Accept-Encoding: gzip,deflate
-
-
-21:53:51.115 response time in milliseconds: 87
-2 &lt; 200
-2 &lt; Vary: Origin
-2 &lt; Vary: Access-Control-Request-Method
-2 &lt; Vary: Access-Control-Request-Headers
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; X-XSS-Protection: 0
-2 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-2 &lt; Pragma: no-cache
-2 &lt; Expires: 0
-2 &lt; X-Frame-Options: SAMEORIGIN
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Date: Wed, 26 Mar 2025 01:53:52 GMT
-2 &lt; Keep-Alive: timeout=60
-2 &lt; Connection: keep-alive
-{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;}
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref passed">22</div>
-      
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -371,29 +348,29 @@
 </div>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2.1:84]">
+          <div class="scenario-heading" id="[2.1:83]">
             <div class="heading-container">
               <div class="scenario-tags">
                 <a class="badge badge-primary" href="karate-tags.html">Order(2)</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2.1:84]</span>
+                Scenario: <span>[2.1:83]</span>
                 <span class="scenario-name">create a user and then get it by id</span>
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>359</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>24</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2.1:84]bg">
+            <div class="step-container" id="[2.1:83]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2.1:84]bg"><div>
+          <div data-parent="[2.1:83]bg"><div>
   
 
   <div class="step-row">
@@ -415,8 +392,8 @@
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="1.8">
-      <div class="step-ref bg-step">8</div>
+    <div class="step-container" id="1.7">
+      <div class="step-ref bg-step">7</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
@@ -431,10 +408,10 @@
 
   
 
-  <div class="preformatted" data-parent="1.8">21:53:51.118 karate.env system property was: null 
-21:53:51.118 karate.env is: mysql 
-21:53:51.118 Database Password:  
-21:53:51.119 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="1.7">13:34:40.443 karate.env system property was: null 
+13:34:40.443 karate.env is: local 
+13:34:40.444 Database Password: abc123!! 
+13:34:40.444 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -447,14 +424,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="1.27">
-      <div class="step-ref passed">27</div>
+    <div class="step-container" id="1.26">
+      <div class="step-ref passed">26</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def rando = Math.floor(Math.random() * 1031)</span>
       </div>
     </div>
-    <div class="time-cell passed">4</div>
+    <div class="time-cell passed">8</div>
   </div>
 
    
@@ -475,8 +452,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="1.28">
-      <div class="step-ref passed">28</div>
+    <div class="step-container" id="1.27">
+      <div class="step-ref passed">27</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def usernameEmail = &quot;user&quot;+rando+&quot;@gmail.com&quot;</span>
@@ -503,8 +480,8 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="1.29">
-      <div class="step-ref passed">29</div>
+    <div class="step-container" id="1.28">
+      <div class="step-ref passed">28</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>print &quot;_______________________ID____:&quot; + usernameEmail</span>
@@ -519,7 +496,7 @@
 
   
 
-  <div class="preformatted" data-parent="1.29">21:53:51.125 [print] _______________________ID____:user700@gmail.com 
+  <div class="preformatted" data-parent="1.28">13:34:40.455 [print] _______________________ID____:user1005@gmail.com 
 </div>   
 
   
@@ -532,19 +509,19 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="1.30">
-      <div class="step-ref passed">30</div>
+    <div class="step-container" id="1.29">
+      <div class="step-ref passed">29</div>
       
       <div class="step-cell passed">
         <span>*</span>&nbsp;<span>def user =</span>
       </div>
     </div>
-    <div class="time-cell passed">3</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
   
-  <div class="preformatted" data-parent="1.30">{
+  <div class="preformatted" data-parent="1.29">{
   &quot;username&quot;: &#39;#(usernameEmail)&#39;,
   &quot;lastName&quot;: &quot;Wonderland&quot;,
   &quot;firstName&quot;: &quot;Alice&quot;,
@@ -585,11 +562,39 @@
   </div>
 
   <div class="step-row">
+    <div class="step-container" id="1.52">
+      <div class="step-ref passed">52</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
     <div class="step-container" id="1.53">
       <div class="step-ref passed">53</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>path &#39;users&#39;</span>
+        <span>And</span>&nbsp;<span>request user</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
@@ -617,38 +622,10 @@
       <div class="step-ref passed">54</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request user</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.55">
-      <div class="step-ref passed">55</div>
-      
-      <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method POST</span>
       </div>
     </div>
-    <div class="time-cell passed">156</div>
+    <div class="time-cell passed">13</div>
   </div>
 
    
@@ -657,34 +634,30 @@
 
   
 
-  <div class="preformatted" data-parent="1.55">21:53:51.129 request:
-1 &gt; POST http://52.3.58.191:8083/api/users
+  <div class="preformatted" data-parent="1.54">13:34:40.460 request:
+1 &gt; POST http://localhost:8083/api/users
+1 &gt; Authorization: Bearer null
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Content-Length: 290
-1 &gt; Host: 52.3.58.191:8083
+1 &gt; Content-Length: 292
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;username&quot;:&quot;user700@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https:\/\/example.com\/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user700@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;}],&quot;id&quot;:null}
+{&quot;username&quot;:&quot;user1005@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https:\/\/example.com\/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user1005@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;}],&quot;id&quot;:null}
 
-21:53:51.284 response time in milliseconds: 154
-1 &lt; 201
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
-1 &lt; Location: /api/users/84
+13:34:40.469 response time in milliseconds: 9
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:52 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:40 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;userId&quot;:84,&quot;username&quot;:&quot;user700@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user700@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user700@gmail.com&quot;}
+
 </div>   
 
   
@@ -697,14 +670,47 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="1.56">
-      <div class="step-ref passed">56</div>
+    <div class="step-container" id="1.55">
+      <div class="step-ref failed">55</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.55">13:34:40.470 classpath:karate/users/users.feature:55
+Then status 201
+status code was: 401, expected: 201, response time in milliseconds: 9, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/users/users.feature:55
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.57">
+      <div class="step-ref skipped">57</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>json resp = response</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -726,41 +732,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.58">
-      <div class="step-ref passed">58</div>
+      <div class="step-ref skipped">58</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>json resp = response</span>
-      </div>
-    </div>
-    <div class="time-cell passed">0</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.59">
-      <div class="step-ref passed">59</div>
-      
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def localId = resp.userId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -781,14 +759,14 @@
   
 
   <div class="step-row">
-    <div class="step-container" id="1.61">
-      <div class="step-ref passed">61</div>
+    <div class="step-container" id="1.60">
+      <div class="step-ref skipped">60</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print &#39;created id is: &#39;, localId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -797,8 +775,7 @@
 
   
 
-  <div class="preformatted" data-parent="1.61">21:53:51.286 [print] created id is:  84 
-</div>   
+     
 
   
 
@@ -817,14 +794,42 @@
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="1.63">
-      <div class="step-ref passed">63</div>
+    <div class="step-container" id="1.62">
+      <div class="step-ref skipped">62</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>path &#39;users/&#39; +  localId</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.63">
+      <div class="step-ref skipped">63</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>print &#39;user is: &#39;,localId</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -846,13 +851,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.64">
-      <div class="step-ref passed">64</div>
+      <div class="step-ref skipped">64</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;user is: &#39;,localId</span>
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -861,8 +866,7 @@
 
   
 
-  <div class="preformatted" data-parent="1.64">21:53:51.288 [print] user is:  84 
-</div>   
+     
 
   
 
@@ -875,66 +879,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.65">
-      <div class="step-ref passed">65</div>
+      <div class="step-ref skipped">65</div>
       
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method GET</span>
-      </div>
-    </div>
-    <div class="time-cell passed">58</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.65">21:53:51.289 request:
-2 &gt; GET http://52.3.58.191:8083/api/users/84
-2 &gt; Host: 52.3.58.191:8083
-2 &gt; Connection: Keep-Alive
-2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-2 &gt; Accept-Encoding: gzip,deflate
-
-
-21:53:51.345 response time in milliseconds: 56
-2 &lt; 200
-2 &lt; Vary: Origin
-2 &lt; Vary: Access-Control-Request-Method
-2 &lt; Vary: Access-Control-Request-Headers
-2 &lt; X-Content-Type-Options: nosniff
-2 &lt; X-XSS-Protection: 0
-2 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-2 &lt; Pragma: no-cache
-2 &lt; Expires: 0
-2 &lt; X-Frame-Options: SAMEORIGIN
-2 &lt; Content-Type: application/json
-2 &lt; Transfer-Encoding: chunked
-2 &lt; Date: Wed, 26 Mar 2025 01:53:52 GMT
-2 &lt; Keep-Alive: timeout=60
-2 &lt; Connection: keep-alive
-{&quot;userId&quot;:84,&quot;username&quot;:&quot;user700@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user700@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user700@gmail.com&quot;}
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.66">
-      <div class="step-ref passed">66</div>
-      
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -971,14 +922,42 @@
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="1.69">
-      <div class="step-ref passed">69</div>
+    <div class="step-container" id="1.68">
+      <div class="step-ref skipped">68</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Given</span>&nbsp;<span>path &#39;users/&#39; + localId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.69">
+      <div class="step-ref skipped">69</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>print &#39;user is: &#39;, localId</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1000,13 +979,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.70">
-      <div class="step-ref passed">70</div>
+      <div class="step-ref skipped">70</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;user is: &#39;, localId</span>
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>user.userId = localId</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1015,8 +994,7 @@
 
   
 
-  <div class="preformatted" data-parent="1.70">21:53:51.347 [print] user is:  84 
-</div>   
+     
 
   
 
@@ -1029,13 +1007,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.71">
-      <div class="step-ref passed">71</div>
+      <div class="step-ref skipped">71</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>user.userId = localId</span>
+      <div class="step-cell skipped">
+        <span>And</span>&nbsp;<span>request user</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1057,13 +1035,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.72">
-      <div class="step-ref passed">72</div>
+      <div class="step-ref skipped">72</div>
       
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request user</span>
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method PUT</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1085,68 +1063,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.73">
-      <div class="step-ref passed">73</div>
+      <div class="step-ref skipped">73</div>
       
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method PUT</span>
-      </div>
-    </div>
-    <div class="time-cell passed">69</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.73">21:53:51.350 request:
-3 &gt; PUT http://52.3.58.191:8083/api/users/84
-3 &gt; Content-Type: application/json; charset=UTF-8
-3 &gt; Content-Length: 302
-3 &gt; Host: 52.3.58.191:8083
-3 &gt; Connection: Keep-Alive
-3 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-3 &gt; Accept-Encoding: gzip,deflate
-{&quot;username&quot;:&quot;user700@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https:\/\/example.com\/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user700@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;}],&quot;id&quot;:null,&quot;userId&quot;:84}
-
-21:53:51.417 response time in milliseconds: 66
-3 &lt; 201
-3 &lt; Vary: Origin
-3 &lt; Vary: Access-Control-Request-Method
-3 &lt; Vary: Access-Control-Request-Headers
-3 &lt; X-Content-Type-Options: nosniff
-3 &lt; X-XSS-Protection: 0
-3 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-3 &lt; Pragma: no-cache
-3 &lt; Expires: 0
-3 &lt; X-Frame-Options: SAMEORIGIN
-3 &lt; Content-Type: application/json
-3 &lt; Transfer-Encoding: chunked
-3 &lt; Date: Wed, 26 Mar 2025 01:53:52 GMT
-3 &lt; Keep-Alive: timeout=60
-3 &lt; Connection: keep-alive
-{&quot;userId&quot;:84,&quot;username&quot;:&quot;user700@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user700@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user700@gmail.com&quot;}
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.74">
-      <div class="step-ref passed">74</div>
-      
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1183,14 +1106,42 @@
   </div>
 
   <div class="step-row">
-    <div class="step-container" id="1.77">
-      <div class="step-ref passed">77</div>
+    <div class="step-container" id="1.76">
+      <div class="step-ref skipped">76</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Given</span>&nbsp;<span>path &#39;users/&#39; + localId</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="1.77">
+      <div class="step-ref skipped">77</div>
+      
+      <div class="step-cell skipped">
+        <span>*</span>&nbsp;<span>print &#39;user is: &#39;, localId</span>
+      </div>
+    </div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1212,13 +1163,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.78">
-      <div class="step-ref passed">78</div>
+      <div class="step-ref skipped">78</div>
       
-      <div class="step-cell passed">
-        <span>*</span>&nbsp;<span>print &#39;user is: &#39;, localId</span>
+      <div class="step-cell skipped">
+        <span>When</span>&nbsp;<span>method DELETE</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1227,8 +1178,7 @@
 
   
 
-  <div class="preformatted" data-parent="1.78">21:53:51.417 [print] user is:  84 
-</div>   
+     
 
   
 
@@ -1241,65 +1191,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.79">
-      <div class="step-ref passed">79</div>
+      <div class="step-ref skipped">79</div>
       
-      <div class="step-cell passed">
-        <span>When</span>&nbsp;<span>method DELETE</span>
-      </div>
-    </div>
-    <div class="time-cell passed">62</div>
-  </div>
-
-   
-  
-  
-
-  
-
-  <div class="preformatted" data-parent="1.79">21:53:51.419 request:
-4 &gt; DELETE http://52.3.58.191:8083/api/users/84
-4 &gt; Host: 52.3.58.191:8083
-4 &gt; Connection: Keep-Alive
-4 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
-4 &gt; Accept-Encoding: gzip,deflate
-
-
-21:53:51.479 response time in milliseconds: 60
-4 &lt; 200
-4 &lt; Vary: Origin
-4 &lt; Vary: Access-Control-Request-Method
-4 &lt; Vary: Access-Control-Request-Headers
-4 &lt; X-Content-Type-Options: nosniff
-4 &lt; X-XSS-Protection: 0
-4 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
-4 &lt; Pragma: no-cache
-4 &lt; Expires: 0
-4 &lt; X-Frame-Options: SAMEORIGIN
-4 &lt; Content-Length: 0
-4 &lt; Date: Wed, 26 Mar 2025 01:53:52 GMT
-4 &lt; Keep-Alive: timeout=60
-4 &lt; Connection: keep-alive
-
-</div>   
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="1.80">
-      <div class="step-ref passed">80</div>
-      
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    

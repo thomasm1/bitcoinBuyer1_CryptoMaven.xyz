@@ -1,6 +1,5 @@
 Feature:  users karate test script
 
-  Background:
   Background: background
 #    * url 'http://52.3.58.191:8083/api'
 #    * url 'http://localhost:8083/api/'

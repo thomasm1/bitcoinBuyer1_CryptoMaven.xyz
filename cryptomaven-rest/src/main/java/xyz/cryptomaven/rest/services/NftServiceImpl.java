@@ -92,6 +92,7 @@ public class NftServiceImpl implements NftService {
                 }
                 // Update Attributes
                 if (metadata.getAttributes() != null) {
+                    assert nftCoinDto.getMetadata() != null;
                     List<AttributeDto> attributeDtos = nftCoinDto.getMetadata().getAttributes();
                     if (attributeDtos != null) {
                         for (int i = 0; i < metadata.getAttributes().size(); i++) {

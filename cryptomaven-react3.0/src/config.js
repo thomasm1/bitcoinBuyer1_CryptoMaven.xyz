@@ -1,17 +1,16 @@
 // STRINGS
 // export const API_BASE_URL = "http://52.3.58.191:8083/api"; //"http://localhost:8083/api";// 
 // export const NFT_COIN_BASE_URL =  "http://52.3.58.191:8083/api"; // "http://localhost:8083/api";//  "http://comments-clusterip-srv:4001"; //
- 
-
 // export const ADDRESSES_BASE_URL = "http://52.3.58.191:8083/api"; // "http://localhost:8083/api"; // "http://addresses-clusterip-srv:4000"; //
+
 export const API_BASE_URL = "http://localhost:8083/api";// 
 export const NFT_COIN_BASE_URL = "http://localhost:8083/api";//  "http://comments-clusterip-srv:4001"; //
 export const ADDRESSES_BASE_URL = "http://localhost:8083/api"; // "http://addresses-clusterip-srv:4000"; //
-// export const API_BASE_URL = "http://localhost:8083/api";// 
+ 
 // export const NFT_COIN_BASE_URL = "http://coins-clusterip-srv:4001";  
 // export const ADDRESSES_BASE_URL =  "http://addresses-clusterip-srv:4000"; 
 
-export const JWT_TOKEN = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiYmJAZ21haWwuY29tIiwiaWF0IjoxNzQyOTMxNjI0LCJleHAiOjE3NDM1MzY0MjR9.rCjYbXnoclln2EznsMSMx4burPSwMWzsx9LuzF4e19786pGAJ16WKU7rxYOf2cJq";
+export const JWT_TOKEN = "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJiYmJAZ21haWwuY29tIiwiaWF0IjoxNzQ0MTYxNTA3LCJleHAiOjE3NDQ3NjYzMDd9.NTH17yxoEXt359aWt8hNCLF4WYpz3QxIc_afRDFf6aghjbUd-IrBUkR-WnNop45p";
 
 
 // OBJECTS

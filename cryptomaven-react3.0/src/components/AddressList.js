@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import CoinCreate from "./CoinCreate";
 import CoinList from "./CoinList";
 import { NavLink } from "react-router-dom";
-import addressesService from "../services/addressesService"; 
+import addressesService from "../services/addressesService";
 
 const AddressList = () => {
   const [addresses, setAddresses] = useState([]);
@@ -13,7 +13,7 @@ const AddressList = () => {
     const fetchAddresses = async () => {
       try {
         const res = await addressesService.listAddresses();
-        setAddresses(res);
+        setAddresses(Array.isArray(res) ? res : []);
       } catch (error) {
         console.error("Error fetching addresses:", error);
         setError("Failed to fetch addresses.");
@@ -26,7 +26,27 @@ const AddressList = () => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure you want to delete this address?")) {
+      try {
+        await addressesService.removeAddress(id);
+        setAddresses((prev) => prev.filter((address) => address.id !== id));
+      } catch (error) {
+        console.error("Error deleting address:", error);
+        alert("Failed to delete the address.");
+      }
+    }
+  };
 
+  const handleUpdate = async (id) => {
+    try {
+      await addressesService.updateAddress(id);
+      alert("Address updated successfully.");
+    } catch (error) {
+      console.error("Error updating address:", error);
+      alert("Failed to update the address.");
+    }
+  };
   return (
     <div className="container">
       <h2 className="text-center">List of Addresses</h2>
@@ -42,7 +62,7 @@ const AddressList = () => {
           </tr>
         </thead>
         <tbody>
-          {addresses.map((address) => (
+          { addresses.map((address) => (
             <React.Fragment key={address.id}>
               <tr>
                 <td>
@@ -74,12 +94,15 @@ const AddressList = () => {
                   ))}
                 </td>
                 <td>
-                  <button className="btn btn-info" onClick={() => addressesService.updateAddress(address.id)}>
+                  <button
+                    className="btn btn-info"
+                    onClick={() => handleUpdate(address.id)}
+                  >
                     Update
                   </button>
                   <button
                     className="btn btn-danger"
-                    onClick={() => addressesService.removeAddress(address.id)}
+                    onClick={() => handleDelete(address.id)}
                     style={{ marginLeft: "10px" }}
                   >
                     Delete

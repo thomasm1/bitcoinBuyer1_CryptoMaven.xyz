@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { NFT_COIN_BASE_URL } from '../config';
-import { JWT_TOKEN } from '../config'; 
+import { JWT_TOKEN } from '../config';
 
 class NftCoinsService {
 
@@ -10,42 +10,28 @@ class NftCoinsService {
         try {
             const cat = await axios.post(`${NFT_COIN_BASE_URL}/nftCoins`, {
                 ...values,
-                
-                    "id": 10,
-                    "name": "A.I.Now.",
-                    "description": "AI Technology nftCoins",
-                    "nftCoins": [
+
+                // "id": 70,
+                "name": "NFT One",
+                "amount": 10.3333, 
+                "nftAddress": "0xnft1",  
+                "metadata": {
+                    "metadataId": 505,
+                    "name": "MetaOne",
+                    "description": "ancient science",
+                    "image": "https://s3.amazonaws.com/tmm.net/images/ancientscience.jpg",
+                    "external_url": "https://example.com/meta1",
+                    "attributes": [
                         {
-                            "id": 42,
-                            "title": "Tech Giant Merges",
-                            "url": "https://nftCoins3.com"
+                            "attrid": 605,
+                            "attribute_value": "Gold",
+                            "trait_type": "Color"
                         }
                     ],
-                    "addresses": [
-                        {
-                            "id": 23,
-                            "did": "D1004",
-                            "date": "2025-05-04",
-                            "author": "Alice",
-                            "monthOrder": "June",
-                            "cat3": "Tech",
-                            "title": "AI Breakthrough",
-                            "addresses": "New AI breakthrough discovered...",
-                            "blogcite": "https://blogsite4.com",
-                            "email": "alice.user@example.com",
-                            "state": "Published",
-                            "wordCount": 1600,
-                            "durationGoal": 8,
-                            "coins": [
-                                {
-                                    "id": 33,
-                                    "name": "TechLover",
-                                    "email": "techie@example.com",
-                                    "body": "Excited about AI updates!"
-                                }
-                            ]
-                        }
-                    ] 
+                    "nftCoin": null
+                },
+                "coin": null
+
 
                 // did: Date.now(),
                 // date: Date.now(),
@@ -60,24 +46,42 @@ class NftCoinsService {
             alert("Error creating addresses. Please check the console for details.");
         }
     }
-    async addNftCoins(nftCoinId, nftCoins) {
+    async updateNftCoins(nftCoinId, nftCoinVar) {
         const bearerToken = localStorage.getItem('accessToken') || JWT_TOKEN
         const nftCoin = await axios.get(`${NFT_COIN_BASE_URL}/nftCoins/${nftCoinId}`, {
             headers: {
                 Authorization: `Bearer ${bearerToken}`
             }
         });
-        if (!nftCoin.nftCoins) {
-            nftCoin.nftCoins = [];
-        }
-        nftCoin.nftCoins.push(nftCoins);   
+       const tempResponse = {
+        "id": 81,
+        "name": "NFTFsive",
+        "amount": 50.0,
+        "metadata": {
+            "metadataId": 11,
+            "name": "MetaFive",
+            "description": "  huracan",
+            "image": "https://s3.amazonaws.com/tmm.net/images/crypto/huracan.jpg",
+            "external_url": "https://example.com/meta5",
+            "attributes": [
+                {
+                    "attrid": 111,
+                    "attribute_value": "Holographic",
+                    "trait_type": "Texture"
+                }
+            ],
+            "nftCoin": null
+        },
+        "coin": null
+    }
+     nftCoin = tempResponse; 
         console.log("NftCoinsService addNftCoins:", nftCoin);
-        await axios.put(`${NFT_COIN_BASE_URL}/nftCoins/${nftCoinId}`, nftCoin
-        , {
-            headers: {
-                Authorization: `Bearer ${bearerToken}`
-            }
-        });
+        await axios.put(`${NFT_COIN_BASE_URL}/nftCoins/${nftCoin.id}`, nftCoin
+            , {
+                headers: {
+                    Authorization: `Bearer ${bearerToken}`
+                }
+            });
     }
 
     async getNftCoin(id) {
@@ -87,13 +91,12 @@ class NftCoinsService {
     }
 
     async getNftCoins() {
-      const response = await axios.get(`${NFT_COIN_BASE_URL}/nftCoins`);
+        const response = await axios.get(`${NFT_COIN_BASE_URL}/nftCoins`);
         console.log("NftCoinsService getNftCoins:", response.data);
         return response.data;
     }
-    
+
 }
 
- const nftCoinsService = new NftCoinsService();
-export default nftCoinsService; 
- 
+const nftCoinsService = new NftCoinsService();
+export default nftCoinsService;

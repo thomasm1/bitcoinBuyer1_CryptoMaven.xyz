@@ -22,47 +22,47 @@
       <img src="karate-logo.svg" alt="Karate"/>
     </a>
     <div class="nav-count">
-      <div id="nav-pass" class="bg-success">10</div>
-      <div id="nav-fail" class="bg-danger">0</div>
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">10</div>
     </div>
   </div>
   <div id="nav-type">
     <div>Scenarios</div>
   </div>         
   <div id="nav-date">
-    <div>2025-03-25 09:53:47 PM</div>
+    <div>2025-04-09 01:34:37 PM</div>
   </div>        
 </div>
 
         <div class="nav-container">
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.1:22]"><span>[1.1:22]</span> <span>&#39;addresses&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.2:23]"><span>[1.2:23]</span> <span>&#39;addresses&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.3:25]"><span>[1.3:25]</span> <span>&#39;chains&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.4:26]"><span>[1.4:26]</span> <span>&#39;chains&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.5:28]"><span>[1.5:28]</span> <span>&#39;users&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.6:29]"><span>[1.6:29]</span> <span>&#39;users&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.7:31]"><span>[1.7:31]</span> <span>&#39;coins&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.8:32]"><span>[1.8:32]</span> <span>&#39;coins&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.9:34]"><span>[1.9:34]</span> <span>&#39;nftCoins&#39;</span></a>
           </div>
-          <div class="nav-item passed">
+          <div class="nav-item failed">
             <a href="#[1.10:35]"><span>[1.10:35]</span> <span>&#39;nftCoins&#39;</span></a>
           </div>
         </div>
@@ -88,8 +88,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>513</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>15</span>
             </div>
           </div>
           <div class="step-row">
@@ -137,7 +137,7 @@
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">10</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -146,13 +146,403 @@
 
   
 
-  <div class="preformatted" data-parent="1.8">21:53:46.320 karate.env system property was: null 
-21:53:46.325 karate.env is: mysql 
-21:53:46.326 Database Password:  
-21:53:46.329 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="1.8">13:34:36.717 &lt;&lt; lock released, cached callSingle: classpath:utils/createToken.feature
+</div>   
+
+  <div>
+        
+    <div class="step-row">
+      <div class="step-container" id="1.8.0.call">
+        <div class="step-ref bg-step">&gt;&gt;</div>
+        <div class="step-indent"></div>
+        <div class="step-cell passed">utils.createToken</div>
+      </div>
+      <div class="time-cell passed">870</div>
+    </div>
+    <div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Register the User</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.6">
+      <div class="step-ref bg-step">6</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url  baseUrl + &#39;/api/users/auth/register&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.8.0.call.0.6">13:34:35.781 karate.env system property was: null 
+13:34:35.785 karate.env is: local 
+13:34:35.786 Database Password: abc123!! 
+13:34:35.788 Using Local or H2 environment. Base URL: http://localhost:8083/ 
+13:34:35.792 &gt;&gt; lock acquired, begin callSingle: classpath:utils/createToken.feature
 </div>   
 
   
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.7">
+      <div class="step-ref bg-step">7</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>headers {Accept:&#39;application/json&#39;, Content-Type:&#39;application/json&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">45</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.8">
+      <div class="step-ref bg-step">8</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {   username: &#39;#(username)&#39;,  password: &#39;#(password)&#39;, email: &#39;#(username)&#39;, lastName: &#39;#(lastName)&#39;, firstName: &#39;#(firstName)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.9">
+      <div class="step-ref bg-step">9</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">530</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.8.0.call.0.9">13:34:36.347 request:
+1 &gt; POST http://localhost:8083//api/users/auth/register
+1 &gt; Accept: application/json
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 134
+1 &gt; Host: localhost:8083
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;password&quot;:&quot;password&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;#(lastName)&quot;,&quot;firstName&quot;:&quot;#(firstName)&quot;}
+
+13:34:36.440 response time in milliseconds: 91
+1 &lt; 200
+1 &lt; Vary: Origin
+1 &lt; Vary: Access-Control-Request-Method
+1 &lt; Vary: Access-Control-Request-Headers
+1 &lt; X-Content-Type-Options: nosniff
+1 &lt; X-XSS-Protection: 0
+1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+1 &lt; Pragma: no-cache
+1 &lt; Expires: 0
+1 &lt; X-Frame-Options: SAMEORIGIN
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
+1 &lt; Keep-Alive: timeout=60
+1 &lt; Connection: keep-alive
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.10">
+      <div class="step-ref bg-step">10</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      <div class="step-indent"></div>
+      <div class="step-cell comment"># Get the Token</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.13">
+      <div class="step-ref bg-step">13</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url  baseUrl + &#39;/api/users/auth/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.14">
+      <div class="step-ref bg-step">14</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>headers {Accept:&#39;application/json&#39;, Content-Type:&#39;application/json&#39;}</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.15">
+      <div class="step-ref bg-step">15</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>request {   username: &#39;#(username)&#39;,  password: &#39;#(password)&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.16">
+      <div class="step-ref bg-step">16</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method post</span>
+      </div>
+    </div>
+    <div class="time-cell passed">266</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="1.8.0.call.0.16">13:34:36.447 request:
+2 &gt; POST http://localhost:8083//api/users/auth/login
+2 &gt; Accept: application/json
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 54
+2 &gt; Host: localhost:8083
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;password&quot;:&quot;password&quot;}
+
+13:34:36.710 response time in milliseconds: 263
+2 &lt; 200
+2 &lt; Vary: Origin
+2 &lt; Vary: Access-Control-Request-Method
+2 &lt; Vary: Access-Control-Request-Headers
+2 &lt; X-Content-Type-Options: nosniff
+2 &lt; X-XSS-Protection: 0
+2 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+2 &lt; Pragma: no-cache
+2 &lt; Expires: 0
+2 &lt; X-Frame-Options: SAMEORIGIN
+2 &lt; Content-Length: 0
+2 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
+2 &lt; Keep-Alive: timeout=60
+2 &lt; Connection: keep-alive
+
+</div>   
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.17">
+      <div class="step-ref bg-step">17</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+      <div><div>
+  
+
+  
+
+  <div class="step-row" data-parent="1.8.0.call">
+    <div class="step-container" id="1.8.0.call.0.18">
+      <div class="step-ref bg-step">18</div>
+      <div class="step-indent"></div>
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def accessToken = response.accessToken</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+    </div>    
+  </div>
 
 </div>
 </div>
@@ -169,7 +559,7 @@
         <span>Given</span>&nbsp;<span>path &#39;addresses&#39; + &#39;&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -197,7 +587,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">487</div>
+    <div class="time-cell passed">14</div>
   </div>
 
    
@@ -206,31 +596,28 @@
 
   
 
-  <div class="preformatted" data-parent="1.14">21:53:46.709 request:
-1 &gt; GET http://52.3.58.191:8083/api/addresses
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="1.14">13:34:36.740 request:
+1 &gt; GET http://localhost:8083/api/addresses
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:46.829 response time in milliseconds: 112
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.751 response time in milliseconds: 10
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:47 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-[{&quot;id&quot;:20,&quot;description&quot;:&quot;ETH: Ethereum&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas1@gmail.com&quot;,&quot;address&quot;:&quot;0xAAA111...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;,&quot;nftAddress&quot;:&quot;0xAAA111...&quot;,&quot;chains&quot;:[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}],&quot;user&quot;:{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;}},{&quot;id&quot;:21,&quot;description&quot;:&quot;BSC: Binance&quot;,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas2@gmail.com&quot;,&quot;address&quot;:&quot;0xBBB222...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;,&quot;nftAddress&quot;:&quot;0xBBB222...&quot;,&quot;chains&quot;:[{&quot;id&quot;:31,&quot;name&quot;:&quot;BSC&quot;,&quot;symbol&quot;:&quot;BNB&quot;,&quot;description&quot;:&quot;BinanceChain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://bsc-dataseed.binance.org&quot;,&quot;chainId&quot;:56,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:41,&quot;nativeToken&quot;:0.1,&quot;tokens&quot;:[{&quot;id&quot;:81,&quot;rawToken&quot;:&quot;RawBeta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:71,&quot;name&quot;:&quot;NFTTwo&quot;,&quot;amount&quot;:2.5}]}],&quot;user&quot;:{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;}},{&quot;id&quot;:22,&quot;description&quot;:&quot;MATIC: Polygon&quot;,&quot;email&quot;:&quot;thomas@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas3@gmail.com&quot;,&quot;address&quot;:&quot;0xCCC333...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;,&quot;nftAddress&quot;:&quot;0xCCC333...&quot;,&quot;chains&quot;:[{&quot;id&quot;:32,&quot;name&quot;:&quot;Polygon&quot;,&quot;symbol&quot;:&quot;MATIC&quot;,&quot;description&quot;:&quot;Sidechain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc-mainnet.maticvigil.com&quot;,&quot;chainId&quot;:137,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:42,&quot;nativeToken&quot;:10.0,&quot;tokens&quot;:[{&quot;id&quot;:82,&quot;rawToken&quot;:&quot;RawGamma&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:72,&quot;name&quot;:&quot;NFTThree&quot;,&quot;amount&quot;:3.75}]}],&quot;user&quot;:{&quot;userId&quot;:12,&quot;username&quot;:&quot;thomas3@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas3&quot;,&quot;organizationCode&quot;:&quot;ORG3&quot;,&quot;dashboardCode&quot;:&quot;DASH3&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,&quot;userType&quot;:2,&quot;email&quot;:&quot;thomas3@gmail.com&quot;,&quot;contactType&quot;:103,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas3@gmail.com&quot;}},{&quot;id&quot;:23,&quot;description&quot;:&quot;AVAX: Avalanche&quot;,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas4@gmail.com&quot;,&quot;address&quot;:&quot;0xDDD444...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;,&quot;nftAddress&quot;:&quot;0xDDD444...&quot;,&quot;chains&quot;:[{&quot;id&quot;:33,&quot;name&quot;:&quot;Avalanche&quot;,&quot;symbol&quot;:&quot;AVAX&quot;,&quot;description&quot;:&quot;C-Chain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/avax.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://api.avax.network&quot;,&quot;chainId&quot;:43114,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:43,&quot;nativeToken&quot;:0.05,&quot;tokens&quot;:[{&quot;id&quot;:83,&quot;rawToken&quot;:&quot;RawDelta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:73,&quot;name&quot;:&quot;NFTFour&quot;,&quot;amount&quot;:10.0}]}],&quot;user&quot;:{&quot;userId&quot;:13,&quot;username&quot;:&quot;thomas4@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas4&quot;,&quot;organizationCode&quot;:&quot;ORG4&quot;,&quot;dashboardCode&quot;:&quot;DASH4&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;contactType&quot;:104,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas4@gmail.com&quot;}},{&quot;id&quot;:24,&quot;description&quot;:&quot;PLS: PulseChain&quot;,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas4@gmail.com&quot;,&quot;address&quot;:&quot;0xEEE555...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;,&quot;nftAddress&quot;:&quot;0xEEE555...&quot;,&quot;chains&quot;:[{&quot;id&quot;:34,&quot;name&quot;:&quot;PulseChain&quot;,&quot;symbol&quot;:&quot;PLS&quot;,&quot;description&quot;:&quot;Fork of ETH&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc.pulsechain.io&quot;,&quot;chainId&quot;:369,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:44,&quot;nativeToken&quot;:999.999,&quot;tokens&quot;:[{&quot;id&quot;:84,&quot;rawToken&quot;:&quot;RawEpsilon&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:74,&quot;name&quot;:&quot;NFTFive&quot;,&quot;amount&quot;:50.0}]}],&quot;user&quot;:{&quot;userId&quot;:14,&quot;username&quot;:&quot;thomas5@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas5&quot;,&quot;organizationCode&quot;:&quot;ORG5&quot;,&quot;dashboardCode&quot;:&quot;DASH5&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas5@gmail.com&quot;,&quot;contactType&quot;:105,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas5@gmail.com&quot;}},{&quot;id&quot;:25,&quot;description&quot;:&quot;description&quot;,&quot;email&quot;:&quot;d.maestas@gmail.com&quot;,&quot;owner&quot;:&quot;d.maestas@gmail.com&quot;,&quot;address&quot;:&quot;0x900bE021E38B8d08435A03c05657C8cFA837cAeF&quot;,&quot;iconUrl&quot;:&quot;https://icons.example.com/icon1.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://explorer1.com&quot;,&quot;nftAddress&quot;:&quot;abc123!!&quot;,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:26,&quot;description&quot;:&quot;description&quot;,&quot;email&quot;:&quot;d.maestas@gmail.com&quot;,&quot;owner&quot;:&quot;d.maestas@gmail.com&quot;,&quot;address&quot;:&quot;0x900bE021E38B8d08435A03c05657C8cFA837cAeF&quot;,&quot;iconUrl&quot;:&quot;https://icons.example.com/icon1.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://explorer1.com&quot;,&quot;nftAddress&quot;:&quot;abc123!!&quot;,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:27,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:28,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:29,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:30,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:31,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:32,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:33,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:34,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:35,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:36,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:37,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:38,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null},{&quot;id&quot;:39,&quot;description&quot;:null,&quot;email&quot;:null,&quot;owner&quot;:null,&quot;address&quot;:&quot;0x1234567890abcdef1234567890abcdef12345678&quot;,&quot;iconUrl&quot;:null,&quot;blockExplorerUrl&quot;:null,&quot;nftAddress&quot;:null,&quot;chains&quot;:[],&quot;coins&quot;:[],&quot;user&quot;:null}]
+
 </div>   
 
   
@@ -244,13 +631,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -259,7 +646,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="1.15">13:34:36.753 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -272,13 +664,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">7</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -300,13 +692,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">6</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -328,13 +720,13 @@
 
   <div class="step-row">
     <div class="step-container" id="1.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -343,8 +735,7 @@
 
   
 
-  <div class="preformatted" data-parent="1.18">21:53:46.879 [print] null 
-</div>   
+     
 
   
 
@@ -363,8 +754,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>63</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>17</span>
             </div>
           </div>
           <div class="step-row">
@@ -412,7 +803,7 @@
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -421,10 +812,10 @@
 
   
 
-  <div class="preformatted" data-parent="2.8">21:53:46.892 karate.env system property was: null 
-21:53:46.892 karate.env is: mysql 
-21:53:46.893 Database Password:  
-21:53:46.893 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="2.8">13:34:36.767 karate.env system property was: null 
+13:34:36.768 karate.env is: local 
+13:34:36.769 Database Password: abc123!! 
+13:34:36.770 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -472,7 +863,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">59</div>
+    <div class="time-cell passed">16</div>
   </div>
 
    
@@ -481,31 +872,28 @@
 
   
 
-  <div class="preformatted" data-parent="2.14">21:53:46.900 request:
-1 &gt; GET http://52.3.58.191:8083/api/addresses/20
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="2.14">13:34:36.778 request:
+1 &gt; GET http://localhost:8083/api/addresses/20
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:46.955 response time in milliseconds: 55
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.789 response time in milliseconds: 10
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;id&quot;:20,&quot;description&quot;:&quot;ETH: Ethereum&quot;,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;owner&quot;:&quot;Thomas1@gmail.com&quot;,&quot;address&quot;:&quot;0xAAA111...&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;,&quot;nftAddress&quot;:&quot;0xAAA111...&quot;,&quot;chains&quot;:[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}],&quot;coins&quot;:[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}],&quot;user&quot;:{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;}}
+
 </div>   
 
   
@@ -519,13 +907,13 @@
 
   <div class="step-row">
     <div class="step-container" id="2.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -534,7 +922,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="2.15">13:34:36.791 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 10, url: http://localhost:8083/api/addresses/20, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -547,13 +940,13 @@
 
   <div class="step-row">
     <div class="step-container" id="2.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -575,13 +968,13 @@
 
   <div class="step-row">
     <div class="step-container" id="2.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -603,13 +996,13 @@
 
   <div class="step-row">
     <div class="step-container" id="2.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -618,8 +1011,7 @@
 
   
 
-  <div class="preformatted" data-parent="2.18">21:53:46.960 [print] null 
-</div>   
+     
 
   
 
@@ -638,8 +1030,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>68</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>21</span>
             </div>
           </div>
           <div class="step-row">
@@ -687,7 +1079,7 @@
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -696,10 +1088,10 @@
 
   
 
-  <div class="preformatted" data-parent="3.8">21:53:46.967 karate.env system property was: null 
-21:53:46.968 karate.env is: mysql 
-21:53:46.968 Database Password:  
-21:53:46.968 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="3.8">13:34:36.802 karate.env system property was: null 
+13:34:36.803 karate.env is: local 
+13:34:36.803 Database Password: abc123!! 
+13:34:36.804 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -747,7 +1139,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">64</div>
+    <div class="time-cell passed">20</div>
   </div>
 
    
@@ -756,31 +1148,28 @@
 
   
 
-  <div class="preformatted" data-parent="3.14">21:53:46.973 request:
-1 &gt; GET http://52.3.58.191:8083/api/chains
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="3.14">13:34:36.817 request:
+1 &gt; GET http://localhost:8083/api/chains
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.032 response time in milliseconds: 59
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.833 response time in milliseconds: 15
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-[{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;},{&quot;id&quot;:31,&quot;name&quot;:&quot;BSC&quot;,&quot;symbol&quot;:&quot;BNB&quot;,&quot;description&quot;:&quot;BinanceChain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/bsc.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://bsc-dataseed.binance.org&quot;,&quot;chainId&quot;:56,&quot;blockExplorerUrl&quot;:&quot;https://bscscan.com&quot;},{&quot;id&quot;:32,&quot;name&quot;:&quot;Polygon&quot;,&quot;symbol&quot;:&quot;MATIC&quot;,&quot;description&quot;:&quot;Sidechain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/matic.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc-mainnet.maticvigil.com&quot;,&quot;chainId&quot;:137,&quot;blockExplorerUrl&quot;:&quot;https://polygonscan.com&quot;},{&quot;id&quot;:33,&quot;name&quot;:&quot;Avalanche&quot;,&quot;symbol&quot;:&quot;AVAX&quot;,&quot;description&quot;:&quot;C-Chain&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/avax.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://api.avax.network&quot;,&quot;chainId&quot;:43114,&quot;blockExplorerUrl&quot;:&quot;https://snowtrace.io&quot;},{&quot;id&quot;:34,&quot;name&quot;:&quot;PulseChain&quot;,&quot;symbol&quot;:&quot;PLS&quot;,&quot;description&quot;:&quot;Fork of ETH&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/pls.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://rpc.pulsechain.io&quot;,&quot;chainId&quot;:369,&quot;blockExplorerUrl&quot;:&quot;https://scan.pulsechain.com&quot;}]
+
 </div>   
 
   
@@ -794,13 +1183,13 @@
 
   <div class="step-row">
     <div class="step-container" id="3.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -809,7 +1198,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="3.15">13:34:36.835 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/chains, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -822,13 +1216,13 @@
 
   <div class="step-row">
     <div class="step-container" id="3.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -850,13 +1244,13 @@
 
   <div class="step-row">
     <div class="step-container" id="3.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -878,13 +1272,13 @@
 
   <div class="step-row">
     <div class="step-container" id="3.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -893,8 +1287,7 @@
 
   
 
-  <div class="preformatted" data-parent="3.18">21:53:47.039 [print] null 
-</div>   
+     
 
   
 
@@ -913,8 +1306,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>62</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>15</span>
             </div>
           </div>
           <div class="step-row">
@@ -962,7 +1355,7 @@
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -971,10 +1364,10 @@
 
   
 
-  <div class="preformatted" data-parent="4.8">21:53:47.049 karate.env system property was: null 
-21:53:47.050 karate.env is: mysql 
-21:53:47.050 Database Password:  
-21:53:47.051 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="4.8">13:34:36.846 karate.env system property was: null 
+13:34:36.846 karate.env is: local 
+13:34:36.847 Database Password: abc123!! 
+13:34:36.847 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -1022,7 +1415,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">59</div>
+    <div class="time-cell passed">14</div>
   </div>
 
    
@@ -1031,31 +1424,28 @@
 
   
 
-  <div class="preformatted" data-parent="4.14">21:53:47.056 request:
-1 &gt; GET http://52.3.58.191:8083/api/chains/30
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="4.14">13:34:36.855 request:
+1 &gt; GET http://localhost:8083/api/chains/30
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.112 response time in milliseconds: 55
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.866 response time in milliseconds: 11
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;id&quot;:30,&quot;name&quot;:&quot;Ethereum&quot;,&quot;symbol&quot;:&quot;ETH&quot;,&quot;description&quot;:&quot;Layer1&quot;,&quot;longDescription&quot;:&quot;Mainnet&quot;,&quot;iconUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/crypto/eth.png&quot;,&quot;category&quot;:&quot;DeFi&quot;,&quot;chainListIcon&quot;:null,&quot;rpcUrl&quot;:&quot;https://mainnet.ethereum.org&quot;,&quot;chainId&quot;:1,&quot;blockExplorerUrl&quot;:&quot;https://etherscan.io&quot;}
+
 </div>   
 
   
@@ -1069,13 +1459,13 @@
 
   <div class="step-row">
     <div class="step-container" id="4.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -1084,7 +1474,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="4.15">13:34:36.868 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/chains/30, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -1097,13 +1492,13 @@
 
   <div class="step-row">
     <div class="step-container" id="4.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1125,13 +1520,13 @@
 
   <div class="step-row">
     <div class="step-container" id="4.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1153,13 +1548,13 @@
 
   <div class="step-row">
     <div class="step-container" id="4.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1168,8 +1563,7 @@
 
   
 
-  <div class="preformatted" data-parent="4.18">21:53:47.116 [print] null 
-</div>   
+     
 
   
 
@@ -1188,8 +1582,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>137</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>16</span>
             </div>
           </div>
           <div class="step-row">
@@ -1246,10 +1640,10 @@
 
   
 
-  <div class="preformatted" data-parent="5.8">21:53:47.125 karate.env system property was: null 
-21:53:47.125 karate.env is: mysql 
-21:53:47.126 Database Password:  
-21:53:47.126 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="5.8">13:34:36.877 karate.env system property was: null 
+13:34:36.877 karate.env is: local 
+13:34:36.878 Database Password: abc123!! 
+13:34:36.878 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -1269,7 +1663,7 @@
         <span>Given</span>&nbsp;<span>path &#39;users&#39; + &#39;&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">1</div>
   </div>
 
    
@@ -1297,7 +1691,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">134</div>
+    <div class="time-cell passed">15</div>
   </div>
 
    
@@ -1306,31 +1700,28 @@
 
   
 
-  <div class="preformatted" data-parent="5.14">21:53:47.137 request:
-1 &gt; GET http://52.3.58.191:8083/api/users
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="5.14">13:34:36.884 request:
+1 &gt; GET http://localhost:8083/api/users
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.265 response time in milliseconds: 126
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.896 response time in milliseconds: 12
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-[{&quot;userId&quot;:10,&quot;username&quot;:&quot;thomas1@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas1&quot;,&quot;organizationCode&quot;:&quot;ORG1&quot;,&quot;dashboardCode&quot;:&quot;DASH1&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf1&quot;,&quot;userType&quot;:0,&quot;email&quot;:&quot;thomas1@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas1@gmail.com&quot;},{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;},{&quot;userId&quot;:12,&quot;username&quot;:&quot;thomas3@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas3&quot;,&quot;organizationCode&quot;:&quot;ORG3&quot;,&quot;dashboardCode&quot;:&quot;DASH3&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf3&quot;,&quot;userType&quot;:2,&quot;email&quot;:&quot;thomas3@gmail.com&quot;,&quot;contactType&quot;:103,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas3@gmail.com&quot;},{&quot;userId&quot;:13,&quot;username&quot;:&quot;thomas4@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas4&quot;,&quot;organizationCode&quot;:&quot;ORG4&quot;,&quot;dashboardCode&quot;:&quot;DASH4&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf4&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas4@gmail.com&quot;,&quot;contactType&quot;:104,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas4@gmail.com&quot;},{&quot;userId&quot;:14,&quot;username&quot;:&quot;thomas5@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas5&quot;,&quot;organizationCode&quot;:&quot;ORG5&quot;,&quot;dashboardCode&quot;:&quot;DASH5&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf5&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;thomas5@gmail.com&quot;,&quot;contactType&quot;:105,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas5@gmail.com&quot;},{&quot;userId&quot;:15,&quot;username&quot;:&quot;bb@gmail.com&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;bb@gmail.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;bb@gmail.com&quot;},{&quot;userId&quot;:16,&quot;username&quot;:&quot;bbb@gmail.com&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;bbb@gmail.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;bbb@gmail.com&quot;},{&quot;userId&quot;:17,&quot;username&quot;:&quot;user625@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user625@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user625@gmail.com&quot;},{&quot;userId&quot;:18,&quot;username&quot;:&quot;user676@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user676@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user676@gmail.com&quot;},{&quot;userId&quot;:19,&quot;username&quot;:&quot;user696@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user696@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user696@gmail.com&quot;},{&quot;userId&quot;:20,&quot;username&quot;:&quot;user754@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;https://doggywood-veterinary.s3.amazonaws.com/assets/Animals/random_a1.jpg&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user754@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user754@gmail.com&quot;},{&quot;userId&quot;:21,&quot;username&quot;:&quot;user217@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-217.fancyPhotos.com/photos/217&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user217@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user217@gmail.com&quot;},{&quot;userId&quot;:22,&quot;username&quot;:&quot;user739@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-739.fancyPhotos.com/photos/739&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user739@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user739@gmail.com&quot;},{&quot;userId&quot;:23,&quot;username&quot;:&quot;user588@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-588.fancyPhotos.com/photos/588&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user588@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user588@gmail.com&quot;},{&quot;userId&quot;:24,&quot;username&quot;:&quot;user883@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-883.fancyPhotos.com/photos/883&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user883@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user883@gmail.com&quot;},{&quot;userId&quot;:25,&quot;username&quot;:&quot;user699@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-699.fancyPhotos.com/photos/699&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user699@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user699@gmail.com&quot;},{&quot;userId&quot;:27,&quot;username&quot;:&quot;user290@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-290.fancyPhotos.com/photos/290&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user290@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user290@gmail.com&quot;},{&quot;userId&quot;:28,&quot;username&quot;:&quot;user494@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-494.fancyPhotos.com/photos/494&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user494@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user494@gmail.com&quot;},{&quot;userId&quot;:29,&quot;username&quot;:&quot;user528@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-528.fancyPhotos.com/photos/528&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user528@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user528@gmail.com&quot;},{&quot;userId&quot;:30,&quot;username&quot;:&quot;user506@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-506.fancyPhotos.com/photos/506&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user506@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user506@gmail.com&quot;},{&quot;userId&quot;:31,&quot;username&quot;:&quot;user654@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-654.fancyPhotos.com/photos/654&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user654@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user654@gmail.com&quot;},{&quot;userId&quot;:32,&quot;username&quot;:&quot;user537@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-537.fancyPhotos.com/photos/537&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user537@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user537@gmail.com&quot;},{&quot;userId&quot;:33,&quot;username&quot;:&quot;user1007@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-1007.fancyPhotos.com/photos/1007&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user1007@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user1007@gmail.com&quot;},{&quot;userId&quot;:34,&quot;username&quot;:&quot;user107@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-107.fancyPhotos.com/photos/107&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user107@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user107@gmail.com&quot;},{&quot;userId&quot;:35,&quot;username&quot;:&quot;user866@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-866.fancyPhotos.com/photos/866&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user866@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user866@gmail.com&quot;},{&quot;userId&quot;:36,&quot;username&quot;:&quot;user755@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-755.fancyPhotos.com/photos/755&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user755@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user755@gmail.com&quot;},{&quot;userId&quot;:37,&quot;username&quot;:&quot;user557@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-557.fancyPhotos.com/photos/557&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user557@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user557@gmail.com&quot;},{&quot;userId&quot;:38,&quot;username&quot;:&quot;user365@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-365.fancyPhotos.com/photos/365&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user365@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user365@gmail.com&quot;},{&quot;userId&quot;:39,&quot;username&quot;:&quot;user835@gmail.com&quot;,&quot;lastName&quot;:&quot;Smith&quot;,&quot;firstName&quot;:&quot;Tom1&quot;,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:&quot;www.photo-835.fancyPhotos.com/photos/835&quot;,&quot;userType&quot;:3,&quot;email&quot;:&quot;user835@gmail.com&quot;,&quot;contactType&quot;:1,&quot;isActive&quot;:0,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user835@gmail.com&quot;},{&quot;userId&quot;:40,&quot;username&quot;:&quot;alice222@example.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;alice222@example.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;alice222@example.com&quot;},{&quot;userId&quot;:41,&quot;username&quot;:&quot;user482@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user482@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user482@gmail.com&quot;},{&quot;userId&quot;:42,&quot;username&quot;:&quot;user271@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user271@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user271@gmail.com&quot;},{&quot;userId&quot;:43,&quot;username&quot;:&quot;user201@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user201@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user201@gmail.com&quot;},{&quot;userId&quot;:44,&quot;username&quot;:&quot;user255@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user255@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user255@gmail.com&quot;},{&quot;userId&quot;:46,&quot;username&quot;:&quot;user162@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user162@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user162@gmail.com&quot;},{&quot;userId&quot;:47,&quot;username&quot;:&quot;New Name&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;user@user.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[],&quot;id&quot;:null,&quot;password&quot;:&quot;New Name&quot;},{&quot;userId&quot;:49,&quot;username&quot;:&quot;user170@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user170@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user170@gmail.com&quot;},{&quot;userId&quot;:50,&quot;username&quot;:&quot;user141@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user141@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user141@gmail.com&quot;},{&quot;userId&quot;:51,&quot;username&quot;:&quot;user690@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user690@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user690@gmail.com&quot;},{&quot;userId&quot;:52,&quot;username&quot;:&quot;New Name&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;user@user.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[],&quot;id&quot;:null,&quot;password&quot;:&quot;New Name&quot;},{&quot;userId&quot;:54,&quot;username&quot;:&quot;user193@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user193@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user193@gmail.com&quot;},{&quot;userId&quot;:55,&quot;username&quot;:&quot;user630@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user630@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user630@gmail.com&quot;},{&quot;userId&quot;:56,&quot;username&quot;:&quot;New Name&quot;,&quot;lastName&quot;:null,&quot;firstName&quot;:null,&quot;organizationCode&quot;:null,&quot;dashboardCode&quot;:null,&quot;cusUrl&quot;:null,&quot;userType&quot;:0,&quot;email&quot;:&quot;user@user.com&quot;,&quot;contactType&quot;:0,&quot;isActive&quot;:0,&quot;roles&quot;:[],&quot;id&quot;:null,&quot;password&quot;:&quot;New Name&quot;},{&quot;userId&quot;:58,&quot;username&quot;:&quot;user191@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user191@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user191@gmail.com&quot;},{&quot;userId&quot;:59,&quot;username&quot;:&quot;user681@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user681@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user681@gmail.com&quot;},{&quot;userId&quot;:60,&quot;username&quot;:&quot;user879@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user879@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user879@gmail.com&quot;},{&quot;userId&quot;:61,&quot;username&quot;:&quot;user751@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user751@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user751@gmail.com&quot;},{&quot;userId&quot;:62,&quot;username&quot;:&quot;user928@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user928@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user928@gmail.com&quot;},{&quot;userId&quot;:63,&quot;username&quot;:&quot;user1003@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user1003@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user1003@gmail.com&quot;},{&quot;userId&quot;:64,&quot;username&quot;:&quot;user442@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user442@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user442@gmail.com&quot;},{&quot;userId&quot;:65,&quot;username&quot;:&quot;user110@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user110@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user110@gmail.com&quot;},{&quot;userId&quot;:66,&quot;username&quot;:&quot;user735@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user735@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user735@gmail.com&quot;},{&quot;userId&quot;:67,&quot;username&quot;:&quot;user474@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user474@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user474@gmail.com&quot;},{&quot;userId&quot;:68,&quot;username&quot;:&quot;user236@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user236@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user236@gmail.com&quot;},{&quot;userId&quot;:69,&quot;username&quot;:&quot;user444@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user444@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user444@gmail.com&quot;},{&quot;userId&quot;:70,&quot;username&quot;:&quot;user607@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user607@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user607@gmail.com&quot;},{&quot;userId&quot;:71,&quot;username&quot;:&quot;user366@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user366@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user366@gmail.com&quot;},{&quot;userId&quot;:72,&quot;username&quot;:&quot;user829@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user829@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user829@gmail.com&quot;},{&quot;userId&quot;:73,&quot;username&quot;:&quot;user822@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user822@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user822@gmail.com&quot;},{&quot;userId&quot;:74,&quot;username&quot;:&quot;user1029@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user1029@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user1029@gmail.com&quot;},{&quot;userId&quot;:75,&quot;username&quot;:&quot;user898@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user898@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user898@gmail.com&quot;},{&quot;userId&quot;:76,&quot;username&quot;:&quot;user904@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user904@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user904@gmail.com&quot;},{&quot;userId&quot;:77,&quot;username&quot;:&quot;user706@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user706@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user706@gmail.com&quot;},{&quot;userId&quot;:78,&quot;username&quot;:&quot;user902@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user902@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user902@gmail.com&quot;},{&quot;userId&quot;:79,&quot;username&quot;:&quot;user532@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user532@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user532@gmail.com&quot;},{&quot;userId&quot;:80,&quot;username&quot;:&quot;user31@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user31@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user31@gmail.com&quot;},{&quot;userId&quot;:81,&quot;username&quot;:&quot;user876@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user876@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user876@gmail.com&quot;},{&quot;userId&quot;:82,&quot;username&quot;:&quot;user411@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user411@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user411@gmail.com&quot;},{&quot;userId&quot;:83,&quot;username&quot;:&quot;user988@gmail.com&quot;,&quot;lastName&quot;:&quot;Wonderland&quot;,&quot;firstName&quot;:&quot;Alice&quot;,&quot;organizationCode&quot;:&quot;ORG001&quot;,&quot;dashboardCode&quot;:&quot;DASH-A&quot;,&quot;cusUrl&quot;:&quot;https://example.com/alice&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;user988@gmail.com&quot;,&quot;contactType&quot;:101,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;ROLE_ADMIN&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;user988@gmail.com&quot;}]
+
 </div>   
 
   
@@ -1344,13 +1735,13 @@
 
   <div class="step-row">
     <div class="step-container" id="5.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -1359,7 +1750,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="5.15">13:34:36.898 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 12, url: http://localhost:8083/api/users, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -1372,13 +1768,13 @@
 
   <div class="step-row">
     <div class="step-container" id="5.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1400,13 +1796,13 @@
 
   <div class="step-row">
     <div class="step-container" id="5.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1428,13 +1824,13 @@
 
   <div class="step-row">
     <div class="step-container" id="5.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1443,8 +1839,7 @@
 
   
 
-  <div class="preformatted" data-parent="5.18">21:53:47.270 [print] null 
-</div>   
+     
 
   
 
@@ -1463,8 +1858,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>74</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>16</span>
             </div>
           </div>
           <div class="step-row">
@@ -1521,10 +1916,10 @@
 
   
 
-  <div class="preformatted" data-parent="6.8">21:53:47.277 karate.env system property was: null 
-21:53:47.278 karate.env is: mysql 
-21:53:47.278 Database Password:  
-21:53:47.279 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="6.8">13:34:36.906 karate.env system property was: null 
+13:34:36.907 karate.env is: local 
+13:34:36.907 Database Password: abc123!! 
+13:34:36.908 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -1572,7 +1967,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">71</div>
+    <div class="time-cell passed">15</div>
   </div>
 
    
@@ -1581,31 +1976,28 @@
 
   
 
-  <div class="preformatted" data-parent="6.14">21:53:47.283 request:
-1 &gt; GET http://52.3.58.191:8083/api/users/11
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="6.14">13:34:36.920 request:
+1 &gt; GET http://localhost:8083/api/users/11
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.352 response time in milliseconds: 68
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.932 response time in milliseconds: 11
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;userId&quot;:11,&quot;username&quot;:&quot;thomas2@gmail.com&quot;,&quot;lastName&quot;:&quot;Maestas&quot;,&quot;firstName&quot;:&quot;Thomas2&quot;,&quot;organizationCode&quot;:&quot;ORG2&quot;,&quot;dashboardCode&quot;:&quot;DASH2&quot;,&quot;cusUrl&quot;:&quot;https://s3.amazonaws.com/tmm.net/images/people/random_pf2&quot;,&quot;userType&quot;:1,&quot;email&quot;:&quot;thomas2@gmail.com&quot;,&quot;contactType&quot;:102,&quot;isActive&quot;:1,&quot;roles&quot;:[{&quot;id&quot;:2,&quot;name&quot;:&quot;ROLE_USER&quot;,&quot;user&quot;:null}],&quot;id&quot;:null,&quot;password&quot;:&quot;thomas2@gmail.com&quot;}
+
 </div>   
 
   
@@ -1619,13 +2011,13 @@
 
   <div class="step-row">
     <div class="step-container" id="6.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -1634,7 +2026,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="6.15">13:34:36.933 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 11, url: http://localhost:8083/api/users/11, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -1647,13 +2044,13 @@
 
   <div class="step-row">
     <div class="step-container" id="6.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1675,13 +2072,13 @@
 
   <div class="step-row">
     <div class="step-container" id="6.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1703,13 +2100,13 @@
 
   <div class="step-row">
     <div class="step-container" id="6.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1718,8 +2115,7 @@
 
   
 
-  <div class="preformatted" data-parent="6.18">21:53:47.355 [print] null 
-</div>   
+     
 
   
 
@@ -1738,8 +2134,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>57</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>19</span>
             </div>
           </div>
           <div class="step-row">
@@ -1787,7 +2183,7 @@
         <span>*</span>&nbsp;<span>url baseUrl + &#39;/api/&#39;</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell passed">0</div>
   </div>
 
    
@@ -1796,10 +2192,10 @@
 
   
 
-  <div class="preformatted" data-parent="7.8">21:53:47.363 karate.env system property was: null 
-21:53:47.363 karate.env is: mysql 
-21:53:47.364 Database Password:  
-21:53:47.364 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="7.8">13:34:36.942 karate.env system property was: null 
+13:34:36.942 karate.env is: local 
+13:34:36.943 Database Password: abc123!! 
+13:34:36.943 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -1847,7 +2243,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">54</div>
+    <div class="time-cell passed">18</div>
   </div>
 
    
@@ -1856,31 +2252,28 @@
 
   
 
-  <div class="preformatted" data-parent="7.14">21:53:47.370 request:
-1 &gt; GET http://52.3.58.191:8083/api/coins
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="7.14">13:34:36.948 request:
+1 &gt; GET http://localhost:8083/api/coins
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.421 response time in milliseconds: 50
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.963 response time in milliseconds: 15
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-[{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]},{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:41,&quot;nativeToken&quot;:0.1,&quot;tokens&quot;:[{&quot;id&quot;:81,&quot;rawToken&quot;:&quot;RawBeta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:71,&quot;name&quot;:&quot;NFTTwo&quot;,&quot;amount&quot;:2.5}]},{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:42,&quot;nativeToken&quot;:10.0,&quot;tokens&quot;:[{&quot;id&quot;:82,&quot;rawToken&quot;:&quot;RawGamma&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:72,&quot;name&quot;:&quot;NFTThree&quot;,&quot;amount&quot;:3.75}]},{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:43,&quot;nativeToken&quot;:0.05,&quot;tokens&quot;:[{&quot;id&quot;:83,&quot;rawToken&quot;:&quot;RawDelta&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:73,&quot;name&quot;:&quot;NFTFour&quot;,&quot;amount&quot;:10.0}]},{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:44,&quot;nativeToken&quot;:999.999,&quot;tokens&quot;:[{&quot;id&quot;:84,&quot;rawToken&quot;:&quot;RawEpsilon&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:74,&quot;name&quot;:&quot;NFTFive&quot;,&quot;amount&quot;:50.0}]}]
+
 </div>   
 
   
@@ -1894,13 +2287,13 @@
 
   <div class="step-row">
     <div class="step-container" id="7.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -1909,7 +2302,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="7.15">13:34:36.965 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 15, url: http://localhost:8083/api/coins, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -1922,13 +2320,13 @@
 
   <div class="step-row">
     <div class="step-container" id="7.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1950,13 +2348,13 @@
 
   <div class="step-row">
     <div class="step-container" id="7.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1978,13 +2376,13 @@
 
   <div class="step-row">
     <div class="step-container" id="7.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -1993,8 +2391,7 @@
 
   
 
-  <div class="preformatted" data-parent="7.18">21:53:47.424 [print] null 
-</div>   
+     
 
   
 
@@ -2013,8 +2410,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>67</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>17</span>
             </div>
           </div>
           <div class="step-row">
@@ -2071,10 +2468,10 @@
 
   
 
-  <div class="preformatted" data-parent="8.8">21:53:47.431 karate.env system property was: null 
-21:53:47.432 karate.env is: mysql 
-21:53:47.432 Database Password:  
-21:53:47.433 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="8.8">13:34:36.974 karate.env system property was: null 
+13:34:36.975 karate.env is: local 
+13:34:36.975 Database Password: abc123!! 
+13:34:36.975 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -2122,7 +2519,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">64</div>
+    <div class="time-cell passed">16</div>
   </div>
 
    
@@ -2131,31 +2528,28 @@
 
   
 
-  <div class="preformatted" data-parent="8.14">21:53:47.437 request:
-1 &gt; GET http://52.3.58.191:8083/api/coins/40
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="8.14">13:34:36.981 request:
+1 &gt; GET http://localhost:8083/api/coins/40
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.499 response time in milliseconds: 60
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:36.994 response time in milliseconds: 13
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:36 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;version&quot;:null,&quot;dateCreated&quot;:null,&quot;timeCreated&quot;:null,&quot;lastUpdated&quot;:null,&quot;timeUpdated&quot;:null,&quot;id&quot;:40,&quot;nativeToken&quot;:2.5,&quot;tokens&quot;:[{&quot;id&quot;:80,&quot;rawToken&quot;:&quot;RawAlpha&quot;,&quot;mapToken&quot;:{}}],&quot;nfts&quot;:[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}]}
+
 </div>   
 
   
@@ -2169,13 +2563,13 @@
 
   <div class="step-row">
     <div class="step-container" id="8.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -2184,7 +2578,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="8.15">13:34:36.996 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 13, url: http://localhost:8083/api/coins/40, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -2197,13 +2596,13 @@
 
   <div class="step-row">
     <div class="step-container" id="8.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2225,13 +2624,13 @@
 
   <div class="step-row">
     <div class="step-container" id="8.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2253,13 +2652,13 @@
 
   <div class="step-row">
     <div class="step-container" id="8.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2268,8 +2667,7 @@
 
   
 
-  <div class="preformatted" data-parent="8.18">21:53:47.501 [print] null 
-</div>   
+     
 
   
 
@@ -2288,8 +2686,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>64</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>45</span>
             </div>
           </div>
           <div class="step-row">
@@ -2346,10 +2744,10 @@
 
   
 
-  <div class="preformatted" data-parent="9.8">21:53:47.508 karate.env system property was: null 
-21:53:47.508 karate.env is: mysql 
-21:53:47.509 Database Password:  
-21:53:47.509 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="9.8">13:34:37.003 karate.env system property was: null 
+13:34:37.003 karate.env is: local 
+13:34:37.005 Database Password: abc123!! 
+13:34:37.005 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -2397,7 +2795,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">61</div>
+    <div class="time-cell passed">43</div>
   </div>
 
    
@@ -2406,31 +2804,28 @@
 
   
 
-  <div class="preformatted" data-parent="9.14">21:53:47.513 request:
-1 &gt; GET http://52.3.58.191:8083/api/nftCoins
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="9.14">13:34:37.036 request:
+1 &gt; GET http://localhost:8083/api/nftCoins
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.572 response time in milliseconds: 58
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:37.076 response time in milliseconds: 40
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:37 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-[{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0},{&quot;id&quot;:71,&quot;name&quot;:&quot;NFTTwo&quot;,&quot;amount&quot;:2.5},{&quot;id&quot;:72,&quot;name&quot;:&quot;NFTThree&quot;,&quot;amount&quot;:3.75},{&quot;id&quot;:73,&quot;name&quot;:&quot;NFTFour&quot;,&quot;amount&quot;:10.0},{&quot;id&quot;:74,&quot;name&quot;:&quot;NFTFive&quot;,&quot;amount&quot;:50.0},{&quot;id&quot;:75,&quot;name&quot;:&quot;NFT One&quot;,&quot;amount&quot;:10.0}]
+
 </div>   
 
   
@@ -2444,13 +2839,13 @@
 
   <div class="step-row">
     <div class="step-container" id="9.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -2459,7 +2854,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="9.15">13:34:37.078 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 40, url: http://localhost:8083/api/nftCoins, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -2472,13 +2872,13 @@
 
   <div class="step-row">
     <div class="step-container" id="9.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2500,13 +2900,13 @@
 
   <div class="step-row">
     <div class="step-container" id="9.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2528,13 +2928,13 @@
 
   <div class="step-row">
     <div class="step-container" id="9.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2543,8 +2943,7 @@
 
   
 
-  <div class="preformatted" data-parent="9.18">21:53:47.574 [print] null 
-</div>   
+     
 
   
 
@@ -2563,8 +2962,8 @@
                 <span></span>
               </div>
             </div>
-            <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>63</span>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>21</span>
             </div>
           </div>
           <div class="step-row">
@@ -2621,10 +3020,10 @@
 
   
 
-  <div class="preformatted" data-parent="10.8">21:53:47.581 karate.env system property was: null 
-21:53:47.581 karate.env is: mysql 
-21:53:47.581 Database Password:  
-21:53:47.582 Using Dev/MySQL environment. Base URL: http://52.3.58.191:8083/ 
+  <div class="preformatted" data-parent="10.8">13:34:37.087 karate.env system property was: null 
+13:34:37.087 karate.env is: local 
+13:34:37.087 Database Password: abc123!! 
+13:34:37.088 Using Local or H2 environment. Base URL: http://localhost:8083/ 
 </div>   
 
   
@@ -2672,7 +3071,7 @@
         <span>When</span>&nbsp;<span>method GET</span>
       </div>
     </div>
-    <div class="time-cell passed">60</div>
+    <div class="time-cell passed">20</div>
   </div>
 
    
@@ -2681,31 +3080,28 @@
 
   
 
-  <div class="preformatted" data-parent="10.14">21:53:47.586 request:
-1 &gt; GET http://52.3.58.191:8083/api/nftCoins/70
-1 &gt; Host: 52.3.58.191:8083
+  <div class="preformatted" data-parent="10.14">13:34:37.095 request:
+1 &gt; GET http://localhost:8083/api/nftCoins/70
+1 &gt; Authorization: Bearer null
+1 &gt; Host: localhost:8083
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.10)
 1 &gt; Accept-Encoding: gzip,deflate
 
 
-21:53:47.643 response time in milliseconds: 57
-1 &lt; 200
-1 &lt; Vary: Origin
-1 &lt; Vary: Access-Control-Request-Method
-1 &lt; Vary: Access-Control-Request-Headers
+13:34:37.111 response time in milliseconds: 16
+1 &lt; 401
 1 &lt; X-Content-Type-Options: nosniff
 1 &lt; X-XSS-Protection: 0
 1 &lt; Cache-Control: no-cache, no-store, max-age=0, must-revalidate
 1 &lt; Pragma: no-cache
 1 &lt; Expires: 0
 1 &lt; X-Frame-Options: SAMEORIGIN
-1 &lt; Content-Type: application/json
-1 &lt; Transfer-Encoding: chunked
-1 &lt; Date: Wed, 26 Mar 2025 01:53:48 GMT
+1 &lt; Content-Length: 0
+1 &lt; Date: Wed, 09 Apr 2025 17:34:37 GMT
 1 &lt; Keep-Alive: timeout=60
 1 &lt; Connection: keep-alive
-{&quot;id&quot;:70,&quot;name&quot;:&quot;NFTOne&quot;,&quot;amount&quot;:1.0}
+
 </div>   
 
   
@@ -2719,13 +3115,13 @@
 
   <div class="step-row">
     <div class="step-container" id="10.15">
-      <div class="step-ref passed">15</div>
+      <div class="step-ref failed">15</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell failed">
         <span>Then</span>&nbsp;<span>status 200</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell failed">0</div>
   </div>
 
    
@@ -2734,7 +3130,12 @@
 
   
 
-     
+  <div class="preformatted" data-parent="10.15">13:34:37.113 classpath:karate/apiTest.feature:15
+Then status 200
+status code was: 401, expected: 200, response time in milliseconds: 16, url: http://localhost:8083/api/nftCoins/70, response: 
+
+classpath:karate/apiTest.feature:15
+</div>   
 
   
 
@@ -2747,13 +3148,13 @@
 
   <div class="step-row">
     <div class="step-container" id="10.16">
-      <div class="step-ref passed">16</div>
+      <div class="step-ref skipped">16</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>json res = response</span>
       </div>
     </div>
-    <div class="time-cell passed">0</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2775,13 +3176,13 @@
 
   <div class="step-row">
     <div class="step-container" id="10.17">
-      <div class="step-ref passed">17</div>
+      <div class="step-ref skipped">17</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>def payload = res.data</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2803,13 +3204,13 @@
 
   <div class="step-row">
     <div class="step-container" id="10.18">
-      <div class="step-ref passed">18</div>
+      <div class="step-ref skipped">18</div>
       
-      <div class="step-cell passed">
+      <div class="step-cell skipped">
         <span>*</span>&nbsp;<span>print payload</span>
       </div>
     </div>
-    <div class="time-cell passed">1</div>
+    <div class="time-cell skipped">0</div>
   </div>
 
    
@@ -2818,8 +3219,7 @@
 
   
 
-  <div class="preformatted" data-parent="10.18">21:53:47.647 [print] null 
-</div>   
+     
 
   
 

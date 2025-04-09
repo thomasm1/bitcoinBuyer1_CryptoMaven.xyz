@@ -1,21 +1,20 @@
 import React from "react";
 import NftCoinsAdd from "./NftCoinsAdd";
 
-const NftCoinsList = ({ nftCoinsProp }) => {
-  if (!nftCoinsProp || !Array.isArray(nftCoinsProp)) {
+const NftCoinsList = ({ nftCoinsFilteredProp }) => {
+  if (!nftCoinsFilteredProp || !Array.isArray(nftCoinsFilteredProp) || nftCoinsFilteredProp?.length == 0) {
     return <div>No nftCoins available.</div>;
   }
-  const nftCoinsProbe = nftCoinsProp.map((nftCoin) => (
+  const nftCoinsProbe = nftCoinsFilteredProp.map((nftCoin) => (
     <div key={nftCoin.id} className="address-item-container">
       <div className="address-header">
-        <h6 className="address-title">_name_{nftCoin.name}</h6>
-      </div>
-
+        <h6 className="address-title">{nftCoin.name}</h6>
+      </div> 
       <div className="address-body">
         <ul>
-        <li className="nftCoins-item-li">nftCoin.description: {nftCoin.description}</li>
+        <li className="nftCoins-item-li">NftCoin: {nftCoin.description}</li>
           {Array.isArray(nftCoin.nftCoins) &&
-            nftCoin.nftCoins.map((item) => (
+            nftCoin.metadata.attributes.map((item) => (
               <li key={item.id} className="nftCoins-item-li">
                 <span><small>{item.id}</small></span><br />
                 <span>{"title:__"}{item.title}</span><br />

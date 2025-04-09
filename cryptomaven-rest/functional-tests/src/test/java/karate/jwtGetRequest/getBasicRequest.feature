@@ -10,7 +10,7 @@ Feature: To access the GET end point which is secure with Basic Auth
 
 
   Scenario: To access the GET end point with basic auth
-    Given path '/api/chains'
+    Given path '/api/users/auth/login'
     And headers {Accept:'application/json', Authorization:'Basic YWRtaW46d2VsY29tZQ=='}
     When method get
     Then status 200

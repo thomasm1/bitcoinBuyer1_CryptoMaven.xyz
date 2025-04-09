@@ -12,8 +12,25 @@ const NftCoinsAdd = ({ nftCoinSelected }) => {
     <div className="address-create-container">
       <Form
         initialValues={{
-          title: "",
-          url: "",
+      
+          "name": "",
+          "amount": 0.0,
+          "metadata": {}
+          // "metadata": {
+          //     "metadataId": 0,
+          //     "name": "",
+          //     "description": "",
+          //     "image": "",
+          //     "external_url": "",
+          //     "attributes": [
+          //         {
+          //             "attrid": 0,
+          //             "attribute_value": "",
+          //             "trait_type": ""
+          //         }
+          //       ]
+          //     }
+
         }}
         onSubmit={async (values) => {
           try {
@@ -22,16 +39,14 @@ const NftCoinsAdd = ({ nftCoinSelected }) => {
             const nftCoin = response.data;
             // Ensure nftCoin.metadata exists
             if (!nftCoin.metadata) {
-              nftCoin.metadata = [];
+              nftCoin.metadata = {}
             }
 
-            // Assign an unique id to the new news.
-            const id =
-              Math.max(...nftCoin.metadata.map((news) => news.id), 0) + 1;
-            // Add the news object to the nftCoin
-            nftCoin.metadata.push({ ...values, id });
-
-            nftCoinsService.addNftCoins(nftCoinId, values);
+            // // Assign an unique id to the new news.
+            // const id =
+            //   Math.max(...nftCoin.metadata.map((news) => news.id), 0) + 1;
+            // Add the news object to the nftCoin 
+            nftCoinsService.updateNftCoins(nftCoinId, values);
 
 
             alert("Research URL added successfully!");
@@ -44,15 +59,23 @@ const NftCoinsAdd = ({ nftCoinSelected }) => {
         {({ values, handleChange }) => (
           <>
             <FormGroup
-              label="Title"
-              id="title"
+              label="NftCoin Name"
+              id="name"
               values={values}
               handleChange={handleChange}
               required
             />
             <FormGroup
-              label="URL"
-              id="url"
+              label="amount"
+              id="amount"
+              values={values}
+              handleChange={handleChange}
+              required
+            />
+            
+            <FormGroup
+              label="metadata"
+              id="metadata"
               values={values}
               handleChange={handleChange}
               required

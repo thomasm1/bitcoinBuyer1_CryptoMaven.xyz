@@ -4,18 +4,21 @@ import Filter from "./Filter";
 import  nftCoinsService   from "../services/NftCoinsService";
 // import {   useLocation } from 'react-router-dom';
 
-class NftCoinsParent extends Component {
+ 
+class NftCoinsParent extends Component  {
     // const location = useLocation();
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
             nftCoins: [],
             footerText:
                 "&copy; 2021 All Rights Reserved | thomasmaestas.net | The NftCoins Room",
             filtered: [],
+            filteredMetadata: {},
+            filteredAttributes: [],
             loading: true,
         };
-    }
+    } 
 
     componentDidMount() {
         this.fetchNftCoins();
@@ -37,17 +40,30 @@ class NftCoinsParent extends Component {
             this.setState({ filtered: this.state.nftCoins });
             return;
         }
-        const filteredNftCoins = this.state.nftCoins
+        const filteredNfts = this.state.nftCoins
+            .filter((nftCoin) =>   (nftCoin.name.toLowerCase().includes(keywords.toLowerCase()) || // name
+                nftCoin.amount.toString().includes(keywords)));   ///////// digits);
+
+        this.setState({ filtered: filteredNfts });
+
+        const filteredMeta = this.state.nftCoins 
+                .filter((nftCoin ) =>
+                (nftCoin.metadata?.name.toLowerCase().includes(keywords.toLowerCase()) || // name
+                    nftCoin.metadata?.description.toLowerCase().includes(keywords.toLowerCase())));  ///////// digits
+
+        this.setState({ filteredMetadata: filteredMeta })
+
+        const filteredAttrs = this.state.nftCoins
             .map((nftCoin) => ({
-                ...nftCoin,
-                news: nftCoin.metadata.filter((item) =>
-                (item.title.toLowerCase().includes(keywords.toLowerCase()) ||
-                    item.url.toLowerCase().includes(keywords.toLowerCase()))
+                ...nftCoin, ////////////////check this
+                attributes: nftCoin.metadata?.attributes
+                .filter((attrItem) =>
+                (attrItem.attribute_value.toLowerCase().includes(keywords.toLowerCase()) || // name
+                attrItem.trait_type.toLowerCase().includes(keywords.toLowerCase()))   ///////// digits
                 ),
             }))
-            .filter((nftCoin) => nftCoin.metadata.length > 0);
-
-        this.setState({ filtered: filteredNftCoins });
+            .filter((nftCoin) =>  nftCoin.metadata?.length > 0);
+        this.setState({ filteredAttributes: filteredAttrs })
     };
     render() {
         return (
@@ -59,7 +75,7 @@ class NftCoinsParent extends Component {
                         <Filter getKeywords={this.getKeywords}>
                             {this.state.loading && <div>Loading...</div>}
                             {!this.state.loading && (
-                                <NftCoinsList nftCoinsProp={this.state.filtered} />
+                                <NftCoinsList nftCoinsFilteredProp={this.state.filtered} />
                             )}
                         </Filter>
                     </div>
